@@ -1,0 +1,134 @@
+<?php require __DIR__ . '/partials/header.php'; ?>
+    <body>
+
+    <section class="section hero is-fullheight" itemscope itemtype="http://schema.org/WebPage">
+
+    <div class="hero-head">
+
+    <?php require __DIR__ . '/partials/navigator.php'; ?>
+
+    </div>
+
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h1 class="title is-3">Contact</h1>
+
+                    <div class="content">
+
+                    <p>
+        Interested in collaborating together? Complete the form below with basic info about your project or idea. Please allow 24-48 hours for a response.
+                    </p>
+
+                    </div>
+
+                        <form class="form-limit" method="post" action="/?sent">
+
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                    <label class="label">Name</label>
+                                        <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                              <input class="input" type="text" name="26471" placeholder="Jason Response">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="field is-expanded">
+                                        <label class="label">Email</label>
+                                            <div class="field has-addons">
+                                                <p class="control is-expanded">
+                                                  <input class="input" type="email" name="26472" placeholder="user@domain.com">
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                    <label class="label">Phone</label>
+                                        <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                              <input class="input" type="tel" name="26473" placeholder="242 777 7777">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="field is-expanded">
+                                        <label class="label">Budget</label>
+                                            <div class="field has-addons">
+                                                <p class="control is-expanded">
+                                                  <input class="input" type="text" name="26474" placeholder="Tell us your budget">
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field is-expanded">
+                                    <label class="label">Timeline</label>
+                                        <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                              <input class="input" type="text" name="26475" placeholder="3 weeks and 2 days">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="field is-expanded">
+                                        <label class="label">Website</label>
+                                            <div class="field has-addons">
+                                                <p class="control is-expanded">
+                                                  <input class="input" type="text" name="26476" placeholder="http://www.example.com">
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <label class="label">Subject</label>
+                            <div class="field is-horizontal">
+                              <div class="field-body">
+                                <div class="field">
+                                      <input class="input" type="text" name="26477" placeholder="Bonjour!">
+                                </div>
+                              </div>
+                            </div>
+
+                            <label class="label">Message</label>
+                                <div class="field is-horizontal">
+                                  <div class="field-body">
+                                    <div class="field">
+                                      <div class="control">
+                                        <textarea class="textarea" name="26478" placeholder="How would you describe your project?"></textarea>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                            <br>
+
+                            <div class="field is-horizontal">
+                              <div class="field-body">
+                                <div class="field">
+                                  <div class="control">
+                                    <button class="button is-primary">
+                                      Send message
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                           <input type="checkbox" name="contact" class="form" tabindex="-1" autocomplete="off">
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<?php require __DIR__ . '/partials/footer.php'; ?>

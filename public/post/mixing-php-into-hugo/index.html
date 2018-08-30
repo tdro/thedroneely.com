@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en-us">
+<head>
+  <title>
+    Mixing PHP into Hugo - Portfolio - Thedro Neely
+  </title>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?> 
+  
+</head>
+
+<body>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?><section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-8 is-offset-2">
+				<article class="content">
+					<h1 class="title is-3c">Mixing PHP into Hugo</h1>
+					<p class="subtitle is-6 has-text-grey">
+					<em>Posted 
+<time datetime="2018-08-01">1 August 2018</time>; tagged with 
+<a href="/tags/hugo/">hugo</a>,
+<a href="/tags/php/">php</a>
+</em></p>
+<p><a href="https://gohugo.io/">Hugo</a> is nice because of its blog template system, static site generation abilities and generic framework structure,
+but sometimes you may want to add extra functionality that requires dynamic content.
+If you are also combining static elements with dynamic functions you may want
+to <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> your views to make
+everything consistent. It could be that you only want the blog of your website to be static and everything
+else to operate dynamically.</p>
+
+<p>We can generate files ending in <code>.php</code> using the <a href="https://gohugo.io/templates/output-formats/#media-types">media types</a>
+option in Hugo, however because the template is in the <code>layouts/_default</code> directory, we can simply inject
+something like this directly within the <code>.html</code> files;</p>
+<div class="highlight"><pre class="chroma">{{ safeHTML &#34;&lt;?php require $_SERVER[&#39;DOCUMENT_ROOT&#39;] . &#39;/..&#39; . &#39;/views/partials/navigator.php&#39;; ?&gt;&#34; }}</pre></div>
+<p>This tells Hugo when compiling to insert the above PHP code as <a href="https://gohugo.io/functions/safehtml/">safe HTML</a> into the
+statically generated files.
+If your web server is set up to parse <code>.html</code> files as PHP then you are good to go.</p>
+
+<p><em>Edit</em>: If you are interested in a step by step guide on producing <code>.php</code> pages with Hugo,
+<a href="https://webcache.googleusercontent.com/search?q=cache:C8Mj3FHf8uUJ:https://2cg.me/cooking-with-hugo/a-dash-of-php/">look here</a>.
+Note that since Hugo version <a href="https://gohugo.io/news/0.44-relnotes/">0.44</a> the <code>MediaType.Suffix</code> is deprecated and replaced with a plural
+version, <code>MediaType.Suffixes</code></p>
+
+					
+
+				</article>
+
+        <script data-isso="/isso/" src="/isso/js/embed.min.js"></script>
+
+        <section id="isso-thread"></section>
+
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?> 

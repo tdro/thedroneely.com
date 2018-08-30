@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Portfolio - Thedro Neely</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Portfolio - Thedro Neely</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
+    <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
+    <copyright>&amp;copy; Thedro Neely</copyright>
+    <lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/rss.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ddns</title>
+      <link>/tags/ddns/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/ddns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gpu</title>
+      <link>/tags/gpu/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/gpu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Headless</title>
+      <link>/tags/headless/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/headless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pfsense</title>
+      <link>/tags/pfsense/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/pfsense/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>/tags/php/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Portfolio</title>
+      <link>/tags/portfolio/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 -0800</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/portfolio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>/tags/server/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssh</title>
+      <link>/tags/ssh/</link>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Voiceover</title>
+      <link>/tags/voiceover/</link>
+      <pubDate>Mon, 07 May 2018 02:16:58 -0800</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/voiceover/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

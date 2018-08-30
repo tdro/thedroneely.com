@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ddns on Portfolio - Thedro Neely</title>
+    <link>/tags/ddns/</link>
+    <description>Recent content in Ddns on Portfolio - Thedro Neely</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
+    <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
+    <copyright>&amp;copy; Thedro Neely</copyright>
+    <lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ddns/rss.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Now-DNS and pfSense</title>
+      <link>/post/now-dns-pfsense/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/post/now-dns-pfsense/</guid>
+      <description>The alternative to a static IP address is a server that keeps track of your dynamic IP address. When the IP address changes, the client will immediately notify the server of the new IP address.</description>
+    </item>
+    
+  </channel>
+</rss>

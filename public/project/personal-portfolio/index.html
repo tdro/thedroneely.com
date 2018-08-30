@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en-us">
+<head>
+  <title>
+    Personal Portfolio - Portfolio - Thedro Neely
+  </title>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?> 
+  
+</head>
+
+<body>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?><section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-8 is-offset-2">
+				<article class="content">
+					<h1 class="title is-3c">Personal Portfolio</h1>
+					<p class="subtitle is-6 has-text-grey">
+					<em>Posted 
+<time datetime="2018-06-01">1 June 2018</time> in <a href="/categories/projects/">projects</a>; tagged with 
+<a href="/tags/portfolio/">portfolio</a>
+</em></p>
+<p><a href="https://www.thedroneely.com">https://www.thedroneely.com</a></p>
+
+<p>This is the website you&rsquo;re browsing right now. The general structure is based on design patterns from the <a href="https://laravel.com">Laravel</a>
+PHP framework. The comments are handled by <a href="https://posativ.org/isso">Isso</a> which is a backend commenting server written in Python.
+The static parts of this website are compiled by <a href="https://gohugo.io">Hugo</a>, while
+the <a href="https://secure.php.net">PHP</a> front controller handles the rest.</p>
+
+<p>The backend traffic dashboard is integrated into the website using
+<a href="https://goaccess.io">GoAccess</a> which is a traffic monitor that reads the access logs of <a href="https://www.nginx.com">Nginx</a> directly.
+Nothing much else to it. This website is meant to be small, lean, and compact
+since it runs on a tiny <a href="https://www.raspberrypi.org">Raspberry Pi</a>.</p>
+
+
+<div class="video">
+  <video width="310" height="550" autoplay controls loop muted>
+    <source src="https://res.cloudinary.com/dpszgzqjb/video/upload/v1534273334/Videos/personal-portfolio.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</div>
+
+
+					
+
+				</article>
+
+        <script data-isso="/isso/" src="/isso/js/embed.min.js"></script>
+
+        <section id="isso-thread"></section>
+
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?> 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Portfolio - Thedro Neely</title>
+    <link>/categories/projects/</link>
+    <description>Recent content in Projects on Portfolio - Thedro Neely</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
+    <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
+    <copyright>&amp;copy; Thedro Neely</copyright>
+    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 -0800</lastBuildDate>
+    
+	<atom:link href="/categories/projects/rss.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Personal Portfolio</title>
+      <link>/project/personal-portfolio/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 -0800</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/project/personal-portfolio/</guid>
+      <description>https://www.thedroneely.com
+This is the website you&amp;rsquo;re browsing right now. The general structure is based on design patterns from the Laravel PHP framework.</description>
+    </item>
+    
+    <item>
+      <title>Voiceover Website</title>
+      <link>/project/voiceover-website/</link>
+      <pubDate>Mon, 07 May 2018 02:16:58 -0800</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/project/voiceover-website/</guid>
+      <description>https://www.edwinmattiacci.com
+Voice acting is one of my interests, and I&amp;rsquo;ve made a website to manage just that. There were a few super simple html/css/javascript websites that I created before this one but I consider this my first formal website that actually does something.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en-us">
+<head>
+  <title>
+    Now-DNS and pfSense - Portfolio - Thedro Neely
+  </title>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?> 
+  
+</head>
+
+<body>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?><section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-8 is-offset-2">
+				<article class="content">
+					<h1 class="title is-3c">Now-DNS and pfSense</h1>
+					<p class="subtitle is-6 has-text-grey">
+					<em>Posted 
+<time datetime="2018-07-26">26 July 2018</time>; tagged with 
+<a href="/tags/ddns/">ddns</a>,
+<a href="/tags/pfsense/">pfsense</a>
+</em></p>
+<p>The alternative to a static IP address is a server that keeps track of your dynamic IP address. When the
+IP address changes, the client will immediately notify the server of the new IP address. This is known as
+<a href="https://en.wikipedia.org/wiki/Dynamic_DNS">Dynamic DNS</a>. One of the
+free DDNS services that I use is <a href="https://now-dns.com">Now-DNS</a>.</p>
+
+<p>I&rsquo;ve noticed on <a href="https://www.pfsense.org">pfSense</a> version <code>2.3.5-RELEASE-p2</code> that custom client update
+entries will not work when the update url for <code>curl</code> looks something like this;</p>
+<div class="highlight"><pre class="chroma">curl -u &lt;email&gt;:&lt;password&gt; &#34;https://now-dns.com/update?hostname=&lt;hostname&gt;&#34;</pre></div>
+<p>It appears that the authentication fails when executing the client update. To fix this issue, remove the curl HTTP authentication option
+by commenting out the line below in the file <code>/etc/inc/dyndns.class</code></p>
+<div class="highlight"><pre class="chroma">curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);</pre></div><div class="highlight"><pre class="chroma">if ($this-&gt;_curlSslVerifypeer) {
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, TRUE);
+  } else {
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+  }
+    #curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+    curl_setopt($ch, CURLOPT_USERPWD, &#34;{$this-&gt;_dnsUser}:{$this-&gt;_dnsPass}&#34;);
+}</pre></div>
+<p>This does not have an adverse affect on custom client entries that use a token style update url which does not require a username or password. These urls
+tend to look like this;</p>
+<div class="highlight"><pre class="chroma">https://www.duckdns.org/update?domains=exampledomain&amp;token=a7c4d0ad-114e-40ef-ba1d-d217904a50f2&amp;ip=%IP%</pre></div>
+					
+
+				</article>
+
+        <script data-isso="/isso/" src="/isso/js/embed.min.js"></script>
+
+        <section id="isso-thread"></section>
+
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?> 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Voiceover on Portfolio - Thedro Neely</title>
+    <link>/tags/voiceover/</link>
+    <description>Recent content in Voiceover on Portfolio - Thedro Neely</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
+    <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
+    <copyright>&amp;copy; Thedro Neely</copyright>
+    <lastBuildDate>Mon, 07 May 2018 02:16:58 -0800</lastBuildDate>
+    
+	<atom:link href="/tags/voiceover/rss.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Voiceover Website</title>
+      <link>/project/voiceover-website/</link>
+      <pubDate>Mon, 07 May 2018 02:16:58 -0800</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/project/voiceover-website/</guid>
+      <description>https://www.edwinmattiacci.com
+Voice acting is one of my interests, and I&amp;rsquo;ve made a website to manage just that. There were a few super simple html/css/javascript websites that I created before this one but I consider this my first formal website that actually does something.</description>
+    </item>
+    
+  </channel>
+</rss>
