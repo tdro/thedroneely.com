@@ -36,7 +36,7 @@ class Router
             return $this->routes[$requestType][$uri];
         }
         // throw new Exception('No route defined for this URI: "'.$uri.'"');
-        http_response_code(404);
-        die(require '../app/views/404.view.php');
+
+        die(http_response_code(404));
     }
 }

@@ -3,9 +3,6 @@
 /* composer autoloader */
 require '../vendor/autoload.php';
 
-/* app functions */
-require '../app/Functions.php';
-
 /* source config file */
 $config = include '../AppConfig.php';
 
