@@ -6,13 +6,20 @@
     Profile - Portfolio - Thedro Neely
   </title>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?> 
-  
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php'; ?>
+
+<?php $navigation = new Navigation; ?>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.php'; ?>
 </head>
 
 <body>
 
+
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?>
+
 <section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
 	<div class="container">
 		<div class="columns">
@@ -59,4 +66,6 @@ and general <a href="https://forum.xda-developers.com/member.php?u=6471735">andr
 <section>
 
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?> 
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?>

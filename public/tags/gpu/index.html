@@ -6,13 +6,20 @@
     Gpu - Portfolio - Thedro Neely
   </title>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?> 
-  
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php'; ?>
+
+<?php $navigation = new Navigation; ?>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.php'; ?>
 </head>
 
 <body>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?><section class="section is-fullheight" itemscope itemtype="http://schema.org/AboutPage">
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?>
+<section class="section is-fullheight" itemscope itemtype="http://schema.org/AboutPage">
 	<div class="container">
 		<div class="columns">
 			<div class="column is-8 is-offset-2">
@@ -43,4 +50,6 @@
 </section>
 
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?> 
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?>

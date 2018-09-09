@@ -6,13 +6,20 @@
     SSH Port Fowarding Tunnels - Portfolio - Thedro Neely
   </title>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?> 
-  
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php'; ?>
+
+<?php $navigation = new Navigation; ?>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.php'; ?>
 </head>
 
 <body>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?><section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?>
+<section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
 	<div class="container">
 		<div class="columns">
 			<div class="column is-8 is-offset-2">
@@ -39,6 +46,8 @@ The &ldquo;-N&rdquo; prevents the SSH command from executing on the remote so th
 
 				</article>
 
+        <hr>
+
         <script data-isso="/isso/" src="/isso/js/embed.min.js"></script>
 
         <section id="isso-thread"></section>
@@ -50,4 +59,6 @@ The &ldquo;-N&rdquo; prevents the SSH command from executing on the remote so th
 <section>
 
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?> 
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?>
