@@ -9,7 +9,7 @@
 
     </div>
     <div class="hero-body">
-        <div class="container" style="max-width: 882px">
+        <div class="container">
             <div class="columns">
                 <div class="column is-8 has-text-left">
                     <h1 class="title"><span>Web<span class="has-text-danger"> Developer</span></span></h1>
@@ -72,7 +72,7 @@
                               </a>
                             </li>
                             <li>
-                              <a style="background-color: #fff; color: #999; border: 1px solid #fff">
+                              <a style="background-color: #fff; color: #999; border: 0;">
                                 <span class="is-size-7">Status</span>
                               </a>
                             </li>

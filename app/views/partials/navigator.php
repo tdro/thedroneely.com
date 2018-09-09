@@ -1,7 +1,3 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/model/Navigation.php'; ?>
-
-<?php $navigation = new Navigation(); ?>
-
     <nav class="navbar navbar__custom is-fixed-top" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">

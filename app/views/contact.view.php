@@ -14,19 +14,7 @@
     <div class="hero-body">
         <div class="container">
             <div class="columns">
-
-                <div class="contact-notification notification is-success">
-                  <button class="delete"></button>
-                  <p class="is-size-7">
-                    <strong>Message delivered.</strong>
-                    <br>
-                    Thank you for your message.
-                    <br>
-                    <a href="#">Return to the home page</a>
-                 </p>
-                </div>
-
-                <div class="column is-6 is-offset-3 has-text-centered">
+                <div class="column is-6 is-offset-3 has-text-left">
                     <h1 class="title is-3">Contact</h1>
 
                     <div class="content">

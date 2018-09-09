@@ -2,14 +2,13 @@
 <html class="has-navbar-fixed-top" lang="en-us">
 <head>
 
-    <meta charset="utf-8">
-
-    <title><?php generateTitle(); ?>Portfolio - Thedro Neely</title>
+    <title><?php $navigation->generateTitle(); ?>Portfolio - Thedro Neely</title>
 
     <meta name="description" content="Thedro's Portfolio Website">
     <meta name="keywords" content="Thedro,Neely,Portfolio,Website">
     <meta name="author" content="Thedro Neely">
 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow">
 
