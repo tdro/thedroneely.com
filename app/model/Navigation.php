@@ -28,4 +28,14 @@ class Navigation
             echo str_repeat("\t", 4) . "<a class=\"navbar-item$append\"" . ' href="' . $route['uri'] . '">' . $title . '</a>' . "\n";
         }
     }
+
+    public function generateTitle()
+    {
+        switch ($_SERVER['REQUEST_URI']) {
+        case '/contact/':
+            $uri = $_SERVER['REQUEST_URI'];
+            echo $titleHeader = 'Contact - ';
+            break;
+        }
+    }
 }
