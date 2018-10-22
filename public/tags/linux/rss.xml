@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gpu on Portfolio - Thedro Neely</title>
-    <link>/tags/gpu/</link>
-    <description>Recent content in Gpu on Portfolio - Thedro Neely</description>
+    <title>Linux on Portfolio - Thedro Neely</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in Linux on Portfolio - Thedro Neely</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
@@ -11,7 +11,7 @@
     <copyright>&amp;copy; Thedro Neely</copyright>
     <lastBuildDate>Sun, 11 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/gpu/rss.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/linux/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,6 +21,15 @@
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/headless-gpu-remote-acceleration/</guid>
       <description>Sometimes the solution to some problems are strange. Imagine a headless, remote, linux based desktop setup where users can remote into a graphical environment.</description>
+    </item>
+    
+    <item>
+      <title>SSH Port Fowarding Tunnels</title>
+      <link>/post/ssh-port-forwarding/</link>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/post/ssh-port-forwarding/</guid>
+      <description>The other day I needed to set up a Syncthing instance on a remotely networked server that had no graphical display.</description>
     </item>
     
   </channel>

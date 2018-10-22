@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webdev on Portfolio - Thedro Neely</title>
+    <link>/tags/webdev/</link>
+    <description>Recent content in Webdev on Portfolio - Thedro Neely</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
+    <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
+    <copyright>&amp;copy; Thedro Neely</copyright>
+    <lastBuildDate>Tue, 16 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/webdev/rss.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bulma Resume</title>
+      <link>/project/bulma-resume/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/project/bulma-resume/</guid>
+      <description>Live Website
+When you search for &amp;ldquo;CSS Framework&amp;rdquo; in DuckDuckGo, Bing, or Google, one of the top results happens to be Bulma.</description>
+    </item>
+    
+    <item>
+      <title>My Sublime Text Setup</title>
+      <link>/post/my-sublime-text-setup/</link>
+      <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/post/my-sublime-text-setup/</guid>
+      <description>Intro Sublime Text is a great general purpose performant text editor. It provides a lightweight interface and an excellent plugin packaging system.</description>
+    </item>
+    
+    <item>
+      <title>Mixing PHP into Hugo</title>
+      <link>/post/mixing-php-into-hugo/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/post/mixing-php-into-hugo/</guid>
+      <description>Hugo is nice because of its blog template system, static site generation abilities and generic framework structure, but sometimes you may want to add extra functionality that requires dynamic content.</description>
+    </item>
+    
+  </channel>
+</rss>

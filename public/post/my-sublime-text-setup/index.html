@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en-us">
+<head>
+  <title>
+    My Sublime Text Setup - Portfolio - Thedro Neely
+  </title>
+
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php'; ?>
+
+<?php $navigation = new Navigation; ?>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?>
+</head>
+
+<body>
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?>
+<section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-8 is-offset-2">
+				<article class="content">
+					<h1 class="title is-3c">My Sublime Text Setup</h1>
+					<p class="subtitle is-6 has-text-grey">Posted 
+<time datetime="2018-09-16">16 September 2018</time>; tagged with 
+<a href="/tags/php/">php</a>,
+<a href="/tags/sublime/">sublime</a>,
+<a href="/tags/webdev/">webdev</a>
+</p>
+
+
+<p class="paragraph__serif"><img src="/images/sublime.png" /></p>
+
+<h3 id="intro">Intro</h3>
+
+<p class="paragraph__serif"><a href="https://www.sublimetext.com/">Sublime Text</a> is a great general purpose performant text editor. It provides a lightweight interface and an excellent plugin packaging system.</p>
+
+<p class="paragraph__serif">While I absolutely love <a href="https://www.vim.org/">Vim</a> and <a href="https://www.geany.org/">Geany</a>, Sublime Text serves as a good compromise between flexibility and efficiency, especially when doing web development oriented tasks.</p>
+
+<p class="paragraph__serif">Everyone has their preferred plugin arrangement and I&rsquo;ll show you what my set up looks like. Before I continue, I&rsquo;d like to point out that one of the best resources for mainly PHP oriented tooling is the <a href="https://laracasts.com/series/sublime-text-mastery">Sublime Text Mastery Series</a> by Jeffrey Way.</p>
+
+<h3 id="preferences">Preferences</h3>
+
+<p class="paragraph__serif">Sublime stores its settings in JSON format. You can find my preferred settings right here in <a href="https://github.com/tdro/dotfiles/blob/master/.config/sublime-text-3/Packages/User/Preferences.sublime-settings">my git repository</a>. Since this write up is mainly focused on the plugins that are installed, no further details will be provided about my Sublime preferences.</p>
+
+<h3 id="plugins">Plugins</h3>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/AdvancedNewFile">AdvancedNewFIle</a> &mdash; An improved implementation of the new file function in Sublime. Eliminates some of the quirkiness of the native new file shortcut, providing more control and speed when creating new files.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/AutoSetSyntax">AutoSetSyntax</a> &mdash; This plugin automatically sets the syntax of a file based on the first typed line. This is useful when creating a new file where the language is not known because the file extension has not yet been set.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/BracketHighlighter">BracketHighlighter</a> &mdash; A tag bracket highlighter. No more hunting around to see where a tag ends.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/CSSFormat">CSS Format</a> &mdash; Allows you to reformat CSS on the fly into different forms, i.e compact, expanded, minified, etc. This is my goto plugin when it is necessary to reformat portions of CSS quickly for readability.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/Dayle%20Rees%20Color%20Schemes">Dayle Rees Color Schemes</a> &mdash; A variety of colour schemes by Dayle Rees. This provides a nice assortment of syntax coloring schemes.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/Elm%20Language%20Support">Elm Language Support</a> &mdash; A plugin that provides <a href="https://elm-lang.org/">Elm</a> syntax highlighting.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/Emmet">Emmet</a> &mdash; Good plugin for improving HTML workflow. Provides the use of abbreviations to quickly define multiple tags.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/Hooks">Hooks</a> &mdash; Allows a user to run commands based on event hooks like &lsquo;open new file&rsquo; or &lsquo;save file&rsquo;. I mainly use this to trigger a lazy live browser reload everytime a file is saved. You can view my poor man&rsquo;s browser reload script in <a href="https://github.com/tdro/dotfiles/blob/master/.config/sublime-text-3/Packages/User/Scripts/browser-refresh">my git repository</a>.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/Origami">Origami</a> &mdash; Split a given window into multiple sections. This plugin eliminates the annoyance of having to juggle between two or more files.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/PHP%20Getters%20and%20Setters">PHP Getters and Setters</a> &mdash; This plugin provides a quick way to generate getters and setters for a PHP class.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/PHPUnitKit">PHPUnitKit</a> &mdash; PHP unit testing kit for Sublime Text.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/Predawn">Predawn</a> &mdash; This is one of my favorite themes for Sublime Text.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/Sass">Sass</a> &mdash; SASS and SCSS syntax highlighting.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/ShellCommand">ShellCommand</a> &mdash; Beautiful plugin that allows arbitrary shell commands to be ran from within Sublime Text.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/SublimeLinter">SublimeLinter</a> &mdash; General purpose code linting framework. Good for picking up errors in the syntax of multiple languages based on their documentation.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/SublimeLinter-csslint">SublimeLinter-csslint</a> &mdash; CSS code linter.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/SublimeLinter-phpcs">SublimeLinter-phpcs</a> &mdash; PHP code linter.</p>
+
+<p class="paragraph__serif"><a href="https://packagecontrol.io/packages/Vue%20Syntax%20Highlight">Vue Syntax Highlight</a> &mdash; Vue syntax highlighting.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p class="paragraph__serif">That&rsquo;s it. These are the plugins that I currently use in my web development work flow.</p>
+
+					
+
+          <h3 id="comments">Comments</h3>
+
+				</article>
+
+        <script data-isso="/isso/" src="/isso/js/embed.min.js"></script>
+
+        <section id="isso-thread"></section>
+
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+
+
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?>

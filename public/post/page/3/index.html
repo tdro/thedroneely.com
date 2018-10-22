@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en-us">
+<head>
+  <title>
+    Posts - Portfolio - Thedro Neely
+  </title>
+
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php'; ?>
+
+<?php $navigation = new Navigation; ?>
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?>
+</head>
+
+<body>
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.php'; ?>
+<section class="section is-fullheight" itemscope itemtype="http://schema.org/AboutPage">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-8 is-offset-2">
+				<article class="content">
+				<h1 class="title">Posts</h1>
+				
+				<article>
+    <header class="post-header">
+		<h1 class="title is-4"><a href="/post/ssh-port-forwarding/">SSH Port Fowarding Tunnels</a> </h1>
+		<p class="posts__date subtitle has-text-grey is-6">
+		
+<time datetime="2018-01-08">8 January 2018</time>
+</p>
+    </header>
+	<p>The other day I needed to set up a Syncthing instance on a remotely networked server that had no graphical display.</p>
+  <a href='/post/ssh-port-forwarding/'>Continue reading (300 words)...</a>
+  <footer>
+  </footer>
+</article>
+<hr class="has-background-grey-lighter">
+
+				
+				</article>
+				
+<nav class="pagination" aria-label="pagination">
+	<a href="/post/page/2/" class="pagination-previous" 
+			aria-label="Previous page" >Previous</a>
+	<a href="" class="pagination-next" 
+			aria-label="Next page" disabled aria-hidden="true">Next</a>
+	<ul class="pagination-list">
+			
+			
+		<li><a href="/post/" aria-label="Go to page 1" 
+				class="pagination-link ">1</a></li>
+		
+    
+			
+			
+		<li><a href="/post/page/2/" aria-label="Go to page 2" 
+				class="pagination-link ">2</a></li>
+		
+    
+			
+			
+		<li><a href="/post/page/3/" aria-label="Go to page 3" 
+				class="pagination-link is-current">3</a></li>
+		
+    
+	</ul>
+</nav>
+
+
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+
+
+
+
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/footer.php'; ?>

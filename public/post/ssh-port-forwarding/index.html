@@ -12,7 +12,7 @@
 
 <?php $navigation = new Navigation; ?>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.php'; ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?>
 </head>
 
 <body>
@@ -25,28 +25,28 @@
 			<div class="column is-8 is-offset-2">
 				<article class="content">
 					<h1 class="title is-3c">SSH Port Fowarding Tunnels</h1>
-					<p class="subtitle is-6 has-text-grey">
-					<em>Posted 
+					<p class="subtitle is-6 has-text-grey">Posted 
 <time datetime="2018-01-08">8 January 2018</time>; tagged with 
+<a href="/tags/linux/">linux</a>,
 <a href="/tags/ssh/">ssh</a>
-</em></p>
-<p>The other day I needed to set up a <a href="https://syncthing.net/">Syncthing</a> instance on a remotely networked server that had no graphical display.
+</p>
+<p class="paragraph__serif">The other day I needed to set up a <a href="https://syncthing.net/">Syncthing</a> instance on a remotely networked server that had no graphical display.
 I didn&rsquo;t want to set it up using the command line tools and I definitely did not want to install a graphical environment on the server to access the web GUI.
 We do have another computer with a graphical display on the local network. The only problem is that a standard Syncthing installation
 does not have its port (8384) exposed to the computers within the local network. We would be unable to access the web server.</p>
 
-<p>This means that effectively we would need to expose that port either by configuring Syncthing directly or by opening up the respective port.
+<p class="paragraph__serif">This means that effectively we would need to expose that port either by configuring Syncthing directly or by opening up the respective port.
 That direction is more involved. There is a great solution to this problem and it&rsquo;s call SSH port Forwarding. The solution comes down to this single command;</p>
 <div class="highlight"><pre class="chroma">ssh -v -NL 12345:127.0.0.1:8384 machine.remote</pre></div>
-<p>The above command states that it will forward or bind port 8384 of 127.0.0.1 (Syncthing) from machine.remote to localhost&rsquo;s port 12345 (computer with the graphical display)
+<p class="paragraph__serif">The above command states that it will forward or bind port 8384 of 127.0.0.1 (Syncthing) from machine.remote to localhost&rsquo;s port 12345 (computer with the graphical display)
 such that the user on localhost can access machine.remote&rsquo;s port 8384 as if it was on port 12345.
 The &ldquo;-N&rdquo; prevents the SSH command from executing on the remote so that it is forced to run as a foreground process within the terminal.</p>
 
 					
 
-				</article>
+          <h3 id="comments">Comments</h3>
 
-        <hr>
+				</article>
 
         <script data-isso="/isso/" src="/isso/js/embed.min.js"></script>
 

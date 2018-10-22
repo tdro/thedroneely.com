@@ -12,7 +12,7 @@
 
 <?php $navigation = new Navigation; ?>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.php'; ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?>
 </head>
 
 <body>
@@ -28,38 +28,61 @@
 				
 				<article>
     <header class="post-header">
-		<h1 class="title is-4"><a href="/project/personal-portfolio/">Personal Portfolio</a> </h1>
-		<p class="subtitle has-text-grey-light is-6">
+		<h1 class="title is-4"><a href="/project/bulma-resume/">Bulma Resume</a> </h1>
+		<p class="posts__date subtitle has-text-grey is-6">
 		
-<time datetime="2018-06-01">1 June 2018</time>
+<time datetime="2018-10-16">16 October 2018</time>
 </p>
     </header>
-	https://www.thedroneely.com
-This is the website you&rsquo;re browsing right now. The general structure is based on design patterns from the Laravel PHP framework. <a href='/project/personal-portfolio/'><nobr>Continue reading (200 words)...</nobr></a>
+	<p>Live Website
+When you search for &ldquo;CSS Framework&rdquo; in DuckDuckGo, Bing, or Google, one of the top results happens to be Bulma.</p>
+  <a href='/project/bulma-resume/'>Continue reading (200 words)...</a>
   <footer>
   </footer>
 </article>
-<br>
+<hr class="has-background-grey-lighter">
 
 				
 				<article>
     <header class="post-header">
-		<h1 class="title is-4"><a href="/project/voiceover-website/">Voiceover Website</a> </h1>
-		<p class="subtitle has-text-grey-light is-6">
+		<h1 class="title is-4"><a href="/project/personal-portfolio/">Personal Portfolio</a> </h1>
+		<p class="posts__date subtitle has-text-grey is-6">
 		
-<time datetime="2018-05-07">7 May 2018</time>
+<time datetime="2018-06-01">1 June 2018</time>
 </p>
     </header>
-	https://www.edwinmattiacci.com
-Voice acting is one of my interests, and I&rsquo;ve made a website to manage just that. There were a few super simple html/css/javascript websites that I created before this one but I consider this my first formal website that actually does something. <a href='/project/voiceover-website/'><nobr>Continue reading (300 words)...</nobr></a>
+	<p>Live Website
+This is the website you&rsquo;re browsing right now. The general structure is based on design patterns from the Laravel PHP framework.</p>
+  <a href='/project/personal-portfolio/'>Continue reading (200 words)...</a>
   <footer>
   </footer>
 </article>
-<br>
+<hr class="has-background-grey-lighter">
 
 				
 				</article>
 				
+<nav class="pagination" aria-label="pagination">
+	<a href="" class="pagination-previous" 
+			aria-label="Previous page" disabled aria-hidden="true">Previous</a>
+	<a href="/project/page/2/" class="pagination-next" 
+			aria-label="Next page" >Next</a>
+	<ul class="pagination-list">
+			
+			
+		<li><a href="/project/" aria-label="Go to page 1" 
+				class="pagination-link is-current">1</a></li>
+		
+    
+			
+			
+		<li><a href="/project/page/2/" aria-label="Go to page 2" 
+				class="pagination-link ">2</a></li>
+		
+    
+	</ul>
+</nav>
+
 
 			</div>
 		</div>

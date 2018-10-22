@@ -15,6 +15,25 @@
     
     
     <item>
+      <title>Bulma Resume</title>
+      <link>/project/bulma-resume/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/project/bulma-resume/</guid>
+      <description>Live Website
+When you search for &amp;ldquo;CSS Framework&amp;rdquo; in DuckDuckGo, Bing, or Google, one of the top results happens to be Bulma.</description>
+    </item>
+    
+    <item>
+      <title>My Sublime Text Setup</title>
+      <link>/post/my-sublime-text-setup/</link>
+      <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/post/my-sublime-text-setup/</guid>
+      <description>Intro Sublime Text is a great general purpose performant text editor. It provides a lightweight interface and an excellent plugin packaging system.</description>
+    </item>
+    
+    <item>
       <title>Mixing PHP into Hugo</title>
       <link>/post/mixing-php-into-hugo/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
@@ -38,7 +57,7 @@
       <pubDate>Fri, 01 Jun 2018 00:00:00 -0800</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/project/personal-portfolio/</guid>
-      <description>https://www.thedroneely.com
+      <description>Live Website
 This is the website you&amp;rsquo;re browsing right now. The general structure is based on design patterns from the Laravel PHP framework.</description>
     </item>
     
@@ -48,8 +67,8 @@ This is the website you&amp;rsquo;re browsing right now. The general structure i
       <pubDate>Mon, 07 May 2018 02:16:58 -0800</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/project/voiceover-website/</guid>
-      <description>https://www.edwinmattiacci.com
-Voice acting is one of my interests, and I&amp;rsquo;ve made a website to manage just that. There were a few super simple html/css/javascript websites that I created before this one but I consider this my first formal website that actually does something.</description>
+      <description>Live Website
+Voice acting is one of my interests, and I&amp;rsquo;ve made a website to manage just that. There were a few super simple HTML, CSS, &amp;amp; JavaScript websites that I created before this one but I consider this my first formal website that actually does something.</description>
     </item>
     
     <item>

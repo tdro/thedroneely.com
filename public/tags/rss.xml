@@ -9,10 +9,28 @@
     <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
     <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
     <copyright>&amp;copy; Thedro Neely</copyright>
-    <lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bulma</title>
+      <link>/tags/bulma/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/bulma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Css</title>
+      <link>/tags/css/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/css/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ddns</title>
@@ -24,11 +42,11 @@
     </item>
     
     <item>
-      <title>Gpu</title>
-      <link>/tags/gpu/</link>
-      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <title>Framework</title>
+      <link>/tags/framework/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
-      <guid>/tags/gpu/</guid>
+      <guid>/tags/framework/</guid>
       <description></description>
     </item>
     
@@ -51,6 +69,15 @@
     </item>
     
     <item>
+      <title>Linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pfsense</title>
       <link>/tags/pfsense/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
@@ -62,7 +89,7 @@
     <item>
       <title>Php</title>
       <link>/tags/php/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/tags/php/</guid>
       <description></description>
@@ -96,11 +123,29 @@
     </item>
     
     <item>
+      <title>Sublime</title>
+      <link>/tags/sublime/</link>
+      <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/sublime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Voiceover</title>
       <link>/tags/voiceover/</link>
       <pubDate>Mon, 07 May 2018 02:16:58 -0800</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/tags/voiceover/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Webdev</title>
+      <link>/tags/webdev/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/webdev/</guid>
       <description></description>
     </item>
     

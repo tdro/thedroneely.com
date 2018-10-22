@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/project/bulma-resume/</loc>
+    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/my-sublime-text-setup/</loc>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/mixing-php-into-hugo/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
   </url>
@@ -43,7 +53,19 @@
   </url>
   
   <url>
+    <loc>/tags/bulma/</loc>
+    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/css/</loc>
+    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -54,8 +76,8 @@
   </url>
   
   <url>
-    <loc>/tags/gpu/</loc>
-    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+    <loc>/tags/framework/</loc>
+    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -72,6 +94,12 @@
   </url>
   
   <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/pfsense/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -79,7 +107,7 @@
   
   <url>
     <loc>/tags/php/</loc>
-    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -91,13 +119,13 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/project/</loc>
-    <lastmod>2018-06-01T00:00:00-08:00</lastmod>
+    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -120,14 +148,26 @@
   </url>
   
   <url>
+    <loc>/tags/sublime/</loc>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
-    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/voiceover/</loc>
     <lastmod>2018-05-07T02:16:58-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/webdev/</loc>
+    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
