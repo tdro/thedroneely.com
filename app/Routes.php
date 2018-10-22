@@ -6,6 +6,8 @@ $router->get('', '../app/controllers/index.controller.php');
 
 $router->get('contact', '../app/controllers/contact.controller.php');
 
+$router->get('resume', '../app/controllers/resume.controller.php');
+
 
 $router->head('', '../app/controllers/index.controller.php');
 
