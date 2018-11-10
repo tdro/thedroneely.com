@@ -5,10 +5,10 @@ class Navigation
     public function generateHomeButton()
     {
         if ($_SERVER['REQUEST_URI'] === '/') {
-            echo '<a class="navbar-active navbar-item" href="/">Home</a>';
+            echo '<a class="navbar__active navbar-item navbar__item" href="/">Home</a>';
             return;
         }
-        echo '<a class="navbar-item" href="/">Home</a>';
+        echo '<a class="navbar-item navbar__item" href="/">Home</a>';
     }
 
     public function generateNavBar()
@@ -22,10 +22,14 @@ class Navigation
 
         foreach ($navbar as $title => $route) {
             $append ='';
-            if ($route['uri'] === $_SERVER['REQUEST_URI'] || strpos($_SERVER['REQUEST_URI'], $route['uri']) !== false) {
-                $append = ' navbar-active';
+            if ($route['uri'] === $_SERVER['REQUEST_URI']
+                || strpos($_SERVER['REQUEST_URI'], $route['uri']) !== false
+            ) {
+                $append = 'navbar__active';
             }
-            echo str_repeat("\t", 4) . "<a class=\"navbar-item$append\"" . ' href="' . $route['uri'] . '">' . $title . '</a>' . "\n";
+            echo str_repeat("\t", 4) .
+            "<a class=\"navbar-item navbar__item $append\"" .
+            ' href="' . $route['uri'] . '">' . $title . '</a>' . "\n";
         }
     }
 
