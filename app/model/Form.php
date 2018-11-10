@@ -1,6 +1,5 @@
 <?php
 
-// PHP mailer namespace
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -78,8 +77,8 @@ class Form
             //Send Mail
             $mail->send();
 
-        } catch (Exception $e) {
-            include '../app/views/mail-error.view.php';
+        } catch (Exception $exception) {
+            log_exception($exception);
         }
     }
 }
