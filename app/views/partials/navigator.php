@@ -4,10 +4,14 @@
             <div class="navbar-brand">
 
                 <a href="/" class="has-text-white">
-                    <div class="navbar__mobile navbar__custom has-text-weight-semibold navbar-item">Home</div>
+                    <div class="navbar__mobile navbar__custom navbar-item">Home</div>
                 </a>
 
-                <div id="navBurger" class="navbar-burger burger has-text-white" data-target="navMenu">
+                 <a href="/project" class="has-text-white">
+                    <div class="navbar__mobile navbar__custom navbar-item">Projects</div>
+                </a>
+
+                <div id="navBurger" class="navbar-burger burger has-text-dark" data-target="navMenu">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -22,21 +26,11 @@
                     <?php $navigation->generateNavBar(); ?>
                 </div>
 
-            </div>
+        </div>
 
             <div class="navbar__desktop navbar-menu">
 
-                <!-- <div class="navbar-start">
-
-                    <div class="navbar-item">
-                    <div class="control">
-                      <input class="navbar__search input" type="text">
-                    </div>
-                    </div>
-
-                </div> -->
-
-                <div class="columns is-centered heading is-size-7">
+                <div class="columns is-centered">
 
                     <div class="navbar__left column is-3">
                         <?php $navigation->generatehomeButton(); ?>

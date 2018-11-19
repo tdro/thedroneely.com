@@ -211,7 +211,7 @@
                                 <p class="heading">How long have you been programming?</p>
                                 <p class="is-size-7">
                                     For approximately 3 years. I was recently taught PHP by
-                                    a fellow programmer however web app development is not a recent endeaver.
+                                    a fellow programmer however web app development is not a recent endeavor.
                                     I've made quite a few websites before this, but mostly in private.
                                 </p>
                             </div>
