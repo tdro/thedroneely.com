@@ -24,8 +24,6 @@ if ($validEmail === false ) {
     include '../app/views/mail-error.view.php';
 }
 
-die(var_dump($e));
-
 require '../app/views/mail-sent.view.php';
 
 fastcgi_finish_request();
