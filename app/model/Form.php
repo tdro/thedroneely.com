@@ -40,7 +40,7 @@ class Form
             || (bool) empty($this->email) == true
             || (bool) empty($this->message) == true
         ) {
-            header('Location: /contact');
+            header('Location: /contact/');
             exit;
         }
     }
