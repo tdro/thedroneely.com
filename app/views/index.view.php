@@ -33,9 +33,10 @@
                     <br>
 
                     <p class="has-text-left has-text-black line__height">
-                        My name is Thedro (<span class="has-text-grey">tee-dro</span>) &mdash;
+                        My name is Thedro (<span class="has-text-grey-dark">tee-dro</span>) &mdash;
                         a web developer and self-taught
-                        <a href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a> system administrator.
+                        <a href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a>
+                        system administrator.
                         There are many different tools and programming languages I've come across.
                         Welcome to my corner of the web. Here you'll find things I've
                         worked on as well as other interesting discoveries.
@@ -52,23 +53,21 @@
 
                             <br>
 
-                            <ul>
-                                <li class="link__padding">
-                                    <a href="/post/my-sublime-text-setup/">My Sublime Text Setup</a>
-                                </li>
+                            <a class="underline__hover line__height" href="/post/bitcoin-hacked-email-scam/">Bitcoin Hacked Email Scam</a>
 
-                                <li class="link__padding">
-                                    <a href="/post/mixing-php-into-hugo/">Mixing PHP into Hugo</a>
-                                </li>
+                            <br>
 
-                                <li class="link__padding">
-                                    <a href="/post/now-dns-pfsense/">Now-DNS and pfSense</a>
-                                </li>
+                            <a class="underline__hover line__height" href="/post/my-sublime-text-setup/">My Sublime Text Setup</a>
 
-                                <br>
+                            <br>
 
-                                <li><a class="front__frame" href="post/">More posts <span class="icon">➤</span></a></li>
-                            </ul>
+                            <a class="underline__hover line__height" href="/post/mixing-php-into-hugo/">Mixing PHP into Hugo</a>
+
+                            <br>
+                            <br>
+
+                            <a class="front__frame" href="post/">More posts <span class="icon">➤</span></a>
+
                         </div>
 
                         <div class="column">
@@ -78,23 +77,21 @@
 
                             <br>
 
-                            <ul>
-                                <li class="link__padding">
-                                    <a href="/project/bulma-resume">Bulma Resume</a>
-                                </li>
+                            <a class="underline__hover line__height" href="/project/bulma-resume">Bulma Resume</a>
 
-                                <li class="link__padding">
-                                    <a href="/project/personal-portfolio/">Personal Portfolio</a>
-                                </li>
+                            <br>
 
-                                <li class="link__padding">
-                                    <a href="/project/voiceover-website/">Voiceover Website</a>
-                                </li>
+                            <a class="underline__hover line__height" href="/project/personal-portfolio/">Personal Portfolio</a>
 
-                                <br>
+                            <br>
 
-                                <li><a class="front__frame" href="project/">More projects <span class="icon">➤</span></a></li>
-                            </ul>
+                            <a class="underline__hover line__height" href="/project/voiceover-website/">Voiceover Website</a>
+
+                            <br>
+                            <br>
+
+                            <a class="front__frame" href="project/">More projects <span class="icon">➤</span></a>
+
                         </div>
 
                     </div>
