@@ -24,13 +24,13 @@
 
           <div class="footer__section">
 
-            <p class="has-text-grey-dark has-text-right has-text-centered-mobile is-size-7">
+            <p class="has-text-dark has-text-right has-text-centered-mobile is-size-7">
               Design inspired by
               <a href="https://github.com/solutionroute/hugo-smorg">Smorg</a> &mdash;
-               Built with <a href="https://secure.php.net/">PHP</a> &middot;
-              <a href="https://gohugo.io/">Hugo</a> &middot;
+               Built with <a href="https://secure.php.net/">PHP</a> |
+              <a href="https://gohugo.io/">Hugo</a> |
               <a href="https://posativ.org/isso/">Isso</a> &mdash;
-              See development profile at <a href="https://github.com/tdro">Github</a> &middot;
+              See development profile at <a href="https://github.com/tdro">Github</a> |
               <a href="https://gitlab.com/tdro">Gitlab</a> &mdash;
               Subscribe to <a href="/rss.xml">RSS Feed</a> &mdash;
               Chat at <a href="https://keybase.io/tdro">Keybase</a> &mdash;
@@ -39,7 +39,7 @@
 
             <br>
 
-            <p class="has-text-grey has-text-right has-text-centered-mobile is-size-7">
+            <p class="has-text-grey-dark has-text-right has-text-centered-mobile is-size-7">
               Copyright &copy; Thedro Neely <?php echo date("Y"); ?>. All rights reserved.
             </p>
 
