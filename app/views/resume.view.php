@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 
-    <title>Resume - Portfolio - Thedro Neely</title>
+    <title>Resume - Thedro Neely</title>
 
     <meta name="description" content="Thedro's Web Development Resume">
     <meta name="keywords" content="Thedro,Neely,Portfolio,Website,Resume">
@@ -16,33 +16,8 @@
 
     <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/favicons.php'; ?>
 
-    <style>
-
-        @media screen and (min-width: 769px) {
-            .column__right { max-height: 100vh; overflow: auto; }
-        }
-        .column__background {
-            background-color: #4587c1;
-            background-image: url('/images/shells.jpg');
-            background-position: center;
-            background-size: cover;
-            min-height: 50vh;
-        }
-        .text__frame {
-            border: 1px solid;
-            border-radius: 2px;
-            display: inline-block;
-            padding: 10px;
-            text-shadow: 0 0 0 #fff;
-        }
-        .max__height { min-height: 100vh; }
-        .white__highlight { padding: 10px; text-shadow: 0 0 0 #fff; }
-        .tile__custom { max-width: 243px; }
-        .inline__padding { display: inline-block; margin: 0.5em; }
-
-    </style>
-
     <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/stylesheets.php'; ?>
+
     <link rel="stylesheet" href="/css/bulma-timeline.css">
 
 </head>
@@ -55,7 +30,7 @@
 
         <section class="section has-text-centered">
 
-            <a href="/resume" class="title has-text-weight-light is-size-4 has-text-white inline__padding">Resume</a>
+            <a href="/resume" class="title has-text-weight-light is-size-4 has-text-white inline__padding underline__hover">Resume</a>
 
             <br>
 
@@ -68,17 +43,17 @@
             <br>
 
             <p>
-                <a href="/" class="title has-text-weight-light is-size-7 has-text-white white__highlight">https://www.thedroneely.com</a>
+                <a href="/" class="title has-text-weight-light is-size-7 has-text-white white__highlight underline__hover">https://www.thedroneely.com</a>
             </p>
 
             <br>
 
             <p>
-                <a href="#tools" class="title has-text-weight-light is-size-7 has-text-white white__highlight">#Tools</a>
+                <a href="#tools" class="title has-text-weight-light is-size-7 has-text-white white__highlight underline__hover">#Tools</a>
 
-                <a href="#projects" class="title has-text-weight-light is-size-7 has-text-white white__highlight">#Projects</a>
+                <a href="#projects" class="title has-text-weight-light is-size-7 has-text-white white__highlight underline__hover">#Projects</a>
 
-                <a href="#questions" class="title has-text-weight-light is-size-7 has-text-white white__highlight">#Questions</a>
+                <a href="#questions" class="title has-text-weight-light is-size-7 has-text-white white__highlight underline__hover">#Questions</a>
             </p>
 
         </section>
@@ -205,7 +180,7 @@
                                 <p class="heading">How long have you been programming?</p>
                                 <p class="is-size-7">
                                     For approximately 3 years. I was recently taught PHP by
-                                    a fellow programmer however web app development is not a recent endeavor.
+                                    a fellow programmer however web application development is not a recent endeavor.
                                     I've made quite a few websites before this, but mostly in private.
                                 </p>
                             </div>
@@ -232,27 +207,21 @@
                 <div class="tile is-ancestor">
 
                     <div class="tile is-parent">
-                    <div class="tile tile__custom is-child box has-background-light">
                         <a href="/">
-                          <img width="203" heigth="360" src="/images/thedro.png" alt="thedro">
+                          <img width="203" height="360" src="/images/thedro.png" alt="thedro">
                         </a>
-                    </div>
                     </div>
 
                     <div class="tile is-parent">
-                    <div class="tile tile__custom is-child box has-background-light">
                         <a href="/resume">
-                          <img width="203" heigth="360" src="/images/resume.png" alt="resume">
+                          <img width="203" height="360" src="/images/resume.png" alt="resume">
                         </a>
-                    </div>
                     </div>
 
-                     <div class="tile is-parent">
-                    <div class="tile tile__custom is-child box has-background-light">
+                    <div class="tile is-parent">
                         <a href="https://www.edwinmattiacci.com">
-                          <img width="203" heigth="360" src="/images/edwin.png" alt="edwin">
+                          <img width="203" height="360" src="/images/edwin.png" alt="edwin">
                         </a>
-                    </div>
                     </div>
 
                 </div>
