@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top" lang="en-us">
 <head>
 
-    <title><?php $navigation->generateTitle(); ?>Portfolio - Thedro Neely</title>
+    <title><?php $navigation->generateTitle(); ?>Thedro Neely</title>
 
     <meta name="description" content="Thedro's Portfolio Website">
     <meta name="keywords" content="Thedro,Neely,Portfolio,Website">

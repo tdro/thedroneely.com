@@ -40,6 +40,10 @@ class Navigation
             $uri = $_SERVER['REQUEST_URI'];
             echo $titleHeader = 'Contact - ';
             break;
+        case '/':
+            $uri = $_SERVER['REQUEST_URI'];
+            echo $titleHeader = 'Portfolio - ';
+            break;
         }
     }
 }
