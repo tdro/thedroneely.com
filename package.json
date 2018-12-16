@@ -1,0 +1,30 @@
+{
+  "name": "thedroneely.com",
+  "version": "1.0.0",
+  "description": "Personal Portfolio for Thedro Neely thedroneely.com",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "node_modules/.bin/webpack",
+    "watch": "npm run build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://rp2.local:1302/thedroneely/thedroneely.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "glob-all": "^3.1.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
