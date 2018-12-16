@@ -7,8 +7,12 @@
                     <div class="navbar__mobile navbar__custom navbar-item">Home</div>
                 </a>
 
-                 <a href="/project" class="has-text-white">
+                <a href="/project" class="has-text-white">
                     <div class="navbar__mobile navbar__custom navbar-item">Projects</div>
+                </a>
+
+                <a href="/contact" class="has-text-white">
+                    <div class="navbar__mobile navbar__custom navbar-item">Contact</div>
                 </a>
 
                 <div id="navBurger" class="navbar-burger burger has-text-dark" data-target="navMenu">
@@ -30,7 +34,7 @@
 
             <div class="navbar__desktop navbar-menu">
 
-                <div class="columns is-centered">
+                <div class="columns is-centered has-margin-bottom-none">
 
                     <div class="navbar__left column is-3">
                         <?php $navigation->generatehomeButton(); ?>
@@ -38,6 +42,14 @@
 
                     <div class="navbar__right column is-5">
                         <?php $navigation->generateNavBar(); ?>
+                    </div>
+
+                </div>
+
+                <div class="columns is-centered has-margin-none">
+
+                    <div class="column is-8 has-padding-none">
+                        <hr class="navbar__line has-background-grey-lighter">
                     </div>
 
                 </div>
