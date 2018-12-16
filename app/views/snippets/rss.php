@@ -1,1 +1,1 @@
-<link href="/rss.xml" rel="feed" type="application/rss+xml" title="Thedro Neely"/>
+<link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Thedro Neely"/>
