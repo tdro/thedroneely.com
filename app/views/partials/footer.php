@@ -30,11 +30,12 @@
                Built with <a href="https://secure.php.net/">PHP</a> |
               <a href="https://gohugo.io/">Hugo</a> |
               <a href="https://posativ.org/isso/">Isso</a> &mdash;
-              See development profile at <a href="https://github.com/tdro">Github</a> |
+              See my <a href="https://github.com/tdro">Github</a> |
               <a href="https://gitlab.com/tdro">Gitlab</a> &mdash;
               Subscribe to <a href="/rss.xml">RSS Feed</a> &mdash;
               Chat at <a href="https://keybase.io/tdro">Keybase</a> &mdash;
-              See my <a href="/resume">Resume</a>
+              Now on <a href="https://dev.to/tdro">DEV</a> &mdash;
+              View my <a href="/resume">Resume</a>
             </p>
 
             <br>
@@ -55,86 +56,10 @@
 
 </section>
 
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "/"
-  },
-  "name": "Thedro Neely: Portfolio",
-   "description": "Thedro's Personal Website",
-  "author": {
-    "@type": "Person",
-     "name": "Thedro Neely"
-  },
-  "publisher": {
-     "name": "Thedro Neely",
-     "type": "Person"
-
-  }
-}
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  if ($navbarBurgers.length > 0) {
-    $navbarBurgers.forEach(function ($el) {
-      $el.addEventListener('click', function () {
-        var target = $el.dataset.target;
-        var $target = document.getElementById(target);
-        $el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-      });
-    });
-  }
-});
-</script>
-
-<script>
-var activeBurger = document.getElementById('navBurger');
-var activeMenu = document.getElementById('navMenu');
-document.addEventListener('click', function(event) {
-  var burgerClick= activeBurger.contains(event.target);
-  if (!burgerClick && activeBurger.classList.contains('is-active')) {
-    activeBurger.className = "navbar-burger burger has-text-dark";
-    activeMenu.className = "navbar__mobile navbar-menu";
-  }
-});
-</script>
-
-<script>
-var pastPosition = window.pageYOffset;
-var navbarHeight = document.getElementById("navbar").offsetHeight;
-window.onscroll = function() {
-  var currentPosition = window.pageYOffset;
-    if (pastPosition > currentPosition) {
-      document.getElementById("navbar").style.top = "0";
-    } else if (currentPosition > navbarHeight) {
-      document.getElementById("navbar").style.top = "-4.2em";
-    }
-    if (activeBurger.classList.contains('is-active')) {
-      activeBurger.className = "navbar-burger burger has-text-dark";
-      activeMenu.className = "navbar__mobile navbar-menu";
-    }
-    pastPosition = currentPosition;
-  };
-</script>
+<script src="/dist/app.js"></script>
 
 <?php if (trim($_SERVER['REQUEST_URI'], '/') == 'contact') { ?>
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-<script>
-    new Vue({
-        el: '#contact-vue',
-        data: { name: '', email: '', message: '' }
-    });
-</script>
+<script src="/js/VueDevelopment.js"></script>
 
 <?php } ?>
-
-  </body>
-</html>

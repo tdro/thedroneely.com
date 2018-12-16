@@ -2,7 +2,7 @@
 
     <body>
 
-    <section class="section is-fullheight" itemscope itemtype="http://schema.org/WebPage">
+    <section class="section" itemscope itemtype="http://schema.org/WebPage">
 
     <div class="hero-head">
 
@@ -84,3 +84,6 @@
     </div>
 
 <?php require __DIR__ . '/partials/footer.php'; ?>
+
+  </body>
+</html>

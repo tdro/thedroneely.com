@@ -46,52 +46,48 @@
 
                     <div class="columns">
 
-                        <div class="column">
-                            <h3 class="has-text-dark is-marginless is-size-5">
-                                Recent Posts
-                            </h3>
+                        <div class="column has-text-centered">
+                            <div class="front__textbox has-text-left-desktop is-inline-block">
 
-                            <br>
+                                <h3 class="has-text-dark is-marginless is-size-5">
+                                    Recent Posts
+                                </h3>
 
-                            <a class="underline__hover line__height" href="/post/bitcoin-hacked-email-scam/">Bitcoin Hacked Email Scam</a>
+                                <?php
+                                $recent_posts = file($_SERVER['DOCUMENT_ROOT'] . '/post/index.html');
+                                foreach (range(count($recent_posts) - 32,  count($recent_posts) - 24) as $line) {
+                                    echo $recent_posts[$line];
+                                }
+                                ?>
 
-                            <br>
+                                <br>
+                                <br>
 
-                            <a class="underline__hover line__height" href="/post/my-sublime-text-setup/">My Sublime Text Setup</a>
+                                <a class="front__frame" href="post/">More posts <span class="icon">➤</span></a>
 
-                            <br>
-
-                            <a class="underline__hover line__height" href="/post/mixing-php-into-hugo/">Mixing PHP into Hugo</a>
-
-                            <br>
-                            <br>
-
-                            <a class="front__frame" href="post/">More posts <span class="icon">➤</span></a>
-
+                            </div>
                         </div>
 
-                        <div class="column">
-                            <h3 class="has-text-dark is-marginless is-size-5">
-                                Recent Projects
-                            </h3>
+                        <div class="column has-text-centered">
+                            <div class="front__textbox has-text-left-desktop is-inline-block">
 
-                            <br>
+                                <h3 class="has-text-dark is-marginless is-size-5">
+                                    Recent Projects
+                                </h3>
 
-                            <a class="underline__hover line__height" href="/project/bulma-resume">Bulma Resume</a>
+                                <?php
+                                $recent_projects = file($_SERVER['DOCUMENT_ROOT'] . '/post/index.html');
+                                foreach (range(count($recent_projects) - 15,  count($recent_projects) - 7) as $line) {
+                                    echo $recent_projects[$line];
+                                }
+                                ?>
 
-                            <br>
+                                <br>
+                                <br>
 
-                            <a class="underline__hover line__height" href="/project/personal-portfolio/">Personal Portfolio</a>
+                                <a class="front__frame" href="project/">More projects <span class="icon">➤</span></a>
 
-                            <br>
-
-                            <a class="underline__hover line__height" href="/project/voiceover-website/">Voiceover Website</a>
-
-                            <br>
-                            <br>
-
-                            <a class="front__frame" href="project/">More projects <span class="icon">➤</span></a>
-
+                            </div>
                         </div>
 
                     </div>
@@ -99,7 +95,12 @@
             </div>
         </div>
     </div>
-</section>
+
+    </section>
+
 <section>
 
 <?php require __DIR__ . '/partials/footer.php'; ?>
+
+  </body>
+</html>
