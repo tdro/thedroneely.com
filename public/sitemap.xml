@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/website-auditing-tools/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/bitcoin-hacked-email-scam/</loc>
     <lastmod>2018-11-19T00:00:00+00:00</lastmod>
   </url>
@@ -53,8 +58,9 @@
   </url>
   
   <url>
-    <loc>/rss.xml</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+    <loc>/tags/auditing/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -124,7 +130,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-11-19T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -166,7 +172,19 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/rss.xml</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tools/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -178,7 +196,7 @@
   
   <url>
     <loc>/tags/webdev/</loc>
-    <lastmod>2018-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

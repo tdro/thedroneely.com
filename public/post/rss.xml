@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Portfolio - Thedro Neely</title>
+    <title>Posts on Thedro Neely</title>
     <link>/post/</link>
-    <description>Recent content in Posts on Portfolio - Thedro Neely</description>
+    <description>Recent content in Posts on Thedro Neely</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
     <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
-    <copyright>&amp;copy; Thedro Neely</copyright>
-    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <copyright>Thedro Neely</copyright>
+    <lastBuildDate>Sat, 15 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Website Auditing Tools</title>
+      <link>/post/website-auditing-tools/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/post/website-auditing-tools/</guid>
+      <description>Recently Google introduced a new auditing tool that scans your website and gives it a ranking score out of 100.</description>
+    </item>
     
     <item>
       <title>Bitcoin Hacked Email Scam</title>
@@ -29,7 +38,7 @@
       <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/my-sublime-text-setup/</guid>
-      <description>Intro Sublime Text is a great general purpose performant text editor. It provides a lightweight interface and an excellent plugin packaging system.</description>
+      <description>Sublime Text is a great general purpose performant text editor. It provides a lightweight interface and an excellent plugin packaging system.</description>
     </item>
     
     <item>

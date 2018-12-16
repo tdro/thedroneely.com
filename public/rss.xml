@@ -1,18 +1,121 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Thedro on Portfolio - Thedro Neely</title>
+    <title>Thedro Neely</title>
     <link>/rss.xml</link>
-    <description>Recent content in Thedro on Portfolio - Thedro Neely</description>
+    <description>Recent content on Thedro Neely</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
     <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
-    <copyright>&amp;copy; Thedro Neely</copyright>
-    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <copyright>Thedro Neely</copyright>
+    <lastBuildDate>Sat, 15 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Website Auditing Tools</title>
+      <link>/post/website-auditing-tools/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/post/website-auditing-tools/</guid>
+      <description>
+
+
+&lt;br&gt;
+
+
+&lt;p&gt;&lt;img src=&#34;/images/website-auditing-tools.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently Google introduced a &lt;a href=&#34;https://web.dev/&#34;&gt;new auditing tool&lt;/a&gt; that scans your website and gives it a ranking score out of 100.&lt;/p&gt;
+
+&lt;p&gt;Upon closer inspection, it looks like another front end to their Lighthouse tool. While very informative,
+Lighthouse gives you but a glimpse into the possible issues your website might have.&lt;/p&gt;
+
+&lt;p&gt;Advanced website auditing can be extensive or may even incur costs but generally you can get a good idea of whether you&amp;rsquo;re
+up to date on certain standards by using a myriad of free online tools.&lt;/p&gt;
+
+&lt;p&gt;All websites have real world constraints that may inhibit their ability to meet certain standards but it doesn&amp;rsquo;t hurt to see
+if anything can be improved immediately.&lt;/p&gt;
+
+&lt;h2 id=&#34;comprehensive-tests&#34;&gt;Comprehensive Tests&lt;/h2&gt;
+
+&lt;p&gt;A comprehensive test will try to audit as much of a website as possible, providing both succinct and focused analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.dareboost.com/en&#34;&gt;https://www.dareboost.com/en&lt;/a&gt; — My preferred starting point. This tool will give you a gloriously detailed analysis,
+even going so far as to pull suspect snippets of code from your website and recommend possible solutions. Highly recommended.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://observatory.mozilla.org&#34;&gt;https://observatory.mozilla.org&lt;/a&gt; — A very comprehensive and detailed tool. Mozilla&amp;rsquo;s Observatory will analyze SSL, SSH,
+content security policy, raw headers, and anything important you can think of to test.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://varvy.com/pagespeed/&#34;&gt;https://varvy.com/pagespeed/&lt;/a&gt; — Popularly known for its &lt;a href=&#34;https://varvy.com/pagespeed/wicked-fast.html&#34;&gt;wickedly fast webpage&lt;/a&gt;, this
+auditing tool gives a detailed overview of the different elements affecting the speed of your website. It recommends a lot
+of &amp;ldquo;progressive&amp;rdquo; techniques.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://webhint.io/scanner/&#34;&gt;https://webhint.io/scanner/&lt;/a&gt; — This is another in depth web scanner. The analysis is detailed and just like Dareboost, it presents
+suspect code snippets from your website and gives recommendations.&lt;/p&gt;
+
+&lt;h2 id=&#34;speed-tests&#34;&gt;Speed Tests&lt;/h2&gt;
+
+&lt;p&gt;While a web browser might be the best speed testing tool since it&amp;rsquo;s trivial to emulate different connection speeds — real world
+tests are great too.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gtmetrix.com/&#34;&gt;https://gtmetrix.com/&lt;/a&gt; — My preferred speed testing tool. It gives Pagespeed and YSlow analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tools.pingdom.com/&#34;&gt;https://tools.pingdom.com/&lt;/a&gt; — If you need an alternative analysis, Pingdom also provides a nice tool for conducting speed tests.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://web.dev/&#34;&gt;https://web.dev/&lt;/a&gt; or &lt;a href=&#34;https://developers.google.com/web/tools/lighthouse/run&#34;&gt;https://developers.google.com/web/tools/lighthouse/run&lt;/a&gt;
+or &lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights/&#34;&gt;https://developers.google.com/speed/pagespeed/insights/&lt;/a&gt; — Google has so many iteration of products that all seem to do the same
+thing, but if you&amp;rsquo;re looking for a quick and dirty speed analysis, these tools are also great.&lt;/p&gt;
+
+&lt;h2 id=&#34;content-security-policy&#34;&gt;Content Security Policy&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://securityheaders.com/&#34;&gt;https://securityheaders.com/&lt;/a&gt; — General content security policy checker.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://csp-evaluator.withgoogle.com/&#34;&gt;https://csp-evaluator.withgoogle.com/&lt;/a&gt; — Excellent tool for debugging your content security policy rules. Highly recommended.&lt;/p&gt;
+
+&lt;h2 id=&#34;ssl-checks&#34;&gt;SSL Checks&lt;/h2&gt;
+
+&lt;p&gt;SSL (Secure Sockets Layer) is now the de facto standard, especially since search engines may alter a site&amp;rsquo;s ranking based on its security. SSL isn&amp;rsquo;t
+needed in all cases, but when in doubt it&amp;rsquo;s just better to have this security feature enabled.
+Activating SSL is just the first step.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sslping.com/&#34;&gt;https://sslping.com/&lt;/a&gt; — Very quick SSL check. Covers the basics.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.jitbit.com/sslcheck/&#34;&gt;https://www.jitbit.com/sslcheck/&lt;/a&gt; — An SSL crawler. This tool will check to see if any content throughout all searchable parts of the
+website are over plain HTTP.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sslanalyzer.comodoca.com/&#34;&gt;https://sslanalyzer.comodoca.com/&lt;/a&gt; — Comodo&amp;rsquo;s SSL analysis for those who want more of a proprietary analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ssllabs.com/ssltest/&#34;&gt;https://www.ssllabs.com/ssltest/&lt;/a&gt; — SSL Labs is pretty well known. This tool provides a very comprehensive and in depth SSL Analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.htbridge.com/ssl/&#34;&gt;https://www.htbridge.com/ssl/&lt;/a&gt; — High-Tech Bridge&amp;rsquo;s SSL analysis. This is also another very in depth SSL checker. Most of the
+stuff here honestly goes over my head. It even checks for PCI DSS, HIPAA and NIST compliance.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tls.imirhil.fr/&#34;&gt;https://tls.imirhil.fr/&lt;/a&gt; — SSL cipher suite analysis.&lt;/p&gt;
+
+&lt;h2 id=&#34;search-engine-optimization&#34;&gt;Search Engine Optimization&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m not much of an SEO believer, but there are tools that can give you a glimpse into the world of SEO (Search Engine Optimization).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://seositecheckup.com/&#34;&gt;http://seositecheckup.com/&lt;/a&gt; — General SEO checks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.seowebpageanalyzer.com/&#34;&gt;http://www.seowebpageanalyzer.com/&lt;/a&gt; — Keyword and page content analysis.&lt;/p&gt;
+
+&lt;h2 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://realfavicongenerator.net/favicon_checker&#34;&gt;https://realfavicongenerator.net/favicon_checker&lt;/a&gt; — The website icon displayed in your browser tab is important too. This tool will
+not only check to see if your favicons are set, but will also check all other favicons for operating system platforms including
+Windows, Android, and Mac OS.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.favicomatic.com/favicon-test&#34;&gt;http://www.favicomatic.com/favicon-test&lt;/a&gt; — If you&amp;rsquo;re looking for an even more detailed favicon analysis. This tool will bring
+you full circle by checking against most if not all of the favicon formats available.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gdprchecklist.io/&#34;&gt;https://gdprchecklist.io/&lt;/a&gt; — For GDPR Compliance (General Data Protection Regulation).&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Bitcoin Hacked Email Scam</title>
@@ -20,7 +123,41 @@
       <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/bitcoin-hacked-email-scam/</guid>
-      <description>This showed up in my inbox today. Scammers are apparently upping their game, but not by a lot. This one was rather clever though.</description>
+      <description>
+&lt;br&gt;
+
+
+
+&lt;p class=&#34;has-text-centered&#34;&gt;
+  &lt;a href=&#34;/images/bitcoin-hacked-email-scam.png&#34;&gt;
+    &lt;img src=&#34;/images/bitcoin-hacked-email-scam.png&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+
+
+&lt;p&gt;This showed up in my inbox today. Scammers are apparently upping their game, but not by a lot. This one was rather clever though. The sender tries to convince me that my gmail account was hacked and attempts to extort me into paying &lt;a href=&#34;https://en.wikipedia.org/wiki/Bitcoin&#34;&gt;Bitcoin&lt;/a&gt; to the above highlighted address.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hello! I have bad news for you. 13/07/2018 - on this day I hacked your operating system and got full access to your account [email]
+On that day your account [email] password was: [password]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What makes the scam slightly convincing is that the password stated in the email is a legitimate password. In my case, this is a password from a very long time ago. Not only that, but the message appears to be sent from my own email address. Even the email headers look legit, but the message is sent from a spoofed address.&lt;/p&gt;
+
+
+&lt;p class=&#34;has-text-centered&#34;&gt;
+  &lt;a href=&#34;/images/dropbox-bitly-lastfm-breach.png&#34;&gt;
+    &lt;img src=&#34;/images/dropbox-bitly-lastfm-breach.png&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+
+
+&lt;p&gt;How&amp;rsquo;d they get the password? That&amp;rsquo;s an easy answer. My email has been exposed in at least &lt;em&gt;five&lt;/em&gt; different &lt;a href=&#34;https://haveibeenpwned.com/&#34;&gt;security breaches&lt;/a&gt; &amp;mdash; chief among them; Dropbox, Bit.ly, and Last.fm. Anyone that has access to those pawned files can troll for real passwords, emails, and other info to construct an elaborate scheme such as this one.&lt;/p&gt;
+
+&lt;p&gt;The Bitcoin address in question has already been &lt;a href=&#34;https://www.bitcoinabuse.com/reports/1LuiqwsE5HF9T2mkS8EN3TLkJRFdbzrR8k&#34;&gt;reported multiple times&lt;/a&gt; and it&amp;rsquo;s evident that many different variations of this scam have been sent to numerous people.&lt;/p&gt;
+
+&lt;p&gt;This is however, a good reminder to not use the same password on multiple sites and to change passwords often.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -29,8 +166,26 @@
       <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/project/bulma-resume/</guid>
-      <description>Live Website
-When you search for &amp;ldquo;CSS Framework&amp;rdquo; in DuckDuckGo, Bing, or Google, one of the top results happens to be Bulma.</description>
+      <description>
+&lt;br&gt;
+
+
+
+&lt;p class=&#34;has-text-centered&#34;&gt;
+  &lt;a href=&#34;/images/resume-large.png&#34;&gt;
+    &lt;img src=&#34;/images/resume-large.png&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;https://www.thedroneely.com/resume&#34;&gt;Live Website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When you search for &amp;ldquo;CSS Framework&amp;rdquo; in DuckDuckGo, Bing, or Google, one of the top results happens to be &lt;a href=&#34;https://bulma.io/&#34;&gt;Bulma&lt;/a&gt;. This framework appears to be everyone&amp;rsquo;s new toy. I&amp;rsquo;ve been dabbling deeply with the Bulma CSS Framework on a current e-commerce project and it has been a pleasure to work with so far. This comes from someone who ends up breaking frameworks every so often.&lt;/p&gt;
+
+&lt;p&gt;Invariably, this is less of a project and more of a quick demonstration of modern resume design using Bulma. Something like this could take a bit of time to get right from scratch, but Bulma&amp;rsquo;s Flexbox based design makes it almost effortless.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s a simple web-page but the possibilities are endless. We can add some overlays, sprinkle in a bit of JavaScript or divvy up additional information into active tabs. In addition to Bulma, I&amp;rsquo;ve heard good things about &lt;a href=&#34;https://tachyons.io/&#34;&gt;Tachyons&lt;/a&gt; and &lt;a href=&#34;https://tailwindcss.com/&#34;&gt;Tailwind CSS&lt;/a&gt;, which are also excellent lightweight alternatives to &lt;a href=&#34;https://getbootstrap.com/&#34;&gt;Bootstrap&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -39,7 +194,72 @@ When you search for &amp;ldquo;CSS Framework&amp;rdquo; in DuckDuckGo, Bing, or 
       <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/my-sublime-text-setup/</guid>
-      <description>Intro Sublime Text is a great general purpose performant text editor. It provides a lightweight interface and an excellent plugin packaging system.</description>
+      <description>
+
+
+&lt;br&gt;
+
+
+
+&lt;p class=&#34;has-text-centered&#34;&gt;
+  &lt;a href=&#34;/images/sublime.png&#34;&gt;
+    &lt;img src=&#34;/images/sublime.png&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;https://www.sublimetext.com/&#34;&gt;Sublime Text&lt;/a&gt; is a great general purpose performant text editor. It provides a lightweight interface and an excellent plugin packaging system.&lt;/p&gt;
+
+&lt;p&gt;While I absolutely love &lt;a href=&#34;https://www.vim.org/&#34;&gt;Vim&lt;/a&gt; and &lt;a href=&#34;https://www.geany.org/&#34;&gt;Geany&lt;/a&gt;, Sublime Text serves as a good compromise between flexibility and efficiency, especially when doing web development oriented tasks.&lt;/p&gt;
+
+&lt;p&gt;Everyone has their preferred plugin arrangement and I&amp;rsquo;ll show you what my set up looks like. Before I continue, I&amp;rsquo;d like to point out that one of the best resources for mainly PHP oriented tooling is the &lt;a href=&#34;https://laracasts.com/series/sublime-text-mastery&#34;&gt;Sublime Text Mastery Series&lt;/a&gt; by Jeffrey Way.&lt;/p&gt;
+
+&lt;h3 id=&#34;preferences&#34;&gt;Preferences&lt;/h3&gt;
+
+&lt;p&gt;Sublime stores its settings in JSON format. You can find my preferred settings right here in &lt;a href=&#34;https://github.com/tdro/dotfiles/blob/master/.config/sublime-text-3/Packages/User/Preferences.sublime-settings&#34;&gt;my git repository&lt;/a&gt;. Since this write up is mainly focused on the plugins that are installed, no further details will be provided about my Sublime preferences.&lt;/p&gt;
+
+&lt;h3 id=&#34;plugins&#34;&gt;Plugins&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/AdvancedNewFile&#34;&gt;Advanced New File&lt;/a&gt; &amp;mdash; An improved implementation of the new file function in Sublime. Eliminates some of the quirkiness of the native new file shortcut, providing more control and speed when creating new files.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/AutoSetSyntax&#34;&gt;Auto Set Syntax&lt;/a&gt; &amp;mdash; This plugin automatically sets the syntax of a file based on the first typed line. This is useful when creating a new file where the language is not known because the file extension has not yet been set.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/BracketHighlighter&#34;&gt;Bracket Highlighter&lt;/a&gt; &amp;mdash; A tag bracket highlighter. No more hunting around to see where a tag ends.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/CSSFormat&#34;&gt;CSS Format&lt;/a&gt; &amp;mdash; Allows you to reformat CSS on the fly into different forms, i.e compact, expanded, minified, etc. This is my goto plugin when it is necessary to reformat portions of CSS quickly for readability.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Dayle%20Rees%20Color%20Schemes&#34;&gt;Dayle Rees Color Schemes&lt;/a&gt; &amp;mdash; A variety of colour schemes by Dayle Rees. This provides a nice assortment of syntax coloring schemes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Elm%20Language%20Support&#34;&gt;Elm Language Support&lt;/a&gt; &amp;mdash; A plugin that provides &lt;a href=&#34;https://elm-lang.org/&#34;&gt;Elm&lt;/a&gt; syntax highlighting.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Emmet&#34;&gt;Emmet&lt;/a&gt; &amp;mdash; Good plugin for improving HTML workflow. Provides the use of abbreviations to quickly define multiple tags.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Hooks&#34;&gt;Hooks&lt;/a&gt; &amp;mdash; Allows a user to run commands based on event hooks like &amp;lsquo;open new file&amp;rsquo; or &amp;lsquo;save file&amp;rsquo;. I mainly use this to trigger a lazy live browser reload everytime a file is saved. You can view my poor man&amp;rsquo;s browser reload script in &lt;a href=&#34;https://github.com/tdro/dotfiles/blob/master/.config/sublime-text-3/Packages/User/Scripts/browser-refresh&#34;&gt;my git repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Origami&#34;&gt;Origami&lt;/a&gt; &amp;mdash; Split a given window into multiple sections. This plugin eliminates the annoyance of having to juggle between two or more files.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/PHP%20Getters%20and%20Setters&#34;&gt;PHP Getters and Setters&lt;/a&gt; &amp;mdash; This plugin provides a quick way to generate getters and setters for a PHP class.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/PHPUnitKit&#34;&gt;PHP Unit Kit&lt;/a&gt; &amp;mdash; PHP unit testing kit for Sublime Text.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Predawn&#34;&gt;Predawn&lt;/a&gt; &amp;mdash; This is one of my favorite themes for Sublime Text.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Sass&#34;&gt;Sass&lt;/a&gt; &amp;mdash; SASS and SCSS syntax highlighting.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/ShellCommand&#34;&gt;Shell Command&lt;/a&gt; &amp;mdash; Beautiful plugin that allows arbitrary shell commands to be ran from within Sublime Text.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/SublimeLinter&#34;&gt;Sublime Linter&lt;/a&gt; &amp;mdash; General purpose code linting framework. Good for picking up errors in the syntax of multiple languages based on their documentation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/SublimeLinter-csslint&#34;&gt;Sublime Linter-csslint&lt;/a&gt; &amp;mdash; CSS code linter.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/SublimeLinter-phpcs&#34;&gt;Sublime Linter-phpcs&lt;/a&gt; &amp;mdash; PHP code linter.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://packagecontrol.io/packages/Vue%20Syntax%20Highlight&#34;&gt;Vue Syntax Highlight&lt;/a&gt; &amp;mdash; Vue syntax highlighting.&lt;/p&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;That&amp;rsquo;s it. These are the plugins that I currently use in my web development work flow.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -48,7 +268,26 @@ When you search for &amp;ldquo;CSS Framework&amp;rdquo; in DuckDuckGo, Bing, or 
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/mixing-php-into-hugo/</guid>
-      <description>Hugo is nice because of its blog template system, static site generation abilities and generic framework structure, but sometimes you may want to add extra functionality that requires dynamic content.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; is nice because of its blog template system, static site generation abilities and generic framework structure,
+but sometimes you may want to add extra functionality that requires dynamic content.
+If you are also combining static elements with dynamic functions you may want
+to &lt;a href=&#34;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&#34;&gt;DRY&lt;/a&gt; your views to make
+everything consistent. It could be that you only want the blog of your website to be static and everything
+else to operate dynamically.&lt;/p&gt;
+
+&lt;p&gt;We can generate files ending in &lt;code&gt;.php&lt;/code&gt; using the &lt;a href=&#34;https://gohugo.io/templates/output-formats/#media-types&#34;&gt;media types&lt;/a&gt;
+option in Hugo, however because the template is in the &lt;code&gt;layouts/_default&lt;/code&gt; directory, we can simply inject
+something like this directly within the &lt;code&gt;.html&lt;/code&gt; files;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;{{ safeHTML &amp;#34;&amp;lt;?php require $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;] . &amp;#39;/..&amp;#39; . &amp;#39;/views/partials/navigator.php&amp;#39;; ?&amp;gt;&amp;#34; }}&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This tells Hugo when compiling to insert the above PHP code as &lt;a href=&#34;https://gohugo.io/functions/safehtml/&#34;&gt;safe HTML&lt;/a&gt; into the
+statically generated files.
+If your web server is set up to parse &lt;code&gt;.html&lt;/code&gt; files as PHP then you are good to go.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Edit&lt;/em&gt;: If you are interested in a step by step guide on producing &lt;code&gt;.php&lt;/code&gt; pages with Hugo,
+&lt;a href=&#34;https://webcache.googleusercontent.com/search?q=cache:C8Mj3FHf8uUJ:https://2cg.me/cooking-with-hugo/a-dash-of-php/&#34;&gt;look here&lt;/a&gt;.
+Note that since Hugo version &lt;a href=&#34;https://gohugo.io/news/0.44-relnotes/&#34;&gt;0.44&lt;/a&gt; the &lt;code&gt;MediaType.Suffix&lt;/code&gt; is deprecated and replaced with a plural
+version, &lt;code&gt;MediaType.Suffixes&lt;/code&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -57,7 +296,27 @@ When you search for &amp;ldquo;CSS Framework&amp;rdquo; in DuckDuckGo, Bing, or 
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/now-dns-pfsense/</guid>
-      <description>The alternative to a static IP address is a server that keeps track of your dynamic IP address. When the IP address changes, the client will immediately notify the server of the new IP address.</description>
+      <description>&lt;p&gt;The alternative to a static IP address is a server that keeps track of your dynamic IP address. When the
+IP address changes, the client will immediately notify the server of the new IP address. This is known as
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Dynamic_DNS&#34;&gt;Dynamic DNS&lt;/a&gt;. One of the
+free DDNS services that I use is &lt;a href=&#34;https://now-dns.com&#34;&gt;Now-DNS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve noticed on &lt;a href=&#34;https://www.pfsense.org&#34;&gt;pfSense&lt;/a&gt; version &lt;code&gt;2.3.5-RELEASE-p2&lt;/code&gt; that custom client update
+entries will not work when the update url for &lt;code&gt;curl&lt;/code&gt; looks something like this;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;curl -u &amp;lt;email&amp;gt;:&amp;lt;password&amp;gt; &amp;#34;https://now-dns.com/update?hostname=&amp;lt;hostname&amp;gt;&amp;#34;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It appears that the authentication fails when executing the client update. To fix this issue, remove the curl HTTP authentication option
+by commenting out the line below in the file &lt;code&gt;/etc/inc/dyndns.class&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;if ($this-&amp;gt;_curlSslVerifypeer) {
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, TRUE);
+  } else {
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+  }
+    #curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+    curl_setopt($ch, CURLOPT_USERPWD, &amp;#34;{$this-&amp;gt;_dnsUser}:{$this-&amp;gt;_dnsPass}&amp;#34;);
+}&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This does not have an adverse affect on custom client entries that use a token style update url which does not require a username or password. These urls
+tend to look like this;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;https://www.duckdns.org/update?domains=exampledomain&amp;amp;token=a7c4d0ad-114e-40ef-ba1d-d217904a50f2&amp;amp;ip=%IP%&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -66,8 +325,18 @@ When you search for &amp;ldquo;CSS Framework&amp;rdquo; in DuckDuckGo, Bing, or 
       <pubDate>Fri, 01 Jun 2018 00:00:00 -0800</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/project/personal-portfolio/</guid>
-      <description>Live Website
-This is the website you&amp;rsquo;re browsing right now. The general structure is based on design patterns from the Laravel PHP framework.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.thedroneely.com&#34;&gt;Live Website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the website you&amp;rsquo;re browsing right now. The general structure is based on design patterns from the &lt;a href=&#34;https://laravel.com&#34;&gt;Laravel&lt;/a&gt;
+PHP framework. The comments are handled by &lt;a href=&#34;https://posativ.org/isso&#34;&gt;Isso&lt;/a&gt; which is a backend commenting server written in Python.
+The static parts of this website are compiled by &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, while
+the &lt;a href=&#34;https://secure.php.net&#34;&gt;PHP&lt;/a&gt; front controller handles the rest.&lt;/p&gt;
+
+&lt;p&gt;The backend traffic dashboard is integrated into the website using
+&lt;a href=&#34;https://goaccess.io&#34;&gt;GoAccess&lt;/a&gt; which is a traffic monitor that reads the access logs of &lt;a href=&#34;https://www.nginx.com&#34;&gt;Nginx&lt;/a&gt; directly.
+Nothing much else to it. This website is meant to be small, lean, and compact
+since it runs on a tiny &lt;a href=&#34;https://www.raspberrypi.org&#34;&gt;Raspberry Pi&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -76,8 +345,23 @@ This is the website you&amp;rsquo;re browsing right now. The general structure i
       <pubDate>Mon, 07 May 2018 02:16:58 -0800</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/project/voiceover-website/</guid>
-      <description>Live Website
-Voice acting is one of my interests, and I&amp;rsquo;ve made a website to manage just that. There were a few super simple HTML, CSS, &amp;amp; JavaScript websites that I created before this one but I consider this my first formal website that actually does something.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.edwinmattiacci.com&#34;&gt;Live Website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Voice acting is one of my interests, and I&amp;rsquo;ve made a website to manage just that. There were a few super simple HTML, CSS, &amp;amp; JavaScript websites that I created before this one but I consider this my first formal website that actually does something.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s made using a combination of &lt;a href=&#34;https://secure.php.net&#34;&gt;PHP&lt;/a&gt; for dynamic content and &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; for static content &amp;ndash; a &lt;a href=&#34;https://www.mysql.com&#34;&gt;MySQL&lt;/a&gt; database for the backend, and &lt;a href=&#34;https://www.nginx.com&#34;&gt;Nginx&lt;/a&gt; as the web server. Everything sits behind a front controller and the project structure is based on a very barebones implementation of the &lt;a href=&#34;https://laravel.com&#34;&gt;Laravel&lt;/a&gt; framework.&lt;/p&gt;
+
+&lt;p&gt;To manipulate the content on the site, markdown files are edited and the static components of the website are recompiled by &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. The comment section is handled by a PHP commenting system called &lt;a href=&#34;http://tildehash.com/?page=hashover&#34;&gt;HashOver&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;div class=&#34;video&#34;&gt;
+  &lt;video width=&#34;310&#34; height=&#34;550&#34; autoplay controls loop muted&gt;
+    &lt;source src=&#34;https://res.cloudinary.com/dpszgzqjb/video/upload/v1534272953/Videos/voiceover-website.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  Your browser does not support the video tag.
+  &lt;/video&gt;
+&lt;/div&gt;
+
+</description>
     </item>
     
     <item>
@@ -86,7 +370,28 @@ Voice acting is one of my interests, and I&amp;rsquo;ve made a website to manage
       <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/headless-gpu-remote-acceleration/</guid>
-      <description>Sometimes the solution to some problems are strange. Imagine a headless, remote, linux based desktop setup where users can remote into a graphical environment.</description>
+      <description>&lt;p&gt;Sometimes the solution to some problems are strange. Imagine a headless, remote, linux based desktop setup where users can remote into a graphical
+environment. The remote desktop works great with the integrated graphics card but once it switches to discrete graphics it comes to screeching halt.
+No graphical acceleration.&lt;/p&gt;
+
+&lt;p&gt;Many graphic cards now enter a low power state if you do not connect a monitor. This is good for users who care about power efficiency but a pain for
+those who implement headless configurations. The common solution to this problem is to buy a &amp;ldquo;Dummy Plug&amp;rdquo; for your HDMI or Display Port to fake
+a head onto your headless configuration. It does work.&lt;/p&gt;
+
+&lt;p&gt;I stumbled upon another way of doing this without having to use a dummy plug. It turns out that we can tell the system to pretend that we have a display connected by using
+&lt;code&gt;xrandr&lt;/code&gt;. First we tell the system to add new resolution modes like so;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;xrandr --newmode &amp;#34;1366x768p&amp;#34; 72.00 1366 1414 1446 1494 768 771 777 803;
+xrandr --newmode &amp;#34;1280x800p&amp;#34; 24.15 1280 1312 1400 1432 800 819 822 841;
+xrandr --newmode &amp;#34;1024x768p&amp;#34; 18.71 1024 1056 1120 1152 768 786 789 807;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then assign those modes to a port type on the graphics card like a Display Port;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;xrandr --addmode DisplayPort-0 &amp;#34;1366x768p&amp;#34;;
+xrandr --addmode DisplayPort-0 &amp;#34;1280x800p&amp;#34;;
+xrandr --addmode DisplayPort-0 &amp;#34;1024x768p&amp;#34;;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finally pick a mode and then force output on the interface as such;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;xrandr --output DisplayPort-0 --mode &amp;#34;1366x768p&amp;#34;;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Amazingly enough the discrete graphics card comes to life and we get GPU acceleration on the remote. Maybe this does not work for all cards,
+but it has good coverage. For everything else there is always the &amp;ldquo;Dummy Plug&amp;rdquo;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -95,7 +400,18 @@ Voice acting is one of my interests, and I&amp;rsquo;ve made a website to manage
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/ssh-port-forwarding/</guid>
-      <description>The other day I needed to set up a Syncthing instance on a remotely networked server that had no graphical display.</description>
+      <description>&lt;p&gt;The other day I needed to set up a &lt;a href=&#34;https://syncthing.net/&#34;&gt;Syncthing&lt;/a&gt; instance on a remotely networked server that had no graphical display.
+I didn&amp;rsquo;t want to set it up using the command line tools and I definitely did not want to install a graphical environment on the server to access the web GUI.
+We do have another computer with a graphical display on the local network. The only problem is that a standard Syncthing installation
+does not have its port (8384) exposed to the computers within the local network. We would be unable to access the web server.&lt;/p&gt;
+
+&lt;p&gt;This means that effectively we would need to expose that port either by configuring Syncthing directly or by opening up the respective port.
+That direction is more involved. There is a great solution to this problem and it&amp;rsquo;s call SSH port Forwarding. The solution comes down to this single command;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;ssh -v -NL 12345:127.0.0.1:8384 machine.remote&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The above command states that it will forward or bind port 8384 of 127.0.0.1 (Syncthing) from machine.remote to localhost&amp;rsquo;s port 12345 (computer with the graphical display)
+such that the user on localhost can access machine.remote&amp;rsquo;s port 8384 as if it was on port 12345.
+The &amp;ldquo;-N&amp;rdquo; prevents the SSH command from executing on the remote so that it is forced to run as a foreground process within the terminal.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

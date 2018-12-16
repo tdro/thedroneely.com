@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Portfolio - Thedro Neely</title>
+    <title>Tags on Thedro Neely</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Portfolio - Thedro Neely</description>
+    <description>Recent content in Tags on Thedro Neely</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
     <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
-    <copyright>&amp;copy; Thedro Neely</copyright>
-    <lastBuildDate>Tue, 16 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <copyright>Thedro Neely</copyright>
+    <lastBuildDate>Sat, 15 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Auditing</title>
+      <link>/tags/auditing/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/auditing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bulma</title>
@@ -141,6 +150,15 @@
     </item>
     
     <item>
+      <title>Tools</title>
+      <link>/tags/tools/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      <author>thedroneely@gmail.com (Thedro Neely)</author>
+      <guid>/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Voiceover</title>
       <link>/tags/voiceover/</link>
       <pubDate>Mon, 07 May 2018 02:16:58 -0800</pubDate>
@@ -152,7 +170,7 @@
     <item>
       <title>Webdev</title>
       <link>/tags/webdev/</link>
-      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/tags/webdev/</guid>
       <description></description>

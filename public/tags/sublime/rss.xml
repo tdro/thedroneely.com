@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sublime on Portfolio - Thedro Neely</title>
+    <title>Sublime on Thedro Neely</title>
     <link>/tags/sublime/</link>
-    <description>Recent content in Sublime on Portfolio - Thedro Neely</description>
+    <description>Recent content in Sublime on Thedro Neely</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>thedroneely@gmail.com (Thedro Neely)</managingEditor>
     <webMaster>thedroneely@gmail.com (Thedro Neely)</webMaster>
-    <copyright>&amp;copy; Thedro Neely</copyright>
+    <copyright>Thedro Neely</copyright>
     <lastBuildDate>Sun, 16 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/sublime/rss.xml" rel="self" type="application/rss+xml" />
@@ -20,7 +20,7 @@
       <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/my-sublime-text-setup/</guid>
-      <description>Intro Sublime Text is a great general purpose performant text editor. It provides a lightweight interface and an excellent plugin packaging system.</description>
+      <description>Sublime Text is a great general purpose performant text editor. It provides a lightweight interface and an excellent plugin packaging system.</description>
     </item>
     
   </channel>
