@@ -34,11 +34,13 @@ var pastPosition = window.pageYOffset;
 var navbarHeight = document.getElementById("navbar").offsetHeight;
 window.onscroll = function() {
   var currentPosition = window.pageYOffset;
+    /*
     if (pastPosition > currentPosition) {
       document.getElementById("navbar").style.top = "0";
     } else if (currentPosition > navbarHeight) {
       document.getElementById("navbar").style.top = "-5em";
     }
+    */
     if (activeBurger.classList.contains('is-active')) {
       activeBurger.className = "navbar-burger burger has-text-dark";
       activeMenu.className = "navbar__mobile navbar-menu";
