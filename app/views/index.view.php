@@ -46,8 +46,8 @@
 
                     <div class="columns">
 
-                        <div class="column has-text-centered">
-                            <div class="front__textbox has-text-left-desktop is-inline-block">
+                        <div class="column has-text-centered has-text-left-mobile">
+                            <div class="front__textbox has-text-left is-inline-block">
 
                                 <h3 class="has-text-dark is-marginless is-size-5">
                                     Recent Posts
@@ -63,13 +63,13 @@
                                 <br>
                                 <br>
 
-                                <a class="front__frame" href="post/">More posts <span class="icon">➤</span></a>
+                                <a class="front__frame is-inline-block" href="post/">More posts <span class="icon">➤</span></a>
 
                             </div>
                         </div>
 
-                        <div class="column has-text-centered">
-                            <div class="front__textbox has-text-left-desktop is-inline-block">
+                        <div class="column has-text-centered has-text-left-mobile">
+                            <div class="front__textbox has-text-left is-inline-block">
 
                                 <h3 class="has-text-dark is-marginless is-size-5">
                                     Recent Projects
@@ -85,7 +85,7 @@
                                 <br>
                                 <br>
 
-                                <a class="front__frame" href="project/">More projects <span class="icon">➤</span></a>
+                                <a class="front__frame is-inline-block" href="project/">More projects <span class="icon">➤</span></a>
 
                             </div>
                         </div>
