@@ -10287,25 +10287,22 @@ label.panel-block:hover {
 
 .front__frame {
   border: 1px solid #b1cfff;
-  padding: 0.55em;
+  padding: 0.45em;
   border-radius: 1px;
   background-image: linear-gradient(to bottom, #eef3f5 0, #e0e0e0 100%);
 }
 
-.front__textbox {
-  width: 14em;
-  padding: 1.5em 0.5em;
-}
+.front__textbox { padding: 1.5em 0; }
 
 .paragraph__serif {
   font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
-  font-size: 24px;
-  line-height: 1.8;
+  font-size: 21px;
+  word-break: break-word;
 }
 
-.paragraph__serif > code { font-size: 0.735em; }
+.paragraph__serif, .line__height { line-height: 1.8; }
 
-.line__height { line-height: 1.8; }
+.paragraph__serif > code { font-size: 0.735em; white-space: nowrap; }
 
 /* condensed mobile navbar */
 
@@ -10323,12 +10320,13 @@ label.panel-block:hover {
 
 @media screen and (max-width: 1087px) {
   .navbar-menu { padding: 0 !important; }
-  .navbar__item { padding: 0.65em 1em; }
+  .navbar__item { padding: 0.65em 1em; margin: 0; }
   .navbar-end {
     z-index: -1;
     position: absolute;
     right: 0;
     background-color: #fff;
+    border-left: 1px solid #ddd;
     box-shadow: 0 2px 2px #aaa; }
 }
 
@@ -10422,7 +10420,7 @@ a.navbar-item:hover { color: #235786; background-color: aliceblue; text-decorati
 
 .underline, .underline__hover:hover,
 .paragraph__serif > a,
-.line__height > a,
+.article__paragraph > a,
 .footer__section p > a { border-bottom: 1px solid currentColor; }
 
 /* margin and padding helpers */
