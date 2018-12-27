@@ -34,7 +34,7 @@
               <a href="https://gitlab.com/tdro">Gitlab</a> &mdash;
               Subscribe to <a href="/rss.xml">RSS Feed</a> &mdash;
               Chat at <a href="https://keybase.io/tdro">Keybase</a> &mdash;
-              Now on <a href="https://dev.to/tdro">DEV</a> &mdash;
+              Profile on <a href="https://dev.to/tdro">DEV</a> &mdash;
               View my <a href="/resume">Resume</a>
             </p>
 
