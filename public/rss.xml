@@ -24,15 +24,17 @@
       <description>
 
 
-&lt;br&gt;
+&lt;p class=&#34;has-text-centered&#34;&gt;
+  &lt;a href=&#34;/images/website-auditing-tools.png&#34;&gt;
+    &lt;img src=&#34;/images/website-auditing-tools.png&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
 
-
-&lt;p&gt;&lt;img src=&#34;/images/website-auditing-tools.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Recently Google introduced a &lt;a href=&#34;https://web.dev/&#34;&gt;new auditing tool&lt;/a&gt; that scans your website and gives it a ranking score out of 100.&lt;/p&gt;
 
-&lt;p&gt;Upon closer inspection, it looks like another front end to their Lighthouse tool. While very informative,
-Lighthouse gives you but a glimpse into the possible issues your website might have.&lt;/p&gt;
+&lt;p&gt;Upon closer inspection, it looks like another front end to their Lighthouse tool or PageSpeed Insights application.
+While very informative, this audit gives you but a general glimpse into the possible issues your website might have.&lt;/p&gt;
 
 &lt;p&gt;Advanced website auditing can be extensive or may even incur costs but generally you can get a good idea of whether you&amp;rsquo;re
 up to date on certain standards by using a myriad of free online tools.&lt;/p&gt;
@@ -124,10 +126,6 @@ you full circle by checking against most if not all of the favicon formats avail
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/bitcoin-hacked-email-scam/</guid>
       <description>
-&lt;br&gt;
-
-
-
 &lt;p class=&#34;has-text-centered&#34;&gt;
   &lt;a href=&#34;/images/bitcoin-hacked-email-scam.png&#34;&gt;
     &lt;img src=&#34;/images/bitcoin-hacked-email-scam.png&#34; /&gt;
@@ -167,10 +165,6 @@ On that day your account [email] password was: [password]&lt;/p&gt;
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/project/bulma-resume/</guid>
       <description>
-&lt;br&gt;
-
-
-
 &lt;p class=&#34;has-text-centered&#34;&gt;
   &lt;a href=&#34;/images/resume-large.png&#34;&gt;
     &lt;img src=&#34;/images/resume-large.png&#34; /&gt;
@@ -195,10 +189,6 @@ On that day your account [email] password was: [password]&lt;/p&gt;
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/post/my-sublime-text-setup/</guid>
       <description>
-
-
-&lt;br&gt;
-
 
 
 &lt;p class=&#34;has-text-centered&#34;&gt;
@@ -283,9 +273,9 @@ something like this directly within the &lt;code&gt;.html&lt;/code&gt; files;&lt
 statically generated files.
 If your web server is set up to parse &lt;code&gt;.html&lt;/code&gt; files as PHP then you are good to go.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Edit&lt;/em&gt;: If you are interested in a step by step guide on producing &lt;code&gt;.php&lt;/code&gt; pages with Hugo,
-&lt;a href=&#34;https://webcache.googleusercontent.com/search?q=cache:C8Mj3FHf8uUJ:https://2cg.me/cooking-with-hugo/a-dash-of-php/&#34;&gt;look here&lt;/a&gt;.
-Note that since Hugo version &lt;a href=&#34;https://gohugo.io/news/0.44-relnotes/&#34;&gt;0.44&lt;/a&gt; the &lt;code&gt;MediaType.Suffix&lt;/code&gt; is deprecated and replaced with a plural
+&lt;p&gt;&lt;strong&gt;Edit&lt;/strong&gt;: If you are interested in a step by step guide on producing &lt;code&gt;.php&lt;/code&gt; pages with Hugo,
+&lt;s&gt;&lt;a href=&#34;https://2cg.me/cooking-with-hugo/a-dash-of-php/&#34;&gt;look here&lt;/a&gt;&lt;/s&gt;.
+(link broke) Note that since Hugo version &lt;a href=&#34;https://gohugo.io/news/0.44-relnotes/&#34;&gt;0.44&lt;/a&gt; the &lt;code&gt;MediaType.Suffix&lt;/code&gt; is deprecated and replaced with a plural
 version, &lt;code&gt;MediaType.Suffixes&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
@@ -306,17 +296,23 @@ entries will not work when the update url for &lt;code&gt;curl&lt;/code&gt; look
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;curl -u &amp;lt;email&amp;gt;:&amp;lt;password&amp;gt; &amp;#34;https://now-dns.com/update?hostname=&amp;lt;hostname&amp;gt;&amp;#34;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;It appears that the authentication fails when executing the client update. To fix this issue, remove the curl HTTP authentication option
 by commenting out the line below in the file &lt;code&gt;/etc/inc/dyndns.class&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;if ($this-&amp;gt;_curlSslVerifypeer) {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;if ($this-&amp;gt;_curlSslVerifypeer) {
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, TRUE);
   } else {
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
   }
     #curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
     curl_setopt($ch, CURLOPT_USERPWD, &amp;#34;{$this-&amp;gt;_dnsUser}:{$this-&amp;gt;_dnsPass}&amp;#34;);
-}&lt;/pre&gt;&lt;/div&gt;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;This does not have an adverse affect on custom client entries that use a token style update url which does not require a username or password. These urls
 tend to look like this;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;https://www.duckdns.org/update?domains=exampledomain&amp;amp;token=a7c4d0ad-114e-40ef-ba1d-d217904a50f2&amp;amp;ip=%IP%&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;https://www.duckdns.org/update?domains=exampledomain&amp;amp;token=a7c4d0ad-114e-40ef-ba1d-d217904a50f2&amp;amp;ip=%IP%&lt;/pre&gt;&lt;/div&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/monokai-syntax.css&#34;&gt;
+
+</description>
     </item>
     
     <item>
@@ -355,7 +351,7 @@ since it runs on a tiny &lt;a href=&#34;https://www.raspberrypi.org&#34;&gt;Rasp
 
 
 &lt;div class=&#34;video&#34;&gt;
-  &lt;video width=&#34;310&#34; height=&#34;550&#34; autoplay controls loop muted&gt;
+  &lt;video width=&#34;310&#34; height=&#34;550&#34; controls loop muted&gt;
     &lt;source src=&#34;https://res.cloudinary.com/dpszgzqjb/video/upload/v1534272953/Videos/voiceover-website.mp4&#34; type=&#34;video/mp4&#34;&gt;
   Your browser does not support the video tag.
   &lt;/video&gt;
@@ -380,17 +376,27 @@ a head onto your headless configuration. It does work.&lt;/p&gt;
 
 &lt;p&gt;I stumbled upon another way of doing this without having to use a dummy plug. It turns out that we can tell the system to pretend that we have a display connected by using
 &lt;code&gt;xrandr&lt;/code&gt;. First we tell the system to add new resolution modes like so;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;xrandr --newmode &amp;#34;1366x768p&amp;#34; 72.00 1366 1414 1446 1494 768 771 777 803;
-xrandr --newmode &amp;#34;1280x800p&amp;#34; 24.15 1280 1312 1400 1432 800 819 822 841;
-xrandr --newmode &amp;#34;1024x768p&amp;#34; 18.71 1024 1056 1120 1152 768 786 789 807;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrandr --newmode &lt;span class=&#34;s2&#34;&gt;&amp;#34;1366x768p&amp;#34;&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.00 &lt;span class=&#34;m&#34;&gt;1366&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1414&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1446&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1494&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;768&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;771&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;777&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;803&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+xrandr --newmode &lt;span class=&#34;s2&#34;&gt;&amp;#34;1280x800p&amp;#34;&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;.15 &lt;span class=&#34;m&#34;&gt;1280&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1312&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1400&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1432&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;800&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;819&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;822&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;841&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+xrandr --newmode &lt;span class=&#34;s2&#34;&gt;&amp;#34;1024x768p&amp;#34;&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;.71 &lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1056&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1120&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1152&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;768&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;786&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;789&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;807&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Then assign those modes to a port type on the graphics card like a Display Port;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;xrandr --addmode DisplayPort-0 &amp;#34;1366x768p&amp;#34;;
-xrandr --addmode DisplayPort-0 &amp;#34;1280x800p&amp;#34;;
-xrandr --addmode DisplayPort-0 &amp;#34;1024x768p&amp;#34;;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrandr --addmode DisplayPort-0 &lt;span class=&#34;s2&#34;&gt;&amp;#34;1366x768p&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+xrandr --addmode DisplayPort-0 &lt;span class=&#34;s2&#34;&gt;&amp;#34;1280x800p&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+xrandr --addmode DisplayPort-0 &lt;span class=&#34;s2&#34;&gt;&amp;#34;1024x768p&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Finally pick a mode and then force output on the interface as such;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;xrandr --output DisplayPort-0 --mode &amp;#34;1366x768p&amp;#34;;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrandr --output DisplayPort-0 --mode &lt;span class=&#34;s2&#34;&gt;&amp;#34;1366x768p&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Amazingly enough the discrete graphics card comes to life and we get GPU acceleration on the remote. Maybe this does not work for all cards,
 but it has good coverage. For everything else there is always the &amp;ldquo;Dummy Plug&amp;rdquo;.&lt;/p&gt;
+
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/monokai-syntax.css&#34;&gt;
+
 </description>
     </item>
     
@@ -407,10 +413,16 @@ does not have its port (8384) exposed to the computers within the local network.
 
 &lt;p&gt;This means that effectively we would need to expose that port either by configuring Syncthing directly or by opening up the respective port.
 That direction is more involved. There is a great solution to this problem and it&amp;rsquo;s call SSH port Forwarding. The solution comes down to this single command;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;ssh -v -NL 12345:127.0.0.1:8384 machine.remote&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh -v -NL &lt;span class=&#34;m&#34;&gt;12345&lt;/span&gt;:127.0.0.1:8384 machine.remote&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;The above command states that it will forward or bind port 8384 of 127.0.0.1 (Syncthing) from machine.remote to localhost&amp;rsquo;s port 12345 (computer with the graphical display)
 such that the user on localhost can access machine.remote&amp;rsquo;s port 8384 as if it was on port 12345.
 The &amp;ldquo;-N&amp;rdquo; prevents the SSH command from executing on the remote so that it is forced to run as a foreground process within the terminal.&lt;/p&gt;
+
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/monokai-syntax.css&#34;&gt;
+
 </description>
     </item>
     

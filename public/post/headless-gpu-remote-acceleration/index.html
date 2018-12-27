@@ -25,12 +25,15 @@
 			<div class="column is-8 is-offset-2">
 				<article class="content">
 					<h1 class="title is-3c">GPU Accel on Remote Desktop</h1>
-					<p class="subtitle is-6 has-text-grey-dark">Posted 
+
+					<p class="subtitle line__height is-6 has-text-grey-dark">Posted 
 <time datetime="2018-02-11">11 February 2018</time>; tagged with 
 <a class="underline" href="/tags/headless/">headless</a>,
 <a class="underline" href="/tags/linux/">linux</a>,
 <a class="underline" href="/tags/server/">server</a>
-</p>
+<br>
+            <a href="#isso-thread">Comments</a>
+          </p>
 <p class="paragraph__serif">Sometimes the solution to some problems are strange. Imagine a headless, remote, linux based desktop setup where users can remote into a graphical
 environment. The remote desktop works great with the integrated graphics card but once it switches to discrete graphics it comes to screeching halt.
 No graphical acceleration.</p>
@@ -41,31 +44,40 @@ a head onto your headless configuration. It does work.</p>
 
 <p class="paragraph__serif">I stumbled upon another way of doing this without having to use a dummy plug. It turns out that we can tell the system to pretend that we have a display connected by using
 <code>xrandr</code>. First we tell the system to add new resolution modes like so;</p>
-<div class="highlight"><pre class="chroma">xrandr --newmode &#34;1366x768p&#34; 72.00 1366 1414 1446 1494 768 771 777 803;
-xrandr --newmode &#34;1280x800p&#34; 24.15 1280 1312 1400 1432 800 819 822 841;
-xrandr --newmode &#34;1024x768p&#34; 18.71 1024 1056 1120 1152 768 786 789 807;</pre></div>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">xrandr --newmode <span class="s2">&#34;1366x768p&#34;</span> <span class="m">72</span>.00 <span class="m">1366</span> <span class="m">1414</span> <span class="m">1446</span> <span class="m">1494</span> <span class="m">768</span> <span class="m">771</span> <span class="m">777</span> <span class="m">803</span><span class="p">;</span>
+xrandr --newmode <span class="s2">&#34;1280x800p&#34;</span> <span class="m">24</span>.15 <span class="m">1280</span> <span class="m">1312</span> <span class="m">1400</span> <span class="m">1432</span> <span class="m">800</span> <span class="m">819</span> <span class="m">822</span> <span class="m">841</span><span class="p">;</span>
+xrandr --newmode <span class="s2">&#34;1024x768p&#34;</span> <span class="m">18</span>.71 <span class="m">1024</span> <span class="m">1056</span> <span class="m">1120</span> <span class="m">1152</span> <span class="m">768</span> <span class="m">786</span> <span class="m">789</span> <span class="m">807</span><span class="p">;</span></code></pre></div>
+
 <p class="paragraph__serif">Then assign those modes to a port type on the graphics card like a Display Port;</p>
-<div class="highlight"><pre class="chroma">xrandr --addmode DisplayPort-0 &#34;1366x768p&#34;;
-xrandr --addmode DisplayPort-0 &#34;1280x800p&#34;;
-xrandr --addmode DisplayPort-0 &#34;1024x768p&#34;;</pre></div>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">xrandr --addmode DisplayPort-0 <span class="s2">&#34;1366x768p&#34;</span><span class="p">;</span>
+xrandr --addmode DisplayPort-0 <span class="s2">&#34;1280x800p&#34;</span><span class="p">;</span>
+xrandr --addmode DisplayPort-0 <span class="s2">&#34;1024x768p&#34;</span><span class="p">;</span></code></pre></div>
+
 <p class="paragraph__serif">Finally pick a mode and then force output on the interface as such;</p>
-<div class="highlight"><pre class="chroma">xrandr --output DisplayPort-0 --mode &#34;1366x768p&#34;;</pre></div>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">xrandr --output DisplayPort-0 --mode <span class="s2">&#34;1366x768p&#34;</span><span class="p">;</span></code></pre></div>
+
 <p class="paragraph__serif">Amazingly enough the discrete graphics card comes to life and we get GPU acceleration on the remote. Maybe this does not work for all cards,
 but it has good coverage. For everything else there is always the &ldquo;Dummy Plug&rdquo;.</p>
 
-					
+
+<link rel="stylesheet" href="/css/monokai-syntax.css">
+
+
 
           <h3 id="comments">Comments</h3>
 
-				</article>
+          </article>
 
-        <link rel="stylesheet" href="/css/isso-tdro.css">
+          <link rel="stylesheet" href="/css/isso-tdro.css">
 
-        <script data-isso="/isso/" data-isso-css="false" src="/isso/js/embed.min.js"></script>
+          <script data-isso="/isso/" data-isso-css="false" src="/isso/js/embed.min.js"></script>
 
-        <section id="isso-thread"></section>
+          <section id="isso-thread" data-title="GPU Accel on Remote Desktop"></section>
 
-        <noscript>Sadly, you'll have to enable JavaScript to view the comments.</noscript>
+          <noscript>Sadly, you'll have to enable JavaScript to view the comments.</noscript>
 
 			</div>
 		</div>
