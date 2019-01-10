@@ -2,38 +2,33 @@
 
 class Navigation
 {
-    public function generateHomeButton()
+    public function requestContains($route)
+    {
+        if (strpos($_SERVER['REQUEST_URI'], $route) !== false) {
+            return true;
+        }
+        return false;
+    }
+
+     public function isActiveHome()
     {
         if ($_SERVER['REQUEST_URI'] === '/') {
-            echo '<a class="navbar__active navbar-item navbar__item" href="/">Home</a>';
-            return;
+            return 'navbar__active ';
         }
-        echo '<a class="navbar-item navbar__item" href="/">Home</a>';
+        return;
     }
 
-    public function generateNavBar()
+    public function isActive($route)
     {
-        $navbar = [
-        'Posts' => ['uri' => '/post/'],
-        'Projects' => ['uri' => '/project/'],
-        'Profile' => ['uri' => '/about/'],
-        'Contact' => ['uri' => '/contact/'],
-        ];
-
-        foreach ($navbar as $title => $route) {
-            $append ='';
-            if ($route['uri'] === $_SERVER['REQUEST_URI']
-                || strpos($_SERVER['REQUEST_URI'], $route['uri']) !== false
-            ) {
-                $append = 'navbar__active';
-            }
-            echo str_repeat("\t", 4) .
-            "<a class=\"navbar-item navbar__item $append\"" .
-            ' href="' . $route['uri'] . '">' . $title . '</a>' . "\n";
+        if ($_SERVER['REQUEST_URI'] === $route
+            || $this->requestContains($route)
+        ) {
+            return 'navbar__active ';
         }
+        return;
     }
 
-    public function generateTitle()
+    public function title()
     {
         switch ($_SERVER['REQUEST_URI']) {
         case '/contact/':
