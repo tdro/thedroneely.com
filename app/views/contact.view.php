@@ -2,13 +2,9 @@
 
     <body>
 
-    <section class="section" itemscope itemtype="http://schema.org/WebPage">
-
-    <div class="hero-head">
-
     <?php require __DIR__ . '/partials/navigator.php'; ?>
 
-    </div>
+    <section class="section" itemscope itemtype="http://schema.org/WebPage">
 
     <div id="contact-vue">
         <div class="container">
