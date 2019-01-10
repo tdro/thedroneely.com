@@ -1,6 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php'; ?>
-
-<?php $navigation = new Navigation; ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/bootstrap/Bootstrap.php'; ?>
 
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.php'; ?>
 

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow">
 
+    <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/bootstrap/Bootstrap.php'; ?>
+
     <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/rss.php'; ?>
 
     <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/favicons.php'; ?>
