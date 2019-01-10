@@ -23,8 +23,8 @@ var activeMenu = document.getElementById('navMenu');
 document.addEventListener('click', function(event) {
   var burgerClick= activeBurger.contains(event.target);
   if (!burgerClick && activeBurger.classList.contains('is-active')) {
-    activeBurger.className = "navbar-burger burger has-text-dark";
-    activeMenu.className = "navbar__mobile navbar-menu";
+    activeBurger.classList.toggle('is-active');
+    activeMenu.classList.toggle('is-active');
   }
 });
 
@@ -42,10 +42,8 @@ window.onscroll = function() {
     }
     */
     if (activeBurger.classList.contains('is-active')) {
-      activeBurger.className = "navbar-burger burger has-text-dark";
-      activeMenu.className = "navbar__mobile navbar-menu";
+      activeBurger.classList.toggle('is-active');
+      activeMenu.classList.toggle('is-active');
     }
     pastPosition = currentPosition;
 };
-
-
