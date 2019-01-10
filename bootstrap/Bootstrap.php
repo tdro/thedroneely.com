@@ -1,10 +1,16 @@
 <?php
 
-/* composer autoloader */
-require '../vendor/autoload.php';
+/* composer autoload */
+require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php';;
 
 /* source config file */
-$config = include '../AppConfig.php';
+$config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';;
 
-/* database query setup */
+/* connect database */
 $contact['database'] = new QueryBuilder(Connection::make($config['database']));
+
+/* create new router */
+$router = new Router;
+
+/* create navigator */
+$navigation = new Navigation();
