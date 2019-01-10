@@ -166,8 +166,8 @@ On that day your account [email] password was: [password]&lt;/p&gt;
       <guid>/project/bulma-resume/</guid>
       <description>
 &lt;p class=&#34;has-text-centered&#34;&gt;
-  &lt;a href=&#34;/images/resume-large.png&#34;&gt;
-    &lt;img src=&#34;/images/resume-large.png&#34; /&gt;
+  &lt;a href=&#34;/images/resume.png&#34;&gt;
+    &lt;img src=&#34;/images/resume.png&#34; /&gt;
   &lt;/a&gt;
 &lt;/p&gt;
 
@@ -321,7 +321,15 @@ tend to look like this;&lt;/p&gt;
       <pubDate>Fri, 01 Jun 2018 00:00:00 -0800</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/project/personal-portfolio/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.thedroneely.com&#34;&gt;Live Website&lt;/a&gt;&lt;/p&gt;
+      <description>
+&lt;p class=&#34;has-text-centered&#34;&gt;
+  &lt;a href=&#34;/images/thedro.png&#34;&gt;
+    &lt;img src=&#34;/images/thedro.png&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;https://www.thedroneely.com&#34;&gt;Live Website&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;This is the website you&amp;rsquo;re browsing right now. The general structure is based on design patterns from the &lt;a href=&#34;https://laravel.com&#34;&gt;Laravel&lt;/a&gt;
 PHP framework. The comments are handled by &lt;a href=&#34;https://posativ.org/isso&#34;&gt;Isso&lt;/a&gt; which is a backend commenting server written in Python.
@@ -341,22 +349,21 @@ since it runs on a tiny &lt;a href=&#34;https://www.raspberrypi.org&#34;&gt;Rasp
       <pubDate>Mon, 07 May 2018 02:16:58 -0800</pubDate>
       <author>thedroneely@gmail.com (Thedro Neely)</author>
       <guid>/project/voiceover-website/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.edwinmattiacci.com&#34;&gt;Live Website&lt;/a&gt;&lt;/p&gt;
+      <description>
+&lt;p class=&#34;has-text-centered&#34;&gt;
+  &lt;a href=&#34;/images/edwin.png&#34;&gt;
+    &lt;img src=&#34;/images/edwin.png&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;https://www.edwinmattiacci.com&#34;&gt;Live Website&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Voice acting is one of my interests, and I&amp;rsquo;ve made a website to manage just that. There were a few super simple HTML, CSS, &amp;amp; JavaScript websites that I created before this one but I consider this my first formal website that actually does something.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s made using a combination of &lt;a href=&#34;https://secure.php.net&#34;&gt;PHP&lt;/a&gt; for dynamic content and &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; for static content &amp;ndash; a &lt;a href=&#34;https://www.mysql.com&#34;&gt;MySQL&lt;/a&gt; database for the backend, and &lt;a href=&#34;https://www.nginx.com&#34;&gt;Nginx&lt;/a&gt; as the web server. Everything sits behind a front controller and the project structure is based on a very barebones implementation of the &lt;a href=&#34;https://laravel.com&#34;&gt;Laravel&lt;/a&gt; framework.&lt;/p&gt;
 
 &lt;p&gt;To manipulate the content on the site, markdown files are edited and the static components of the website are recompiled by &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. The comment section is handled by a PHP commenting system called &lt;a href=&#34;http://tildehash.com/?page=hashover&#34;&gt;HashOver&lt;/a&gt;.&lt;/p&gt;
-
-
-&lt;div class=&#34;video&#34;&gt;
-  &lt;video width=&#34;310&#34; height=&#34;550&#34; controls loop muted&gt;
-    &lt;source src=&#34;https://res.cloudinary.com/dpszgzqjb/video/upload/v1534272953/Videos/voiceover-website.mp4&#34; type=&#34;video/mp4&#34;&gt;
-  Your browser does not support the video tag.
-  &lt;/video&gt;
-&lt;/div&gt;
-
 </description>
     </item>
     
