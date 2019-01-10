@@ -76,8 +76,7 @@
                     </h1>
 
                     <p class="is-size-7">
-                        Hello! My name is Thedro, and I'm a web developer based in The Bahamas.
-                        I'm currently looking for work, so feel free to get in touch with contracts or job opportunities.
+                        Hi, My name is Thedro, and I'm a web developer based in The Bahamas.
                     </p>
 
                 </section>
@@ -89,7 +88,7 @@
                     <div class="column">
 
                         <section>
-                            <h1 class="heading title has-text-weight-semibold">Tools</h1>
+                            <h1 class="heading title has-text-weight-semibold">Stack</h1>
                         </section>
 
                         <br>
