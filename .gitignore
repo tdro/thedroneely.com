@@ -2,3 +2,10 @@
 AppConfig.php
 /node_modules
 public/dist
+public/tags
+public/post
+public/project
+public/categories
+public/about
+public/rss.xml
+public/sitemap.xml
