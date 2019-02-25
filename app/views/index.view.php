@@ -4,14 +4,11 @@
 
 <?php require __DIR__ . '/partials/navigator.php'; ?>
 
-    <section class="section hero" itemscope itemtype="http://schema.org/HomePage">
+    <section class="section" itemscope itemtype="http://schema.org/HomePage">
 
-    <div class="hero-body">
         <div class="container">
             <div class="columns is-centered">
-                <div class="column is-8">
-
-                    <br>
+                <div class="column is-7">
 
                     <h1 class="title has-text-weight-normal">
                         <span>
@@ -34,8 +31,7 @@
 
                     <p class="has-text-left has-text-black line__height">
                         My name is Thedro (<span class="has-text-grey-dark">tee-dro</span>) &mdash;
-                        a web developer and self-taught
-                        <a href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a>
+                        a web developer and <a href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a>
                         system administrator.
                         There are many different tools and programming languages I've come across.
                         Welcome to my corner of the web. Here you'll find things I've
@@ -94,7 +90,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     </section>
 
