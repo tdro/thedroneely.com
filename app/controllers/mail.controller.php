@@ -4,9 +4,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 $form = new Form(
-    $name = $_POST['26471'],
-    $email = $_POST['26472'],
-    $message = $_POST['26478']
+    $name = $_POST['26471'] ?? null,
+    $email = $_POST['26472'] ?? null,
+    $message = $_POST['26478'] ?? null
 );
 
 $validEmail = PHPMailer::validateAddress($email, 'auto');
