@@ -9,15 +9,15 @@
     <div id="contact-vue">
         <div class="container">
             <div class="columns is-centered">
-                <div class="column is-8">
+                <div class="column is-7">
 
                     <article class="content">
 
                         <h1 class="title is-3">Contact</h1>
 
                         <p>
-                        Interested in collaborating together?
-                        Complete the form below with basic info about your project or idea.
+                        Interested in collaborating?
+                        Complete and submit the form below to send me a direct message.
                         </p>
 
                         <form method="post" action="/?sent">
@@ -28,7 +28,7 @@
                                     <label class="heading is-size-6">Name <span class="alert" v-show="!name">*</span></label>
                                         <div class="field has-addons">
                                             <p class="control is-expanded">
-                                              <input v-model="name" class="input" type="text" name="26471" placeholder="Jason Response">
+                                              <input v-model="name" class="input" type="text" name="26471" placeholder="">
                                             </p>
                                         </div>
                                     </div>
@@ -36,7 +36,7 @@
                                         <label class="heading is-size-6">Email <span class="alert" v-show="!email">*</span></label>
                                             <div class="field has-addons">
                                                 <p class="control is-expanded">
-                                                  <input v-model="email" class="input" type="email" name="26472" placeholder="user@domain.com">
+                                                  <input v-model="email" class="input" type="email" name="26472" placeholder="">
                                                 </p>
                                             </div>
                                     </div>
@@ -48,7 +48,7 @@
                                   <div class="field-body">
                                     <div class="field">
                                       <div class="control">
-                                        <textarea v-model="message" class="textarea" name="26478" placeholder="How would you describe your project?"></textarea>
+                                        <textarea v-model="message" class="textarea" name="26478" placeholder=""></textarea>
                                       </div>
                                     </div>
                                   </div>
