@@ -64,8 +64,8 @@ class Form
             $mail->Port = $config['mail']['port'];              // TCP port to connect to
 
             //Recipients
-            $mail->setFrom('thedroneely@gmail.com', 'Thedro Neely');
-            $mail->addAddress('thedroneely@gmail.com', 'Thedro Neely');
+            $mail->setFrom($config['mail']['username'], 'Thedro Neely');
+            $mail->addAddress($config['mail']['username'], 'Thedro Neely');
             $mail->addReplyTo($this->email, $this->name);
 
             //Content
