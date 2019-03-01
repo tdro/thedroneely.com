@@ -10,8 +10,8 @@
 
     <div class="hero-body">
         <div class="container">
-            <div class="columns">
-                <div class="column is-8 is-offset-2 has-text-centered">
+            <div class="columns is-centered">
+                <div class="column is-7 has-text-centered">
                     <article class="has-text-centered">
                         <h3>Thank you for your message.</h3>
                         <a href="/"><b>Return to the Home Page</b></a>
