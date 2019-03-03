@@ -24,8 +24,6 @@
 
     <body class="has-background-grey-dark">
 
-    <div class="container is-fullhd">
-
         <div class="columns max__height is-gapless">
 
             <div class="column column__background is-4">
@@ -180,9 +178,18 @@
                                 <div class="timeline-content">
                                     <p class="heading">How long have you been programming?</p>
                                     <p class="is-size-7">
-                                        For approximately 3 years. I was recently taught PHP by
-                                        a fellow programmer however web application development is not a recent endeavor.
-                                        I've made quite a few websites before this, but mostly in private.
+                                        I've been programming for a long time, too long to accurately say.
+                                    </p>
+                                </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p class="heading">What is your preferred stack?</p>
+                                    <p class="is-size-7">
+                                        PHP 7 + PostgreSQL. Pretty decent stuff. I'm still learning
+                                        Vue and React. I'd like to learn Go next.
                                     </p>
                                 </div>
                                 </div>
@@ -233,5 +240,3 @@
           </div>
 
         </div>
-
-    </div>
