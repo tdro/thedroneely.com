@@ -68,20 +68,12 @@
 
                 <div class="columns is-centered has-margin-bottom-none">
 
-                    <div class="navbar__left column is-3">
+                    <div class="navbar__left column is-2">
                         <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.home.php'; ?>
                     </div>
 
                     <div class="navbar__right column is-5">
                         <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/navigator.links.php'; ?>
-                    </div>
-
-                </div>
-
-                <div class="columns is-centered has-margin-none">
-
-                    <div class="column is-8 has-padding-none">
-                        <hr class="navbar__line has-background-grey-lighter">
                     </div>
 
                 </div>
