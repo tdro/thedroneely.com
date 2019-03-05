@@ -1,13 +1,9 @@
 <div class="hero-foot">
 
+<br>
+
   <footer class="footer">
     <div class="container">
-
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <hr class="has-background-grey-lighter">
-        </div>
-      </div>
 
       <div class="columns is-centered">
 
@@ -20,17 +16,18 @@
 
         </div>
 
-        <div class="column is-6">
+        <div class="column is-5">
 
           <div class="footer__section">
 
-            <p class="has-text-dark has-text-right has-text-centered-mobile is-size-7">
+            <p class="has-text-dark has-text-centered-mobile is-size-7">
               Design inspired by
               <a href="https://github.com/solutionroute/hugo-smorg">Smorg</a> &mdash;
                Built with <a href="https://secure.php.net/">PHP</a> |
               <a href="https://gohugo.io/">Hugo</a> |
               <a href="https://posativ.org/isso/">Isso</a> &mdash;
-              See my <a href="https://github.com/tdro">Github</a> |
+              See my <a href="https://www.thedroneely.com/git/explore/repos">Git</a> |
+              <a href="http://gitea.local.lan">Github</a> |
               <a href="https://gitlab.com/tdro">Gitlab</a> &mdash;
               Subscribe to <a href="/rss.xml">RSS Feed</a> &mdash;
               Chat at <a href="https://keybase.io/tdro">Keybase</a> &mdash;
@@ -38,17 +35,22 @@
               View my <a href="/resume">Resume</a>
             </p>
 
-            <br>
-
-            <p class="has-text-grey-dark has-text-right has-text-centered-mobile is-size-7">
-              Copyright &copy; Thedro Neely <?php echo date("Y"); ?>. All rights reserved.
-            </p>
-
           </div>
 
         </div>
 
       </div>
+
+      <div class="columns is-centered">
+
+        <div class="column is-7">
+          <p class="has-text-grey-dark has-text-centered is-size-7">
+          Copyright &copy; Thedro Neely <?php echo date("Y"); ?>. All rights reserved.
+          </p>
+        </div>
+
+      </div>
+
     </div>
   </footer>
 
