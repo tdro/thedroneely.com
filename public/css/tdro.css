@@ -2392,12 +2392,6 @@ fieldset[disabled] .button {
   }
 }
 
-@media screen and (min-width: 1472px) {
-  .container {
-    max-width: 1344px;
-    width: 1344px;
-  }
-}
 
 .content li + li {
   margin-top: 0.25em;
