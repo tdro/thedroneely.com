@@ -8400,6 +8400,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
   align-items: stretch;
   display: block;
   flex-basis: 0;
+  -ms-flex-preferred-size: auto;
   flex-grow: 1;
   flex-shrink: 1;
   min-height: -webkit-min-content;
