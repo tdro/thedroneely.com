@@ -9472,6 +9472,7 @@ video {
 @media screen and (min-width: 1088px) {
   .navbar-menu, .navbar-item { display: inline-block; }
   .navbar__active { border-bottom: 2px solid dodgerblue; }
+  a.navbar-item:hover { border-bottom: 2px solid dodgerblue; }
 }
 
 .navbar__mobile__compact,
@@ -9503,7 +9504,7 @@ video {
 .navbar__icon__align { margin-top: -4px; margin-bottom: 3px; }
 .navbar__active { color: #235786; font-weight: bold; }
 
-a.navbar-item:hover { color: #235786; background-color: aliceblue; }
+a.navbar-item:hover { color: #235786; }
 
 .navbar-end > .navbar-item { background-color: transparent; }
 .navbar-end > .navbar__active { background-color: #bbdbee; font-weight: normal; }
@@ -9528,6 +9529,7 @@ a.navbar-item:hover { color: #235786; background-color: aliceblue; }
 
 .footer__section { text-align: left; line-height: 2; }
 .hero-foot > .footer > .columns { margin: 0; }
+.footer__section  a { color: #222; }
 
 /* posts and projects list date header */
 
