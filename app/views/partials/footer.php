@@ -16,11 +16,11 @@
 
         </div>
 
-        <div class="column is-5">
+        <div class="column is-4">
 
           <div class="footer__section">
 
-            <p class="has-text-dark has-text-centered-mobile is-size-7">
+            <p class="has-text-grey-dark has-text-centered-mobile is-size-7">
               Design inspired by
               <a href="https://github.com/solutionroute/hugo-smorg">Smorg</a> &mdash;
                Built with <a href="https://secure.php.net/">PHP</a> |
@@ -37,6 +37,12 @@
 
           </div>
 
+        </div>
+
+        <div class="column has-text-right has-text-centered-mobile is-1">
+           <a class="has-text-black" href="#">
+            <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/arrow-up.svg') ?>
+          </a>
         </div>
 
       </div>
