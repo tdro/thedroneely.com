@@ -9529,7 +9529,7 @@ a.navbar-item:hover { color: #235786; }
 
 .footer__section { text-align: left; line-height: 2; }
 .hero-foot > .footer > .columns { margin: 0; }
-.footer__section  a { color: #222; }
+.footer__section a { color: #444; }
 
 /* posts and projects list date header */
 
