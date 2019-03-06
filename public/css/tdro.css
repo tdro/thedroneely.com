@@ -6157,7 +6157,7 @@ body.has-navbar-fixed-bottom {
   color: #4a4a4a;
   display: block;
   line-height: 1.5;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.1rem;
   position: relative;
 }
 
@@ -9452,7 +9452,7 @@ video {
 
 .navbar-item {
   color: #444;
-  margin: 0.75em 0;
+  margin: 0.75rem 0.9rem;
   border-radius: 1px;
 }
 
@@ -9471,6 +9471,7 @@ video {
 
 @media screen and (min-width: 1088px) {
   .navbar-menu, .navbar-item { display: inline-block; }
+  .navbar__active { border-bottom: 2px solid dodgerblue; }
 }
 
 .navbar__mobile__compact,
@@ -9495,7 +9496,7 @@ video {
 .navbar__line { margin: 0 12px; }
 
 .navbar__left { padding-bottom: 0; }
-.navbar__left a { margin-left: -9px; }
+.navbar__left a { margin-left: 8px; }
 .navbar__right { text-align: right; padding-bottom: 0; }
 
 .navbar__icon { justify-content: center; width: 20%; margin: 0;}
