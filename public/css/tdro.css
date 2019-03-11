@@ -9588,7 +9588,8 @@ a.navbar-item:hover { color: #235786; }
 .has-margin-bottom-none { margin-bottom: 0 !important; }
 
 /* fade in animations */
-.section { animation: fadein 1s; }
+
+/*.section { animation: fadein 1s; }*/
 
 @keyframes fadein {
     from { opacity: 0; }
