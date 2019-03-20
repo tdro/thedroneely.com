@@ -93,3 +93,15 @@
 
         </div>
     </nav>
+
+    <div id="navMenu" class="navbar-menu is-hidden-desktop">
+        <div id="navMenuContainer" class="navbar-end">
+
+            <?php require $_SERVER['DOCUMENT_ROOT']
+            . '/..' . '/app/views/partials/navigator.home.php'; ?>
+
+            <?php require $_SERVER['DOCUMENT_ROOT']
+            . '/..' . '/app/views/partials/navigator.links.php'; ?>
+
+        </div>
+    </div>
