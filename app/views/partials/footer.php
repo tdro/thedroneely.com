@@ -16,7 +16,7 @@
             </a>
 
             <a href="/resume">
-              <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/info.svg') ?>
+              <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/help-circle.svg') ?>
             </a>
 
             <a href="https://www.thedroneely.com/git/explore/repos">
