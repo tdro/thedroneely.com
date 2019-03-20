@@ -1,6 +1,7 @@
 
-/* open mobile flyout menu */
-
+/**
+ * Open mobile flyout menu
+ */
 document.addEventListener('DOMContentLoaded', function () {
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
@@ -16,24 +17,50 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/* close flyout menu when tapped outside of its div region */
-
-var activeBurger = document.getElementById('navBurger');
+/**
+ * Close flyout menu when tapped outside of its div region
+ */
 var activeMenu = document.getElementById('navMenu');
+var activeBurger = document.getElementById('navBurger');
+var activeBurgerCompact = document.getElementById('navBurgerCompact');
+var activeMenuContainer = document.getElementById('navMenuContainer');
+
 document.addEventListener('click', function(event) {
-  var burgerClick= activeBurger.contains(event.target);
-  if (!burgerClick && activeBurger.classList.contains('is-active')) {
-    activeBurger.classList.toggle('is-active');
-    activeMenu.classList.toggle('is-active');
+
+  var burgerClick = activeBurger.contains(event.target);
+  var burgerCompactClick = activeBurgerCompact.contains(event.target);
+  var menuContainerClick = activeMenuContainer.contains(event.target);
+
+  if (!burgerClick && !burgerCompactClick && !menuContainerClick) {
+    activeMenu.classList.remove('is-active');
+    activeBurger.classList.remove('is-active');
+    activeBurgerCompact.classList.remove('is-active');
   }
+
 });
 
-/* hide and reveal navigator on scroll events */
+document.addEventListener('touchstart', function(event) {
 
+  var burgerClick = activeBurger.contains(event.target);
+  var burgerCompactClick = activeBurgerCompact.contains(event.target);
+  var menuContainerClick = activeMenuContainer.contains(event.target);
+
+  if (!burgerClick && !burgerCompactClick && !menuContainerClick) {
+    activeMenu.classList.remove('is-active');
+    activeBurger.classList.remove('is-active');
+    activeBurgerCompact.classList.remove('is-active');
+  }
+
+});
+
+/**
+ * Hide elements on scroll events
+ */
 var pastPosition = window.pageYOffset;
 var navbarHeight = document.getElementById("navbar").offsetHeight;
 window.onscroll = function() {
-  var currentPosition = window.pageYOffset;
+    var currentPosition = window.pageYOffset;
+
     /*
     if (pastPosition > currentPosition) {
       document.getElementById("navbar").style.top = "0";
@@ -41,9 +68,10 @@ window.onscroll = function() {
       document.getElementById("navbar").style.top = "-5em";
     }
     */
-    if (activeBurger.classList.contains('is-active')) {
-      activeBurger.classList.toggle('is-active');
-      activeMenu.classList.toggle('is-active');
-    }
+
+    activeMenu.classList.remove('is-active');
+    activeBurger.classList.remove('is-active');
+    activeBurgerCompact.classList.remove('is-active');
+
     pastPosition = currentPosition;
 };
