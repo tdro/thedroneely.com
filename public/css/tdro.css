@@ -9506,13 +9506,14 @@ video {
 .navbar__icon__align { margin-top: -4px; margin-bottom: 3px; }
 .navbar__active { color: #235786; font-weight: bold; }
 
+.navbar__icon__menu { margin: 0; justify-content: center; height: 100%; }
+
 a.navbar-item:hover { color: #235786; }
 
+.navbar-end > .navbar-item { color: #000; }
 .navbar-end > .navbar-item { background-color: transparent; }
-.navbar-end > .navbar__active { background-color: #bbdbee; font-weight: normal; }
-.navbar-end > a.navbar-item:hover { background-color: #bbdbee; font-weight: normal; }
-
-.is-active > .navbar-end > .navbar-item { color: #000; }
+.navbar-end > .navbar__active { font-weight: bold; color: #265987; }
+.navbar-end > a.navbar-item:hover { background-color: #bbdbee; font-weight: normal; color: #000; }
 
 .error__headerSize { font-size: 8rem; }
 
