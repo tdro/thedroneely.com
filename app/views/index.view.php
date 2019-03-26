@@ -40,53 +40,43 @@
 
                     </div>
 
-                    <div class="columns">
+                    <div class="recent__article">
 
-                        <div class="column has-text-centered has-text-left-mobile">
-                            <div class="front__textbox has-text-left is-inline-block">
+                    <h1 class="title has-text-weight-normal">Recent Posts</h1>
 
-                                <h3 class="has-text-dark is-marginless is-size-5">
-                                    Recent Posts
-                                </h3>
+                    <?php
+                    $recentPosts = new DOMExtract();
+                    $recentPosts->setSource($_SERVER['DOCUMENT_ROOT'] . '/post/index.html');
+                    echo $recentPosts->getInnerHTML('recent-article');
+                    ?>
 
-                                <?php
-                                $recent_posts = file($_SERVER['DOCUMENT_ROOT'] . '/post/index.html');
-                                foreach (range(count($recent_posts) - 32,  count($recent_posts) - 24) as $line) {
-                                    echo $recent_posts[$line];
-                                }
-                                ?>
+                    <a href="/post/"
+                        class="front__more is-block has-text-right has-text-centered-mobile">
+                        See All Posts
+                        <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT']
+                        . '/..' . '/public/css/fonts/feather-icons/chevron-right.svg') ?>
+                    </a>
 
-                                <br>
-                                <br>
+                    <br>
 
-                                <a class="front__frame is-inline-block" href="post/">More posts <span class="icon">➤</span></a>
+                    <h1 class="title has-text-weight-normal">Recent Projects</h1>
 
-                            </div>
-                        </div>
-
-                        <div class="column has-text-centered has-text-left-mobile">
-                            <div class="front__textbox has-text-left is-inline-block">
-
-                                <h3 class="has-text-dark is-marginless is-size-5">
-                                    Recent Projects
-                                </h3>
-
-                                <?php
-                                $recent_projects = file($_SERVER['DOCUMENT_ROOT'] . '/post/index.html');
-                                foreach (range(count($recent_projects) - 15,  count($recent_projects) - 7) as $line) {
-                                    echo $recent_projects[$line];
-                                }
-                                ?>
-
-                                <br>
-                                <br>
-
-                                <a class="front__frame is-inline-block" href="project/">More projects <span class="icon">➤</span></a>
-
-                            </div>
-                        </div>
-
+                    <?php
+                    $recentProjects = new DOMExtract();
+                    $recentProjects->setSource($_SERVER['DOCUMENT_ROOT'] . '/project/index.html');
+                    echo $recentProjects->getInnerHTML('recent-article');
+                    ?>
                     </div>
+
+                    <a href="/project/"
+                    class="front__more is-block has-text-right has-text-centered-mobile">
+                        See All Projects
+                        <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT']
+                        . '/..' . '/public/css/fonts/feather-icons/chevron-right.svg') ?>
+                    </a>
+
+                    <br>
+
                 </div>
             </div>
         </div>
