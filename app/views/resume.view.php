@@ -30,30 +30,30 @@
 
             <section class="section has-text-centered">
 
-                <a href="/resume" class="title has-text-weight-light is-size-4 has-text-white inline__padding underline__hover">Resume</a>
+                <a href="/resume" class="title has-text-weight-normal is-size-4 has-text-white inline__padding underline__hover">Resume</a>
 
                 <br>
 
-                <a href="/contact/" class="title has-text-weight-light is-size-7 has-text-white text__frame">Contact for Full Resume</a>
+                <a href="/contact/" class="title has-text-weight-normal is-size-7 has-text-white text__frame">Contact for Full Resume</a>
 
                 <br>
 
-                <h1 class="title has-text-weight-light is-size-3 has-text-white inline__padding">Web <br> Developer</h1>
+                <h1 class="title has-text-weight-normal is-size-3 has-text-white inline__padding">Web <br> Developer</h1>
 
                 <br>
 
                 <p>
-                    <a href="/" class="title has-text-weight-light is-size-7 has-text-white white__highlight underline__hover">https://www.thedroneely.com</a>
+                    <a href="/" class="title has-text-weight-normal is-size-7 has-text-white white__highlight underline__hover">https://www.thedroneely.com</a>
                 </p>
 
                 <br>
 
                 <p>
-                    <a href="#tools" class="title has-text-weight-light is-size-7 has-text-white white__highlight underline__hover">#Tools</a>
+                    <a href="#tools" class="title has-text-weight-normal is-size-7 has-text-white white__highlight underline__hover">#Tools</a>
 
-                    <a href="#projects" class="title has-text-weight-light is-size-7 has-text-white white__highlight underline__hover">#Projects</a>
+                    <a href="#projects" class="title has-text-weight-normal is-size-7 has-text-white white__highlight underline__hover">#Projects</a>
 
-                    <a href="#questions" class="title has-text-weight-light is-size-7 has-text-white white__highlight underline__hover">#Questions</a>
+                    <a href="#questions" class="title has-text-weight-normal is-size-7 has-text-white white__highlight underline__hover">#Questions</a>
                 </p>
 
             </section>
@@ -71,7 +71,7 @@
 
                     <section>
 
-                        <h1 class="title has-text-weight-light has-text-primary is-4">
+                        <h1 class="title has-text-weight-normal has-text-primary is-4">
                             Thedro Neely
                         </h1>
 
@@ -216,19 +216,19 @@
 
                         <div class="tile is-parent">
                             <a href="/">
-                              <img width="203" height="360" src="/images/thedro.png" alt="thedro">
+                              <img width="203" height="360" src="/images/personal-portfolio.png" alt="thedro">
                             </a>
                         </div>
 
                         <div class="tile is-parent">
                             <a href="/resume">
-                              <img width="203" height="360" src="/images/resume.png" alt="resume">
+                              <img width="203" height="360" src="/images/bulma-resume.png" alt="resume">
                             </a>
                         </div>
 
                         <div class="tile is-parent">
                             <a href="https://www.edwinmattiacci.com">
-                              <img width="203" height="360" src="/images/edwin.png" alt="edwin">
+                              <img width="203" height="360" src="/images/voiceover-website.png" alt="edwin">
                             </a>
                         </div>
 
