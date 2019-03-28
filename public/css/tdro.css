@@ -330,7 +330,7 @@ th {
 }
 
 html {
-  background-color: white;
+  background-color: #fdfdfd;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -372,9 +372,10 @@ pre {
 
 body {
   color: #000;
+  color: rgba(0,0,0,0.9);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 a {
@@ -393,12 +394,11 @@ a:hover {
 
 code {
   background-color: #f0f0f0;
-  border-radius: 3px;
   color: #000;
-  /*border: 1px solid #dbdbdb;*/
   font-size: 0.875em;
   font-weight: normal;
   padding: 0.25em 0.5em 0.25em;
+    border-radius: 3px;
 }
 
 hr {
@@ -406,7 +406,7 @@ hr {
   border: none;
   display: block;
   height: 1px;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 img {
