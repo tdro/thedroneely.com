@@ -29,8 +29,8 @@
 
                     <br>
 
-                    <p class="has-text-left has-text-black line__height">
-                        My name is Thedro (<span class="has-text-grey-dark">tee-dro</span>) &mdash;
+                    <p class="has-text-left">
+                        My name is Thedro <span class="has-text-grey-dark">[/tee:dro/]</span> &mdash;
                         a web developer and <a href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a>
                         system administrator.
                         There are many different tools and programming languages I've come across.
