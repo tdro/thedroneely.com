@@ -15,7 +15,7 @@
 
                         <h1 class="title is-3">Contact</h1>
 
-                        <p>
+                        <p class="paragraph__serif">
                         Interested in collaborating?
                         Complete and submit the form below to send me a direct message.
                         </p>
@@ -60,7 +60,7 @@
                               <div class="field-body">
                                 <div class="field">
                                   <div class="control">
-                                    <button class="button is-primary contact__button has-text-weight-normal">
+                                    <button class="button is-link is-outlined has-text-weight-normal">
                                       Send message
                                     </button>
                                   </div>
@@ -78,6 +78,10 @@
             </div>
         </div>
     </div>
+
+    </section>
+
+<section>
 
 <?php require __DIR__ . '/partials/footer.php'; ?>
 
