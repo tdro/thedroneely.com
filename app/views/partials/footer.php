@@ -1,8 +1,7 @@
-<div class="hero-foot">
+</section>
 
-<br>
-
-  <footer class="footer">
+<footer class="hero-foot">
+  <div class="footer">
     <div class="container">
 
       <div class="columns is-centered">
@@ -46,11 +45,8 @@
       </div>
 
     </div>
-  </footer>
-
-</div>
-
-</section>
+  </div>
+</footer>
 
 <script src="/dist/app.js"></script>
 
