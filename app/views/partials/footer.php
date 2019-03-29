@@ -52,6 +52,4 @@
 
 <?php if (trim($_SERVER['REQUEST_URI'], '/') == 'contact') { ?>
 
-<script src="/js/VueDevelopment.js"></script>
-
 <?php } ?>

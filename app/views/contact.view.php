@@ -15,44 +15,52 @@
 
                         <h1 class="title is-3">Contact</h1>
 
+                        <?php if (isset($formSuccess)) : ?>
+                        <div class="message__success" role="alert">
+                        <p>Your message has been successful. I'll get in touch with you soon!</p>
+                        </div>
+                        <?php endif; ?>
+
                         <p class="paragraph__serif">
                         Interested in collaborating?
                         Complete and submit the form below to send me a direct message.
                         </p>
 
-                        <form method="post" action="/?sent">
+                        <form method="post" action="/contact/">
 
                             <div class="field is-horizontal">
                                 <div class="field-body">
                                     <div class="field is-expanded">
-                                    <label class="heading is-size-6">Name <span class="alert" v-show="!name">*</span></label>
+                                    <label class="heading is-size-6">Name</label>
                                         <div class="field has-addons">
                                             <p class="control is-expanded">
-                                              <input v-model="name" class="input" type="text" name="26471" placeholder="">
+                                              <input class="input" type="text" name="26471" value="<?php echo $name ?? '' ?>">
                                             </p>
                                         </div>
                                     </div>
                                     <div class="field is-expanded">
-                                        <label class="heading is-size-6">Email <span class="alert" v-show="!email">*</span></label>
-                                            <div class="field has-addons">
-                                                <p class="control is-expanded">
-                                                  <input v-model="email" class="input" type="email" name="26472" placeholder="">
-                                                </p>
-                                            </div>
+                                        <label class="heading is-size-6">Email <span class="alert">*</span></label>
+                                        <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                              <input class="input <?php echo $border = isset($emailError) ? 'is-danger' : '';?>"
+                                              type="email" name="26472" value="<?php echo $email ?? '' ?>">
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <label class="heading is-size-6">Message <span class="alert" v-show="!message">*</span></label>
-                                <div class="field is-horizontal">
-                                  <div class="field-body">
-                                    <div class="field">
-                                      <div class="control">
-                                        <textarea v-model="message" class="textarea" name="26478" placeholder=""></textarea>
-                                      </div>
-                                    </div>
+                            <label class="heading is-size-6">Message <span class="alert">*</span></label>
+
+                            <div class="field is-horizontal">
+                              <div class="field-body">
+                                <div class="field">
+                                  <div class="control">
+                                    <textarea class="textarea" name="26478" placeholder=""><?php echo $message ?? '' ?></textarea>
                                   </div>
                                 </div>
+                              </div>
+                            </div>
 
                             <br>
 
@@ -68,7 +76,7 @@
                               </div>
                             </div>
 
-                           <input type="checkbox" name="contact" class="form" tabindex="-1" autocomplete="off">
+                           <input type="checkbox" name="agree" class="agree" tabindex="-1" autocomplete="off">
 
                         </form>
 
