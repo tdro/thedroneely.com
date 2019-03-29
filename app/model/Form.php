@@ -8,41 +8,28 @@ class Form
     public $name;
     public $email;
     public $message;
-
-    public function __construct($name, $email, $message)
-    {
-        $this->name = $name;
-        $this->email = $email;
-        $this->message = $message;
-
-        $this->isSpam();
-        $this->isEmpty();
-    }
+    public $spam;
 
     public function isSpam()
     {
-        $spam = false;
-
-        if (isset($_POST['contact'])) {
-            $spam = $_POST['contact'];
-        }
-
-        if ((bool) $spam == true) {
-            http_response_code(403);
+        if ((bool) $this->spam == true) {
             error_log('Contact Form Spam: Error 403');
-            exit;
+            return true;
         }
     }
 
     public function isEmpty()
     {
-        if ((bool) empty($this->name) == true
-            || (bool) empty($this->email) == true
+        if ((bool) empty($this->email) == true
             || (bool) empty($this->message) == true
         ) {
-            header('Location: /contact/');
-            exit;
+            return true;
         }
+    }
+
+    public function isEmailValid()
+    {
+        return $email = PHPMailer::validateAddress($this->email, 'auto');
     }
 
     public function isSubmit()
@@ -54,7 +41,6 @@ class Form
 
         try {
             //Server settings
-            //$mail->SMTPDebug = 2;                             // Enable verbose debug output
             $mail->isSMTP();                                    // Set mailer to use SMTP
             $mail->Host = $config['mail']['host'];              // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                             // Enable SMTP authentication

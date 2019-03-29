@@ -16,4 +16,4 @@ $router->head('', '../app/controllers/index.controller.php');
 $router->head('contact', '../app/controllers/contact.controller.php');
 
 
-$router->post('?sent', '../app/controllers/mail.controller.php');
+$router->post('contact', '../app/controllers/contact.controller.php');
