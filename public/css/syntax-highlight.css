@@ -48,9 +48,9 @@
 /* Comment */ .chroma .c { color: #75715e }
 /* CommentHashbang */ .chroma .ch { color: #75715e }
 /* CommentMultiline */ .chroma .cm { color: #75715e }
-/* CommentSingle */ .chroma .c1 { color: #75715e }
+/* CommentSingle */ .chroma .c1 { color: #94907a }
 /* CommentSpecial */ .chroma .cs { color: #75715e }
-/* CommentPreproc */ .chroma .cp { color: #75715e }
+/* CommentPreproc */ .chroma .cp { color: #E4246B }
 /* CommentPreprocFile */ .chroma .cpf { color: #75715e }
 /* GenericDeleted */ .chroma .gd { color: #f92672 }
 /* GenericEmph */ .chroma .ge { font-style: italic }
