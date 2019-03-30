@@ -102,7 +102,7 @@
                                 <div class="timeline-content">
                                   <p class="heading">Front End</p>
                                   <p class="is-size-7">HTML &nbsp; CSS &nbsp; JavaScript &nbsp; Bulma</p>
-                                  <p class="is-size-7">Bootstrap &nbsp; Vue.js &nbsp; Sass</p>
+                                  <p class="is-size-7">Bootstrap &nbsp; Sass</p>
                                 </div>
                                 </div>
 
