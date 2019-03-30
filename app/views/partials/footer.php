@@ -1,4 +1,3 @@
-</section>
 
 <footer class="hero-foot">
   <div class="footer">
