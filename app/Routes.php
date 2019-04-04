@@ -8,8 +8,6 @@ $router->get('contact', '../app/controllers/contact.controller.php');
 
 $router->get('resume', '../app/controllers/resume.controller.php');
 
-$router->get('admin', '../app/controllers/admin.controller.php');
-
 
 $router->head('', '../app/controllers/index.controller.php');
 
