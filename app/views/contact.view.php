@@ -76,7 +76,7 @@
                               </div>
                             </div>
 
-                           <input type="checkbox" name="agree" class="agree" tabindex="-1" autocomplete="off">
+                           <input type="checkbox" name="agree" class="agree" tabindex="-1">
 
                         </form>
 
