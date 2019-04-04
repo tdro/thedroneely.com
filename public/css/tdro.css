@@ -5239,7 +5239,7 @@ body.has-navbar-fixed-bottom {
   color: #4a4a4a;
   display: block;
   line-height: 1.5;
-  padding: 0.5rem 0.1rem;
+  padding: 0.25rem 0.1rem;
   position: relative;
 }
 
@@ -8493,7 +8493,7 @@ article.content { min-height: 452px; }
 blockquote p { color: rgba(0, 0, 0, 0.7) !important; }
 
 div.highlight, .highlight pre {
-  background-color: #444;
+  background-color: #273238;
   box-shadow: 0 0 1rem rgba(48,55,66,.3);
   color: #fff; border-radius: 3px;
 }
