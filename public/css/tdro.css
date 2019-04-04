@@ -8504,6 +8504,10 @@ video {
   border: 1px solid #000;
 }
 
+a code { color: #014ecb; }
+
+.image__thumbnail { max-height: 222px; }
+
 /* more posts and projects link frame */
 
 .front__more { text-transform: uppercase; }
@@ -8515,8 +8519,6 @@ video {
   word-break: break-word;
   color: rgba(0,0,0,0.85);
 }
-
-.paragraph__serif > code { font-size: 0.735em; white-space: nowrap; }
 
 .recent__article p, .article__summary {
   overflow: hidden;
