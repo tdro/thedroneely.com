@@ -21,7 +21,7 @@
                         </div>
                         <?php endif; ?>
 
-                        <p class="paragraph__serif">
+                        <p>
                         Interested in collaborating?
                         Complete and submit the form below to send me a direct message.
                         </p>
