@@ -81,17 +81,17 @@ var navbar = document.getElementById("navbar");
 var navbarHeight = navbar.offsetHeight;
 
 window.onscroll = function() {
-    var currentPosition = window.pageYOffset;
-
-    if (previousPosition > currentPosition) {
-      remClass(navbar, 'navbar__headroom')
-    } else if (currentPosition > navbarHeight) {
-      addClass(navbar, 'navbar__headroom')
-    }
-
-    previousPosition = currentPosition;
-
     remClass(activeMenu, 'is-active');
     remClass(activeBurger, 'is-active');
     remClass(activeBurgerCompact, 'is-active');
+
+    var currentPosition = window.pageYOffset;
+
+    if (previousPosition > currentPosition) {
+      remClass(navbar, 'navbar__headroom');
+    } else if (currentPosition > navbarHeight) {
+      addClass(navbar, 'navbar__headroom');
+    }
+
+    previousPosition = currentPosition;
 };
