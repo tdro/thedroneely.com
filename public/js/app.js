@@ -80,16 +80,21 @@ var previousPosition = window.pageYOffset;
 var navbar = document.getElementById("navbar");
 var navbarHeight = navbar.offsetHeight;
 
+if (previousPosition > navbarHeight) {
+    addClass(navbar, 'navbar__headroom');
+}
+
 window.onscroll = function() {
     remClass(activeMenu, 'is-active');
     remClass(activeBurger, 'is-active');
     remClass(activeBurgerCompact, 'is-active');
 
     var currentPosition = window.pageYOffset;
+    var velocity = previousPosition - currentPosition;
 
-    if (previousPosition > currentPosition) {
+    if (velocity > 55 || currentPosition < navbarHeight) {
       remClass(navbar, 'navbar__headroom');
-    } else if (currentPosition > navbarHeight) {
+    } else if (velocity < 0) {
       addClass(navbar, 'navbar__headroom');
     }
 
