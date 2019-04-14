@@ -47,8 +47,4 @@
   </div>
 </footer>
 
-<script src="/dist/app.js"></script>
-
-<?php if (trim($_SERVER['REQUEST_URI'], '/') == 'contact') { ?>
-
-<?php } ?>
+<script src="/js/app.js"></script>
