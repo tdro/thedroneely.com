@@ -371,8 +371,7 @@ pre {
 }
 
 body {
-  color: #000;
-  color: rgba(0,0,0,0.9);
+  color: black;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.8;
@@ -413,7 +412,7 @@ img {
   height: auto;
   max-width: 100%;
   border-radius: 0.1em;
-  box-shadow: 0 0.25rem 1rem rgba(48,55,66,.15);
+  box-shadow: 0 0.25rem 1rem rgba(48,55,66,.3);
 }
 
 input[type="checkbox"],
@@ -1702,14 +1701,13 @@ fieldset[disabled] .button.is-link.is-inverted {
 }
 
 .button.is-link.is-outlined {
-  background-color: white;
+  background-color: transparent;
   border-color: #3273dc;
   color: #1e55ae;
 }
 
 .button.is-link.is-outlined:hover, .button.is-link.is-outlined:focus {
   border-color: #3273dc;
-  font-weight: bold !important;
 }
 
 .button.is-link.is-outlined.is-loading::after {
@@ -4540,6 +4538,7 @@ fieldset[disabled] .select select:hover {
 
 .navbar {
   background-color: #fdfdfd;
+  background-color: rgba(253, 253, 253, .97);
   min-height: 4rem;
   position: relative;
   z-index: 30;
@@ -8504,7 +8503,7 @@ video {
   border: 1px solid #000;
 }
 
-a code { color: #014ecb; }
+a code { color: #0147b7; }
 
 .image__thumbnail { max-height: 222px; }
 
