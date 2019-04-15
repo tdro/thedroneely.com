@@ -2128,17 +2128,8 @@ fieldset[disabled] .button {
 }
 
 .content figure {
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-bottom: 1em;
   text-align: center;
-}
-
-.content figure:not(:first-child) {
-  margin-top: 2em;
-}
-
-.content figure:not(:last-child) {
-  margin-bottom: 2em;
 }
 
 .content figure img {
