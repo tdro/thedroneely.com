@@ -1741,6 +1741,16 @@ fieldset[disabled] .button.is-link.is-inverted.is-outlined {
   color: #fff;
 }
 
+.button.is-success.is-outlined {
+  background-color: transparent;
+  border-color: #157a38;
+  color: #157a38;
+}
+
+.button.is-success.is-outlined:hover, .button.is-success.is-outlined:focus {
+  border-color: #157a38;
+}
+
 
 .button.is-danger {
   background-color: #ff3860;
