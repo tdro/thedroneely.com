@@ -22,7 +22,7 @@
 
 </head>
 
-    <body class="has-background-grey-dark">
+    <body>
 
         <div class="columns max__height is-gapless">
 
@@ -60,7 +60,7 @@
 
             </div>
 
-            <div class="column column__right is-size-6 has-background-white">
+            <div class="column column__right is-size-6">
 
                 <div id="tools" class="resume__container">
 
