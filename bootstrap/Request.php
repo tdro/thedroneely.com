@@ -4,7 +4,7 @@ class Request
 {
     public static function uri()
     {
-        return (string) trim($_SERVER['REQUEST_URI'], "/");
+        return (string) trim(explode('?', $_SERVER['REQUEST_URI'])[0], "/");
     }
 
     public static function method()
