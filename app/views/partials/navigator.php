@@ -77,6 +77,50 @@
 
                 <div class="columns is-centered has-margin-bottom-none">
 
+                    <div class="navbar__left column">
+                        <a href="https://www.thedroneely.com/git/explore/repos"
+                        class="brand__custom is-inline-block">
+                            <?php echo file_get_contents(
+                                $_SERVER['DOCUMENT_ROOT']
+                                . '/..' . '/public/css/fonts/feather-icons/terminal.svg'
+                            ) ?>
+                        </a>
+
+                        <div class="navbar__separator is-inline-block"></div>
+
+                        <div class ="is-inline-block theme-toggle">
+                        <form method="get" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+                            <button class="theme-toggle-button button is-text"
+                            name="toggle" type="submit" value="theme">
+
+                                <?php if($theme->dark()) { ?>
+
+                                <span class="theme-toggle-sun">
+                                    <?php echo file_get_contents(
+                                        $_SERVER['DOCUMENT_ROOT']
+                                        . '/..'
+                                        . '/public/css/fonts/feather-icons/sun.svg'
+                                    ) ?>
+                                </span>
+
+                                <?php } else { ?>
+
+                                <span class="theme-toggle-moon">
+                                    <?php echo file_get_contents(
+                                        $_SERVER['DOCUMENT_ROOT']
+                                        . '/..'
+                                        . '/public/css/fonts/feather-icons/moon.svg'
+                                    ) ?>
+                                </span>
+
+                                <?php } ?>
+
+                            </button>
+                        </form>
+                        </div>
+
+                    </div>
+
                     <div class="navbar__left column is-2">
                         <?php require $_SERVER['DOCUMENT_ROOT']
                         . '/..' . '/app/views/partials/navigator.home.php'; ?>
@@ -85,6 +129,18 @@
                     <div class="navbar__right column is-5">
                         <?php require $_SERVER['DOCUMENT_ROOT']
                         . '/..' . '/app/views/partials/navigator.links.php'; ?>
+                    </div>
+
+                     <div class="navbar__right column">
+                        <a href ="https://ko-fi.com/thedroneely"
+                        class="navbar-item coffee button is-success
+                        is-outlined is-inline-flex">
+                        <?php echo file_get_contents(
+                            $_SERVER['DOCUMENT_ROOT']
+                            . '/..' . '/public/css/fonts/feather-icons/coffee.svg'
+                        ) ?>
+                        <span>Coffee</span>
+                        </a>
                     </div>
 
                 </div>
@@ -102,6 +158,37 @@
 
             <?php require $_SERVER['DOCUMENT_ROOT']
             . '/..' . '/app/views/partials/navigator.links.php'; ?>
+
+            <div class ="theme-toggle">
+                <form method="get" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+                    <button class="theme-toggle-button button is-text has-text-centered is-block"
+                    name="toggle" type="submit" value="theme">
+
+                    <?php if ($theme->dark()) { ?>
+
+                        <span class="theme-toggle-sun">
+                        <?php echo file_get_contents(
+                            $_SERVER['DOCUMENT_ROOT']
+                            . '/..'
+                            . '/public/css/fonts/feather-icons/sun.svg'
+                        ) ?>
+                        </span>
+
+                    <?php } else { ?>
+
+                        <span class="theme-toggle-moon">
+                        <?php echo file_get_contents(
+                            $_SERVER['DOCUMENT_ROOT']
+                            . '/..'
+                            . '/public/css/fonts/feather-icons/moon.svg'
+                        ) ?>
+                        </span>
+
+                    <?php } ?>
+
+                    </button>
+                </form>
+            </div>
 
         </div>
     </nav>

@@ -14,3 +14,9 @@ $router = new Router;
 
 /* create navigator */
 $navigation = new Navigation();
+
+/* create new theme */
+$theme = new Theme;
+
+/* enable dark and light themes */
+$theme->toggle();
