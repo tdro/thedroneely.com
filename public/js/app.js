@@ -72,6 +72,12 @@ document.addEventListener('touchstart', function(event) {
 
 });
 
+/**
+ * Remove url query string on load
+ */
+var url = window.location.href.split('?')[0];
+window.history.replaceState(null, null, url);
+
 
 /**
  * Hide elements on scroll events
