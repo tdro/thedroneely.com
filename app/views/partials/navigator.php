@@ -3,28 +3,41 @@
 
             <div class="navbar-brand navbar__mobile__compact">
 
-                <a href="/" class="navbar-item navbar__icon <?php echo $navigation->isActiveHome() ?? 'has-text-gray' ?>">
+                <a href="/" class="navbar-item navbar__icon
+                <?php echo $navigation->isActiveHome() ?? 'has-text-gray' ?>">
                     <div class="has-text-centered">
-                    <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/user.svg') ?>
+                    <?php echo file_get_contents(
+                        $_SERVER['DOCUMENT_ROOT']
+                            . '/..' . '/public/css/fonts/feather-icons/user.svg'
+                    ) ?>
                     <p class="is-size-7 navbar__icon__align">Home</p>
                     </div>
                 </a>
 
-                <a href="/post/" class="navbar-item navbar__icon <?php echo $navigation->isActive('/post/') ?? 'has-text-gray' ?>">
+                <a href="/posts/" class="navbar-item navbar__icon
+                <?php echo $navigation->isActive('/posts/') ?? 'has-text-gray' ?>">
                     <div class="has-text-centered">
-                    <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/book-open.svg') ?>
+                    <?php echo file_get_contents(
+                        $_SERVER['DOCUMENT_ROOT']
+                        . '/..' . '/public/css/fonts/feather-icons/book-open.svg'
+                    ) ?>
                     <p class="is-size-7 navbar__icon__align">Posts</p>
                     </div>
                 </a>
 
-                <a href="/project/" class="navbar-item navbar__icon <?php echo $navigation->isActive('/project/') ?? 'has-text-gray' ?>">
+                <a href="/projects/" class="navbar-item navbar__icon
+                <?php echo $navigation->isActive('/projects/') ?? 'has-text-gray' ?>">
                     <div class="has-text-centered">
-                    <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/briefcase.svg') ?>
+                    <?php echo file_get_contents(
+                        $_SERVER['DOCUMENT_ROOT']
+                        . '/..' . '/public/css/fonts/feather-icons/briefcase.svg'
+                    ) ?>
                     <p class="is-size-7 navbar__icon__align">Projects</p>
                     </div>
                 </a>
 
-                <a href="/contact/" class="navbar-item navbar__icon <?php echo $navigation->isActive('/contact/') ?? 'has-text-gray' ?>">
+                <a href="/contact/" class="navbar-item navbar__icon
+                <?php echo $navigation->isActive('/contact/') ?? 'has-text-gray' ?>">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
                         $_SERVER['DOCUMENT_ROOT']
@@ -34,7 +47,9 @@
                     </div>
                 </a>
 
-                <div id="navBurgerCompact" class="navbar-burger burger navbar__icon has-text-dark" data-target="navMenu">
+                <div id="navBurgerCompact"
+                class="navbar-burger burger navbar__icon has-text-dark"
+                data-target="navMenu">
                 <a href="javascript:void(0)" class="navbar-item navbar__icon__menu">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
@@ -56,7 +71,8 @@
                 <?php require $_SERVER['DOCUMENT_ROOT']
                 . '/..' . '/app/views/partials/navigator.links.php'; ?>
 
-                <div id="navBurger" class="navbar-burger burger has-text-dark" data-target="navMenu">
+                <div id="navBurger"
+                class="navbar-burger burger has-text-dark" data-target="navMenu">
                 <a href="javascript:void(0)" class="navbar-item navbar__icon__menu">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
