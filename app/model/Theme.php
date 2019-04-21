@@ -2,30 +2,41 @@
 
 class Theme
 {
-    public function dark()
+    public function color()
     {
-        return  $darkTheme = $_COOKIE['darkTheme'] ?? null;
+        return $theme = $_COOKIE['theme'] ?? null;
+    }
+
+    public function option()
+    {
+        return $theme = $_GET['theme'] ?? null;
     }
 
     public function set($theme)
     {
-        $time = time()+3600*24*365*10;
+        $time = time() + 3600 * 24 * 365 * 10;
 
         if ($theme === null) {
-            setcookie('darkTheme', 'on', $time, '/');
-            return $_COOKIE['darkTheme'] = 'on';
+            setcookie('theme', 'dark', $time, '/');
+            return $_COOKIE['theme'] = 'dark';
         }
 
-        setcookie('darkTheme', null, $time, '/');
-        return $_COOKIE['darkTheme'] = null;
+        setcookie('theme', $theme, $time, '/');
+        return $_COOKIE['theme'] = $theme;
+
     }
 
     public function toggle()
     {
-        $toggle = $_GET['toggle'] ?? null;
+        $theme = $this->option();
 
-        if ($toggle === 'theme') {
-            $theme = $this->set($this->dark());
+        if ($theme === 'dark') {
+            $theme = $this->set($this->option());
+            return;
+        }
+
+        if ($theme === 'light') {
+            $theme = $this->set($this->option());
         }
     }
 }
