@@ -106,10 +106,11 @@
 
                         <div class ="is-inline-block theme-toggle">
                         <form method="get" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-                            <button class="theme-toggle-button button is-text"
-                            name="toggle" type="submit" value="theme">
 
-                                <?php if($theme->dark()) { ?>
+                                <?php if ($theme->color() === 'dark') { ?>
+
+                                <button class="theme-toggle-button button is-text"
+                                name="theme" type="submit" value="light">
 
                                 <span class="theme-toggle-sun">
                                     <?php echo file_get_contents(
@@ -120,6 +121,9 @@
                                 </span>
 
                                 <?php } else { ?>
+
+                                <button class="theme-toggle-button button is-text"
+                                name="theme" type="submit" value="dark">
 
                                 <span class="theme-toggle-moon">
                                     <?php echo file_get_contents(
@@ -177,10 +181,11 @@
 
             <div class ="theme-toggle">
                 <form method="get" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-                    <button class="theme-toggle-button button is-text has-text-centered is-block"
-                    name="toggle" type="submit" value="theme">
 
-                    <?php if ($theme->dark()) { ?>
+                    <?php if ($theme->color() === 'dark') { ?>
+
+                    <button class="theme-toggle-button button is-text has-text-centered is-block"
+                    name="theme" type="submit" value="light">
 
                         <span class="theme-toggle-sun">
                         <?php echo file_get_contents(
@@ -191,6 +196,9 @@
                         </span>
 
                     <?php } else { ?>
+
+                    <button class="theme-toggle-button button is-text has-text-centered is-block"
+                    name="theme" type="submit" value="dark">
 
                         <span class="theme-toggle-moon">
                         <?php echo file_get_contents(
