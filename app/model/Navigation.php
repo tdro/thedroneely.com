@@ -12,7 +12,7 @@ class Navigation
 
      public function isActiveHome()
     {
-        if ($_SERVER['REQUEST_URI'] === '/') {
+        if (substr_count($_SERVER['REQUEST_URI'], '/') === 1) {
             return 'navbar__active ';
         }
         return;
