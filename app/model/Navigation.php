@@ -27,18 +27,4 @@ class Navigation
         }
         return;
     }
-
-    public function title()
-    {
-        switch ($_SERVER['REQUEST_URI']) {
-        case '/contact/':
-            $uri = $_SERVER['REQUEST_URI'];
-            echo $titleHeader = 'Contact - ';
-            break;
-        case '/':
-            $uri = $_SERVER['REQUEST_URI'];
-            echo $titleHeader = 'Portfolio - ';
-            break;
-        }
-    }
 }

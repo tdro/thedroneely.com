@@ -1,3 +1,5 @@
+<?php $title = 'Contact - ' ?>
+
 <?php require __DIR__ . '/partials/header.php'; ?>
 
     <body>
