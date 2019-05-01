@@ -15,7 +15,7 @@
                 </a>
 
                 <a href="/posts/" class="navbar-item navbar__icon
-                <?php echo $navigation->isActive('/posts/') ?? 'has-text-gray' ?>">
+                <?php echo $navigation->isActive('posts') ?? 'has-text-gray' ?>">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
                         $_SERVER['DOCUMENT_ROOT']
@@ -26,7 +26,7 @@
                 </a>
 
                 <a href="/projects/" class="navbar-item navbar__icon
-                <?php echo $navigation->isActive('/projects/') ?? 'has-text-gray' ?>">
+                <?php echo $navigation->isActive('projects') ?? 'has-text-gray' ?>">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
                         $_SERVER['DOCUMENT_ROOT']
@@ -37,7 +37,7 @@
                 </a>
 
                 <a href="/contact/" class="navbar-item navbar__icon
-                <?php echo $navigation->isActive('/contact/') ?? 'has-text-gray' ?>">
+                <?php echo $navigation->isActive('contact') ?? 'has-text-gray' ?>">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
                         $_SERVER['DOCUMENT_ROOT']
