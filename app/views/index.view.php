@@ -48,7 +48,7 @@
 
                     <div class="recent__article">
 
-                    <h1 class="title has-text-weight-normal">Recent Posts</h1>
+                    <h1 class="title is-4 has-text-weight-normal">Recent Posts</h1>
 
                     <?php
                     $recentPosts = new DOMExtract();
@@ -56,7 +56,7 @@
                     echo $recentPosts->getInnerHTML('recent-article');
                     ?>
 
-                    <a href="/post/"
+                    <a href="/posts/"
                         class="front__more is-block has-text-right has-text-centered-mobile">
                         See All Posts
                         <?php echo file_get_contents(
@@ -68,7 +68,7 @@
 
                     <br>
 
-                    <h1 class="title has-text-weight-normal">Recent Projects</h1>
+                    <h1 class="title is-4 has-text-weight-normal">Recent Projects</h1>
 
                     <?php
                     $recentProjects = new DOMExtract();
@@ -77,7 +77,7 @@
                     ?>
                     </div>
 
-                    <a href="/project/"
+                    <a href="/projects/"
                     class="front__more is-block has-text-right has-text-centered-mobile">
                         See All Projects
                         <?php echo file_get_contents(
