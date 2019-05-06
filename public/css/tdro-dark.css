@@ -5,6 +5,8 @@ body { color: #cad6e2; }
 img { border: 1px solid transparent; }
 a, .footer__section svg:hover { color: #75b2f0; }
 a.navbar-item:hover { color: #fff; }
+.serif > a { color: #cad6e2 }
+.content blockquote { border-left: 2px solid #555; color: #bdc1c7; }
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }
 .navbar__active { color: #75b2f0 !important; }
 .navbar-end > a.navbar-item:hover { background-color: #4698EA; color: #fff !important; }
