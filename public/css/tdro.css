@@ -6329,25 +6329,15 @@ a.navbar-item:hover, a.navbar-item.is-active,
 
 .footer {
   padding: 1.5rem;
-  box-shadow: 0px -10px 25px 0px rgba(0,0,0,0.05);
 }
 
 /* article, video and code highlights */
 
 article.content { min-height: 452px; }
 
-blockquote p { color: rgba(0, 0, 0, 0.7) !important; }
+div.highlight, .highlight pre { background-color: #273238; color: #fff; border-radius: 3px; }
 
-div.highlight, .highlight pre {
-  background-color: #273238;
-  box-shadow: 0 0 1rem rgba(48,55,66,.3);
-  color: #fff; border-radius: 3px;
-}
-
-video {
-  display: inline-block;
-  box-shadow: 0 0.25rem 1rem rgba(48,55,66,.3);
-}
+video { display: inline-block; box-shadow: 0 0.25rem 1rem rgba(48,55,66,.3); }
 
 a code { color: #0147b7; }
 
@@ -6358,11 +6348,10 @@ a code { color: #0147b7; }
 .front__more { text-transform: uppercase; }
 .front__more svg { vertical-align: bottom; }
 
-.serif {
-  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
-  font-size: 1.4em;
-  word-break: break-word;
-}
+.serif { font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; }
+.serif > a { color: #222; padding-bottom: 1px; }
+
+.is-size-serif { font-size: 1.4em !important; }
 
 .recent__article p, .article__summary {
   overflow: hidden;
@@ -6510,11 +6499,12 @@ a code { color: #0147b7; }
     text-shadow: 0 0 0 #fff;
 }
 
+
 /* underline text */
 
-.underline, .serif > a, .underline__hover:hover,
-.article__paragraph > a,
-.footer__section p > a { border-bottom: 1px solid currentColor; }
+.underline, .underline__hover:hover,
+.footer__section p > a, .serif > a { border-bottom: 1px solid currentColor; }
+
 
 /* post tags */
 
@@ -6524,6 +6514,10 @@ a code { color: #0147b7; }
   padding-right: 4px;
   border-radius: 6px;
 }
+
+/* figure caption */
+
+figcaption { font-size: 0.9em; }
 
 /* theme toggle */
 .theme-toggle { vertical-align: middle; }
