@@ -1809,13 +1809,10 @@ fieldset[disabled] .button {
 
 .content h1,
 .content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
+.content h3 {
   color: #000;
   font-weight: 400;
-  line-height: 1.125;
+  line-height: 1.4;
 }
 
 .content h1 {
@@ -1845,26 +1842,9 @@ fieldset[disabled] .button {
   margin-top: 1.3333em;
 }
 
-.content h4 {
-  font-size: 1.25em;
-  margin-bottom: 0.8em;
-}
-
-.content h5 {
-  font-size: 1.125em;
-  margin-bottom: 0.8888em;
-}
-
-.content h6 {
-  font-size: 1em;
-  margin-bottom: 1em;
-}
-
 .content blockquote {
-  background-color: whitesmoke;
-  border-left: 5px solid #dbdbdb;
   padding: 1.25em 1.5em;
-  color: #444;
+  margin-left: 5%;
 }
 
 .content ol {
@@ -1919,10 +1899,6 @@ fieldset[disabled] .button {
 
 .content figure img {
   display: inline-block;
-}
-
-.content figure figcaption {
-  font-style: italic;
 }
 
 .content pre {
