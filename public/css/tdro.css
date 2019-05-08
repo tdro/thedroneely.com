@@ -6359,32 +6359,28 @@ a code { color: #0147b7; }
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  line-height: 1.5;
-  max-height: 45px;
+  max-height: 56px;
   margin-bottom: 0.5em;
 }
 
 
 /* condensed mobile navbar */
 
-#navbar { -webkit-transition: top 0.75s; -o-transition: top 0.75s; transition: top 0.75s; }
-
+#navbar { -webkit-transition: top 0.25s; -o-transition: top 0.25s; transition: top 0.25s; }
 .navbar__headroom { top: -5em !important; }
 .navbar-item { color: #555; margin: 0.86rem 0.8rem; }
-.navbar { box-shadow: 0 4px 12px 0 rgba(0,0,0,.05); }
 
 @media screen and (max-width: 1087px) {
-  .navbar { box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25); }
   .navbar-menu { padding: 0 !important; }
   .navbar__item { padding: 0.65em 1em; margin: 0; }
   .navbar-end {
-    z-index: 1;
+    z-index: 40;
     position: fixed;
     min-width: 100px;
-    top: 4em;
-    right: 0;
+    top: 1em;
+    right: 1em;
     background-color: #fff;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); }
+    border: 1px solid #eee; }
 }
 
 @media screen and (min-width: 1088px) {
