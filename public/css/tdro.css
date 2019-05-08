@@ -386,11 +386,8 @@ a strong {
 }
 
 code {
-  background-color: #f0f0f0;
-  color: #000;
   font-size: 0.735em;
   font-weight: normal;
-  padding: 0.25em 0.5em;
   border-radius: 3px;
 }
 
