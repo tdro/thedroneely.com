@@ -6532,6 +6532,79 @@ figcaption { font-size: 0.9em; }
 .has-margin-none { margin: 0 !important; }
 .has-margin-bottom-none { margin-bottom: 0 !important; }
 
+/* tufte css */
+
+.leftnote {
+  float: left;
+  clear: left;
+  margin-left: -40%;
+  margin-left: -22vw;
+  padding-left: 1.125em;
+}
+
+.rightnote {
+  float: right;
+  clear: right;
+  margin-right: -40%;
+  margin-right: -22vw;
+  padding-right: 1.125em;
+}
+
+.leftnote, .rightnote {
+  width: 32%;
+  width: 18vw;
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  vertical-align: baseline;
+  position: relative;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body { counter-reset: sidenote-counter; }
+
+label.sidenote-mark { display: inline; }
+input.sidenote-toggle, input.marginnote-toggle  { display: none; }
+
+.sidenote-mark { counter-increment: sidenote-counter; }
+.sidenote:before { content: counter(sidenote-counter) " "; }
+.sidenote-mark:after { content: counter(sidenote-counter); left: 0.1rem; }
+
+.sidenote-mark:after, .sidenote:before, .marginnote-mark:after  {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 0.7rem;
+  top: -0.5rem;
+}
+
+@media (max-width: 768px) {
+.sidenote-toggle:checked + .sidenote,
+.marginnote-toggle:checked + .marginnote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative;
+}
+label { cursor: pointer; }
+label.marginnote-toggle:not(.sidenote-number) { display: inline; }
+.sidenote, .marginnote { display: none; }
+.marginnote-mark:after { content: "\0002B"; font-weight: bold; }
+}
+
+blockquote footer { font-size: 1.1rem; text-align: right; }
+blockquote p { font-size: 1.3rem !important; }
+
+.document .subtitle { margin-top: 0 !important; margin-bottom: 1.5em !important; }
+.is-small-caps { font-variant: small-caps; }
+
 /* isso comments */
 
 #isso-thread * {
