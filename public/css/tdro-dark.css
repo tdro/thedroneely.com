@@ -2,7 +2,6 @@
 
 html { background-color: #333; }
 body { color: #cad6e2; }
-img { border: 1px solid transparent; }
 a, .footer__section svg:hover { color: #75b2f0; }
 a.navbar-item:hover { color: #fff; }
 .serif > a { color: #cad6e2 }

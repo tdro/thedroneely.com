@@ -403,7 +403,6 @@ img {
   height: auto;
   max-width: 100%;
   border-radius: 0.1em;
-  border: 1px solid #eee;
 }
 
 input[type="checkbox"],
@@ -1963,9 +1962,8 @@ fieldset[disabled] .button {
 .input,
 .textarea {
   background-color: #f9f9f9;
-  border-color: #eee;
+  border-color: #ccc;
   color: #363636;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
   max-width: 100%;
   width: 100%;
   font-weight: 400;
@@ -6443,7 +6441,6 @@ a code { color: #0147b7; }
   padding: 1em;
   border: 1px solid #28d263;
   margin-bottom: 1em;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,.12), 0 2px 4px 0 rgba(0,0,0,.08);
 }
 
 /* footer */
@@ -6806,7 +6803,6 @@ blockquote p { font-size: 1.3rem !important; }
     border-radius: 2px;
     background-color: #fafafa;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     min-height: 150px;
 }
 
@@ -6837,7 +6833,6 @@ blockquote p { font-size: 1.3rem !important; }
     background-color: #fafafa;
     line-height: 1.4em;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .isso-postbox > .form-wrapper > .auth-section .post-action {
@@ -6852,7 +6847,6 @@ blockquote p { font-size: 1.3rem !important; }
     cursor: pointer;
     outline: 0;
     line-height: 1.7em;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     width: 6em;
     background-color: white;
     -webkit-appearance: none;
