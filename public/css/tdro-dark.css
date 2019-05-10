@@ -7,6 +7,7 @@ a, .footer__section svg:hover { color: #75b2f0; }
 a.navbar-item:hover { color: #fff; }
 .serif > a { color: #cad6e2 }
 .content blockquote { color: #bdc1c7; }
+div.highlight, .highlight pre { background-color: #404040; }
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }
 .navbar__active { color: #75b2f0 !important; }
 .navbar-end > a.navbar-item:hover { background-color: #4698EA; color: #fff !important; }
@@ -14,9 +15,9 @@ a.navbar-item:hover { color: #fff; }
 .has-text-primary { color: #a6c9e8 !important; }
 .footer__section a { color: #bbb; }
 .navbar { background-color: #333; background-color: rgba(51, 51, 51, 0.95); }
-.title, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { color: #ffffff; }
-.button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #627e8d; color: white; border-width: 2px; }
-.input, .textarea { background-color: #2c4c6d; border-color: transparent; color: white; }
+.title, .content h1, .content h2, .content h3 { color: #ffffff; }
+.button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #75b2f0; color: #cad6e2 !important; border-width: 1px; }
+.input, .textarea { background-color: #404040; border-color: transparent; color: white; }
 .brand__custom { background-color: white; color: black; }
 .page__tags { background-color: #75b2f0; color: #212121; }
 .message__success { background-color: #55a1ec; border: 1px solid #1259a1;  color: black; }
@@ -24,14 +25,14 @@ a.navbar-item:hover { color: #fff; }
 .pagination-previous, .pagination-next, .pagination-link { border-color: #4d6879; color: #cad6e2; min-width: 2.25em; }
 .pagination-previous:hover, .pagination-next:hover, .pagination-link:hover { color: #cad6e2; }
 .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled] { background-color: #4d6879; border-color: #4d6879; color: #fff; }
-@media screen and (min-width: 1088px) { .navbar__active { border-bottom: 2px solid #627e8d !important; color: white !important; } }
-@media screen and (min-width: 1088px) { a.navbar-item:hover { border-bottom: 2px solid #627e8d; } }
-@media screen and (max-width: 1087px) { .navbar-end { background-color: #333; border: 1px solid #444; } }
+@media screen and (min-width: 1088px) { .navbar__active { border-bottom: 2px solid #75b2f0 !important; color: white !important; } }
+@media screen and (min-width: 1088px) { a.navbar-item:hover { border-bottom: 2px solid #75b2f0; } }
+@media screen and (max-width: 1087px) { .navbar-end { background-color: #333; border: 1px solid #666; } }
 @media screen and (max-width: 1087px) { .theme-toggle-button { background-color: #3d6b99 !important; } }
 #isso-thread > h4 { color: #b7c7d7; }
 #isso-thread .textarea.placeholder { color: #cad6e2; }
-.isso-postbox > .form-wrapper > .auth-section .input-wrapper input { background-color: #2c4c6d; color: white; }
-.isso-postbox > .form-wrapper .textarea, .isso-postbox > .form-wrapper .preview { background-color: #2c4c6d; }
+.isso-postbox > .form-wrapper > .auth-section .input-wrapper input { background-color: #404040; color: white; }
+.isso-postbox > .form-wrapper .textarea, .isso-postbox > .form-wrapper .preview { background-color: #404040; }
 .isso-comment > div.text-wrapper > .isso-comment-header .author { color: #fff; }
 .isso-feedlink:hover, .isso-comment > div.text-wrapper > .isso-comment-footer a:hover { background-color: #34597f; color: white; }
 .isso-comment-footer .upvote svg, .isso-comment-footer .downvote svg { fill: white };
@@ -39,4 +40,4 @@ input::-moz-placeholder, textarea::-moz-placeholder { color: #cad6e2; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cad6e2; }
 input:-moz-placeholder, textarea:-moz-placeholder { color: #cad6e2; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cad6e2; }
-.isso-postbox > .form-wrapper > .auth-section .post-action > input { border: 1px solid #557181; background-color: #1f364d; color: white; }
+.isso-postbox > .form-wrapper > .auth-section .post-action > input { border: 1px solid #557181; background-color: transparent; color: white; }
