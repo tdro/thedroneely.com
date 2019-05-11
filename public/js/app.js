@@ -86,11 +86,8 @@ var previousPosition = window.pageYOffset;
 var navbar = document.getElementById("navbar");
 var navbarHeight = navbar.offsetHeight;
 
-if (previousPosition > navbarHeight) {
-    addClass(navbar, 'navbar__headroom');
-}
-
 window.onscroll = function() {
+
     remClass(activeMenu, 'is-active');
     remClass(activeBurger, 'is-active');
     remClass(activeBurgerCompact, 'is-active');
@@ -105,4 +102,5 @@ window.onscroll = function() {
     }
 
     previousPosition = currentPosition;
+
 };
