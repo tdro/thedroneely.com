@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top" lang="en-us">
+
+<script>document.write('<html class="has-navbar-fixed-top" lang="en-us">');</script>
+<noscript><html lang="en-us"></noscript>
+
 <head>
 
     <title><?php echo $title = $title ?? 'Portfolio - '; ?>Thedro Neely</title>

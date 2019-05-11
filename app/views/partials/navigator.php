@@ -1,4 +1,7 @@
-    <nav id="navbar" class="navbar is-fixed-top" aria-label="main navigation">
+
+        <script>document.write('<nav id="navbar" class="navbar is-fixed-top" aria-label="main navigation">');</script>
+        <noscript><nav id="navbar" class="navbar" aria-label="main navigation"></noscript>
+
         <div class="container">
 
             <div class="navbar-brand navbar__mobile__compact">
