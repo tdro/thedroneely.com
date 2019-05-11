@@ -30,7 +30,7 @@
 
             <section class="section has-text-centered">
 
-                <a href="/resume" class="title has-text-weight-normal is-size-4 has-text-white inline__padding underline__hover">Resume</a>
+                <a href="/resume" class="title has-text-weight-normal is-size-4 has-text-white inline__padding">Resume</a>
 
                 <br>
 
@@ -43,17 +43,17 @@
                 <br>
 
                 <p>
-                    <a href="/" class="title has-text-weight-normal is-size-7 has-text-white white__highlight underline__hover">https://www.thedroneely.com</a>
+                    <a href="/" class="title has-text-weight-normal is-size-7 resume__label">https://www.thedroneely.com</a>
                 </p>
 
                 <br>
 
                 <p>
-                    <a href="#tools" class="title has-text-weight-normal is-size-7 has-text-white white__highlight underline__hover">#Tools</a>
+                    <a href="#tools" class="title has-text-weight-normal is-size-7 resume__label">#Tools</a>
 
-                    <a href="#projects" class="title has-text-weight-normal is-size-7 has-text-white white__highlight underline__hover">#Projects</a>
+                    <a href="#projects" class="title has-text-weight-normal is-size-7 resume__label">#Projects</a>
 
-                    <a href="#questions" class="title has-text-weight-normal is-size-7 has-text-white white__highlight underline__hover">#Questions</a>
+                    <a href="#questions" class="title has-text-weight-normal is-size-7 resume__label">#Questions</a>
                 </p>
 
             </section>
