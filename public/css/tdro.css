@@ -6350,21 +6350,23 @@ a code { color: #0147b7; }
 
 /* condensed mobile navbar */
 
-#navbar { -webkit-transition: top 0.25s; -o-transition: top 0.25s; transition: top 0.25s; }
+#navbar { -webkit-transition: top 0.15s; -o-transition: top 0.15s; transition: top 0.15s; }
 .navbar__headroom { top: -5em !important; }
 .navbar-item { color: #555; margin: 0.86rem 0.8rem; }
+.navbar { box-shadow: 0 4px 12px 0 rgba(0,0,0,.05); }
 
 @media screen and (max-width: 1087px) {
   .navbar-menu { padding: 0 !important; }
   .navbar__item { padding: 0.65em 1em; margin: 0; }
+  .navbar { box-shadow: 0 4px 12px 0 rgba(0,0,0,.1); }
   .navbar-end {
     z-index: 40;
     position: fixed;
     min-width: 100px;
-    top: 1em;
-    right: 1em;
+    top: 0.5em;
+    right: 0.5em;
     background-color: #fff;
-    border: 1px solid #eee; }
+    box-shadow: 0px 2px 8px rgba(0,0,0,.25); }
 }
 
 @media screen and (min-width: 1088px) {
