@@ -1,19 +1,21 @@
 /* dark theme */
 
 html { background-color: #333; }
-body { color: #cad6e2; }
 a, .footer__section svg:hover { color: #75b2f0; }
 a.navbar-item:hover { color: #fff; }
-.serif > a { color: #cad6e2 }
+img { box-shadow: none; }
+body, .serif > a { color: #cad6e2 }
 .content blockquote { color: #bdc1c7; }
 div.highlight, .highlight pre { background-color: #404040; }
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }
 .navbar__active { color: #75b2f0 !important; }
+.navbar__border { border-bottom: 1px solid #666; }
 .navbar-end > a.navbar-item:hover { background-color: #4698EA; color: #fff !important; }
 .has-text-danger { color: #ff8f93 !important; }
 .has-text-primary { color: #a6c9e8 !important; }
 .footer__section a { color: #bbb; }
-.navbar { background-color: #333; background-color: rgba(51, 51, 51, 0.95); }
+.footer { padding: 1.5rem; box-shadow: 0px -30px 25px 0px rgba(0,0,0,0.08); }
+.navbar { background-color: #333; background-color: rgba(51, 51, 51, 0.95); box-shadow: 0 4px 12px 0 rgba(0,0,0,.15); }
 .title, .content h1, .content h2, .content h3 { color: #ffffff; }
 .button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #75b2f0; color: #cad6e2 !important; border-width: 1px; }
 .input, .textarea { background-color: #404040; border-color: transparent; color: white; }
@@ -26,7 +28,7 @@ div.highlight, .highlight pre { background-color: #404040; }
 .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled] { background-color: #4d6879; border-color: #4d6879; color: #fff; }
 @media screen and (min-width: 1088px) { .navbar__active { border-bottom: 2px solid #75b2f0 !important; color: white !important; } }
 @media screen and (min-width: 1088px) { a.navbar-item:hover { border-bottom: 2px solid #75b2f0; } }
-@media screen and (max-width: 1087px) { .navbar-end { background-color: #333; border: 1px solid #666; } }
+@media screen and (max-width: 1087px) { .navbar-end { background-color: #333; } }
 @media screen and (max-width: 1087px) { .theme-toggle-button { background-color: #3d6b99 !important; } }
 #isso-thread > h4 { color: #b7c7d7; }
 #isso-thread .textarea.placeholder { color: #cad6e2; }
@@ -40,3 +42,4 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 input:-moz-placeholder, textarea:-moz-placeholder { color: #cad6e2; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cad6e2; }
 .isso-postbox > .form-wrapper > .auth-section .post-action > input { border: 1px solid #557181; background-color: transparent; color: white; }
+.isso-postbox>.form-wrapper .preview { background-color: #333; background: repeating-linear-gradient(-45deg,#333333,#333333 10px,#404040 10px,#404040 20px); }
