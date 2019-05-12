@@ -1619,19 +1619,11 @@ a.box:active {
   color: #014cc6;
 }
 
-.button.is-link.is-outlined:hover, .button.is-link.is-outlined:focus {
-  border-color: #3273dc;
-}
-
 .button.is-success.is-outlined {
   background-color: transparent;
   border-color: #03a87c;
   border-width: 1px;
   color: #03a87c;
-}
-
-.button.is-success.is-outlined:hover, .button.is-success.is-outlined:focus {
-  border-color: #03a87c;
 }
 
 .button.is-small {
@@ -1989,12 +1981,6 @@ textarea:-moz-placeholder {
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #545454;
-}
-
-.input:hover, .input.is-hovered,
-.textarea:hover,
-.textarea.is-hovered {
-  border-color: #b5b5b5;
 }
 
 .input:focus, .input.is-focused, .input:active, .input.is-active,
