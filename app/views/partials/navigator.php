@@ -198,6 +198,8 @@
                         ) ?>
                         </span>
 
+                        <span>Light</span>
+
                     <?php } else { ?>
 
                     <button class="theme-toggle-button button is-text has-text-centered is-block"
@@ -210,6 +212,8 @@
                             . '/public/css/fonts/feather-icons/moon.svg'
                         ) ?>
                         </span>
+
+                        <span>Dark</span>
 
                     <?php } ?>
 
