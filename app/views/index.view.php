@@ -48,7 +48,15 @@
 
                     <div class="recent__article">
 
-                    <h1 class="title is-4 has-text-weight-normal">Recent Posts</h1>
+                    <label for="posts" class="title is-inline-block is-4 has-text-weight-normal marginnote-toggle marginnote-mark">
+                       Recent Posts
+                    </label>
+
+                    <input type="checkbox" id="posts" class="marginnote-toggle">
+
+                    <span class="marginnote rightnote">
+                        See an archive of all posts <a class="underline" href="/posts/archive/">here.</a>
+                    </span>
 
                     <?php
                     $recentPosts = new DOMExtract();
@@ -56,9 +64,9 @@
                     echo $recentPosts->getInnerHTML('recent-article');
                     ?>
 
-                    <a href="/posts/"
-                        class="front__more is-block has-text-right has-text-centered-mobile">
-                        See All Posts
+                    <a href="/posts/page/2/"
+                        class="front__more is-block has-text-centered">
+                        See More Posts
                         <?php echo file_get_contents(
                             $_SERVER['DOCUMENT_ROOT']
                             . '/..'
@@ -68,7 +76,16 @@
 
                     <br>
 
-                    <h1 class="title is-4 has-text-weight-normal">Recent Projects</h1>
+
+                    <label for="projects" class="title is-inline-block is-4 has-text-weight-normal marginnote-toggle marginnote-mark">
+                       Recent Projects
+                    </label>
+
+                    <input type="checkbox" id="projects" class="marginnote-toggle">
+
+                    <span class="marginnote rightnote">
+                        See an archive of all projects <a class="underline" href="/projects/archive/">here.</a>
+                    </span>
 
                     <?php
                     $recentProjects = new DOMExtract();
@@ -78,8 +95,8 @@
                     </div>
 
                     <a href="/projects/"
-                    class="front__more is-block has-text-right has-text-centered-mobile">
-                        See All Projects
+                    class="front__more is-block has-text-centered">
+                        See More Projects
                         <?php echo file_get_contents(
                             $_SERVER['DOCUMENT_ROOT']
                             . '/..'
