@@ -97,22 +97,26 @@
                 <div class="columns is-centered has-margin-bottom-none">
 
                     <div class="navbar__left column">
-                        <a href="https://www.thedroneely.com/git/explore/repos"
+                        <a title="Git Repository"
+                        href="https://www.thedroneely.com/git/explore/repos"
                         class="brand__custom is-inline-block">
                             <?php echo file_get_contents(
                                 $_SERVER['DOCUMENT_ROOT']
-                                . '/..' . '/public/css/fonts/feather-icons/terminal.svg'
+                                . '/..'
+                                . '/public/css/fonts/feather-icons/terminal.svg'
                             ) ?>
                         </a>
 
                         <div class="navbar__separator is-inline-block"></div>
 
                         <div class ="is-inline-block theme-toggle">
-                        <form method="get" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+                        <form method="get"
+                        action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 
                                 <?php if ($theme->color() === 'dark') { ?>
 
-                                <button class="theme-toggle-button button is-text"
+                                <button title="Light Theme"
+                                class="theme-toggle-button button is-text"
                                 name="theme" type="submit" value="light">
 
                                 <span class="theme-toggle-sun">
@@ -125,7 +129,8 @@
 
                                 <?php } else { ?>
 
-                                <button class="theme-toggle-button button is-text"
+                                <button title="Dark Theme"
+                                class="theme-toggle-button button is-text"
                                 name="theme" type="submit" value="dark">
 
                                 <span class="theme-toggle-moon">
@@ -155,7 +160,8 @@
                     </div>
 
                      <div class="navbar__right column">
-                        <a href ="https://ko-fi.com/thedroneely"
+                        <a title="Coffee"
+                        href ="https://ko-fi.com/thedroneely"
                         class="navbar-item coffee button is-success
                         is-outlined is-inline-flex">
                         <?php echo file_get_contents(
