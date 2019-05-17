@@ -23,7 +23,7 @@
                         In it for the long haul
                     </h2>
 
-                    <img alt="Mountains" src="/images/mountains.jpg"
+                    <img image-zoom alt="Mountains" src="/images/mountains.jpg"
                     width="<?php echo getimagesize(
                         $_SERVER['DOCUMENT_ROOT'] . '/images/mountains.jpg'
                     )[0]; ?>"
