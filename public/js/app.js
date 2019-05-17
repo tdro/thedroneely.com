@@ -593,6 +593,6 @@ window.onscroll = function() {
 /**
  * Activate Medium Zoom
  */
-imageZoom = mediumZoom('[image-zoom]');
+imageZoom = mediumZoom('[data-image-zoom]');
 imageZoom.on('open', function(event) { addClass(navbar, 'navbar__headroom'); });
 imageZoom.on('close', function(event) { if (window.pageYOffset < navbarHeight) { remClass(navbar, 'navbar__headroom'); }; });
