@@ -1,6 +1,5 @@
 
-        <script>document.write('<nav id="navbar" class="navbar is-fixed-top" aria-label="main navigation">');</script>
-        <noscript><nav id="navbar" class="navbar" aria-label="main navigation"></noscript>
+    <nav id="navbar" class="navbar is-fixed-top" aria-label="main navigation">
 
         <div class="container">
 

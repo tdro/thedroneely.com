@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
-<script>document.write('<html class="has-navbar-fixed-top" lang="en-us">');</script>
-<noscript><html lang="en-us"></noscript>
+<html class="has-navbar-fixed-top" lang="en-us">
 
 <head>
 
