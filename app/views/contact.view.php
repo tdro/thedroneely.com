@@ -8,7 +8,6 @@
 
     <section class="section" itemscope itemtype="http://schema.org/WebPage">
 
-    <div id="contact-vue">
         <div class="container">
             <div class="columns is-centered">
                 <div class="column is-7">
@@ -87,7 +86,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     </section>
 
