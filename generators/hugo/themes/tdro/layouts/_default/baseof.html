@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en-us">
+
+<head>
+
+{{ partial "head.html" . -}}
+  
+</head>
+
+<body>
+
+{{ partial "nav.html" . -}}
+
+	{{- block "main" . }} 
+		<p>If you are seeing this, your page content hasn't been created.</p>
+	{{- end }}
+
+{{ partial "footer.html" . -}}

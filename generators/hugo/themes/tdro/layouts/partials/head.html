@@ -1,0 +1,30 @@
+
+<!-- HTML Meta Tags -->
+<title>{{ partial "title.html" . -}}</title>
+<meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}">
+<meta name="keywords" content="{{ partial "title.html" . -}}">
+<meta name="author" content="Thedro Neely">
+
+<meta charset="utf-8">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Search Engine Tags -->
+<meta itemprop="name" content="{{ partial "title.html" . -}}">
+<meta itemprop="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}">
+<meta itemprop="image" content="{{ partial "article-image.html" . -}}">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="{{ partial "title.html" . -}}">
+<meta property="og:description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ partial "article-image.html" . -}}">
+<meta property="og:type" content="website">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ partial "title.html" . -}}">
+<meta name="twitter:description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}">
+<meta name="twitter:image" content="{{ partial "article-image.html" . -}}">
+
+{{ safeHTML "<?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/partials/header.posts.php'; ?>" }}

@@ -1,0 +1,6 @@
+{{ $minutes := div .WordCount 150 }}
+{{ if lt $minutes 1 }}
+    less than 1 min read
+{{ else }}
+  {{ $minutes }} min read
+{{ end }}
