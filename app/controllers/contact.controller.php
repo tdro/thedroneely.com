@@ -9,17 +9,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $form->message = $message = $_POST['26478'] ?? null;
     $form->spam = $spam = $_POST['agree'] ?? false;
 
-    if ($form->isEmpty()) {
+    if ($form->empty()) {
         include '../app/views/contact.view.php';
         return;
     }
 
-    if ($form->isSpam()) {
+    if ($form->spam()) {
         error_log('Contact Form Spam: Error 403');
         return http_response_code(403);
     }
 
-    if ($form->isEmailValid() === false) {
+    if ($form->emailValid() === false) {
         $emailError = 'Invalid email: ' . "\r" . '<b>'. $email . '</b>';
         include '../app/views/contact.view.php';
         return;
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]
     );
 
-    $form->isSubmit();
+    $form->submit();
     return;
 }
 

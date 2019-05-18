@@ -10,7 +10,7 @@ class Form
     public $message;
     public $spam;
 
-    public function isSpam()
+    public function spam()
     {
         if ((bool) $this->spam == true) {
             error_log('Contact Form Spam: Error 403');
@@ -18,7 +18,7 @@ class Form
         }
     }
 
-    public function isEmpty()
+    public function empty()
     {
         if ((bool) empty($this->email) == true
             || (bool) empty($this->message) == true
@@ -27,12 +27,12 @@ class Form
         }
     }
 
-    public function isEmailValid()
+    public function emailValid()
     {
         return $email = PHPMailer::validateAddress($this->email, 'auto');
     }
 
-    public function isSubmit()
+    public function submit()
     {
         // Include mail config
         $config = include '../AppConfig.php';
