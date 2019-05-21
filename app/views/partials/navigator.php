@@ -192,33 +192,17 @@
 
                     <?php if ($theme->color() === 'dark') { ?>
 
-                    <button class="theme-toggle-button button is-text has-text-centered is-block"
+                    <button class="theme-toggle-button button is-text has-text-left is-block"
                     name="theme" type="submit" value="light">
 
-                        <span class="theme-toggle-sun">
-                        <?php echo file_get_contents(
-                            $_SERVER['DOCUMENT_ROOT']
-                            . '/..'
-                            . '/public/css/fonts/feather-icons/sun.svg'
-                        ) ?>
-                        </span>
-
-                        <span>Light</span>
+                        <span class="theme-toggle-moon">Light<span>
 
                     <?php } else { ?>
 
-                    <button class="theme-toggle-button button is-text has-text-centered is-block"
+                    <button class="theme-toggle-button button is-text has-text-left is-block"
                     name="theme" type="submit" value="dark">
 
-                        <span class="theme-toggle-moon">
-                        <?php echo file_get_contents(
-                            $_SERVER['DOCUMENT_ROOT']
-                            . '/..'
-                            . '/public/css/fonts/feather-icons/moon.svg'
-                        ) ?>
-                        </span>
-
-                        <span>Dark</span>
+                        <span class="theme-toggle-moon">Dark</span>
 
                     <?php } ?>
 
