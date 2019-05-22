@@ -6312,7 +6312,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
   }
 }
 
-.footer { padding: 1.5rem; box-shadow: 0px -30px 25px 0px rgba(0,0,0,0.04); }
+.footer { padding: 1.5rem; box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.06); }
 
 
 /* article, video and code highlights */
