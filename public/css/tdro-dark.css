@@ -30,7 +30,7 @@ div.highlight, .highlight pre { background-color: #404048; }
 @media screen and (min-width: 1088px) { .navbar__active { border-bottom: 2px solid #75b2f0 !important; color: white !important; } }
 @media screen and (min-width: 1088px) { a.navbar-item:hover { border-bottom: 2px solid #75b2f0; } }
 @media screen and (max-width: 1087px) { .navbar-end { background-color: #3a3a40; } }
-@media screen and (max-width: 1087px) { .theme-toggle-button, .theme-toggle-button:hover { background-color: #3d6b99 !important; color: #cad6e2; } }
+@media screen and (max-width: 1087px) { .theme-toggle-button, .theme-toggle-button:hover { color: #cad6e2; } }
 #isso-thread > h4 { color: #b7c7d7; }
 #isso-thread .textarea.placeholder { color: #cad6e2; }
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper input { background-color: #404048; color: white; }
