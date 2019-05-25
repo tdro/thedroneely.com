@@ -6415,10 +6415,11 @@ a code { color: #0147b7; }
 .error__headerSize { font-size: 8rem; }
 
 .coffee { padding: 0.25rem 1rem; }
-.coffee svg { stroke-width: 1.5px; width: 22px; height: 22px; }
+.coffee svg { stroke-width: 1.5px; width: 20px; height: 20px; }
 .coffee span { padding-left: 10px; }
 
-.brand__custom { margin: 14px 12px; text-align: center; background-color: black; color: white; width: 32px; border-radius: 2px; }
+.brand__custom { margin: 14px 12px; text-align: center; background-color: black; color: white; width: 32px; border-radius: 6px; }
+
 
 /* contact form */
 
