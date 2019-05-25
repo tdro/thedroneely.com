@@ -4280,9 +4280,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
 }
 
 .pagination-link.is-current {
-  background-color: white;
+  background-color: #3273dc;
   border-color: #3273dc;
-  color: #1e55ae;
+  color: white;
   font-weight: bold;
 }
 
