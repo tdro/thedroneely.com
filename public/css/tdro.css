@@ -6335,7 +6335,7 @@ a code { color: #0147b7; }
 
 .serif > a { color: #222; }
 .is-size-serif { font-size: 1.3em !important; }
-.serif { font-family: Charter, TimesNewRoman, 'Times New Roman', Baskerville, Georgia, serif; }
+.serif { font-family: "Times New Roman", TimesNewRoman, Cambria, Baskerville, Georgia, serif; }
 
 .recent__article p, .article__summary {
   overflow: hidden;
