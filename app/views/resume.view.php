@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" style="scrollbar-width: none;">
+
 <head>
 
     <title>Resume - Thedro Neely</title>
@@ -11,6 +12,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow">
+
+    <style>html::-webkit-scrollbar { height: 0; width: 0; }</style>
 
     <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/rss.php'; ?>
 
@@ -240,3 +243,6 @@
           </div>
 
         </div>
+
+    </body>
+</html>
