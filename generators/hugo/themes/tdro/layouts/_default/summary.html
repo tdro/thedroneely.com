@@ -2,7 +2,13 @@
 
   <div class="column is-5 has-text-centered">
     <a href="{{ .Permalink }}">
-      <img class="image__thumbnail" alt="{{ .Title }}" src="{{ partial "article-image.html" . }}">
+
+    {{ if (fileExists (print "public/" (replaceRE .Site.BaseURL "" (partial "article-image.html" .)))) }}
+      {{ $image := imageConfig (print "public/" (replaceRE .Site.BaseURL "" (partial "article-image.html" .))) }}
+      <img class="image__thumbnail" alt="{{ .Title }}" src="{{ partial "article-image.html" . }}"
+       height="{{ $image.Height }}" width="{{ $image.Width }}"/>
+    {{ end }}
+
     </a>
   </div>
 
