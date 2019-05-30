@@ -6,38 +6,59 @@
 				<article class="content document">
 					<h1 class="title serif">{{ .Title }}</h1>
 
-					<p class="subtitle is-6 has-text-grey-dark">
-            {{- partial "page-meta.html" . -}}
-            <br>
-            <script>document.write('<a href="#isso-thread">Comments</a> ·');</script> {{- partial "read-time.html" . -}} · {{ .FuzzyWordCount }} words
-          </p>
-
-					{{- partial "page-status.html" . -}}
-
-					{{- .Content | replaceRE "<p>" "<p class=\"serif is-size-serif\">" | replaceRE "<h2" "<h2 class=\"serif\"" | replaceRE "<h3" "<h3 class=\"serif\"" | safeHTML }}
-
-          <div class="has-text-right">
-            <p class="article__updated has-text-grey-dark is-inline-block">
-              Updated 
-              {{ if .Params.updated }} 
-                {{ dateFormat "2 January 2006" .Params.updated }}  
-              {{ else }} 
-                {{ dateFormat "2 January 2006" .Params.date }} 
-              {{ end }}
+            <p class="subtitle is-6 has-text-grey-dark">
+              {{- partial "page-meta.html" . -}}
+              <br>
+              <script>document.write('<a title="Jump to Comments" href="#isso-thread">0 Comments</a>');</script> · {{- partial "read-time.html" . -}} · {{ .FuzzyWordCount }} words
             </p>
-          </div>
 
-          <script>document.write('<h3 id="comments">Comments</h3>');</script>
+            {{- partial "page-status.html" . -}}
+
+            {{- .Content | replaceRE "<p>" "<p class=\"serif is-size-serif\">" | replaceRE "<h2" "<h2 class=\"serif\"" | replaceRE "<h3" "<h3 class=\"serif\"" | safeHTML }}
+
+
+            <div class="has-text-right">
+              <p class="article__updated has-text-grey-dark is-inline-block">
+                Updated
+                {{ if .Params.updated }}
+                  {{ dateFormat "2 January 2006" .Params.updated }}
+                {{ else }}
+                  {{ dateFormat "2 January 2006" .Params.date }}
+                {{ end }}
+              </p>
+            </div>
+
+
+            <section>
+              {{ $related :=  shuffle .Site.RegularPages | first 3 }}
+              {{ with $related }}
+              <h3>Random</h3>
+              <ul>
+                {{ range . }}
+                <li><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
+                {{ end }}
+              </ul>
+              {{ end }}
+            </section>
+
+
+            {{ if .Params.syntax }}
+              <link rel="stylesheet" href="/css/syntax-highlight.css">
+            {{ end }}
+
+
+            <section>
+
+              <script>document.write('<h3 id="comments">Comments</h3>');</script>
+
+              <script data-isso="/isso/" data-isso-css="false" src="/isso/js/embed.min.js"></script>
+
+              <section id="isso-thread" data-title="{{ .Title }}"></section>
+
+            </section>
+
 
           </article>
-
-          {{ if .Params.syntax }}
-            <link rel="stylesheet" href="/css/syntax-highlight.css">
-          {{ end }}
-
-          <script data-isso="/isso/" data-isso-css="false" src="/isso/js/embed.min.js"></script>
-
-          <section id="isso-thread" data-title="{{ .Title }}"></section>
 
 			</div>
 		</div>
