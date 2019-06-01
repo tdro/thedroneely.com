@@ -43,8 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]
     );
 
-    $form->submit();
-    return;
+    return $form->submit();
 }
 
 require '../app/views/contact.view.php';
