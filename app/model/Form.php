@@ -41,24 +41,24 @@ class Form
 
         try {
             //Server settings
-            $mail->isSMTP();                                    // Set mailer to use SMTP
-            $mail->Host = $config['mail']['host'];              // Specify main and backup SMTP servers
-            $mail->SMTPAuth = true;                             // Enable SMTP authentication
-            $mail->Username = $config['mail']['username'];      // SMTP username
-            $mail->Password = $config['mail']['password'];      // SMTP password
-            $mail->SMTPSecure = 'ssl';                          // Enable TLS encryption, `ssl` also accepted
-            $mail->Port = $config['mail']['port'];              // TCP port to connect to
+            //$mail->SMTPDebug = 2;
+            $mail->isSMTP();
+            $mail->SMTPAuth = true;
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port = $config['mail']['port'];
+            $mail->Host = $config['mail']['host'];
+            $mail->Username = $config['mail']['username'];
+            $mail->Password = $config['mail']['password'];
 
             //Recipients
             $mail->setFrom($config['mail']['username'], 'Thedro Neely');
             $mail->addAddress($config['mail']['username'], 'Thedro Neely');
-            $mail->addReplyTo($this->email, $this->name);
 
             //Content
             $mail->isHTML(true);
-            $mail->Subject = 'New message from ' . $this->name;
-            $mail->Body    = $this->message;
-            $mail->AltBody = $this->message;
+            $mail->Subject = 'New message from ' . $this->email;
+            $mail->Body    = $this->message . "\n\n" . $this->name . "\n" . $this->email;
+            $mail->AltBody = $this->message . "\n\n" . $this->name . "\n" . $this->email;
 
             //Send Mail
             $mail->send();
