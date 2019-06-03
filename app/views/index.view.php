@@ -37,7 +37,7 @@
 
                     <p class="has-text-left">
                         My name is Thedro <span class="has-text-grey-dark">[/tee:dro/]</span> &mdash;
-                        a web developer and <a href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a>
+                        a web developer and <a class="underline" href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a>
                         system administrator.
                         There are many different tools and programming languages I've come across.
                         Welcome to my corner of the web. Here you'll find things I've
