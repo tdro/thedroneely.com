@@ -6232,6 +6232,8 @@ a code { color: #0147b7; }
 }
 
 .article__updated { padding: 0.5em; }
+.article__list { line-height: 2.5; }
+
 
 /* resume page */
 
@@ -6239,9 +6241,10 @@ a code { color: #0147b7; }
 .resume__section { padding: 0 1.5em; }
 .resume__break { padding: 0.75em 1.5em; }
 .resume__column { padding: 0; }
+.resume__label { padding: 10px; color: white; border-radius: 3px; }
+.resume__label:hover { background-color: #8fb8db; background-color: rgba(255, 255, 255, 0.4); color: #333; }
 
 .max__height { min-height: 100vh; }
-.white__highlight { padding: 10px; text-shadow: 0 0 0 #fff; }
 .inline__padding { display: inline-block; margin: 0.5em; border-bottom: 1px solid transparent; }
 
 @media screen and (min-width: 769px) { .column__right { max-height: 100vh; overflow: auto; } }
@@ -6259,45 +6262,63 @@ a code { color: #0147b7; }
     border-radius: 2px;
     display: inline-block;
     padding: 10px;
-    text-shadow: 0 0 0 #fff;
 }
 
 
-/* underline text */
+/* underline links */
 
-.underline, .underline__hover:hover,
-.footer__section p > a, .serif > a { border-bottom: 1px solid currentColor; }
+.underline,
+.isso-comment > div.text-wrapper > .text a,
+.serif > a {
+  border-bottom: 2px solid #999;
+  padding-bottom: 2px;
+}
 
+/* focus links */
+.post-header a:focus,
+.serif > a:focus,
+li a:focus,
+.underline:focus,
+.isso-comment > div.text-wrapper > .text a:focus,
+.front__more:focus { background-color: #ffeb99; outline: 3px solid #ffeb99; }
+
+a:focus img { box-shadow: 0 0 40px 2px #999; }
 
 /* post tags */
 
 .page__tags {
-  background-color: aliceblue;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 1px 6px 2px 6px;
   border-radius: 6px;
+  border: 1px solid currentColor;
 }
 
-/* figure caption */
 
-figcaption { font-size: 0.9em; }
+/* figure */
+
+figcaption { font-size: 0.9em; margin-top: 1.5em; }
+
 
 /* theme toggle */
+
 .theme-toggle { vertical-align: middle; }
 .theme-toggle-button { border-radius: 0; height: 100%; padding: 0 0.35em; width: 100%; }
-.theme-toggle-moon svg { fill: #118fe4; color: blue; width: 32px; height: 32px; }
 .theme-toggle-sun svg { fill: orange; color: orange; width: 32px; height: 32px; }
+.theme-toggle-moon svg { fill: #118fe4; color: blue; width: 32px; height: 32px; }
+.theme-toggle-sun:hover svg { color: red; }
+.theme-toggle-moon:hover svg { fill: #59b5f3; }
 
 @media screen and (max-width: 1087px) {
   .theme-toggle-sun svg, .theme-toggle-moon svg { display: inline-block; vertical-align: middle; }
-  .theme-toggle-button { background-color: #dbeeff !important; padding: 6px 0.35em; }
+  .theme-toggle-button { color: black; padding: 9.4px 1em; }
 }
+
 
 /* margin and padding helpers */
 
 .has-padding-none { padding: 0 !important; }
 .has-margin-none { margin: 0 !important; }
 .has-margin-bottom-none { margin-bottom: 0 !important; }
+
 
 /* tufte css */
 
@@ -6322,7 +6343,7 @@ figcaption { font-size: 0.9em; }
   width: 18vw;
   margin-top: 0;
   margin-bottom: 1em;
-  font-size: 1.1rem;
+  font-size: 0.75em;
   line-height: 1.6;
   vertical-align: baseline;
   position: relative;
@@ -6363,14 +6384,17 @@ input.sidenote-toggle, input.marginnote-toggle  { display: none; }
 label { cursor: pointer; }
 label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 .sidenote, .marginnote { display: none; }
+.sidenote-mark, .marginnote-mark { border-bottom: 2px dashed #999; padding-bottom: 2px; }
 .marginnote-mark:after { content: "\0002B"; font-weight: bold; }
 }
 
-blockquote footer { font-size: 1.1rem; text-align: right; }
+blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1em; }
 blockquote p { font-size: 1.3rem !important; }
 
 .document .subtitle { margin-top: 0 !important; margin-bottom: 1.5em !important; }
 .is-small-caps { font-variant: small-caps; }
+.recent__article .columns { clear: both; }
+
 
 /* isso comments */
 
