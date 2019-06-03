@@ -1,24 +1,4 @@
 /*! bulma.io v0.7.4 | MIT License | github.com/jgthms/bulma */
-@-webkit-keyframes spinAround {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-@keyframes spinAround {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
 
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
 .pagination-next,
@@ -136,19 +116,6 @@
   width: 32px;
 }
 
-.button.is-loading::after, .select.is-loading::after, .control.is-loading::after, .loader {
-  -webkit-animation: spinAround 500ms infinite linear;
-          animation: spinAround 500ms infinite linear;
-  border: 2px solid #dbdbdb;
-  border-radius: 290486px;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  content: "";
-  display: block;
-  height: 1em;
-  position: relative;
-  width: 1em;
-}
 
 .is-overlay, .image.is-square img,
 .image.is-square .has-ratio, .image.is-1by1 img,
@@ -379,10 +346,6 @@ a {
   color: #014cc6;
   cursor: pointer;
   text-decoration: none;
-}
-
-a strong {
-  color: currentColor;
 }
 
 code {
@@ -1656,17 +1619,6 @@ fieldset[disabled] .button {
   width: 100%;
 }
 
-.button.is-loading {
-  color: transparent !important;
-  pointer-events: none;
-}
-
-.button.is-loading::after {
-  position: absolute;
-  left: calc(50% - (1em / 2));
-  top: calc(50% - (1em / 2));
-  position: absolute !important;
-}
 
 .button.is-static {
   background-color: whitesmoke;
@@ -2561,26 +2513,6 @@ fieldset[disabled] .select select:hover {
   width: 100%;
 }
 
-.select.is-loading::after {
-  margin-top: 0;
-  position: absolute;
-  right: 0.625em;
-  top: 0.625em;
-  -webkit-transform: none;
-          transform: none;
-}
-
-.select.is-loading.is-small:after {
-  font-size: 0.75rem;
-}
-
-.select.is-loading.is-medium:after {
-  font-size: 1.25rem;
-}
-
-.select.is-loading.is-large:after {
-  font-size: 1.5rem;
-}
 
 .label {
   color: #363636;
@@ -2857,24 +2789,6 @@ fieldset[disabled] .select select:hover {
   right: 0;
 }
 
-.control.is-loading::after {
-  position: absolute !important;
-  right: 0.625em;
-  top: 0.625em;
-  z-index: 4;
-}
-
-.control.is-loading.is-small:after {
-  font-size: 0.75rem;
-}
-
-.control.is-loading.is-medium:after {
-  font-size: 1.25rem;
-}
-
-.control.is-loading.is-large:after {
-  font-size: 1.5rem;
-}
 
 .icon {
   align-items: center;
