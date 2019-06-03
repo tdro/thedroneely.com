@@ -6483,12 +6483,17 @@ blockquote p { font-size: 1.3rem !important; }
     font-size: 0.95em;
 }
 
-.isso-comment > div.text-wrapper > .isso-comment-header {
-    font-size: 0.85em;
+.isso-comment > div.text-wrapper > .text a {
+  color: black;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-header .permalink {
+  color: #555;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .spacer {
     padding: 0 6px;
+    color: #999;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .note {
