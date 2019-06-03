@@ -6602,8 +6602,8 @@ blockquote p { font-size: 1.3rem !important; }
     margin: 0 0 .6em;
     padding: .4em .8em;
     border-radius: 2px;
-    background-color: #fafafa;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #fafafa;
     min-height: 150px;
 }
 
@@ -6634,6 +6634,8 @@ blockquote p { font-size: 1.3rem !important; }
     background-color: #fafafa;
     line-height: 1.4em;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .isso-postbox > .form-wrapper > .auth-section .post-action {
