@@ -6435,6 +6435,7 @@ blockquote p { font-size: 1.3rem !important; }
 }
 
 #isso-thread .textarea {
+    line-height: 1.8;
     outline: 0;
 }
 
