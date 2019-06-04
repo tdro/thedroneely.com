@@ -4,43 +4,29 @@
     <div class="container">
 
       <div class="columns is-centered">
+        <div class="column is-6 has-text-centered footer__section">
 
-        <div class="column is-6">
+            <p class="has-text-grey-dark is-size-7">
 
-          <div class="footer__section has-text-centered">
+            <a class="underline" href="/rss.xml">RSS Feed</a> |
 
-            <a href="/rss.xml">
-              <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/rss.svg') ?>
-            </a>
+            <a class="underline" href="/resume">Resume</a> |
 
-            <a href="/resume">
-              <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/help-circle.svg') ?>
-            </a>
+            <a class="underline" href="https://www.thedroneely.com/git/explore/repos">Repository</a> |
 
-            <a href="https://www.thedroneely.com/git/explore/repos">
-              <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/git-merge.svg') ?>
-            </a>
+            <a class="underline" href="https://gitlab.com/tdro">Gitlab</a> |
 
-            <a href="https://gitlab.com/tdro">
-              <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/gitlab.svg') ?>
-            </a>
+            <a class="underline" href="https://github.com/tdro">Github</a> |
 
-            <a href="https://github.com/tdro">
-              <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/github.svg') ?>
-            </a>
+            <a class="underline" href="#">Back To Top</a>
 
-            <a href="#">
-              <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/..' . '/public/css/fonts/feather-icons/arrow-up.svg') ?>
-            </a>
+            </p>
 
             <p class="has-text-grey-dark is-size-7">
               Copyright &copy; <?php echo date("Y"); ?> Thedro Neely
             </p>
 
-          </div>
-
         </div>
-
       </div>
 
     </div>
