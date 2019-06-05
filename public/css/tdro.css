@@ -6111,6 +6111,8 @@ a code { color: #0147b7; }
 
 /* more posts and projects link frame */
 
+.introduction { padding: 1em; margin-top: 0.75em; }
+
 .front__more { text-transform: uppercase; }
 .front__more svg { vertical-align: bottom; }
 

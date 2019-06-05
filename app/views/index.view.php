@@ -33,9 +33,7 @@
 
                     <div class="content">
 
-                    <br>
-
-                    <p class="has-text-left">
+                    <p class="introduction has-text-left">
                         My name is Thedro <span class="has-text-grey-dark">[/tee:dro/]</span> &mdash;
                         a web developer and <a class="underline" href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a>
                         system administrator.
