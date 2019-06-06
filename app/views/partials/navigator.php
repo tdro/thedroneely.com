@@ -96,7 +96,7 @@
                 <div class="columns is-centered has-margin-bottom-none">
 
                     <div class="navbar__left column">
-                        <a title="Git Repository"
+                        <a title="Go to Website Repository"
                         href="https://www.thedroneely.com/git/explore/repos"
                         class="brand__custom is-inline-block">
                             <?php echo file_get_contents(
@@ -114,7 +114,7 @@
 
                                 <?php if ($theme->color() === 'dark') { ?>
 
-                                <button title="Light Theme"
+                                <button title="Switch to Light Theme"
                                 class="theme-toggle-button button is-text"
                                 name="theme" type="submit" value="light">
 
@@ -128,7 +128,7 @@
 
                                 <?php } else { ?>
 
-                                <button title="Dark Theme"
+                                <button title="Switch to Dark Theme"
                                 class="theme-toggle-button button is-text"
                                 name="theme" type="submit" value="dark">
 
@@ -195,7 +195,7 @@
                     <button class="theme-toggle-button button is-text has-text-left is-block"
                     name="theme" type="submit" value="light">
 
-                        <span class="theme-toggle-moon">Light<span>
+                        <span class="theme-toggle-moon">Light</span>
 
                     <?php } else { ?>
 

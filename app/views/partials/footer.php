@@ -12,7 +12,7 @@
 
             <a class="underline" href="/resume">Resume</a> |
 
-            <a class="underline" href="https://www.thedroneely.com/git/explore/repos">Repository</a> |
+            <a class="underline" href="https://www.thedroneely.com/git/explore/repos">Source</a> |
 
             <a class="underline" href="https://gitlab.com/tdro">Gitlab</a> |
 
