@@ -218,19 +218,19 @@
                     <div class="tile is-ancestor">
 
                         <div class="tile is-parent">
-                            <a href="/">
+                            <a href="/projects/personal-portfolio">
                               <img width="203" height="360" src="/images/personal-portfolio.png" alt="thedro">
                             </a>
                         </div>
 
                         <div class="tile is-parent">
-                            <a href="/resume">
+                            <a href="/projects/bulma-resume">
                               <img width="203" height="360" src="/images/bulma-resume.png" alt="resume">
                             </a>
                         </div>
 
                         <div class="tile is-parent">
-                            <a href="https://www.edwinmattiacci.com">
+                            <a href="/projects/voiceover-website/">
                               <img width="203" height="360" src="/images/voiceover-website.png" alt="edwin">
                             </a>
                         </div>
