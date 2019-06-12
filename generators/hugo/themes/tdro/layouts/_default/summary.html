@@ -16,15 +16,17 @@
     <article>
       <header class="post-header">
 
-      <h2 class="article__title title is-5 has-text-weight-bold">
+      <h1 class="article__title title is-5 has-text-weight-bold">
         <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
-      </h2>
+      </h1>
 
       <p class="article__date subtitle is-6">
-      {{ partial "page-date.html" . }}{{ partial "page-status.html" .}} · {{ partial "read-time.html" .}} </p>
+        {{ partial "page-date.html" . }}{{ partial "page-status.html" .}} · {{ partial "read-time.html" .}}
+      </p>
+
       </header>
       <p class="article__summary">{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}</p>
-      <a class="underline" href='{{ .Permalink }}'>Continue reading ({{ .FuzzyWordCount }} words)</a>
+      <p><a class="underline" href='{{ .Permalink }}'>Continue reading ({{ .FuzzyWordCount }} words)</a></p>
     </article>
   </div>
 
