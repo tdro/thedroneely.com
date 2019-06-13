@@ -1,2 +1,2 @@
 {{- range $i, $value := sort . }}{{ if $i }} {{ end }}
-<a class="page__tags" href="{{ "tags/" | relURL }}{{ $value | urlize }}/">{{ $value }}</a>{{ end }}
+<a class="page__tags focus-link" href="{{ "tags/" | relURL }}{{ $value | urlize }}/">{{ $value }}</a>{{ end }}
