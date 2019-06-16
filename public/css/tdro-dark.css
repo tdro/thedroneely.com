@@ -18,12 +18,12 @@ div.highlight, .highlight pre, .introduction { background-color: #404048; }
 .footer { padding: 1.5rem; box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.1); }
 .navbar { background-color: #333338; background-color: rgba(51, 51, 56, 0.95); box-shadow: 0 4px 12px 0 rgba(0,0,0,.15); }
 .title, .content h1, .content h2, .content h3 { color: #ffffff; }
-.button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #75b2f0; color: #cad6e2 !important; border-width: 1px; }
+.button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #cad6e2; color: #cad6e2; border-width: 1px; }
 .input, .textarea { background-color: #404048; border-color: transparent; color: white; }
 .brand__custom { background-color: white; color: black; }
 .page__tags { background-color: #75b2f0; color: #212121; }
 .message__success { background-color: #55a1ec; border: 1px solid #1259a1;  color: black; }
-.pagination-link.is-current { background-color: #4a6078; border-color: #4a6078; color: #fff; }
+.pagination-link.is-current { background-color: #75b2f0; border-color: #75b2f0; color: #212121 !important; }
 .pagination-previous, .pagination-next, .pagination-link { border-color: #404048; color: #cad6e2; min-width: 2.25em; }
 .pagination-previous:hover, .pagination-next:hover, .pagination-link:hover { color: #cad6e2; }
 .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled] { background-color: #404048; border-color: #404048; color: #fff; }
