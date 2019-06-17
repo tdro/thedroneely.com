@@ -38,9 +38,13 @@ div.highlight, .highlight pre, .introduction { background-color: #404048; }
 .isso-comment > div.text-wrapper > .isso-comment-header .author { color: #fff; }
 .isso-feedlink:hover, .isso-comment > div.text-wrapper > .isso-comment-footer a:hover { background-color: #34597f; color: white; }
 .isso-comment-footer .upvote svg, .isso-comment-footer .downvote svg { fill: white };
+input::placeholder, textarea::placeholder { color: #cad6e2; }
 input::-moz-placeholder, textarea::-moz-placeholder { color: #cad6e2; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cad6e2; }
 input:-moz-placeholder, textarea:-moz-placeholder { color: #cad6e2; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cad6e2; }
 .isso-postbox > .form-wrapper > .auth-section .post-action > input { border: 1px solid #557181; background-color: transparent; color: white; }
-.isso-postbox>.form-wrapper .preview { background-color: #333338; background: repeating-linear-gradient(-45deg,#333338333,#333338333 10px,#404048 10px,#404048 20px); }
+.isso-postbox>.form-wrapper .preview { background-color: #333338; background: repeating-linear-gradient(-45deg,#404048,#404048 10px,#333338 10px,#333338 20px); }
+.isso-comment > div.text-wrapper > .isso-comment-header .permalink { color: #ccc; }
+.isso-comment > div.text-wrapper > .text a { color: #cad6e2; }
+.is-success:focus, .is-link:focus { background-color: #75b2f0 !important; color: #121212 !important; border-color: #75b2f0 !important; }
