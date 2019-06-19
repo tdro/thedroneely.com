@@ -1517,7 +1517,7 @@ a.box:active {
 }
 
 .button {
-  background-color: white;
+  background-color: transparent;
   border-color: #dbdbdb;
   border-width: 1px;
   color: #363636;
