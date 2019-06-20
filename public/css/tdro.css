@@ -1555,26 +1555,10 @@ a.box:active {
   margin-right: calc(-0.375em - 1px);
 }
 
-.button:hover, .button.is-hovered {
-  border-color: #b5b5b5;
-  color: #363636;
-}
-
-.button:focus, .button.is-focused {
-  border-color: #3273dc;
-  color: #363636;
-}
-
-.button:active, .button.is-active {
-  border-color: #4a4a4a;
-  color: #363636;
-}
-
 .button.is-text {
   background-color: transparent;
   border-color: transparent;
 }
-
 
 .button.is-link.is-outlined {
   background-color: transparent;
