@@ -1567,27 +1567,9 @@ a.box:active {
 }
 
 .button.is-success.is-outlined {
-  background-color: transparent;
   border-color: #03a87c;
   border-width: 1px;
   color: #03a87c;
-}
-
-.button.is-small {
-  border-radius: 2px;
-  font-size: 0.75rem;
-}
-
-.button.is-normal {
-  font-size: 1rem;
-}
-
-.button.is-medium {
-  font-size: 1.25rem;
-}
-
-.button.is-large {
-  font-size: 1.5rem;
 }
 
 .button[disabled],
