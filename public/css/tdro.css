@@ -1585,7 +1585,6 @@ fieldset[disabled] .button {
   width: 100%;
 }
 
-
 .button.is-static {
   background-color: whitesmoke;
   border-color: #dbdbdb;
@@ -2478,7 +2477,6 @@ fieldset[disabled] .select select:hover {
   width: 100%;
 }
 
-
 .label {
   color: #363636;
   display: block;
@@ -2753,7 +2751,6 @@ fieldset[disabled] .select select:hover {
 .control.has-icons-right .icon.is-right {
   right: 0;
 }
-
 
 .icon {
   align-items: center;
@@ -3615,7 +3612,6 @@ a.navbar-item,
 a.navbar-item:hover, a.navbar-item.is-active,
 .navbar-link:hover,
 .navbar-link.is-active {
-  background-color: transparent;
   color: #000000;
 }
 
