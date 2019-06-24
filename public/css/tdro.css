@@ -6146,9 +6146,10 @@ a code { color: #0147b7; }
 
 .navbar__icon { justify-content: center; width: 20%; margin: 0;}
 .navbar__icon__align { margin-top: -4px; margin-bottom: 3px; }
-.navbar__active { color: #014cc6 !important; font-weight: bold; }
+.navbar__active { color: #014cc6 !important; }
 
 .navbar__icon__menu { margin: 0; justify-content: center; height: 100%; }
+.navbar__icon.navbar__active { font-weight: bold; }
 
 .navbar-end > .navbar-item { color: black; }
 .navbar-end > .navbar-item { background-color: transparent; }
