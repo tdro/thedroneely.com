@@ -99,11 +99,7 @@
                         <a title="Go to Website Repository"
                         href="https://www.thedroneely.com/git/explore/repos"
                         class="brand__custom is-inline-block">
-                            <?php echo file_get_contents(
-                                $_SERVER['DOCUMENT_ROOT']
-                                . '/..'
-                                . '/public/css/fonts/feather-icons/terminal.svg'
-                            ) ?>
+                          Git Repo
                         </a>
 
                         <div class="navbar__separator is-inline-block"></div>
