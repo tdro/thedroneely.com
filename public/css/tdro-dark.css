@@ -47,4 +47,5 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cad6e2; }
 .isso-postbox>.form-wrapper .preview { background-color: #333338; background: repeating-linear-gradient(-45deg,#404048,#404048 10px,#333338 10px,#333338 20px); }
 .isso-comment > div.text-wrapper > .isso-comment-header .permalink { color: #ccc; }
 .isso-comment > div.text-wrapper > .text a { color: #cad6e2; }
+.isso-comment .isso-follow-up { border-left: 3px solid #555; }
 .is-success:focus, .is-link:focus { background-color: #75b2f0 !important; color: #121212 !important; border-color: #75b2f0 !important; }
