@@ -6240,14 +6240,20 @@ a code { color: #0147b7; }
 }
 
 /* focus links */
+
+.focus-link:focus,
+li a:focus,
 .post-header a:focus,
 .serif > a:focus,
-li a:focus,
 .underline:focus,
 .isso-comment > div.text-wrapper > .text a:focus,
-.front__more:focus { background-color: #ffeb99; outline: 3px solid #ffeb99; }
+.front__more:focus { background-color: #ffeb99 !important; color: black !important; outline: none; }
 
-a:focus img { box-shadow: 0 0 40px 2px #999; }
+a:focus img,
+.brand__custom:focus { box-shadow: 0 0 40px 2px #999; }
+
+.is-success:focus, .is-link:focus { background-color: #ebebeb !important }
+
 
 /* post tags */
 
