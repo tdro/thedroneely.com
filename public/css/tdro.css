@@ -6359,13 +6359,14 @@ label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 .marginnote-mark:after { content: "\0002B"; font-weight: bold; }
 }
 
+blockquote { border-left: 3px solid #ddd; }
 blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1em; }
-blockquote p { font-size: 1.3rem !important; }
+blockquote p { font-size: 1.3rem !important; color: #333; }
 
 .document .subtitle { margin-top: 0 !important; margin-bottom: 1.5em !important; }
 .is-small-caps { font-variant: small-caps; }
 .recent__article .columns { clear: both; }
-
+.recent__article .marginnote, .recent__article .sidenote { margin-top: 0 !important; }
 
 /* isso comments */
 
