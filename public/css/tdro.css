@@ -6601,6 +6601,7 @@ blockquote p { font-size: 1.3rem !important; color: #333; }
 
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
     padding: .6em 10px;
+    font-size: 0.8em;
     width: 100%;
     border-radius: 2px;
     background-color: #fafafa;
@@ -6617,6 +6618,7 @@ blockquote p { font-size: 1.3rem !important; color: #333; }
 
 .isso-postbox > .form-wrapper > .auth-section .post-action > input {
     padding: 0.4em;
+    font-size: 0.8em;
     border-radius: 2px;
     border: 1px solid #3273dc;
     cursor: pointer;
