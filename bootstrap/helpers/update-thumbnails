@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /srv/http/staging/thedroneely.com/public/images || exit 1;
+mogrify -path thumbnails/ -auto-orient -quiet -thumbnail x222 $(find . -maxdepth 1 -type f -mtime -1) || echo 'No Images Updated.' && exit 1;
+rename jpg png thumbnails/*;
+echo Image Thumbnails in "'$(pwd)'" updated.;
