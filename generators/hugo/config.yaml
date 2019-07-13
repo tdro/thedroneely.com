@@ -1,0 +1,49 @@
+# config.yaml
+
+theme: "tdro"
+baseURL: ""
+languageCode: "en-us"
+title: "Thedro Neely"
+
+# disable generation of index and 404 files
+
+disableKinds: ["404"]
+
+# author name and email appears in RSS feed
+
+author:
+    name: "Thedro Neely"
+    email: "thedroneely@gmail.com"
+
+# copyright appears in the RSS Feed
+
+copyright: "Thedro Neely"
+
+# metaDataFormat for new content pages generated with the `hugo new` command
+
+metaDataFormat: yaml
+summaryLength: 20
+paginate: 3
+
+# Code oriented optional features:
+# pygments variables tune code syntax highlighting features Hugo provides
+
+pygmentsUseClassic: false
+pygmentsCodeFences: true
+pygmentsUseClasses: true
+pygmentsCodeFencesGuessSyntax: true
+
+# Syndication feed at rss.xml ---------------------------------
+
+mediaTypes:
+  application/atom:
+    suffixes: xml
+
+outputFormats:
+  RSS:
+    mediaType: application/rss
+    baseName: rss
+
+outputs:
+  home:
+    - RSS
