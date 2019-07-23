@@ -6055,7 +6055,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
   }
 }
 
-.footer { padding: 1.5rem; box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.06); }
+.footer { padding: 1.5rem; box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.06); border-top: 1px solid #ebebeb; }
 
 
 /* article, video and code highlights */
