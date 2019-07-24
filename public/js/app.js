@@ -87,6 +87,7 @@ var previousPosition = window.pageYOffset;
 var navbar = document.getElementById("navbar");
 var navbarHeight = navbar.offsetHeight;
 
+/*
 window.onscroll = function() {
 
     remClass(activeMenu, 'is-active');
@@ -105,7 +106,7 @@ window.onscroll = function() {
     previousPosition = currentPosition;
 
 };
-
+*/
 
 /**
  * Medium Zoom 1.0.4
@@ -595,4 +596,4 @@ window.onscroll = function() {
  */
 imageZoom = mediumZoom('[data-image-zoom]');
 imageZoom.on('open', function(event) { addClass(navbar, 'navbar__headroom'); });
-imageZoom.on('close', function(event) { if (window.pageYOffset < navbarHeight) { remClass(navbar, 'navbar__headroom'); }; });
+imageZoom.on('close', function(event) { remClass(navbar, 'navbar__headroom'); });
