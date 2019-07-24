@@ -55,20 +55,20 @@ steps:
   - eval $(ssh-agent)
   - echo "$SSH_KEY_PASSWORD" | ssh-add ssh-key
 
-  - > 
-    scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key 
+  - >
+    scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key
     $SERVER_USER@$SERVER_IP:/srv/http/thedroneely.com/generators/hugo/content generators/hugo/
 
   - ls -lR generators/hugo/content
 
-  - > 
-    scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key 
+  - >
+    scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key
     $SERVER_USER@$SERVER_IP:/srv/http/thedroneely.com/cockpit/storage/data/collections.sqlite .
 
   - ls -la
 
   - >
-    scp -rp -o StrictHostKeyChecking=no -P $ORIGIN_PORT -vT -i ssh-key collections.sqlite 
+    scp -rp -o StrictHostKeyChecking=no -P $ORIGIN_PORT -vT -i ssh-key collections.sqlite
     $ORIGIN_USER@$ORIGIN_HOST:/srv/http/staging/thedroneely.com/cockpit/storage/data/collections.sqlite.new
 
   - >
@@ -76,7 +76,7 @@ steps:
     '
     cd /srv/http/staging/thedroneely.com/cockpit/storage/data/ &&
     cmp --silent collections.sqlite collections.sqlite.new ||
-    { 
+    {
       cp collections.sqlite collections.sqlite-$(date +%H%M-%d%m-%Y) && mv collections.sqlite.new collections.sqlite &&
       touch collections.sqlite;
     }
@@ -153,17 +153,17 @@ steps:
     tar -czf $NAME.tar.gz app bootstrap generators
     public vendor AppConfig.php composer.json composer.lock
 
-  - > 
-    scp -r -o StrictHostKeyChecking=no -vT -i ssh-key 
+  - >
+    scp -r -o StrictHostKeyChecking=no -vT -i ssh-key
     $NAME.tar.gz $SERVER_USER@$SERVER_IP:/srv/deploys/$NAME/
 
   - >
     ssh -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$SERVER_IP
     '
     export DATE=$(date +%H%M-%d%m-%Y) NAME=thedroneely.com &&
-    cd /srv/deploys/$NAME && 
+    cd /srv/deploys/$NAME &&
 
-    mkdir $NAME-$DATE &&  
+    mkdir $NAME-$DATE &&
     tar -xvf $NAME.tar.gz -C $NAME-$DATE &&
     rm $NAME.tar.gz &&
 
@@ -171,6 +171,9 @@ steps:
     cp -r /srv/deploys/$NAME/$NAME-deploy/public/images $NAME-$DATE/public/ &&
     cp -r /srv/deploys/$NAME/$NAME-deploy/public/uploads $NAME-$DATE/public/ &&
     cp -r /srv/deploys/$NAME/$NAME-deploy/public/videos $NAME-$DATE/public/ &&
+
+    chattr +i $NAME-DATE/generators/hugo/content/posts/archive.md &&
+    chattr +i $NAME-DATE/generators/hugo/content/projects/archive.md &&
 
     cd $NAME-$DATE/generators/hugo &&
     hugo &&
