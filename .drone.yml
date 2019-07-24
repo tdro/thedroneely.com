@@ -167,10 +167,10 @@ steps:
     tar -xvf $NAME.tar.gz -C $NAME-$DATE &&
     rm $NAME.tar.gz &&
 
-    cp -r /srv/deploys/$NAME-deploy/cockpit $NAME-$DATE/ &&
-    cp -r /srv/deploys/$NAME-deploy/public/images $NAME-$DATE/public/ &&
-    cp -r /srv/deploys/$NAME-deploy/public/uploads $NAME-$DATE/public/ &&
-    cp -r /srv/deploys/$NAME-deploy/public/videos $NAME-$DATE/public/ &&
+    cp -r /srv/deploys/$NAME/$NAME-deploy/cockpit $NAME-$DATE/ &&
+    cp -r /srv/deploys/$NAME/$NAME-deploy/public/images $NAME-$DATE/public/ &&
+    cp -r /srv/deploys/$NAME/$NAME-deploy/public/uploads $NAME-$DATE/public/ &&
+    cp -r /srv/deploys/$NAME/$NAME-deploy/public/videos $NAME-$DATE/public/ &&
 
     cd $NAME-$DATE/generators/hugo &&
     hugo &&
