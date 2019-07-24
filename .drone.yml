@@ -111,13 +111,13 @@ steps:
   - ./minify public/css/tdro-dark.css > public/css/tdro-dark.min.$(date +%d%m%Y%H%M).css
   - ./minify public/css/bulma-timeline.css > public/css/bulma-timeline.min.$(date +%d%m%Y%H%M).css
   - ./minify public/css/syntax-highlight.css > public/css/syntax-highlight.min.$(date +%d%m%Y%H%M).css
-  - ./minify public/js/app.js > public/js/app-js.min.$(date +%d%m%Y%H%M).css
+  - ./minify public/js/app.js > public/js/app-js.min.$(date +%d%m%Y%H%M).js
 
   - sed -i "s|tdro.css|$(find public/css -name "tdro.min*" | awk -F/ '{print $NF}')|" app/views/snippets/stylesheets.php
   - sed -i "s|tdro-dark.css|$(find public/css -name "tdro-dark.min*" | awk -F/ '{print $NF}')|" app/views/snippets/stylesheets.php
   - sed -i "s|bulma-timeline.css|$(find public/css -name "bulma-timeline.min*" | awk -F/ '{print $NF}')|" app/views/resume.view.php
   - sed -i "s|app.js|$(find public/js -name "app-js.min*" | awk -F/ '{print $NF}')|" app/views/partials/footer.php
-  
+
 
 - name: prepare
   image: alpine:3.10
