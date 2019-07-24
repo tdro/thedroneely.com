@@ -178,6 +178,10 @@ steps:
 
     ln -s $NAME-$DATE $NAME-deploy-$DATE &&
     mv -Tf $NAME-deploy-$DATE $NAME-deploy &&
+
     chown nginx:nginx -R $NAME-deploy $NAME-$DATE &&
+    chattr +i $NAME-$DATE/generators/hugo/content/posts/archive.md &&
+    chattr +i $NAME-$DATE/generators/hugo/content/projects/archive.md &&
+
     ls -la
     '
