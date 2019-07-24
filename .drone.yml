@@ -172,8 +172,8 @@ steps:
     cp -r /srv/deploys/$NAME/$NAME-deploy/public/uploads $NAME-$DATE/public/ &&
     cp -r /srv/deploys/$NAME/$NAME-deploy/public/videos $NAME-$DATE/public/ &&
 
-    chattr +i $NAME-DATE/generators/hugo/content/posts/archive.md &&
-    chattr +i $NAME-DATE/generators/hugo/content/projects/archive.md &&
+    chattr +i $NAME-$DATE/generators/hugo/content/posts/archive.md &&
+    chattr +i $NAME-$DATE/generators/hugo/content/projects/archive.md &&
 
     cd $NAME-$DATE/generators/hugo &&
     hugo &&
