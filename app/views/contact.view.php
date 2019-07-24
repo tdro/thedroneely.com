@@ -44,7 +44,7 @@
                                         <div class="field has-addons">
                                             <p class="control is-expanded">
                                               <input class="input <?php echo $border = isset($emailError) ? 'is-danger' : '';?>"
-                                              type="email" name="26472" value="<?php echo $email ?? '' ?>">
+                                              type="email" name="26472" value="<?php echo $email ?? '' ?>" required>
                                             </p>
                                         </div>
                                     </div>
@@ -57,7 +57,7 @@
                               <div class="field-body">
                                 <div class="field">
                                   <div class="control">
-                                    <textarea class="textarea" name="26478" placeholder=""><?php echo $message ?? '' ?></textarea>
+                                    <textarea class="textarea" name="26478" placeholder="" required><?php echo $message ?? '' ?></textarea>
                                   </div>
                                 </div>
                               </div>
