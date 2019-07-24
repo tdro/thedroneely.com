@@ -33,6 +33,12 @@
 
                     <div class="content">
 
+                    <?php $quote = shell_exec('fortune -s'); ?>
+                    <span class="marginnote leftnote">
+                    <p class="has-text-weight-bold has-margin-bottom-sm">Random Quote</p>
+                    <?php echo $quote; ?>
+                    </span>
+
                     <p class="introduction has-text-left">
                         My name is Thedro <span class="has-text-grey-dark">[/tee:dro/]</span> &mdash;
                         a web developer and <a class="underline" href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a>
