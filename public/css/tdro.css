@@ -6290,6 +6290,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 .has-padding-none { padding: 0 !important; }
 .has-margin-none { margin: 0 !important; }
 .has-margin-bottom-none { margin-bottom: 0 !important; }
+.has-margin-bottom-sm { margin-bottom: 0.25em !important; }
 
 
 /* tufte css */
