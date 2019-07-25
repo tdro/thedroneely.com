@@ -5596,7 +5596,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
 .footer { padding: 1.5rem; box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.06); border-top: 1px solid #ebebeb; }
 
 
-/* article, video and code highlights */
+/* article, video, and code highlights */
 
 article.content { min-height: 452px; }
 
@@ -5724,7 +5724,7 @@ a code { color: #0147b7; }
 .footer a { color: #333; border-bottom: 1px solid #333; }
 
 
-/* posts and projects list date header */
+/* posts and projects */
 
 .article__date { margin-bottom: 0.75rem; }
 .article__divider { background-color: transparent; }
@@ -5831,6 +5831,8 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 .has-margin-none { margin: 0 !important; }
 .has-margin-bottom-none { margin-bottom: 0 !important; }
 .has-margin-bottom-sm { margin-bottom: 0.25em !important; }
+.has-margin-bottom-md { margin-bottom: 0.5em !important; }
+.has-margin-bottom-lg { margin-bottom: 1em !important; }
 
 
 /* tufte css */
