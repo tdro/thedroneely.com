@@ -8,6 +8,8 @@ body, .serif > a { color: #cad6e2 }
 div.highlight, .highlight pre { background-color: #404048; }
 blockquote { border-left: 3px solid #555; }
 blockquote p { color: #b3c4d5; }
+.posts__more__content { background-color: #404048; }
+.posts__more__content .column { background-color: #333338; }
 .medium-zoom-overlay { background-color: #333338 !important; }
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }
 .navbar__active { color: #75b2f0 !important; }

@@ -6200,6 +6200,8 @@ a code { color: #0147b7; }
 .article__updated { padding: 0.5em; }
 .article__list { line-height: 2.5; }
 
+.posts__more__content { background-color: #eee; }
+.posts__more__content .column { background-color: #fff; background-clip: content-box; }
 
 /* resume page */
 
