@@ -35,7 +35,7 @@
 
                     <?php $quote = shell_exec('fortune -s'); ?>
                     <span class="marginnote leftnote">
-                    <p class="has-text-weight-bold has-margin-bottom-sm">Random Quote</p>
+                    <span class="has-text-weight-bold has-margin-bottom-sm is-block">Random Quote</span>
                     <?php echo $quote; ?>
                     </span>
 
