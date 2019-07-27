@@ -13,13 +13,12 @@ blockquote p { color: #b3c4d5; }
 .medium-zoom-overlay { background-color: #333338 !important; }
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }
 .navbar__active { color: #75b2f0 !important; }
-.navbar__border { border-bottom: 1px solid #666; }
 .navbar-end > a.navbar-item:hover { background-color: #4698EA; color: #fff !important; }
 .has-text-danger { color: #ff8f93 !important; }
 .has-text-primary { color: #a6c9e8 !important; }
 .footer a { color: #bbb; border-bottom: 1px solid #999; }
-.footer { padding: 1.5rem; box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.1); border-top: 1px solid #444; }
-.navbar { background-color: #333338; background-color: rgba(51, 51, 56, 0.95); box-shadow: 0 4px 12px 0 rgba(0,0,0,.15); border-bottom: 1px solid #444; }
+.footer { padding: 1.5rem; box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.1); }
+.navbar { background-color: #333338; background-color: rgba(51, 51, 56, 0.95); box-shadow: 0 4px 12px 0 rgba(0,0,0,.15); }
 .title, .content h1, .content h2, .content h3 { color: #ffffff; }
 .button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #cad6e2; color: #cad6e2; border-width: 1px; }
 .input, .textarea { background-color: #404048; border-color: transparent; color: white; }
