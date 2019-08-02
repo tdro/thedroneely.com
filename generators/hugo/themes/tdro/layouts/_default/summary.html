@@ -25,7 +25,7 @@
       </p>
 
       </header>
-      <p class="article__summary">{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}</p>
+      <p class="article__summary">{{ if .Params.summary }}{{ truncate 75 "..." .Params.summary }}{{ else }}{{ truncate 75 "..." .Summary}}{{ end }}</p>
       <p><a class="underline" href='{{ .Permalink }}'>Continue reading ({{ .FuzzyWordCount }} words)</a></p>
     </article>
   </div>
