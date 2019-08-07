@@ -5593,7 +5593,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
   }
 }
 
-.footer { padding: 1.5rem; box-shadow: 0px -4px 10px 0px rgba(0,0,0,0.1); }
+.footer { padding: 1.5rem; box-shadow: 0 -4px 10px 0px rgba(0,0,0,0.1); }
 
 
 /* article, video, and code highlights */
@@ -5630,9 +5630,12 @@ a code { color: #0147b7; }
 .navbar-item { color: #555; margin: 0.86rem 0.8rem; }
 .navbar { box-shadow: 0 4px 12px 0 rgba(0,0,0,.05); }
 
+.navbar__tablet__compact .navbar__active { border-bottom: 2px solid #75b2f0; }
+.navbar-end .navbar__item { padding: 0.65em 1em; margin: 0; }
+
 @media screen and (max-width: 1087px) {
+  .theme-toggle-button:hover { background-color: #bbdbee; color: black; }
   .navbar-menu { padding: 0 !important; }
-  .navbar__item { padding: 0.65em 1em; margin: 0; }
   .navbar { box-shadow: 0 4px 12px 0 rgba(0,0,0,.1); }
   .navbar-end {
     z-index: 40;
@@ -5805,7 +5808,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 /* theme toggle */
 
 .theme-toggle { vertical-align: middle; }
-.theme-toggle-button { border-radius: 0; height: 100%; padding: 0 0.35em; width: 100%; }
+.theme-toggle-button { border-radius: 0; height: 100%; padding: 0 0.35em; width: 100%; font-weight: 400; }
 .theme-toggle-sun svg { fill: orange; color: orange; width: 32px; height: 32px; }
 .theme-toggle-moon svg { fill: #118fe4; color: blue; width: 32px; height: 32px; }
 .theme-toggle-sun:hover svg { color: red; }
@@ -5813,7 +5816,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 
 @media screen and (max-width: 1087px) {
   .theme-toggle-sun svg, .theme-toggle-moon svg { display: inline-block; vertical-align: middle; }
-  .theme-toggle-button { color: black; padding: 9.4px 1em; }
+  .theme-toggle-button { color: black; padding: 0.587em 1em; }
 }
 
 
