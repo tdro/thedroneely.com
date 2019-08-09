@@ -15,12 +15,12 @@
         </div>
     </section>
 
-    <link href="https://transloadit.edgly.net/releases/uppy/v1.0.0/uppy.min.css" rel="stylesheet">
-    <script src="https://transloadit.edgly.net/releases/uppy/v1.0.0/uppy.min.js"></script>
+    <link href="/css/uppy.min.css" rel="stylesheet">
+    <script src="/js/uppy.min.js"></script>
 
     <script>
      var uppy = Uppy.Core()
-        .use(Uppy.Url, { companionUrl: 'https://companion.uppy.io/' })
+        .use(Uppy.Url, { companionUrl: 'https://www.thedroneely.com/' })
         .use(Uppy.Webcam, {})
         .use(Uppy.Dashboard, { inline: true, target: '#file-upload-area',  plugins: ['Url', 'Webcam'] })
         .use(Uppy.XHRUpload, {endpoint: '/upload/', formdata: true, fieldName: 'upload' })
