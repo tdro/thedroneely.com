@@ -87,7 +87,7 @@ window.history.replaceState(null, null, url);
 var previousPosition = window.pageYOffset;
 var navbar = document.getElementById("navbar");
 var navbarHeight = navbar.offsetHeight;
-
+var scrollReady = 0;
 
 window.onscroll = function() {
 
@@ -98,14 +98,18 @@ window.onscroll = function() {
     var currentPosition = window.pageYOffset;
     var velocity = previousPosition - currentPosition;
 
-    if (velocity > 55 || currentPosition < navbarHeight) {
-      remClass(navbar, 'navbar__headroom');
-    } else if (velocity < 0) {
-      addClass(navbar, 'navbar__headroom');
+    if (scrollReady == 1) {
+      if (velocity > 75 || currentPosition < navbarHeight) {
+        remClass(navbar, 'navbar__headroom');
+      } else if (velocity < -25) {
+        addClass(navbar, 'navbar__headroom');
+      } else if (currentPosition > navbarHeight) {
+        runOnce(function () { addClass(navbar, 'navbar__headroom') });
+      }
     }
 
     previousPosition = currentPosition;
-
+    scrollReady = 1;
 };
 
 /**
