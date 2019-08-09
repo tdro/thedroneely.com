@@ -94,16 +94,16 @@ window.onscroll = function() {
     remClass(activeBurger, 'is-active');
     remClass(activeBurgerCompact, 'is-active');
 
-    //var currentPosition = window.pageYOffset;
-    //var velocity = previousPosition - currentPosition;
+    var currentPosition = window.pageYOffset;
+    var velocity = previousPosition - currentPosition;
 
-    //if (velocity > 55 || currentPosition < navbarHeight) {
-    //  remClass(navbar, 'navbar__headroom');
-    //} else if (velocity < 0) {
-    //  addClass(navbar, 'navbar__headroom');
-    //}
+    if (velocity > 55 || currentPosition < navbarHeight) {
+      remClass(navbar, 'navbar__headroom');
+    } else if (velocity < 0) {
+      addClass(navbar, 'navbar__headroom');
+    }
 
-    //previousPosition = currentPosition;
+    previousPosition = currentPosition;
 
 };
 
