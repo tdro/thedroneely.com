@@ -11,6 +11,7 @@ function hasClass (el, cl) { var a = el.className.split(' '); return afind(cl, a
 function addClass (el, cl) { if (el) { var a = el.className.split(' '); if (!afind(cl, a)) { a.unshift(cl); el.className = a.join(' ')}} }
 function remClass (el, cl) { if (el) { var a = el.className.split(' '); arem(a, cl); el.className = a.join(' ') } }
 function togClass (el, cl) { if (hasClass(el, cl)) { remClass(el, cl); return; } addClass(el, cl); }
+function runOnce(action) { runOnce = function(){}; action(); }
 
 
 /**
