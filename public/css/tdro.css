@@ -6209,3 +6209,14 @@ blockquote p { font-size: 1.3rem !important; color: #333; }
         width: 100%;
     }
 }
+
+/* Uppy CSS Rules */
+
+.uppy-Dashboard-inner {
+  background-color: #fff !important;
+  border: 1px solid #aaa !important;
+}
+
+.uppy-size--md .uppy-DashboardAddFiles { border: 2px dashed #aaa !important; }
+
+.uppy-size--md .uppy-Dashboard-inner { margin: 0 auto; }

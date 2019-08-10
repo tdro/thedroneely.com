@@ -26,11 +26,6 @@
         .use(Uppy.XHRUpload, {endpoint: '/upload/', formdata: true, fieldName: 'upload' })
     </script>
 
-    <style>
-        .uppy-DashboardAddFiles { border: 2px dashed #333; }
-        .uppy-size--md .uppy-Dashboard-inner { margin: 0 auto; }
-    </style>
-
   <?php require __DIR__ . '/partials/footer.php';?>
 
     </body>
