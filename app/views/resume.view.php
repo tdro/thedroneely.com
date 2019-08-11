@@ -105,7 +105,7 @@
                                 <div class="timeline-content">
                                   <p class="heading">Front End</p>
                                   <p class="is-size-7">HTML &nbsp; CSS &nbsp; JavaScript &nbsp; Bulma</p>
-                                  <p class="is-size-7">Bootstrap &nbsp; Sass</p>
+                                  <p class="is-size-7">Bootstrap &nbsp; Sass &nbsp; Tailwind</p>
                                 </div>
                                 </div>
 
@@ -130,8 +130,8 @@
                                 <div class="timeline-item">
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                  <p class="heading">Version Systems</p>
-                                  <p class="is-size-7">Git &nbsp; Gitlab &nbsp; Github</p>
+                                  <p class="heading">Version Systems & GUIs</p>
+                                  <p class="is-size-7">Git &nbsp; Gitlab &nbsp; Github &nbsp; Gitea</p>
                                 </div>
                                 </div>
 
@@ -139,10 +139,18 @@
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
                                   <p class="heading">Sys Admin</p>
-                                  <p class="is-size-7">Dnsmasq &nbsp; SSH &nbsp; DD-WRT &nbsp; Iptables</p>
-                                  <p class="is-size-7">Bash &nbsp; VNC &nbsp; Libvirt &nbsp; pfSense</p>
-                                  <p class="is-size-7">RDP &nbsp; Docker &nbsp; Systemd &nbsp; Samba</p>
-                                  <p class="is-size-7">CUPS &nbsp; KVM &nbsp; QEMU &nbsp;</p>
+                                  <p class="is-size-7">CentOS &nbsp; Debian &nbsp; Windows</p>
+                                  <p class="is-size-7">Android &nbsp; pfSense/Opnsense</p>
+                                  <p class="is-size-7">Systemd &nbsp; DNS &nbsp; SMTP &nbsp; DHCP</p>
+                                </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                  <p class="heading">Dev Ops</p>
+                                  <p class="is-size-7">Docker &nbsp; Jenkins &nbsp; Drone CI</p>
+                                  <p class="is-size-7">LXC</p>
                                 </div>
                                 </div>
 
