@@ -140,7 +140,7 @@
                                 <div class="timeline-content">
                                   <p class="heading">Sys Admin</p>
                                   <p class="is-size-7">CentOS &nbsp; Debian &nbsp; Windows</p>
-                                  <p class="is-size-7">Android &nbsp; pfSense/Opnsense</p>
+                                  <p class="is-size-7">Android &nbsp; Alpine &nbsp; pfSense/Opnsense</p>
                                   <p class="is-size-7">Systemd &nbsp; DNS &nbsp; SMTP &nbsp; DHCP</p>
                                 </div>
                                 </div>
@@ -201,6 +201,17 @@
                                     <p class="is-size-7">
                                         PHP 7 + PostgreSQL. Pretty decent stuff. I'm still learning
                                         Vue and React. I'd like to learn Go next.
+                                    </p>
+                                </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p class="heading">What's your OS setup?</p>
+                                    <p class="is-size-7">
+                                        Linux distribution on bare metal, and everything else floating on top.
+                                        Arch bare metaling and hosting CentOS, Debian, Void, Windows and MAC OS.
                                     </p>
                                 </div>
                                 </div>
