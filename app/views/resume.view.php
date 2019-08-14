@@ -211,7 +211,7 @@
                                     <p class="heading">What's your OS setup?</p>
                                     <p class="is-size-7">
                                         Linux distribution on bare metal, and everything else floating on top.
-                                        Arch bare metaling and hosting CentOS, Debian, Void, Windows and MAC OS.
+                                        Arch bare metaling and hosting CentOS, Debian, Void, Windows and macOS.
                                     </p>
                                 </div>
                                 </div>
