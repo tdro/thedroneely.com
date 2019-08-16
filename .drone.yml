@@ -119,6 +119,24 @@ steps:
   - sed -i "s|app.js|$(find public/js -name "app-js.min*" | awk -F/ '{print $NF}')|" app/views/partials/footer.php
 
 
+- name: openring
+  image: debian:stretch-slim
+  commands:
+  
+  - apt-get update
+  - apt-get install -y wget
+  - wget https://yukari.sr.ht/openring
+  - chmod +x openring
+
+  - >
+   ./openring
+   -s https://drewdevault.com/feed.xml
+   -s https://mxb.dev/feed.xml
+   -s https://www.taniarascia.com/rss.xml
+   < generators/openring/template.html
+   > generators/hugo/themes/tdro/layouts/partials/openring.html
+
+
 - name: prepare
   image: alpine:3.10
   commands:
