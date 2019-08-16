@@ -54,6 +54,8 @@
               <h2><a href="{{ .RelPermalink }}" title="{{ .Title }}" class="serif is-size-4 is-block has-margin-bottom-md">{{ .Title }}</a></h2>
               <div class="content">
                 <p>{{ truncate 100 "..." .Summary }}</p>
+                <small class="is-block">by <a href="/">Thedro</a></small>
+                <small class="has-text-grey-dark">{{ dateFormat "January 2, 2006" .Date }}</small>
               </div>
             </article>
           </div>
