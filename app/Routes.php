@@ -26,4 +26,4 @@ $router->post('contact', '../app/controllers/contact.controller.php');
  *  Api routes
  */
 
-$router->post('api/thumbnails', '../app/controllers/api/thumbnails.controller.php');
+$router->post('api/v1/thumbnails', '../app/controllers/api/thumbnails.controller.php');
