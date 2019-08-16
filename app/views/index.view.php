@@ -33,12 +33,6 @@
 
                     <div class="content">
 
-                    <?php $quote = shell_exec('fortune quotes'); ?>
-                    <span class="marginnote leftnote">
-                    <span class="has-text-weight-bold has-margin-bottom-sm is-block">Random Quote</span>
-                    <?php echo $quote; ?>
-                    </span>
-
                     <p class="introduction has-text-left">
                         My name is Thedro <span class="has-text-grey-dark">[/tee:dro/]</span> &mdash;
                         a web developer and <a class="underline" href="https://en.wikipedia.org/wiki/Linux">linux and unix-like</a>
@@ -47,6 +41,12 @@
                         Welcome to my corner of the web. Here you'll find things I've
                         worked on as well as other interesting discoveries.
                     </p>
+
+                    <span class="marginnote leftnote">
+                    <span class="has-text-weight-bold has-margin-bottom-sm is-block">Random Quote</span>
+                    <?php $quote = shell_exec('fortune quotes'); ?>
+                    <?php echo $quote; ?>
+                    </span>
 
                     </div>
 

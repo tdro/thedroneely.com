@@ -5904,7 +5904,7 @@ blockquote p { font-size: 1.3rem !important; color: #333; }
 
 .document .subtitle { margin-top: 0 !important; margin-bottom: 1.5em !important; }
 .is-small-caps { font-variant: small-caps; }
-.recent__article .columns { clear: both; }
+@media (max-width: 768px) { .recent__article .columns { clear: both; } }
 .recent__article .marginnote, .recent__article .sidenote { margin-top: 0 !important; }
 
 /* isso comments */
