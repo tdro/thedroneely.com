@@ -42,7 +42,7 @@
                         worked on as well as other interesting discoveries.
                     </p>
 
-                    <span class="marginnote leftnote">
+                    <span class="quote marginnote leftnote">
                     <span class="has-text-weight-bold has-margin-bottom-sm is-block">Random Quote</span>
                     <?php $quote = shell_exec('fortune quotes'); ?>
                     <?php echo $quote; ?>
