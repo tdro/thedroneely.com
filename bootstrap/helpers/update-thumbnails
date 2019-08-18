@@ -1,6 +1,9 @@
 #!/bin/bash
 
-cd images/ && touch .update-thumbnails || exit 1;
-mogrify -path thumbnails/ -auto-orient -quiet -thumbnail x222 $(find . -maxdepth 1 -type f -mtime -1) || echo 'No Images Updated.' && exit 1;
-rename jpg png thumbnails/*;
+cd images || exit 1;
+mogrify -path thumbnails -auto-orient -quiet -thumbnail x222 $(find . -maxdepth 1 -type f -mtime -1);
+mogrify -format png -quiet thumbnails/*.jpg;
+rm -f thumbnails/*.jpg
+find thumbnails -name '*.png' -mtime -1 -exec pngquant --quality 85 --ext .png --force {} \;
+touch .update-thumbnails;
 echo Image Thumbnails in "'$(pwd)'" updated.;
