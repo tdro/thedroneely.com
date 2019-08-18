@@ -125,7 +125,7 @@ steps:
 
   - apt-get update
   - apt-get install -y wget
-  - wget https://yukari.sr.ht/openring
+  - wget https://www.thedroneely.com/openring
   - chmod +x openring
 
   - >
