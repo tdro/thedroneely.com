@@ -4,6 +4,7 @@ cd images || exit 1;
 mogrify -path thumbnails -auto-orient -quiet -thumbnail x222 $(find . -maxdepth 1 -type f -mtime -1);
 mogrify -format png -quiet thumbnails/*.jpg;
 rm -f thumbnails/*.jpg
-find thumbnails -name '*.png' -mtime -1 -exec pngquant --quality 85 --ext .png --force {} \;
+find -name '*.png' -mtime -1 -exec pngquant --quality 85 --ext .png --force {} \;
+find -name '*.jpg' -mtime -1 -exec jpegoptim -m 85 {} +
 touch .update-thumbnails;
 echo Image Thumbnails in "'$(pwd)'" updated.;
