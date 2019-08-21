@@ -1647,9 +1647,9 @@ fieldset[disabled] .button {
 .content h1,
 .content h2,
 .content h3 {
-  color: black;
+  color: #000;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .content h1 {
