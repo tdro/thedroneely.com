@@ -311,8 +311,9 @@ fieldset {
 
 pre {
   -webkit-overflow-scrolling: touch;
-  background-color: whitesmoke;
-  color: #4a4a4a;
+  background-color: #36464e;
+  border-radius: 3px;
+  color: #fff;
   font-size: 0.875em;
   overflow-x: auto;
   padding: 1.25rem 1.5rem;
@@ -2982,6 +2983,7 @@ fieldset[disabled] .radio {
 }
 
 .highlight pre {
+  background-color: #36464e;
   overflow: auto;
   max-width: 100%;
 }
@@ -5599,8 +5601,6 @@ a.navbar-item:hover, a.navbar-item.is-active,
 /* article, video, and code highlights */
 
 article.content { min-height: 452px; }
-
-div.highlight, .highlight pre { background-color: #36464e; color: #fff; border-radius: 3px; }
 
 video { display: inline-block; box-shadow: 0 0.25rem 1rem rgba(48,55,66,.3); }
 
