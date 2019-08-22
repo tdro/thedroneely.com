@@ -23,13 +23,22 @@
                         In it for the long haul
                     </h2>
 
-                    <img data-image-zoom alt="Mountains" src="/images/mountains.jpg"
-                    width="<?php echo getimagesize(
-                        $_SERVER['DOCUMENT_ROOT'] . '/images/mountains.jpg'
-                    )[0]; ?>"
-                    height="<?php echo getimagesize(
-                        $_SERVER['DOCUMENT_ROOT'] . '/images/mountains.jpg'
-                    )[1]; ?>" >
+                    <?php
+                    $width = getimagesize($_SERVER['DOCUMENT_ROOT'] . '/images/mountains.jpg')[0];
+                    $height = getimagesize($_SERVER['DOCUMENT_ROOT'] . '/images/mountains.jpg')[1];
+                    $ratio = ((($height / $width) * 100) > 100) ? $height . 'px' : $height / $width * 100 . '%';
+                    ?>
+
+                    <figure>
+                      <a href="/images/mountains.jpg" onclick="return false;">
+                        <div style="<?php echo 'padding-bottom:' . $ratio . ';'; ?>">
+                          <img data-image-zoom alt="Mountains" src="/images/mountains.jpg"
+                            width="<?php echo $width; ?>"
+                            height="<?php echo $height; ?>"
+                          >
+                        </div>
+                      </a>
+                    </figure>
 
                     <div class="content">
 

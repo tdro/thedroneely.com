@@ -1,13 +1,16 @@
 {{ safeHTML "<?php" }}
-$width = '"' . getimagesize($_SERVER['DOCUMENT_ROOT'] . '{{.Get `source`}}')[0] . '"';
-$height = '"' . getimagesize($_SERVER['DOCUMENT_ROOT'] . '{{.Get `source`}}')[1] . '"';
+$width = getimagesize($_SERVER['DOCUMENT_ROOT'] . '{{.Get `source`}}')[0];
+$height = getimagesize($_SERVER['DOCUMENT_ROOT'] . '{{.Get `source`}}')[1];
+$ratio = ((($height / $width) * 100) > 100) ? $height . 'px' : $height / $width * 100 . '%';
 {{ safeHTML "?>" }}
 
 <figure>
   <a href="{{.Get `source`}}" onclick="return false;">
+    <div {{ safeHTMLAttr `<?php echo 'style=' . '"' . 'padding-bottom:' . $ratio . ';' . '"'; ?>` }}>
     <img data-image-zoom src="{{.Get `source`}}" alt="{{.Get `title`}}" title="{{.Get `title`}}"
-    {{ safeHTMLAttr "<?php echo 'width=' . $width; ?>" }}
-    {{ safeHTMLAttr "<?php echo 'height=' . $height; ?>" }} />
+    {{ safeHTMLAttr `<?php echo 'width=' . '"' . $width . '"'; ?>` }}
+    {{ safeHTMLAttr `<?php echo 'height=' . '"' . $height . '"'; ?>` }} />
+    </div>
   </a>
   <figcaption class="has-text-centered has-text-grey-dark">{{ .Inner }}</figcaption>
 </figure>

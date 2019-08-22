@@ -5802,6 +5802,7 @@ a:focus img,
 
 /* figure */
 
+figure div { height: 0; }
 figcaption { font-size: 0.9em; margin-top: 1.5em; }
 
 
@@ -5908,6 +5909,7 @@ blockquote p { font-size: 1.3rem !important; color: #333; }
 
 @media (max-width: 768px) { .recent__article .columns, .content blockquote, .highlight { clear: both; } }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .quote { height: 0; } } /* ie quote height fix */
+
 
 /* isso comments */
 
