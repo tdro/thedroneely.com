@@ -2197,6 +2197,9 @@ fieldset[disabled] .select select:-ms-input-placeholder,
   color: rgba(122, 122, 122, 0.3);
 }
 
+.is-danger.input, .is-danger.textarea {
+  border-color: #ff3860;
+}
 
 .textarea {
   display: block;
