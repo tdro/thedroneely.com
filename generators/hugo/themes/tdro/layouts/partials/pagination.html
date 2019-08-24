@@ -5,14 +5,16 @@
 {{ if gt $HugoPaginator.TotalPages 1 }}
 
 <nav class="pagination" aria-label="pagination">
-	
-  <a href="{{ if $HugoPaginator.HasPrev }}{{ $HugoPaginator.Prev.URL }}{{ end }}" class="pagination-previous"
-			aria-label="Previous page" {{ if not $HugoPaginator.HasPrev }}disabled aria-hidden="true"{{ end }}>
+
+  <a {{ if $HugoPaginator.HasPrev }} href="{{ $HugoPaginator.Prev.URL }}" {{ end }}
+      class="pagination-previous {{ if not $HugoPaginator.HasPrev }}disabled{{ end }}"
+			aria-label="Previous page" {{ if not $HugoPaginator.HasPrev }}aria-hidden="true"{{ end }}>
       Previous
   </a>
 
-	<a href="{{ if not (le (int $MyPaginator) $HugoPaginator.PageNumber) }}{{ if $HugoPaginator.HasNext }}{{ $HugoPaginator.Next.URL }}{{ end }}{{ end }}" class="pagination-next" 
-			aria-label="Next page" {{ if le (int $MyPaginator) $HugoPaginator.PageNumber }}disabled aria-hidden="true"{{ end }}>
+	<a {{ if not (le (int $MyPaginator) $HugoPaginator.PageNumber) }}{{ if $HugoPaginator.HasNext }} href="{{ $HugoPaginator.Next.URL }}" {{ end }}{{ end }}
+    class="pagination-next {{ if not $HugoPaginator.HasPrev }}disabled{{ end }}"
+			aria-label="Next page" {{ if le (int $MyPaginator) $HugoPaginator.PageNumber }}aria-hidden="true"{{ end }}>
       Next
   </a>
 
@@ -23,7 +25,7 @@
   {{ $right := sub .TotalPages .PageNumber }}
   {{ $showNumber := or (le .PageNumber 3) (eq $right 0) }}
   {{ $showNumber := or $showNumber (and (gt .PageNumber (sub $HugoPaginator.PageNumber 2)) (lt .PageNumber (add $HugoPaginator.PageNumber 2))) }}
-    
+
       {{ if $showNumber }}
         {{ $.Scratch.Set "__paginator.ellipsed" false }}
         {{ $.Scratch.Set "__paginator.shouldEllipse" false }}
@@ -35,7 +37,7 @@
       {{ if $showNumber }}
 
         <li>
-          <a href="{{ .URL }}" aria-label="Go to page {{ .PageNumber }}" 
+          <a href="{{ .URL }}" aria-label="Go to page {{ .PageNumber }}"
             class="pagination-link {{ if eq . $HugoPaginator }}is-current{{ end }}">
             {{ .PageNumber }}
           </a>
