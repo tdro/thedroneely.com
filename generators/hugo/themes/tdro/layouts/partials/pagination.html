@@ -13,7 +13,7 @@
   </a>
 
 	<a {{ if not (le (int $MyPaginator) $HugoPaginator.PageNumber) }}{{ if $HugoPaginator.HasNext }} href="{{ $HugoPaginator.Next.URL }}" {{ end }}{{ end }}
-    class="pagination-next {{ if not $HugoPaginator.HasPrev }}disabled{{ end }}"
+    class="pagination-next {{ if le (int $MyPaginator) $HugoPaginator.PageNumber }}disabled{{ end }}"
 			aria-label="Next page" {{ if le (int $MyPaginator) $HugoPaginator.PageNumber }}aria-hidden="true"{{ end }}>
       Next
   </a>
