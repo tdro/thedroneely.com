@@ -216,6 +216,13 @@ window.onscroll = function() {
         target: target
       });
     };
+    var _handleTouch = function _handleTouch(event) {
+      var target = event.target;
+      if (target === overlay) {
+        close();
+        return;
+      }
+    };
     var _handleScroll = function _handleScroll() {
       if (isAnimating || !active.original) {
         return;
@@ -546,6 +553,7 @@ window.onscroll = function() {
     }, zoomOptions);
     var overlay = createOverlay(zoomOptions.background);
     document.addEventListener("click", _handleClick);
+    document.addEventListener("touchstart", _handleTouch);
     document.addEventListener("keyup", _handleKeyUp);
     document.addEventListener("scroll", _handleScroll);
     window.addEventListener("resize", close);
