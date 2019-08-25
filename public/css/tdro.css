@@ -5176,7 +5176,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 }
 
 
-/* margin and padding helpers */
+/* custom helpers */
 
 .has-padding-none { padding: 0 !important; }
 .has-margin-none { margin: 0 !important; }
@@ -5184,7 +5184,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 .has-margin-bottom-sm { margin-bottom: 0.25em !important; }
 .has-margin-bottom-md { margin-bottom: 0.5em !important; }
 .has-margin-bottom-lg { margin-bottom: 1em !important; }
-
+.has-spacing-widest { letter-spacing: 0.1em }
 
 /* tufte css */
 
