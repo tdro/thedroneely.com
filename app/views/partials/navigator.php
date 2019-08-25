@@ -88,8 +88,6 @@
 
             </div>
 
-            <div class="navbar-brand is-hidden-touch"></div>
-
 
             <div class="navbar-menu">
 
