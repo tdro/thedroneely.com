@@ -248,11 +248,11 @@ code {
 }
 
 hr {
-  background-color: #aaa;
+  background-color: #ddd;
   border: none;
   display: block;
   height: 1px;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 img {
