@@ -5376,6 +5376,7 @@ blockquote p { font-size: 1.3rem !important; color: #333; }
 
 .isso-comment > div.text-wrapper > div.text p:last-child {
     margin-bottom: 0.2em;
+    font-size: 0.9em;
 }
 
 .isso-comment > div.text-wrapper > div.text h1,
@@ -5409,15 +5410,22 @@ blockquote p { font-size: 1.3rem !important; color: #333; }
 }
 
 .isso-feedlink:hover,
-.isso-comment > div.text-wrapper > .isso-comment-footer a:hover {
+.isso-comment > div.text-wrapper > .isso-comment-footer a:hover svg,
+.isso-comment > div.text-wrapper > .isso-comment-footer .reply:hover,
+.isso-comment > div.text-wrapper > .isso-comment-footer .edit:hover,
+.isso-comment > div.text-wrapper > .isso-comment-footer .cancel:hover,
+.isso-comment > div.text-wrapper > .isso-comment-footer .delete:hover {
     color: #111111;
     text-shadow: #aaaaaa 0 0 1px !important;
     background-color: #ccc;
+    fill: #111111;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer > a {
     position: relative;
     top: .2em;
+    padding: 0.3em;
+    border-radius: 0.1em;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer .votes {
@@ -5437,6 +5445,7 @@ blockquote p { font-size: 1.3rem !important; color: #333; }
 .isso-comment-footer > .delete {
     margin: 0.2rem 0 0 0.4rem;
 }
+
 .isso-comment-footer > .cancel {
     margin-left: 0.3rem;
 }

@@ -37,7 +37,6 @@ blockquote p { color: #b3c4d5; }
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper input { background-color: #002e42; color: white; }
 .isso-postbox > .form-wrapper .textarea, .isso-postbox > .form-wrapper .preview { background-color: #002e42; }
 .isso-comment > div.text-wrapper > .isso-comment-header .author { color: #fff; }
-.isso-feedlink:hover, .isso-comment > div.text-wrapper > .isso-comment-footer a:hover { background-color: #34597f; color: white; }
 .isso-comment-footer .upvote svg, .isso-comment-footer .downvote svg { fill: white };
 input::placeholder, textarea::placeholder { color: #cad6e2; }
 input::-moz-placeholder, textarea::-moz-placeholder { color: #cad6e2; }
