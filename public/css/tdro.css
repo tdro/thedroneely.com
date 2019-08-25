@@ -1556,41 +1556,38 @@ fieldset[disabled] .button {
 }
 
 .container {
+  flex-grow: 1;
   margin: 0 auto;
   position: relative;
+  width: auto;
 }
 
 @media screen and (min-width: 1088px) {
   .container {
     max-width: 960px;
-    width: 960px;
   }
   .container.is-fluid {
     margin-left: 32px;
     margin-right: 32px;
     max-width: none;
-    width: auto;
   }
 }
 
 @media screen and (max-width: 1279px) {
   .container.is-widescreen {
     max-width: 1152px;
-    width: auto;
   }
 }
 
 @media screen and (max-width: 1471px) {
   .container.is-fullhd {
     max-width: 1344px;
-    width: auto;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1152px;
-    width: 1152px;
   }
 }
 
@@ -2121,8 +2118,7 @@ fieldset[disabled] .button {
   vertical-align: top;
 }
 
-.input,
-.textarea {
+.input, .textarea, .select select {
   background-color: #f9f9f9;
   border-color: #ccc;
   color: #363636;
@@ -5255,7 +5251,6 @@ label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 .marginnote-mark:after { content: "\0002B"; font-weight: bold; }
 }
 
-blockquote { border-left: 3px solid #ddd; }
 blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1em; }
 blockquote p { font-size: 1.3rem !important; color: #333; }
 
@@ -5345,7 +5340,6 @@ blockquote p { font-size: 1.3rem !important; color: #333; }
 
 .isso-comment .isso-follow-up {
     padding-left: calc(7% + 20px);
-    border-left: 3px solid #ddd;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header,
