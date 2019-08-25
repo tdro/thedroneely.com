@@ -4937,7 +4937,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .section {
-  padding: 2rem 1.5rem 2.5rem;
+  padding: 2rem 0;
 }
 
 @media screen and (max-width: 1087px) {
