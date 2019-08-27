@@ -8,7 +8,7 @@ body, .serif > a { color: #cad6e2 }
 blockquote p { color: #b3c4d5; }
 .highlight pre { background-color: #002e42; }
 .posts__more__content { background-color: #002e42; }
-.medium-zoom-overlay { background-color: #001f2c !important; }
+.medium-zoom-overlay { background-color: #001f2c; background-color: rgba(0, 31, 44, .9); }
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }
 .navbar__mobile__compact .navbar__active, .navbar-end .navbar__active { color: #75b2f0 !important; }
 .navbar-end > a.navbar-item:hover { background-color: #4698EA; color: #fff !important; }

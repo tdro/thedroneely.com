@@ -546,7 +546,6 @@ window.onscroll = function() {
     }
     zoomOptions = _extends({
       margin: 0,
-      background: "#fff",
       scrollOffset: 40,
       container: null,
       template: null
