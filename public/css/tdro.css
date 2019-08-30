@@ -5207,7 +5207,6 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 .leftnote, .rightnote {
   width: 32%;
   width: 18vw;
-  max-width: 22em;
   margin-top: 0;
   margin-bottom: 1em;
   font-size: 0.75em;
@@ -5219,6 +5218,8 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
   -webkit-user-select: none;
   user-select: none; */
 }
+
+@media (min-width: 769px) { .leftnote, .rightnote { max-width: 22em;} }
 
 body { counter-reset: sidenote-counter; }
 
