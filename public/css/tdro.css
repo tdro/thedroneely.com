@@ -1642,8 +1642,9 @@ fieldset[disabled] .button {
 }
 
 .content blockquote {
-  padding: 1.25em 1.5em;
+  padding: 0 1.5em;
   margin-left: 5%;
+  margin-bottom: 1.3em !important;
 }
 
 .content ol {
@@ -5254,7 +5255,7 @@ label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 .marginnote-mark:after { content: "\0002B"; font-weight: bold; }
 }
 
-blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1em; }
+blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1.3rem; }
 blockquote p { font-size: 1.3rem !important; color: #444; }
 
 .document .subtitle { margin-top: 0 !important; margin-bottom: 1.5em !important; }
