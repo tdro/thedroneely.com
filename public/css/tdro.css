@@ -4548,16 +4548,23 @@ a code { color: #0147b7; }
   white-space: nowrap;
   overflow: hidden;
   display: block;
-  text-overflow: ellipsis
+  text-overflow: ellipsis;
 }
 
 .article__updated { padding: 0.5em; }
 .article__list { line-height: 2.5; }
+.article__list li:hover { background-color: #f1f1f1; }
+.article__list a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .webring li { padding-top: 1em; }
 .webring ul { margin-top: 0.5em; }
 .webring .articles h2 { margin-bottom: 0.1em; }
 .posts__more__content { background-color: #f5f5f5; }
+
 
 /* resume page */
 
