@@ -148,7 +148,7 @@ steps:
   - cd generators/hugo && ln -s ../../public/ public
 
 
-- name: deploy
+- name: package
   image: alpine:3.10
   environment:
     NAME: thedroneely.com
@@ -168,12 +168,32 @@ steps:
   - echo "$SSH_KEY_PASSWORD" | ssh-add ssh-key
 
   - >
-    tar -czf $NAME.tar.gz app bootstrap generators
+    tar -zcvf $NAME.tar.gz app bootstrap generators
     public vendor AppConfig.php composer.json composer.lock
 
   - >
     scp -r -o StrictHostKeyChecking=no -vT -i ssh-key
     $NAME.tar.gz $SERVER_USER@$SERVER_IP:/srv/deploys/$NAME/
+
+
+- name: deploy
+  image: alpine:3.10
+  environment:
+    NAME: thedroneely.com
+    SSH_KEY:
+     from_secret: ssh_key
+    SSH_KEY_PASSWORD:
+      from_secret: ssh_key_password
+    SERVER_IP:
+      from_secret: server_ip
+    SERVER_USER:
+      from_secret: server_user
+  commands:
+
+  - apk add openssh
+  - echo "$SSH_KEY" > ssh-key && chmod 600 ssh-key
+  - eval $(ssh-agent)
+  - echo "$SSH_KEY_PASSWORD" | ssh-add ssh-key
 
   - >
     ssh -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$SERVER_IP
