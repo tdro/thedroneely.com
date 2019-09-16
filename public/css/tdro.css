@@ -188,7 +188,7 @@ th:not([align]) {
 }
 
 html {
-  background-color: #fff;
+  background-color: #fcfcfc;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2500,8 +2500,8 @@ fieldset[disabled] .radio {
 
 
 .navbar {
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, .97);
+  background-color: #fcfcfc;
+  background-color: rgba(252, 252, 252, .97);
   min-height: 4rem;
   position: relative;
   z-index: 30;
