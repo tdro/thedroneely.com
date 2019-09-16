@@ -214,8 +214,8 @@ steps:
     hugo &&
     cd /srv/deploys/$NAME &&
 
-    chattr -i -Rf "$(ls -t | awk "NR>8")" || true &&
-    rm -rf "$(ls -t | awk "NR>8")" &&
+    chattr -i -Rf $(ls -t | awk "NR>8") || true &&
+    rm -rf $(ls -t | awk "NR>8") &&
 
     ln -s $NAME-$DATE $NAME-deploy-$DATE &&
     mv -Tf $NAME-deploy-$DATE $NAME-deploy &&
