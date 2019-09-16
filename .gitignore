@@ -11,4 +11,6 @@ public/images
 public/about
 public/rss.xml
 public/sitemap.xml
-
+generators/hugo/content
+generators/hugo/public
+openring.html
