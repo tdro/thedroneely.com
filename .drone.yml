@@ -3,8 +3,10 @@ name: build-package-deploy
 
 
 steps:
+
 - name: build
   image: composer:1.8.6
+
   commands:
 
   - composer -V
@@ -13,7 +15,9 @@ steps:
 
 - name: secrets
   image: alpine:3.10
+
   environment:
+
     EMAIL_USERNAME:
       from_secret: email_username
     EMAIL_PASSWORD:
@@ -22,6 +26,7 @@ steps:
       from_secret: pgsql_username
     PGSQL_PASSWORD:
       from_secret: pgsql_password
+
   commands:
 
   - mv AppConfigBuild.php AppConfig.php
@@ -33,7 +38,9 @@ steps:
 
 - name: synchronize
   image: alpine:3.10
+
   environment:
+
     SSH_KEY:
      from_secret: ssh_key
     SSH_KEY_PASSWORD:
@@ -48,6 +55,7 @@ steps:
       from_secret: origin_user
     ORIGIN_PORT:
       from_secret: origin_port
+
   commands:
 
   - apk add openssh
@@ -101,6 +109,7 @@ steps:
 
 - name: minify
   image: alpine:3.10
+
   commands:
 
   - wget https://github.com/tdewolff/minify/releases/download/v2.5.0/minify_2.5.0_linux_amd64.tar.gz
@@ -121,6 +130,7 @@ steps:
 
 - name: openring
   image: debian:stretch-slim
+
   commands:
 
   - apt-get update
@@ -139,6 +149,7 @@ steps:
 
 - name: prepare
   image: alpine:3.10
+
   commands:
 
   - sed -i 's|""|"https://www.thedroneely.com/"|' generators/hugo/config.yaml
@@ -150,8 +161,11 @@ steps:
 
 - name: package
   image: alpine:3.10
+
   environment:
+
     NAME: thedroneely.com
+
     SSH_KEY:
      from_secret: ssh_key
     SSH_KEY_PASSWORD:
@@ -160,6 +174,7 @@ steps:
       from_secret: server_ip
     SERVER_USER:
       from_secret: server_user
+
   commands:
 
   - apk add openssh
@@ -178,8 +193,11 @@ steps:
 
 - name: deploy
   image: alpine:3.10
+
   environment:
+
     NAME: thedroneely.com
+
     SSH_KEY:
      from_secret: ssh_key
     SSH_KEY_PASSWORD:
@@ -188,6 +206,7 @@ steps:
       from_secret: server_ip
     SERVER_USER:
       from_secret: server_user
+
   commands:
 
   - apk add openssh
