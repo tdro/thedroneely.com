@@ -41,12 +41,12 @@ steps:
 
   environment:
 
+    NAME: thedroneely.com
+
     SSH_KEY:
      from_secret: ssh_key
     SSH_KEY_PASSWORD:
       from_secret: ssh_key_password
-    SERVER_IP:
-      from_secret: server_ip
     SERVER_USER:
       from_secret: server_user
     ORIGIN_HOST:
@@ -65,13 +65,13 @@ steps:
 
   - >
     scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key
-    $SERVER_USER@$SERVER_IP:/srv/http/thedroneely.com/generators/hugo/content generators/hugo/
+    $SERVER_USER@$NAME:/srv/http/thedroneely.com/generators/hugo/content generators/hugo/
 
   - ls -lR generators/hugo/content
 
   - >
     scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key
-    $SERVER_USER@$SERVER_IP:/srv/http/thedroneely.com/cockpit/storage/data/collections.sqlite .
+    $SERVER_USER@$NAME:/srv/http/thedroneely.com/cockpit/storage/data/collections.sqlite .
 
   - ls -la
 
@@ -92,9 +92,9 @@ steps:
 
   - ls -la
 
-  -  scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$SERVER_IP:/srv/http/thedroneely.com/public/images .
+  -  scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$NAME:/srv/http/thedroneely.com/public/images .
 
-  -  scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$SERVER_IP:/srv/http/thedroneely.com/public/videos .
+  -  scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$NAME:/srv/http/thedroneely.com/public/videos .
 
   - ls -la
 
@@ -167,11 +167,9 @@ steps:
     NAME: thedroneely.com
 
     SSH_KEY:
-     from_secret: ssh_key
+      from_secret: ssh_key
     SSH_KEY_PASSWORD:
       from_secret: ssh_key_password
-    SERVER_IP:
-      from_secret: server_ip
     SERVER_USER:
       from_secret: server_user
 
@@ -188,7 +186,7 @@ steps:
 
   - >
     scp -r -o StrictHostKeyChecking=no -vT -i ssh-key
-    $NAME.tar.gz $SERVER_USER@$SERVER_IP:/srv/deploys/$NAME/
+    $NAME.tar.gz $SERVER_USER@$NAME:/srv/deploys/$NAME/
 
 
 - name: deploy
@@ -199,11 +197,9 @@ steps:
     NAME: thedroneely.com
 
     SSH_KEY:
-     from_secret: ssh_key
+      from_secret: ssh_key
     SSH_KEY_PASSWORD:
       from_secret: ssh_key_password
-    SERVER_IP:
-      from_secret: server_ip
     SERVER_USER:
       from_secret: server_user
 
@@ -215,7 +211,7 @@ steps:
   - echo "$SSH_KEY_PASSWORD" | ssh-add ssh-key
 
   - >
-    ssh -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$SERVER_IP
+    ssh -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$NAME
     '
     export DATE=$(date +%H%M-%d%m-%Y) NAME=thedroneely.com &&
     cd /srv/deploys/$NAME &&
