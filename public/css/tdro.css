@@ -4733,7 +4733,7 @@ label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 }
 
 blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1.3rem; }
-blockquote p { font-size: 1.3rem !important; color: #444; }
+blockquote p { font-size: 1.3rem !important; }
 
 .document .subtitle { margin-top: 0 !important; margin-bottom: 1.5em !important; }
 .is-small-caps { font-variant: small-caps; }
