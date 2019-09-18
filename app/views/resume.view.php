@@ -37,7 +37,7 @@
 
                 <br>
 
-                <a href="/contact/" class="title has-text-weight-normal is-size-7 has-text-white text__frame">Contact for Full Resume</a>
+                <a href="/contact/" class="resume__label title has-text-weight-normal is-size-7 text__frame">Contact for Full Resume</a>
 
                 <br>
 
