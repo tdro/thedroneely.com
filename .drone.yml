@@ -125,6 +125,7 @@ steps:
   - sed -i "s|tdro.css|$(find public/css -name "tdro.min*" | awk -F/ '{print $NF}')|" app/views/snippets/stylesheets.php
   - sed -i "s|tdro-dark.css|$(find public/css -name "tdro-dark.min*" | awk -F/ '{print $NF}')|" app/views/snippets/stylesheets.php
   - sed -i "s|bulma-timeline.css|$(find public/css -name "bulma-timeline.min*" | awk -F/ '{print $NF}')|" app/views/resume.view.php
+  - sed -i "s|syntax-highlight.css|$(find public/css -name "syntax-highlight.min*" | awk -F/ '{print $NF}')|" generators/hugo/themes/tdro/layouts/_default/single.html
   - sed -i "s|app.js|$(find public/js -name "app-js.min*" | awk -F/ '{print $NF}')|" app/views/partials/footer.php
 
 

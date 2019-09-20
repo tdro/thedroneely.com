@@ -52,9 +52,9 @@
 /* CommentSpecial */ .chroma .cs { color: #a0aec0 }
 /* CommentPreproc */ .chroma .cp { color: #ff8383 }
 /* CommentPreprocFile */ .chroma .cpf { color: #a0aec0 }
-/* GenericDeleted */ .chroma .gd { color: #fda1c2 }
+/* GenericDeleted */ .chroma .gd { color: #ff3860 }
 /* GenericEmph */ .chroma .ge { font-style: italic }
-/* GenericInserted */ .chroma .gi { color: #a6e22e }
+/* GenericInserted */ .chroma .gi { color: #bcea62 }
 /* GenericStrong */ .chroma .gs { font-weight: bold }
 /* GenericSubheading */ .chroma .gu { color: #bdbaad }
 /* GenericTag */ .chroma .p { color: #93ddfd }
