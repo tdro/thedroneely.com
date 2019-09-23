@@ -4517,7 +4517,7 @@ a code { color: #0147b7; }
 .coffee svg { stroke-width: 1.5px; width: 20px; height: 20px; }
 .coffee span { padding-left: 10px; }
 
-.brand__custom { margin: 14px 12px; text-align: center; background-color: #555; color: white; padding: 0 10px; }
+.brand__custom { margin: 14px 12px; text-align: center; background-color: #444; color: white; padding: 0 10px; border-radius: 0.25em }
 
 
 /* contact form */
