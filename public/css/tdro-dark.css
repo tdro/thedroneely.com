@@ -5,7 +5,6 @@ a { color: #75b2f0; }
 a.navbar-item:hover { color: #fff; }
 img { box-shadow: none; }
 body, .serif > a { color: #cad6e2 }
-.highlight pre { background-color: #002e42; }
 .article__list li:hover { background-color: #003247; }
 .posts__more__content { background-color: #002e42; }
 .medium-zoom-overlay { background-color: #001f2c; background-color: rgba(0, 31, 44, .9); }
