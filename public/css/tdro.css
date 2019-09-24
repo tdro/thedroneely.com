@@ -4599,8 +4599,7 @@ a code { color: #0147b7; }
 .underline,
 .isso-comment > div.text-wrapper > .text a,
 .serif > a {
-  border-bottom: 2px solid #999;
-  padding-bottom: 2px;
+  border-bottom: 1px solid #999;
 }
 
 /* focus links */
@@ -4726,7 +4725,7 @@ input.sidenote-toggle, input.marginnote-toggle  { display: none; }
 label { cursor: pointer; }
 label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 .sidenote, .marginnote { display: none; }
-.sidenote-mark, .marginnote-mark { border-bottom: 2px dashed #999; padding-bottom: 2px; }
+.sidenote-mark, .marginnote-mark { border-bottom: 1px dashed #999; }
 .marginnote-mark:after { content: "\0002B"; font-weight: bold; }
 }
 
