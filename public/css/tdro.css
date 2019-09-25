@@ -4405,6 +4405,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   padding: 2rem 0;
 }
 
+.section-vertical {
+  padding: 1.5rem 0;
+}
+
 @media screen and (max-width: 1087px) {
   .section { padding: 1.5rem; }
 }
