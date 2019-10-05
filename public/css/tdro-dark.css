@@ -6,7 +6,8 @@ a.navbar-item:hover { color: #fff; }
 img { box-shadow: none; }
 body, .serif > a { color: #cad6e2 }
 .article__list li:hover { background-color: #003247; }
-.posts__more__content { background-color: #002e42; }
+.article__more__content { background-color: #002e42; }
+.article__webring { background-color: #00364d; }
 .medium-zoom-overlay { background-color: #001f2c; background-color: rgba(0, 31, 44, .9); }
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }
 .navbar__mobile__compact .navbar__active, .navbar-end .navbar__active { color: #75b2f0 !important; }

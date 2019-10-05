@@ -4566,7 +4566,8 @@ a code { color: #0147b7; }
 .webring li { padding-top: 1em; }
 .webring ul { margin-top: 0.5em; }
 .webring .articles h2 { margin-bottom: 0.1em; }
-.posts__more__content { background-color: #f5f5f5; }
+.article__more__content { background-color: #f5f5f5; }
+.article__webring { background-color: #eee; }
 
 
 /* resume page */
