@@ -4697,7 +4697,8 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
   user-select: none; */
 }
 
-@media (min-width: 769px) { .leftnote, .rightnote { max-width: 22em;} }
+@media (min-width: 769px) { .leftnote, .rightnote { max-width: 22em; } }
+@media (min-width: 2000px) { .leftnote { margin-left: -28em; } .rightnote { margin-right: -28em; } }
 
 body { counter-reset: sidenote-counter; }
 
