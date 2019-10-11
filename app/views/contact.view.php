@@ -32,18 +32,18 @@
                             <div class="field is-horizontal">
                                 <div class="field-body">
                                     <div class="field is-expanded">
-                                    <label class="heading is-size-6">Name</label>
+                                    <label for="name" class="heading is-size-6">Name</label>
                                         <div class="field has-addons">
                                             <p class="control is-expanded">
-                                              <input class="input" type="text" name="26471" value="<?php echo $name ?? '' ?>">
+                                              <input id="name" class="input" type="text" name="26471" value="<?php echo $name ?? '' ?>">
                                             </p>
                                         </div>
                                     </div>
                                     <div class="field is-expanded">
-                                        <label class="heading is-size-6">Email <span class="alert">*</span></label>
+                                        <label for="email" class="heading is-size-6">Email <span class="alert">*</span></label>
                                         <div class="field has-addons">
                                             <p class="control is-expanded">
-                                              <input class="input <?php echo $border = isset($emailError) ? 'is-danger' : '';?>"
+                                              <input id="email" class="input <?php echo $border = isset($emailError) ? 'is-danger' : '';?>"
                                               type="email" name="26472" value="<?php echo $email ?? '' ?>" required>
                                             </p>
                                         </div>
@@ -51,13 +51,13 @@
                                 </div>
                             </div>
 
-                            <label class="heading is-size-6">Message <span class="alert">*</span></label>
+                            <label for="message" class="heading is-size-6">Message <span class="alert">*</span></label>
 
                             <div class="field is-horizontal">
                               <div class="field-body">
                                 <div class="field">
                                   <div class="control">
-                                    <textarea class="textarea" name="26478" placeholder="" required><?php echo $message ?? '' ?></textarea>
+                                    <textarea id="message" class="textarea" name="26478" placeholder="" required><?php echo $message ?? '' ?></textarea>
                                   </div>
                                 </div>
                               </div>
