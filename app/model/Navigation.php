@@ -4,27 +4,16 @@ class Navigation
 {
     public function requestContains($route)
     {
-        if (strpos($_SERVER['REQUEST_URI'], $route) !== false) {
-            return true;
-        }
-        return false;
+        return (bool) (strpos($_SERVER['REQUEST_URI'], $route) !== false);
     }
 
     public function isActiveHome()
     {
-        if (strlen(strtok($_SERVER['REQUEST_URI'], '?')) === 1) {
-            return 'navbar__active ';
-        }
-        return;
+        return (bool) (strlen(strtok($_SERVER['REQUEST_URI'], '?')) === 1);
     }
 
     public function isActive($route)
     {
-        if ($_SERVER['REQUEST_URI'] === $route
-            || $this->requestContains($route)
-        ) {
-            return 'navbar__active ';
-        }
-        return;
+        return (bool) ($_SERVER['REQUEST_URI'] === $route || $this->requestContains($route));
     }
 }
