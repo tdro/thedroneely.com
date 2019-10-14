@@ -1,2 +1,3 @@
-
-<a href="/" class="<?php echo $navigation->isActiveHome() ?? '' ?>navbar-item navbar__item">Home</a>
+<a href="/" class="<?php echo $check = $navigation->isActiveHome() ? 'navbar__active' : ''; ?> navbar-item navbar__item">
+  Home
+</a>

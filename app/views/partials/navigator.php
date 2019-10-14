@@ -6,7 +6,7 @@
             <div class="navbar-brand navbar__mobile__compact">
 
                 <a href="/" class="navbar-item navbar__icon
-                <?php echo $navigation->isActiveHome() ?? 'has-text-gray' ?>">
+                <?php echo $check = $navigation->isActiveHome() ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
                         $_SERVER['DOCUMENT_ROOT']
@@ -17,7 +17,7 @@
                 </a>
 
                 <a href="/posts/" class="navbar-item navbar__icon
-                <?php echo $navigation->isActive('posts') ?? 'has-text-gray' ?>">
+                <?php echo $check = $navigation->isActive('posts') ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
                         $_SERVER['DOCUMENT_ROOT']
@@ -28,7 +28,7 @@
                 </a>
 
                 <a href="/projects/" class="navbar-item navbar__icon
-                <?php echo $navigation->isActive('projects') ?? 'has-text-gray' ?>">
+                <?php echo $check = $navigation->isActive('projects') ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
                         $_SERVER['DOCUMENT_ROOT']
@@ -39,7 +39,7 @@
                 </a>
 
                 <a href="/contact/" class="navbar-item navbar__icon
-                <?php echo $navigation->isActive('contact') ?? 'has-text-gray' ?>">
+                <?php echo $check = $navigation->isActive('contact') ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
                     <?php echo file_get_contents(
                         $_SERVER['DOCUMENT_ROOT']
