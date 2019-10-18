@@ -4458,7 +4458,6 @@ a code { color: #0147b7; }
 .navbar-end .navbar__item { padding: 0.65em 1em; margin: 0; }
 
 @media screen and (max-width: 1087px) {
-  .theme-toggle-button:hover { background-color: #bbdbee; color: black; }
   .navbar-menu { padding: 0 !important; }
   .navbar { box-shadow: 0 4px 12px 0 rgba(0,0,0,.1); }
   .navbar-end {
@@ -4497,9 +4496,9 @@ a code { color: #0147b7; }
 }
 
 .navbar__line { margin: 0 12px; }
-.navbar__left a { margin-left: -2px; }
 .navbar__right { text-align: right; }
-.navbar__left, .navbar__right { padding-bottom: 0; }
+.navbar__middle { text-align: center; }
+.navbar__left, .navbar__middle, .navbar__right { padding-bottom: 0; }
 
 .navbar__icon { justify-content: center; width: 20%; margin: 0;}
 .navbar__icon__align { margin-top: -4px; margin-bottom: 3px; }
@@ -4513,15 +4512,12 @@ a code { color: #0147b7; }
 .navbar-end > .navbar__active { font-weight: bold; color: #014cc6; }
 .navbar-end > a.navbar-item:hover { background-color: #bbdbee; color: black; }
 
-.navbar__separator { border-left: 1px solid #bbb; height: 2.5em; margin-bottom: 6px; vertical-align: middle; }
-
 .error__headerSize { font-size: 8rem; }
 
-.coffee { padding: 0.25rem 1rem; }
-.coffee svg { stroke-width: 1.5px; width: 20px; height: 20px; }
-.coffee span { padding-left: 10px; }
-
-.brand__custom { margin: 14px 12px; text-align: center; background-color: #444; color: white; padding: 0 10px; border-radius: 0.25em }
+.item__box span { padding-left: 10px; }
+.item__box svg { stroke-width: 1.5px; width: 20px; height: 20px; }
+.item__box:hover svg, .item__box:focus svg { fill: currentColor; color: #000; }
+.item__box { margin-left: 0; margin-right: 0.4em; padding: 0.25rem 1rem; background-color: #eee; border-width: 0; color: #444; border-color: transparent !important; }
 
 
 /* contact form */
@@ -4624,32 +4620,17 @@ a:focus img,
 .is-success:focus, .is-link:focus { background-color: #ebebeb !important }
 
 
-/* post tags */
-
-.page__tags {
-  padding: 1px 6px 2px 6px;
-  border-radius: 6px;
-  border: 1px solid currentColor;
-}
-
-
 /* figure */
 
 figure div { height: 0; }
 figcaption { font-size: 0.9em; margin-top: 1.5em; }
 
 
-/* theme toggle */
+/* mobile theme toggle button */
 
-.theme-toggle { vertical-align: middle; }
 .theme-toggle-button { border-radius: 0; height: 100%; padding: 0 0.35em; width: 100%; font-weight: 400; }
-.theme-toggle-sun svg { fill: orange; color: orange; width: 32px; height: 32px; }
-.theme-toggle-moon svg { fill: #118fe4; color: blue; width: 32px; height: 32px; }
-.theme-toggle-sun:hover svg { color: red; }
-.theme-toggle-moon:hover svg { fill: #59b5f3; }
 
 @media screen and (max-width: 1087px) {
-  .theme-toggle-sun svg, .theme-toggle-moon svg { display: inline-block; vertical-align: middle; }
   .theme-toggle-button { color: black; padding: 0.587em 1em; }
 }
 

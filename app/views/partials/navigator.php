@@ -93,49 +93,45 @@
                     <div class="navbar__left column">
                         <a title="Go to Website Repository"
                         href="https://www.thedroneely.com/git/explore/repos"
-                        class="brand__custom is-inline-block">
-                          Git Repo
+                        class="navbar-item item__box button is-inline-flex">
+                        <?php echo file_get_contents(
+                            $_SERVER['DOCUMENT_ROOT']
+                            . '/..' . '/public/css/fonts/feather-icons/git-pull-request.svg'
+                        ) ?>
+                        <span>Repo</span>
                         </a>
 
-                        <div class="navbar__separator is-inline-block"></div>
-
-                        <div class ="is-inline-block theme-toggle">
-                        <form method="get"
+                        <form class="is-inline" method="get"
                         action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 
                                 <?php if ($theme->color() === 'dark') { ?>
 
                                 <button title="Switch to Light Theme"
-                                class="theme-toggle-button button is-text"
+                                class="navbar-item button item__box is-inline-flex"
                                 name="theme" type="submit" value="light">
 
-                                <span class="theme-toggle-sun">
                                     <?php echo file_get_contents(
                                         $_SERVER['DOCUMENT_ROOT']
                                         . '/..'
                                         . '/public/css/fonts/feather-icons/sun.svg'
                                     ) ?>
-                                </span>
 
                                 <?php } else { ?>
 
                                 <button title="Switch to Dark Theme"
-                                class="theme-toggle-button button is-text"
+                                class="navbar-item button item__box is-inline-flex"
                                 name="theme" type="submit" value="dark">
 
-                                <span class="theme-toggle-moon">
                                     <?php echo file_get_contents(
                                         $_SERVER['DOCUMENT_ROOT']
                                         . '/..'
                                         . '/public/css/fonts/feather-icons/moon.svg'
                                     ) ?>
-                                </span>
 
                                 <?php } ?>
 
                             </button>
                         </form>
-                        </div>
 
                     </div>
 
@@ -147,8 +143,7 @@
                      <div class="navbar__right column">
                         <a title="Coffee"
                         href ="https://ko-fi.com/thedroneely"
-                        class="navbar-item coffee button is-success
-                        is-outlined is-inline-flex">
+                        class="navbar-item item__box button is-inline-flex">
                         <?php echo file_get_contents(
                             $_SERVER['DOCUMENT_ROOT']
                             . '/..' . '/public/css/fonts/feather-icons/coffee.svg'
