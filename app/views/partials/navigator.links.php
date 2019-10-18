@@ -1,3 +1,7 @@
+<a href="/" class="<?php echo $check = $navigation->isActiveHome() ? 'navbar__active' : ''; ?> navbar-item navbar__item">
+  Home
+</a>
+
 <a href="/posts/" class="<?php echo $check = $navigation->isActive('posts') ? 'navbar__active' : ''; ?> navbar-item navbar__item">
   Posts
 </a>

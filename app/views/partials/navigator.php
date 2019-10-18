@@ -68,9 +68,6 @@
             <div class="navbar-brand navbar__tablet__compact">
 
                 <?php require $_SERVER['DOCUMENT_ROOT']
-                . '/..' . '/app/views/partials/navigator.home.php'; ?>
-
-                <?php require $_SERVER['DOCUMENT_ROOT']
                 . '/..' . '/app/views/partials/navigator.links.php'; ?>
 
                 <div id="navBurger"
@@ -142,12 +139,7 @@
 
                     </div>
 
-                    <div class="navbar__left column is-2">
-                        <?php require $_SERVER['DOCUMENT_ROOT']
-                        . '/..' . '/app/views/partials/navigator.home.php'; ?>
-                    </div>
-
-                    <div class="navbar__right column is-5">
+                    <div class="navbar__middle column is-7">
                         <?php require $_SERVER['DOCUMENT_ROOT']
                         . '/..' . '/app/views/partials/navigator.links.php'; ?>
                     </div>
@@ -174,9 +166,6 @@
 
     <nav id="navMenu" class="navbar-menu is-hidden-desktop">
         <div id="navMenuContainer" class="navbar-end">
-
-            <?php require $_SERVER['DOCUMENT_ROOT']
-            . '/..' . '/app/views/partials/navigator.home.php'; ?>
 
             <?php require $_SERVER['DOCUMENT_ROOT']
             . '/..' . '/app/views/partials/navigator.links.php'; ?>
