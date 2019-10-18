@@ -7,8 +7,8 @@
     <h2>
       <a href="{{ .Link }}" target="_blank" rel="noopener" title="{{ .Summary }}" class="serif is-size-4">{{ .Title }}</a>
     </h2>
-    <small class="source is-block">by <a href="{{ .SourceLink}} ">{{ .SourceTitle }}</a></small>
-    <small class="is-block has-text-grey-dark">{{ .Date | date }}</small>
+    <div class="source is-block">by <a href="{{ .SourceLink}} ">{{ .SourceTitle }}</a></div>
+    <div class="is-block has-text-grey-dark">{{ .Date | date }}</div>
   </li>
 
   {{end}}
