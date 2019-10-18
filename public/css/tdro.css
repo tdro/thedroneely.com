@@ -1595,8 +1595,9 @@ fieldset[disabled] .button {
   text-align: center;
 }
 
-.content figure img {
+.content figure a {
   display: inline-block;
+  width: 100%;
 }
 
 .content pre {
