@@ -1471,12 +1471,6 @@ a.box:active {
   color: #014cc6;
 }
 
-.button.is-success.is-outlined {
-  border-color: #03a87c;
-  border-width: 1px;
-  color: #03a87c;
-}
-
 .button[disabled],
 fieldset[disabled] .button {
   background-color: white;
