@@ -1,10 +1,13 @@
 <?php
 
 /* composer autoload */
-require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php';;
+require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php';
+
+/* source functions */
+require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/bootstrap/Functions.php';
 
 /* source config file */
-$config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';;
+$config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';
 
 /* connect database */
 $contact['database'] = new QueryBuilder(Connection::make($config['database']));
