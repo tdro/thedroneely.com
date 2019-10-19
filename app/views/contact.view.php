@@ -69,8 +69,9 @@
                               <div class="field-body">
                                 <div class="field">
                                   <div class="control">
-                                    <button class="button is-link is-outlined has-text-weight-normal">
-                                      Send message
+                                    <button class="button item__box has-text-weight-normal">
+                                      <?php featherIcon('send'); ?>
+                                      <span>Send Message</span>
                                     </button>
                                   </div>
                                 </div>

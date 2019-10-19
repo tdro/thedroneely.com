@@ -8,10 +8,7 @@
                 <a href="/" class="navbar-item navbar__icon
                 <?php echo $check = $navigation->isActiveHome() ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
-                    <?php echo file_get_contents(
-                        $_SERVER['DOCUMENT_ROOT']
-                            . '/..' . '/public/css/fonts/feather-icons/user.svg'
-                    ) ?>
+                    <?php featherIcon('user'); ?>
                     <p class="is-size-7 navbar__icon__align">Home</p>
                     </div>
                 </a>
@@ -19,10 +16,7 @@
                 <a href="/posts/" class="navbar-item navbar__icon
                 <?php echo $check = $navigation->isActive('posts') ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
-                    <?php echo file_get_contents(
-                        $_SERVER['DOCUMENT_ROOT']
-                        . '/..' . '/public/css/fonts/feather-icons/book-open.svg'
-                    ) ?>
+                    <?php featherIcon('book-open'); ?>
                     <p class="is-size-7 navbar__icon__align">Posts</p>
                     </div>
                 </a>
@@ -30,10 +24,7 @@
                 <a href="/projects/" class="navbar-item navbar__icon
                 <?php echo $check = $navigation->isActive('projects') ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
-                    <?php echo file_get_contents(
-                        $_SERVER['DOCUMENT_ROOT']
-                        . '/..' . '/public/css/fonts/feather-icons/briefcase.svg'
-                    ) ?>
+                    <?php featherIcon('briefcase'); ?>
                     <p class="is-size-7 navbar__icon__align">Projects</p>
                     </div>
                 </a>
@@ -41,10 +32,7 @@
                 <a href="/contact/" class="navbar-item navbar__icon
                 <?php echo $check = $navigation->isActive('contact') ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
-                    <?php echo file_get_contents(
-                        $_SERVER['DOCUMENT_ROOT']
-                        . '/..' . '/public/css/fonts/feather-icons/mail.svg'
-                    ) ?>
+                    <?php featherIcon('mail'); ?>
                     <p class="is-size-7 navbar__icon__align">Contact</p>
                     </div>
                 </a>
@@ -54,10 +42,7 @@
                 data-target="navMenu">
                 <a href="javascript:void(0)" class="navbar-item navbar__icon__menu">
                     <div class="has-text-centered">
-                    <?php echo file_get_contents(
-                        $_SERVER['DOCUMENT_ROOT']
-                        . '/..' . '/public/css/fonts/feather-icons/menu.svg'
-                    ) ?>
+                    <?php featherIcon('menu'); ?>
                     <p class="is-size-7 navbar__icon__align">Menu</p>
                     </div>
                 </a>
@@ -74,10 +59,7 @@
                 class="navbar-burger burger has-text-dark" data-target="navMenu">
                 <a href="javascript:void(0)" class="navbar-item navbar__icon__menu">
                     <div class="has-text-centered">
-                    <?php echo file_get_contents(
-                        $_SERVER['DOCUMENT_ROOT']
-                        . '/..' . '/public/css/fonts/feather-icons/menu.svg'
-                    ) ?>
+                    <?php featherIcon('menu'); ?>
                     <p class="is-size-7 navbar__icon__align">Menu</p>
                     </div>
                 </a>
@@ -94,10 +76,7 @@
                         <a title="Go to Website Repository"
                         href="https://www.thedroneely.com/git/explore/repos"
                         class="navbar-item item__box button is-inline-flex">
-                        <?php echo file_get_contents(
-                            $_SERVER['DOCUMENT_ROOT']
-                            . '/..' . '/public/css/fonts/feather-icons/git-pull-request.svg'
-                        ) ?>
+                        <?php featherIcon('git-commit'); ?>
                         <span>Repo</span>
                         </a>
 
@@ -110,11 +89,7 @@
                                 class="navbar-item button item__box is-inline-flex"
                                 name="theme" type="submit" value="light">
 
-                                    <?php echo file_get_contents(
-                                        $_SERVER['DOCUMENT_ROOT']
-                                        . '/..'
-                                        . '/public/css/fonts/feather-icons/sun.svg'
-                                    ) ?>
+                                <?php featherIcon('sun'); ?>
 
                                 <?php } else { ?>
 
@@ -122,11 +97,7 @@
                                 class="navbar-item button item__box is-inline-flex"
                                 name="theme" type="submit" value="dark">
 
-                                    <?php echo file_get_contents(
-                                        $_SERVER['DOCUMENT_ROOT']
-                                        . '/..'
-                                        . '/public/css/fonts/feather-icons/moon.svg'
-                                    ) ?>
+                                <?php featherIcon('moon'); ?>
 
                                 <?php } ?>
 
@@ -144,10 +115,7 @@
                         <a title="Coffee"
                         href ="https://ko-fi.com/thedroneely"
                         class="navbar-item item__box button is-inline-flex">
-                        <?php echo file_get_contents(
-                            $_SERVER['DOCUMENT_ROOT']
-                            . '/..' . '/public/css/fonts/feather-icons/coffee.svg'
-                        ) ?>
+                        <?php featherIcon('coffee'); ?>
                         <span>Coffee</span>
                         </a>
                     </div>

@@ -78,13 +78,9 @@
                     ?>
 
                     <a href="/posts/page/2/"
-                        class="front__more is-block has-text-centered">
+                    class="front__more is-block has-text-centered">
                         See More Posts
-                        <?php echo file_get_contents(
-                            $_SERVER['DOCUMENT_ROOT']
-                            . '/..'
-                            . '/public/css/fonts/feather-icons/chevron-right.svg'
-                        ); ?>
+                        <?php featherIcon('chevron-right'); ?>
                     </a>
 
                     <br>
@@ -110,11 +106,7 @@
                     <a href="/projects/"
                     class="front__more is-block has-text-centered">
                         See More Projects
-                        <?php echo file_get_contents(
-                            $_SERVER['DOCUMENT_ROOT']
-                            . '/..'
-                            . '/public/css/fonts/feather-icons/chevron-right.svg'
-                        ); ?>
+                        <?php featherIcon('chevron-right'); ?>
                     </a>
 
                     <br>
