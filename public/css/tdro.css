@@ -1437,11 +1437,6 @@ a.box:active {
   border-color: transparent;
 }
 
-.button.is-link.is-outlined {
-  background-color: transparent;
-  border-color: #014cc6;
-  color: #014cc6;
-}
 
 .button[disabled],
 fieldset[disabled] .button {
