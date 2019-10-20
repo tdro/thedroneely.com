@@ -4408,7 +4408,15 @@ a code { color: #0147b7; }
 .item__box svg { stroke-width: 1.5px; width: 20px; height: 20px; }
 .item__box:hover svg, .item__box:focus svg { fill: currentColor; color: #000; }
 .item__no__hover:hover svg, .item__no__hover:focus svg { fill: transparent !important; }
-.item__box { margin-left: 0; margin-right: 0.4em; padding: 0.25rem 1rem; background-color: #f2f2f2; border-width: 0; color: #444; border-color: transparent !important; }
+.item__box {
+  font-weight: 400;
+  margin-left: 0;
+  margin-right: 0.4em;
+  padding: 0.25rem 1rem;
+  background-color: #f2f2f2;
+  border-width: 0; color: #444;
+  border-color: transparent !important;
+}
 
 
 /* contact form */
