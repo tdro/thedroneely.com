@@ -4332,7 +4332,7 @@ a code { color: #0147b7; }
 
 .serif > a { color: #222; }
 .is-size-serif { font-size: 1.3em !important; }
-.serif { font-family: "Times New Roman", TimesNewRoman, Cambria, Baskerville, Georgia, serif; }
+.serif { font-family: Charter, Georgia, 'Book Antiqua', serif; }
 
 .recent__article p, .article__summary { margin-bottom: 0.5em; }
 
