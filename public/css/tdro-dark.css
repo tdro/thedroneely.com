@@ -3,7 +3,7 @@
 html { background-color: #001f2c; }
 a { color: #75b2f0; }
 a.navbar-item:hover { color: #fff !important; }
-img { box-shadow: none; }
+img { box-shadow: none; filter: brightness(75%); }
 body, .sans-serif > a, .serif > a { color: #cad6e2 }
 .article__list li:hover { background-color: #003247; }
 .leftnote, .rightnote { color: #a9bdd0; }
