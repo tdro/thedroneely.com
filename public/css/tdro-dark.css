@@ -17,7 +17,7 @@ body, .sans-serif > a, .serif > a { color: #cad6e2 }
 .footer a { color: #bbb; border-bottom: 1px solid #999; }
 .footer { padding: 1.5rem; }
 .navbar { background-color: #001f2c; background-color: rgba(0, 31, 44, 0.95); box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.25); }
-.title, .content h1, .content h2, .content h3 { color: #ffffff; }
+.title, .content h1, .content h2, .content h3 { color: #ddd; }
 .button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #cad6e2; color: #cad6e2; border-width: 1px; }
 .input, .textarea { background-color: #002e42; border-color: transparent; color: white; }
 .item__box { color: #fff; background-color: #002e42; }
