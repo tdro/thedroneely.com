@@ -613,7 +613,6 @@ imageZoom.on('close', function(event) { remClass(navbar, 'navbar__headroom'); })
 /**
  * instant.page v3.0.0 - (C) 2019 Alexandre Dieulot - https://instant.page/license
  */
-
 let mouseoverTimer
 let lastTouchTimestamp
 const prefetches = new Set()
@@ -680,21 +679,21 @@ if (isSupported) {
   if (useViewport) {
     let triggeringFunction
     if (window.requestIdleCallback) {
-      triggeringFunction = (callback) => {
+      triggeringFunction = function(callback) {
         requestIdleCallback(callback, {
           timeout: 1500,
         })
       }
     }
     else {
-      triggeringFunction = (callback) => {
+      triggeringFunction = function(callback) {
         callback()
       }
     }
 
-    triggeringFunction(() => {
-      const intersectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+    triggeringFunction(function() {
+      const intersectionObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             const linkElement = entry.target
             intersectionObserver.unobserve(linkElement)
@@ -703,7 +702,7 @@ if (isSupported) {
         })
       })
 
-      document.querySelectorAll('a').forEach((linkElement) => {
+      document.querySelectorAll('a').forEach(function(linkElement) {
         if (isPreloadable(linkElement)) {
           intersectionObserver.observe(linkElement)
         }
@@ -739,7 +738,7 @@ function mouseoverListener(event) {
 
   linkElement.addEventListener('mouseout', mouseoutListener, {passive: true})
 
-  mouseoverTimer = setTimeout(() => {
+  mouseoverTimer = setTimeout(function() {
     preload(linkElement.href)
     mouseoverTimer = undefined
   }, delayOnHover)
