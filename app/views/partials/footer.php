@@ -8,7 +8,7 @@
 
             <p class="has-text-grey-dark is-size-7">
 
-            <a class="underline" href="/rss.xml">RSS Feed</a> |
+            <a class="underline" href="/posts/rss.xml">RSS Feed</a> |
 
             <a class="underline" href="/resume">Resume</a> |
 
