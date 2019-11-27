@@ -85,7 +85,7 @@ steps:
     cd /srv/http/staging/thedroneely.com/cockpit/storage/data/ &&
     cmp --silent collections.sqlite collections.sqlite.new ||
     {
-      cp collections.sqlite collections.sqlite-$(date +%H%M-%d%m-%Y) && mv collections.sqlite.new collections.sqlite &&
+      cp collections.sqlite collections.sqlite-$(date +%H%M-%d%m-%Y) && cp collections.sqlite.new collections.sqlite &&
       touch collections.sqlite;
     }
     '
