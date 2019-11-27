@@ -10,3 +10,11 @@ function featherIcon($name) {
     . '/..' . '/public/css/fonts/feather-icons/' . $name . '.svg'
   );
 }
+
+function base64($path) {
+  echo base64_encode(
+    file_get_contents($_SERVER['DOCUMENT_ROOT']
+    . '/..' . $path
+    )
+  );
+}
