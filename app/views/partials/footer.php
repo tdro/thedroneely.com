@@ -33,6 +33,7 @@
             <p class="is-hidden h-card">
               <img class="u-photo" src="data:image/ico;base64,<?php echo base64('/public/favicon.ico'); ?>" alt="Terminal" />
               <a class="p-name u-url" href="https://www.thedroneely.com">Thedro Neely</a>
+              <span class="p-note">Thedro Neely is a web developer based in The Bahamas.</span>
               <span class="p-country-name">The Bahamas</span>
             </p>
 
