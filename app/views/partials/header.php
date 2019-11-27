@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow">
 
-    <link rel="me" href="https://twitter.com/thedroneely">
 
     <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/rss.php'; ?>
 
