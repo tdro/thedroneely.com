@@ -14,9 +14,9 @@
 
             <a class="underline" href="https://www.thedroneely.com/git/explore/repos">Source</a> |
 
-            <a class="underline" href="https://gitlab.com/tdro">Gitlab</a> |
+            <a class="underline" rel="me" href="https://gitlab.com/tdro">Gitlab</a> |
 
-            <a class="underline" href="https://github.com/tdro">Github</a> |
+            <a class="underline" rel="me" href="https://github.com/tdro">Github</a> |
 
             <a class="underline" href="https://www.thedroneely.com/analytics">Analytics</a> |
 
