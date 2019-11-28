@@ -1,1 +1,1 @@
-{{ replaceRE "posts|projects|post|project" "/images/thumbnails" (trim .Permalink "/") }}{{ print ".png" -}}
+/images/thumbnails/{{ .Slug }}{{- print ".png" -}}
