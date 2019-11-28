@@ -155,8 +155,6 @@ steps:
 
   - sed -i 's|""|"https://www.thedroneely.com/"|' generators/hugo/config.yaml
   - grep baseURL generators/hugo/config.yaml
-  - sed -i 's|/images/thumbnails|images/thumbnails|' generators/hugo/themes/tdro/layouts/partials/article-image.html
-  - cat generators/hugo/themes/tdro/layouts/partials/article-image.html
   - cd generators/hugo && ln -s ../../public/ public
 
 
