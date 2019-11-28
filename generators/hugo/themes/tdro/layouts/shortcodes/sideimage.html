@@ -1,0 +1,19 @@
+<label for="{{ .Get `mark` }}" class="sidenote-toggle sidenote-mark">{{ .Get `mark` }}</label>
+<input type="checkbox" id="{{ .Get `mark` }}" class="sidenote-toggle">
+
+<span class="sans-serif sidenote sideimage {{ .Get `set` }}note">
+
+{{ safeHTML "<?php" }}
+$width = getimagesize($_SERVER['DOCUMENT_ROOT'] . '{{.Get `source`}}')[0];
+$height = getimagesize($_SERVER['DOCUMENT_ROOT'] . '{{.Get `source`}}')[1];
+$ratio = ((($height / $width) * 100) > 100) ? $height . 'px' : $height / $width * 100 . '%';
+{{ safeHTML "?>" }}
+
+  <a href="{{.Get `source`}}" onclick="return false;">
+    <img data-image-zoom src="{{.Get `source`}}" alt="{{ .Inner }}" title="{{.Get `title`}}"
+    {{ safeHTMLAttr `<?php echo 'width=' . '"' . $width . '"'; ?>` }}
+    {{ safeHTMLAttr `<?php echo 'height=' . '"' . $height . '"'; ?>` }} />
+  </a>
+
+  <span class="sideimage-footer is-block has-text-centered has-text-grey-dark">{{ .Inner }}</span>
+</span>
