@@ -215,7 +215,10 @@ steps:
     export DATE=$(date +%H%M-%d%m-%Y) NAME=thedroneely.com &&
     cd /srv/deploys/$NAME &&
 
-    mkdir $NAME-$DATE &&
+    mkdir -p $NAME-$DATE/public/js $NAME-$DATE/public/css &&
+    cp -r /srv/deploys/$NAME/$NAME-deploy/public/js/*min* $NAME-$DATE/public/js/ &&
+    cp -r /srv/deploys/$NAME/$NAME-deploy/public/css/*min* $NAME-$DATE/public/css/ &&
+
     tar -xvf $NAME.tar.gz -C $NAME-$DATE &&
     rm $NAME.tar.gz &&
 
