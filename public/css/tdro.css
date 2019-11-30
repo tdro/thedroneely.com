@@ -4576,7 +4576,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 
 .sidenote, .marginnote { overflow-wrap: break-word; word-break: break-all; word-break: break-word; }
 
-.sideimage a { border-bottom: 1px solid transparent; }
+.sideimage a, .sideimage a:focus { border-bottom: 1px solid transparent; background-color: transparent !important; }
 
 @media (min-width: 769px) { .rightnote { padding-right: 1.125em; } .leftnote { text-align: right; padding-left: 1.125em; } .leftnote, .rightnote { max-width: 22em; } }
 @media (min-width: 2000px) { .leftnote { margin-left: -28em; } .rightnote { margin-right: -28em; } }
@@ -4614,6 +4614,7 @@ label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 .sidenote, .marginnote { display: none; }
 .sidenote-mark, .marginnote-mark { border-bottom: 1px dashed #999; }
 .marginnote-mark:after { content: "\0002B"; font-weight: bold; }
+.sideimage { margin: 0 !important; left: 0 !important; width: 100% !important; }
 }
 
 blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1.3rem; }
