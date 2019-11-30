@@ -18,10 +18,18 @@ steps:
 
   environment:
 
+    EMAIL_HOST:
+      from_secret: email_host
+    EMAIL_PORT:
+      from_secret: email_port
+    EMAIL_NAME:
+      from_secret: email_name
     EMAIL_USERNAME:
       from_secret: email_username
     EMAIL_PASSWORD:
       from_secret: email_password
+    PGSQL_DATABASE:
+      from_secret: pgsql_database
     PGSQL_USERNAME:
       from_secret: pgsql_username
     PGSQL_PASSWORD:
@@ -30,8 +38,12 @@ steps:
   commands:
 
   - mv AppConfigBuild.php AppConfig.php
+  - sed -i "s|pgsql_database|$PGSQL_DATABASE|" AppConfig.php
   - sed -i "s|pgsql_username|$PGSQL_USERNAME|" AppConfig.php
   - sed -i "s|pgsql_password|$PGSQL_PASSWORD|" AppConfig.php
+  - sed -i "s|email_host|$EMAIL_HOST|" AppConfig.php
+  - sed -i "s|email_port|$EMAIL_PORT|" AppConfig.php
+  - sed -i "s|email_name|$EMAIL_NAME|" AppConfig.php
   - sed -i "s|email_username|$EMAIL_USERNAME|" AppConfig.php
   - sed -i "s|email_password|$EMAIL_PASSWORD|" AppConfig.php
 

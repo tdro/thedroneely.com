@@ -51,8 +51,8 @@ class Form
             $mail->Password = $config['mail']['password'];
 
             //Recipients
-            $mail->setFrom($config['mail']['username'], 'Thedro Neely');
-            $mail->addAddress($config['mail']['username'], 'Thedro Neely');
+            $mail->setFrom($config['mail']['username'], $config['mail']['name']);
+            $mail->addAddress($config['mail']['username'], $config['mail']['name']);
 
             //Content
             $mail->isHTML(true);

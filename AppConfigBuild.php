@@ -2,7 +2,7 @@
 
 return [
     'database' => [
-        'name' => 'thedroneely',
+        'name' => 'pgsql_database',
         'username' => 'pgsql_username',
         'password' => 'pgsql_password',
         'connection' => 'pgsql:',
@@ -12,8 +12,9 @@ return [
     ],
 
     'mail' => [
-        'host' => 'smtp.gmail.com',
-        'port' => '465',
+        'host' => 'email_host',
+        'port' => 'email_port',
+        'name' => 'email_name',
         'username' => 'email_username',
         'password' => 'email_password',
     ]
