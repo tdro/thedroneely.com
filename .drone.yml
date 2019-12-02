@@ -238,6 +238,7 @@ steps:
     cp -r /srv/deploys/$NAME/$NAME-deploy/public/images $NAME-$DATE/public/ &&
     cp -r /srv/deploys/$NAME/$NAME-deploy/public/uploads $NAME-$DATE/public/ &&
     cp -r /srv/deploys/$NAME/$NAME-deploy/public/videos $NAME-$DATE/public/ &&
+    cp -r /srv/deploys/$NAME/$NAME-deploy/public/download $NAME-$DATE/public/ || true &&
 
     cd $NAME-$DATE/generators/hugo &&
     hugo &&
