@@ -4574,7 +4574,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
   color: #333;
 }
 
-.sidenote, .marginnote { overflow-wrap: break-word; word-break: break-all; word-break: break-word; }
+.sidenote, .marginnote { -ms-hyphens: auto; -ms-word-break: normal; overflow-wrap: break-word; word-break: break-word; }
 
 .sideimage a, .sideimage a:focus { border-bottom: 1px solid transparent; background-color: transparent !important; }
 
