@@ -18,7 +18,7 @@ Change to the container directory.
 cd /var/lib/lxc/app
 ```
 
-Remove the old base container filesystem.
+Remove the old base container file system.
 ```sh
 rm -rf rootfs/*
 ```
@@ -28,17 +28,17 @@ Download the website at [https://www.thedroneely.com/download/rootfs.tar.gz](htt
 wget https://www.thedroneely.com/download/rootfs.tar.gz
 ```
 
-Extract the contents to the container filesystem.
+Extract the contents to the container file system.
 ```sh
 tar --numeric-owner -xzvf rootfs.tar.gz -C rootfs/
 ```
 
-Start the website
+Start the website.
 ```sh
 lxc-start -n app
 ```
 
-Get the IP address
+Get the IP address.
 ```sh
 lxc-ls -f
 ```
@@ -49,12 +49,12 @@ app      RUNNING 0         -      x.x.x.x    -    false
 
 ## Notable Endpoints
 
-Cockpit CMS can be accessed at http://x.x.x.x/cockpit.
+[Cockpit CMS](https://getcockpit.com/) can be accessed at http://x.x.x.x/cockpit.
 ```sh
 Username: admin
 Password: admin
 ```
-Isso commenting administration page can be accessed at http://x.x.x.x/isso/admin
+[Isso](https://posativ.org/isso/) commenting administration page can be accessed at http://x.x.x.x/isso/admin.
 ```sh
 Password: changethis
 ```
