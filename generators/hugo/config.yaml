@@ -5,35 +5,34 @@ baseURL: ""
 languageCode: "en-us"
 title: "Thedro Neely"
 
-# disable generation of index and 404 files
+# Disable generation of index and 404 files
 
 disableKinds: ["404"]
 
-# author name and email appears in RSS feed
+# Author name and email appears in RSS feed
 
 author:
     name: "Thedro Neely"
     email: "thedroneely@gmail.com"
 
-# copyright appears in the RSS Feed
+# Copyright appears in the RSS feed
 
 copyright: "Thedro Neely"
 
-# metaDataFormat for new content pages generated with the `hugo new` command
+# Metadata
 
 metaDataFormat: yaml
 summaryLength: 20
 paginate: 3
 
-# Code oriented optional features:
-# pygments variables tune code syntax highlighting features Hugo provides
+# Code highlighting
 
 pygmentsUseClassic: false
 pygmentsCodeFences: true
 pygmentsUseClasses: true
 pygmentsCodeFencesGuessSyntax: true
 
-# Syndication feed at rss.xml ---------------------------------
+# RSS
 
 mediaTypes:
   application/atom:
