@@ -23,7 +23,8 @@ Remove the old base container file system.
 rm -rf rootfs/*
 ```
 
-Download the website at [https://www.thedroneely.com/download/rootfs.tar.gz](https://www.thedroneely.com/download/rootfs.tar.gz).
+Download the website at [https://www.thedroneely.com/download/rootfs.tar.gz](https://www.thedroneely.com/download/rootfs.tar.gz) and
+verify its checksum using [https://www.thedroneely.com/download/rootfs.tar.gz.sha256](https://www.thedroneely.com/download/rootfs.tar.gz.sha256).
 ```sh
 wget https://www.thedroneely.com/download/rootfs.tar.gz
 ```
