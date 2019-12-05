@@ -34,6 +34,8 @@ steps:
       from_secret: pgsql_username
     PGSQL_PASSWORD:
       from_secret: pgsql_password
+    KEYBASE_VERIFICATION:
+      from_secret: keybase_verification
 
   commands:
 
@@ -46,6 +48,7 @@ steps:
   - sed -i "s|email_name|$EMAIL_NAME|" AppConfig.php
   - sed -i "s|email_username|$EMAIL_USERNAME|" AppConfig.php
   - sed -i "s|email_password|$EMAIL_PASSWORD|" AppConfig.php
+  - echo "$KEYBASE_VERIFICATION" > public/.well-known/keybase.txt
 
 
 - name: synchronize
