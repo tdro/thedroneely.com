@@ -9,6 +9,11 @@ title: "Thedro Neely"
 
 disableKinds: ["404"]
 
+# Taxonomies
+
+taxonomies:
+  tag: tags
+
 # Author name and email appears in RSS feed
 
 author:
