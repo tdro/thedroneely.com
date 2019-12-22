@@ -34,6 +34,8 @@ steps:
       from_secret: pgsql_username
     PGSQL_PASSWORD:
       from_secret: pgsql_password
+    CMS_API_TOKEN:
+      from_secret: cms_api_token
     KEYBASE_VERIFICATION:
       from_secret: keybase_verification
     GOOGLE_SITE_VERIFICATION:
@@ -50,6 +52,7 @@ steps:
   - sed -i "s|email_name|$EMAIL_NAME|" AppConfig.php
   - sed -i "s|email_username|$EMAIL_USERNAME|" AppConfig.php
   - sed -i "s|email_password|$EMAIL_PASSWORD|" AppConfig.php
+  - sed -i "s|cms_api_token|$CMS_API_TOKEN|" AppConfig.php
   - echo "$KEYBASE_VERIFICATION" > public/.well-known/keybase.txt
   - echo "$GOOGLE_SITE_VERIFICATION" > public/$(echo $GOOGLE_SITE_VERIFICATION | awk '{ print $2 }')
 

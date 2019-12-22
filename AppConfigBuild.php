@@ -17,5 +17,9 @@ return [
         'name' => 'email_name',
         'username' => 'email_username',
         'password' => 'email_password',
+    ],
+
+    'cms' => [
+        'token' => 'cms_api_token',
     ]
 ];
