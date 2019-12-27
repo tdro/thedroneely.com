@@ -24,7 +24,7 @@ function fetch(string $path, string $field)
 {
     $config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';;
     $json = file_get_contents(
-        'http://' . $_SERVER['SERVER_NAME']
+        $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME']
         .  $path . '?token=' . $config['cms']['token']
     );
     $data = json_decode($json, true);

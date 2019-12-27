@@ -123,7 +123,7 @@ steps:
     scp -r -o StrictHostKeyChecking=no -P $ORIGIN_PORT -vT -i ssh-key images/*
     $ORIGIN_USER@$ORIGIN_HOST:/srv/http/staging/thedroneely.com/public/images
 
-- >
+  - >
     ssh -o StrictHostKeyChecking=no -p $ORIGIN_PORT -vT -i ssh-key $ORIGIN_USER@$ORIGIN_HOST
     'find /srv/http/staging/thedroneely.com/public/images -type f -exec touch -d "2 days ago" {} +'
 
