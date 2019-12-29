@@ -5,8 +5,8 @@ a { color: #75b2f0; }
 a.navbar-item:hover { color: #fff !important; }
 a:hover img { filter: brightness(100%); }
 img { box-shadow: none; filter: brightness(75%); }
-body, .sans-serif > a, .serif > a { color: #cad6e2 }
-.article__list li:hover { background-color: #003247; }
+body, .sans-serif > a, .serif > a, nav#TableOfContents a { color: #cad6e2 }
+.article__list li:hover, nav#TableOfContents li:hover { background-color: #003247; }
 .leftnote, .rightnote { color: #a9bdd0; }
 .medium-zoom-overlay { background-color: #001f2c; background-color: rgba(0, 31, 44, .9); }
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }

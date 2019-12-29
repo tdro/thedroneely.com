@@ -1333,7 +1333,7 @@ fieldset[disabled] .button {
 
 
 .content li + li {
-  margin-top: 0.25em;
+  margin-top: 0.5em;
 }
 
 .content p:not(:last-child),
@@ -4288,7 +4288,7 @@ a code { color: #0147b7; }
 
 .article__date { margin-bottom: 0.75rem; }
 .article__divider { background-color: transparent; }
-.article__title {
+.article__title, nav#TableOfContents a {
   white-space: nowrap;
   overflow: hidden;
   display: block;
@@ -4302,6 +4302,7 @@ a code { color: #0147b7; }
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-left: 1rem;
 }
 
 .webring li { padding-top: 1em; }
@@ -4387,6 +4388,14 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 .has-margin-bottom-md { margin-bottom: 0.5em !important; }
 .has-margin-bottom-lg { margin-bottom: 1em !important; }
 .has-spacing-widest { letter-spacing: 0.1em }
+
+/* table of contents */
+
+details summary { cursor: pointer;}
+
+nav#TableOfContents li:hover { background-color: #f1f1f1; }
+nav#TableOfContents ul { margin: 0; }
+nav#TableOfContents a { display: block; color: #222; padding-left: 0.5rem; font-size: 0.9rem; }
 
 /* tufte css */
 

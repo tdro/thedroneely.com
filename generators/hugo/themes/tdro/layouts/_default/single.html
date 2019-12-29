@@ -6,12 +6,19 @@
         <article class="content document">
           <h2 class="title is-2 serif">{{ .Title }}</h2>
 
-          <p class="subtitle is-6 has-text-grey-dark">
+          {{ if .Params.toc }}
+          <span class="tableofcontents marginnote rightnote">
+            <span class="serif is-size-6 is-uppercase has-text-weight-bold has-spacing-widest has-margin-bottom-sm is-block">Table of Contents</span>
+            {{ .TableOfContents }}
+          </span>
+          {{ end }}
+
+          <aside class="subtitle is-6 has-text-grey-dark">
           {{- partial "page-meta.html" . -}}
           <br>
           <span class="isso-comments-counter"><a class="underline has-text-grey-dark focus-link" title="Jump to Comments" href="#isso-thread">0 Comments</a> ·</span>
           {{- partial "read-time.html" . -}} · {{ .FuzzyWordCount }} words
-          </p>
+          </aside>
 
           {{- partial "page-status.html" . -}}
 
