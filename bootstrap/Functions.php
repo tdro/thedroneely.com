@@ -22,7 +22,7 @@ function base64(string $path)
 
 function fetch(string $path, string $field)
 {
-    $config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';;
+    $config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';
     $json = file_get_contents(
         $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME']
         .  $path . '?token=' . $config['cms']['token']
