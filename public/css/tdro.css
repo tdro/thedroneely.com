@@ -4382,6 +4382,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 /* custom helpers */
 
 .has-padding-none { padding: 0 !important; }
+.has-padding-left-md { padding-left: 0.5em !important; }
 .has-margin-none { margin: 0 !important; }
 .has-margin-bottom-none { margin-bottom: 0 !important; }
 .has-margin-bottom-sm { margin-bottom: 0.25em !important; }
@@ -4394,7 +4395,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 details summary { cursor: pointer;}
 
 nav#TableOfContents li:hover { background-color: #f1f1f1; }
-nav#TableOfContents ul { margin: 0; }
+nav#TableOfContents ul { margin-left: -0.5em; }
 nav#TableOfContents a { display: block; color: #222; padding-left: 0.5rem; font-size: 0.9rem; }
 
 /* tufte css */
