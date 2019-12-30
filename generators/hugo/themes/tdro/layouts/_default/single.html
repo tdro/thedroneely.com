@@ -7,10 +7,10 @@
           <h2 class="title is-2 serif">{{ .Title }}</h2>
 
           {{ if .Params.toc }}
-          <span class="tableofcontents marginnote rightnote">
-            <span class="serif is-size-6 is-uppercase has-text-weight-bold has-spacing-widest has-margin-bottom-sm is-block">Table of Contents</span>
+          <div class="tableofcontents marginnote rightnote is-inline">
+            <div class="serif is-size-6 is-uppercase has-text-weight-bold has-spacing-widest has-margin-bottom-sm">Table of Contents</div>
             {{ .TableOfContents }}
-          </span>
+          </div>
           {{ end }}
 
           <aside class="subtitle is-6 has-text-grey-dark">
