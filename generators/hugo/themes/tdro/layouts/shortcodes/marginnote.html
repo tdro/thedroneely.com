@@ -1,5 +1,5 @@
 <label for="{{ .Get `mark` }}" class="marginnote-toggle marginnote-mark" title="{{ .Inner }}">{{ .Get `mark` }}</label>
 <input type="checkbox" id="{{ .Get `mark` }}" class="marginnote-toggle">
 <span class="sans-serif marginnote {{ .Get `set` }}note">
-{{ .Inner }}
+<mark>{{ .Inner }}</mark>
 </span>

@@ -4176,7 +4176,7 @@ a code { color: #0147b7; }
 .front__more { text-transform: uppercase; }
 .front__more svg { vertical-align: bottom; }
 
-.sans-serif > a, .serif > a { color: #222; }
+.sans-serif a, .serif a { color: #222; }
 .is-size-serif { font-size: 1.3em !important; }
 .serif { font-family: Charter, Georgia, 'Book Antiqua', serif; }
 
@@ -4343,9 +4343,7 @@ a code { color: #0147b7; }
 
 .underline,
 .isso-comment > div.text-wrapper > .text a,
-.sans-serif > a, .serif > a {
-  border-bottom: 1px solid #999;
-}
+.sans-serif a, .serif a { border-bottom: 1px solid #999; }
 
 /* focus links */
 
@@ -4396,7 +4394,7 @@ details summary { cursor: pointer;}
 
 nav#TableOfContents li:hover { background-color: #f1f1f1; }
 nav#TableOfContents ul { margin-left: -0.5em; }
-nav#TableOfContents a { display: block; color: #222; padding-left: 0.5rem; font-size: 0.9rem; }
+nav#TableOfContents a { display: block; color: #555; padding-left: 0.5rem; }
 
 /* tufte css */
 
@@ -4448,6 +4446,10 @@ input.sidenote-toggle, input.marginnote-toggle  { display: none; }
   top: -0.5rem;
 }
 
+mark { background-color: transparent; color: unset; }
+
+.sidenote-mark:hover + input + .sidenote mark { background-color: #fefe98; color: #000; }
+
 @media (max-width: 768px) {
 .sidenote-toggle:checked + .sidenote,
 .marginnote-toggle:checked + .marginnote {
@@ -4466,6 +4468,7 @@ label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 .sidenote-mark, .marginnote-mark { border-bottom: 1px dashed #999; }
 .marginnote-mark:after { content: "\0002B"; font-weight: bold; }
 .sideimage { margin: 0 !important; left: 0 !important; width: 100% !important; }
+.sidenote mark { background-color: transparent !important; color: unset !important; }
 }
 
 blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1.3rem; }

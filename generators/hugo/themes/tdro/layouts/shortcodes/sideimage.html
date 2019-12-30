@@ -15,5 +15,5 @@ $ratio = ((($height / $width) * 100) > 100) ? $height . 'px' : $height / $width 
     {{ safeHTMLAttr `<?php echo 'height=' . '"' . $height . '"'; ?>` }} />
   </a>
 
-  <span class="sideimage-footer is-block has-text-centered has-text-grey-dark">{{ .Inner }}</span>
+  <span class="sideimage-footer is-block has-text-centered has-text-grey-dark"><mark>{{ .Inner }}</mark></span>
 </span>
