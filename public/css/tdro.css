@@ -4448,7 +4448,8 @@ input.sidenote-toggle, input.marginnote-toggle  { display: none; }
 
 mark { background-color: transparent; color: unset; }
 
-.sidenote-mark:hover + input + .sidenote mark { background-color: #fefe98; color: #000; }
+.sidenote-container:hover .sidenote-mark,
+.sidenote-container:hover .sidenote mark { background-color: #fefe98; color: #000; }
 
 @media (max-width: 768px) {
 .sidenote-toggle:checked + .sidenote,
