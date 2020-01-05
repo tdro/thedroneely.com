@@ -10,13 +10,15 @@ body, .sans-serif a, .serif a, nav#TableOfContents a { color: #cad6e2 }
 .sidenote-container:hover .sidenote-mark, .sidenote-container:hover .sidenote mark { background-color: #1b4fa1; color: #fff; }
 .medium-zoom-overlay { background-color: #001f2c; background-color: rgba(0, 31, 44, .9); }
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }
-.navbar__mobile__compact .navbar__active, .navbar-end .navbar__active { color: #75b2f0 !important; }
-.navbar-end > a.navbar-item:hover { background-color: #4698EA; color: #fff !important; }
+.navbar-mobile .navbar__active, .navbar-end .navbar__active { color: #75b2f0 !important; }
+.dropdown-content { background-color: #002e42; border: 1px solid #00405c; }
+.dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover { background-color: #4698EA; color: #fff !important; }
 .has-text-danger { color: #ff8f93 !important; }
 .has-text-primary { color: #a6c9e8 !important; }
 .footer a { color: #bbb; border-bottom: 1px solid #999; }
 .footer { padding: 1.5rem; }
-.navbar { background-color: #001f2c; background-color: rgba(0, 31, 44, 0.95); box-shadow: 0 4px 24px 0 rgba(153, 153, 153, 0.2); }
+.navbar { box-shadow: 0 4px 20px 0 #000; }
+.navbar, .navbar-menu { background-color: #001f2c; background-color: rgba(0, 31, 44, 0.95); }
 .title, .content h1, .content h2, .content h3 { color: #ddd; }
 .button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #cad6e2; color: #cad6e2; border-width: 1px; }
 .input, .textarea { background-color: #002e42; border-color: transparent; color: white; }
@@ -30,7 +32,6 @@ body, .sans-serif a, .serif a, nav#TableOfContents a { color: #cad6e2 }
 .pagination-previous.disabled, .pagination-next.disabled { background-color: #002e42; border-color: #002e42; color: #fff; }
 @media screen and (min-width: 1088px) { .navbar__active { border-bottom: 2px solid #75b2f0 !important; color: white !important; } }
 @media screen and (min-width: 1088px) { a.navbar-item:hover { border-bottom: 2px solid #75b2f0; } }
-@media screen and (max-width: 1087px) { .navbar-end { background-color: #002e42; } }
 @media screen and (max-width: 1087px) { .theme-toggle-button { color: #cad6e2; } }
 #isso-thread > h4 { color: #b7c7d7; }
 #isso-thread .textarea.placeholder { color: #cad6e2; }
