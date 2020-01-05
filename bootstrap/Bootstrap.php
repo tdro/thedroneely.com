@@ -3,8 +3,8 @@
 /* composer autoload */
 require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php';
 
-/* source functions */
-require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/bootstrap/Functions.php';
+/* source helper functions */
+require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/bootstrap/Helpers.php';
 
 /* source config file */
 $config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';

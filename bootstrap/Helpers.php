@@ -4,11 +4,14 @@
  * Helper Functions
  */
 
-function featherIcon(string $name)
+function featherIcon(string $name, string $class = null)
 {
-    echo file_get_contents(
-        $_SERVER['DOCUMENT_ROOT']
-        . '/..' . '/public/css/fonts/feather-icons/' . $name . '.svg'
+    return str_replace(
+        '<svg', '<svg class="' . $class . '" ',
+        file_get_contents(
+            $_SERVER['DOCUMENT_ROOT']
+            . '/..' . '/public/css/fonts/feather-icons/' . $name . '.svg'
+        )
     );
 }
 
@@ -19,6 +22,10 @@ function base64(string $path)
     );
 }
 
+function views(string $folder, string $name)
+{
+    return $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/' . $folder . '/' . $name .'.php';
+}
 
 function fetch(string $path, string $field)
 {
