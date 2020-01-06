@@ -1,11 +1,11 @@
 <div class="dropdown <?php echo $type ?? null ?>">
   <input
-    class="is-hidden input-dropdown"
+    class="is-hidden dropdown-input"
     type="checkbox"
     id="dropdown-menu__<?php echo $id ?? null ?>"
   />
 
-  <label for="dropdown-menu__<?php echo $id ?? null ?>">
+  <label class="dropdown-label" for="dropdown-menu__<?php echo $id ?? null ?>">
     <?php echo $label ?? null ?>
   </label>
 
@@ -23,9 +23,3 @@
     </div>
   </div>
 </div>
-
-<style>
-  .input-dropdown[type="checkbox"]:checked ~ .dropdown-menu {
-    display: block;
-  }
-</style>

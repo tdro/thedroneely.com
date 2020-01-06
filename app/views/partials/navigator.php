@@ -37,7 +37,7 @@
                     </div>
                 </a>
 
-                <div class="navbar-burger navbar-item navbar__icon has-text-dark">
+                <div class="navbar-burger navbar-item navbar__icon has-text-dark has-tap-transparent">
                     <?php
                       $id = 'mobile-compact';
                       $type = 'is-cover is-right';

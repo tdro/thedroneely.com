@@ -4227,11 +4227,20 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 
 .navbar__icon__menu { margin: 0; justify-content: center; height: 100%; }
 .navbar__icon.navbar__active { font-weight: bold; }
+.navbar-burger .dropdown { width: 100%; }
+.navbar-burger .dropdown-label {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .dropdown label { cursor: pointer; }
 .dropdown-content .navbar-item { margin: 0; padding: 0.65rem 1rem; }
 .dropdown-content .navbar__active { font-weight: bold; color: #014cc6; }
 .dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover { background-color: #bbdbee; color: black; }
+.dropdown-input[type="checkbox"]:checked ~ .dropdown-menu { display: block; }
 
 .error__headerSize { font-size: 8rem; }
 
@@ -4373,6 +4382,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 .has-margin-bottom-md { margin-bottom: 0.5em !important; }
 .has-margin-bottom-lg { margin-bottom: 1em !important; }
 .has-spacing-widest { letter-spacing: 0.1em }
+.has-tap-transparent { -webkit-tap-highlight-color: transparent; }
 
 /* table of contents */
 

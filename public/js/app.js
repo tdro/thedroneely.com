@@ -1,76 +1,89 @@
 /**
  * Functions
  */
-function posf (f, a) { for (var i=0; i < a.length; i++) { if (f(a[i])) return i; } return -1; }
-function apos (x, a) { return (typeof x == 'function') ? posf(x,a) : Array.prototype.indexOf.call(a,x) }
+function posf (f, a) { for (var i=0; i < a.length; i++) { if (f(a[i])) {return i;} } return -1; }
+function apos (x, a) { return (typeof x == 'function') ? posf(x,a) : Array.prototype.indexOf.call(a,x); }
 function arem (a, x) { var i = apos(x, a); if (i >= 0) { a.splice(i, 1); } return a; }
 function afind (x, a) { var i = apos(x, a); return (i >= 0) ? a[i] : null; }
-function byClass (el, cl) { return el ? el.getElementsByClassName(cl) : [] }
-function byTag (el, tg) { return el ? el.getElementsByTagName(tg) : [] }
-function hasClass (el, cl) { var a = el.className.split(' '); return afind(cl, a) }
-function addClass (el, cl) { if (el) { var a = el.className.split(' '); if (!afind(cl, a)) { a.unshift(cl); el.className = a.join(' ')}} }
-function remClass (el, cl) { if (el) { var a = el.className.split(' '); arem(a, cl); el.className = a.join(' ') } }
+function byClass (el, cl) { return el ? el.getElementsByClassName(cl) : []; }
+function byTag (el, tg) { return el ? el.getElementsByTagName(tg) : []; }
+function hasClass (el, cl) { var a = el.className.split(' '); return afind(cl, a); }
+function addClass (el, cl) { if (el) { var a = el.className.split(' '); if (!afind(cl, a)) { a.unshift(cl); el.className = a.join(' '); } } }
+function remClass (el, cl) { if (el) { var a = el.className.split(' '); arem(a, cl); el.className = a.join(' '); } }
 function togClass (el, cl) { if (hasClass(el, cl)) { remClass(el, cl); return; } addClass(el, cl); }
 function runOnce(action) { runOnce = function(){}; action(); }
 
+var dropdownInputList = byClass(document, 'dropdown-input');
+var dropdownContentList = byClass(document, 'dropdown-content');
+var dropdownMenuList = byClass(document, 'dropdown');
 
-/**
- * Open mobile flyout menu
+
+/*
+ * Hide dropdown
  */
-document.addEventListener('DOMContentLoaded', function () {
-  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  if ($navbarBurgers.length > 0) {
-    $navbarBurgers.forEach(function ($el) {
-      $el.addEventListener('click', function () {
-        var target = $el.dataset.target;
-        var $target = document.getElementById(target);
-        togClass($el, 'is-active');
-        togClass($target, 'is-active');
-      });
-    });
+function dropdownHide(element, event) {
+  for (var i = 0; i < element.length; i++) {
+    element[i].checked = false;
   }
+}
+
+
+/*
+ * Hide dropdown when clicked outside of region
+ */
+function dropdownClickHide(element, event) {
+  for (var i = 0; i < element.length; i++) {
+    let click = element[i].contains(event.target);
+    if (!click && dropdownInputList[i].checked === true) { dropdownHide(dropdownInputList); }
+  }
+}
+
+
+/*
+ * Hide dropdown when far away
+ */
+document.addEventListener('mousemove', function(event) {
+  let mouseX = event.pageX;
+  let mouseY = event.pageY;
+
+  function magnitude(x, y) {
+    return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+  }
+
+  function distance(mouseX, mouseY, element) {
+    let position = element.getBoundingClientRect();
+    let elementX = position.right - (element.offsetWidth / 2 ) + window.pageXOffset;
+    let elementY = position.bottom - (element.offsetHeight / 2 ) + window.pageYOffset;
+    return Math.abs(magnitude(mouseX, mouseY) - magnitude(elementX, elementY));
+  }
+
+  function hide(element, threshold, event) {
+    for (var i = 0; i < element.length; i++) {
+      let proximity = distance(mouseX, mouseY, element[i]);
+      if (proximity > threshold && dropdownInputList[i].checked === true) {
+        dropdownHide(dropdownInputList, event);
+      }
+    }
+  }
+
+  hide(dropdownContentList, 300, event);
+
 });
 
 
-/**
- * Close flyout menu when tapped outside of its div region
+/*
+ * Document click event
  */
-var activeMenu = document.getElementById('navMenu');
-var activeBurger = document.getElementById('navBurger');
-var activeBurgerCompact = document.getElementById('navBurgerCompact');
-var activeMenuContainer = document.getElementById('navMenuContainer');
-
 document.addEventListener('click', function(event) {
-
-  var burgerClick = activeBurger.contains(event.target);
-  var burgerCompactClick = activeBurgerCompact.contains(event.target);
-  var menuContainerClick = activeMenuContainer.contains(event.target);
-
-  if (!burgerClick && !burgerCompactClick && !menuContainerClick) {
-    remClass(activeMenu, 'is-active');
-    remClass(activeBurger, 'is-active');
-    remClass(activeBurgerCompact, 'is-active');
-  }
-
+  dropdownClickHide(dropdownMenuList, event);
 });
 
 
-/**
- * Close flyout menu when tapped outside of its div region
- * iOS devices
+/*
+ * Document touch start event
  */
 document.addEventListener('touchstart', function(event) {
-
-  var burgerClick = activeBurger.contains(event.target);
-  var burgerCompactClick = activeBurgerCompact.contains(event.target);
-  var menuContainerClick = activeMenuContainer.contains(event.target);
-
-  if (!burgerClick && !burgerCompactClick && !menuContainerClick) {
-    remClass(activeMenu, 'is-active');
-    remClass(activeBurger, 'is-active');
-    remClass(activeBurgerCompact, 'is-active');
-  }
-
+  dropdownClickHide(dropdownMenuList, event);
 });
 
 
@@ -91,20 +104,18 @@ var scrollReady = 0;
 
 window.onscroll = function() {
 
-    remClass(activeMenu, 'is-active');
-    remClass(activeBurger, 'is-active');
-    remClass(activeBurgerCompact, 'is-active');
+    dropdownHide(dropdownInputList);
 
     var currentPosition = window.pageYOffset;
     var velocity = previousPosition - currentPosition;
 
     if (scrollReady == 1) {
       if (velocity > 75 || currentPosition < navbarHeight) {
-        remClass(navbar, 'navbar__headroom');
+        remClass(navbar, 'headroom');
       } else if (velocity < -25) {
-        addClass(navbar, 'navbar__headroom');
+        addClass(navbar, 'headroom');
       } else if (currentPosition > navbarHeight) {
-        runOnce(function () { addClass(navbar, 'navbar__headroom') });
+        runOnce(function () { addClass(navbar, 'headroom'); });
       }
     }
 
@@ -573,7 +584,7 @@ window.onscroll = function() {
     return zoom;
   };
   function styleInject(css, ref) {
-    if (ref === void 0) ref = {};
+    if (ref === void 0) {ref = {};}
     var insertAt = ref.insertAt;
     if (!css || typeof document === "undefined") {
       return;
@@ -605,35 +616,35 @@ window.onscroll = function() {
 /**
  * Activate Medium Zoom
  */
-imageZoom = mediumZoom('[data-image-zoom]');
-imageZoom.on('open', function(event) { addClass(navbar, 'navbar__headroom'); });
-imageZoom.on('close', function(event) { remClass(navbar, 'navbar__headroom'); });
+var imageZoom = mediumZoom('[data-image-zoom]');
+imageZoom.on('open', function(event) { addClass(navbar, 'headroom'); });
+imageZoom.on('close', function(event) { remClass(navbar, 'headroom'); });
 
 
 /**
- * instant.page v3.0.0 - (C) 2019 Alexandre Dieulot - https://instant.page/license
+ * Instant Page v3.0.0 - (C) 2019 Alexandre Dieulot - https://instant.page/license
  */
-let mouseoverTimer
-let lastTouchTimestamp
-const prefetches = new Set()
-const prefetchElement = document.createElement('link')
+let mouseoverTimer;
+let lastTouchTimestamp;
+const prefetches = new Set();
+const prefetchElement = document.createElement('link');
 const isSupported = prefetchElement.relList && prefetchElement.relList.supports && prefetchElement.relList.supports('prefetch')
-                    && window.IntersectionObserver && 'isIntersecting' in IntersectionObserverEntry.prototype
-const allowQueryString = 'instantAllowQueryString' in document.body.dataset
-const allowExternalLinks = 'instantAllowExternalLinks' in document.body.dataset
-const useWhitelist = 'instantWhitelist' in document.body.dataset
+                    && window.IntersectionObserver && 'isIntersecting' in IntersectionObserverEntry.prototype;
+const allowQueryString = 'instantAllowQueryString' in document.body.dataset;
+const allowExternalLinks = 'instantAllowExternalLinks' in document.body.dataset;
+const useWhitelist = 'instantWhitelist' in document.body.dataset;
 
-let delayOnHover = 65
-let useMousedown = false
-let useMousedownOnly = false
-let useViewport = false
+let delayOnHover = 65;
+let useMousedown = false;
+let useMousedownOnly = false;
+let useViewport = false;
 if ('instantIntensity' in document.body.dataset) {
-  const intensity = document.body.dataset.instantIntensity
+  const intensity = document.body.dataset.instantIntensity;
 
   if (intensity.substr(0, 'mousedown'.length) == 'mousedown') {
-    useMousedown = true
+    useMousedown = true;
     if (intensity == 'mousedown-only') {
-      useMousedownOnly = true
+      useMousedownOnly = true;
     }
   }
   else if (intensity.substr(0, 'viewport'.length) == 'viewport') {
@@ -643,18 +654,18 @@ if ('instantIntensity' in document.body.dataset) {
          * Small 7" tablet resolution (which we don’t want): 600 × 1024 = 614400
          * Note that the viewport (which we check here) is smaller than the resolution due to the UI’s chrome */
         if (document.documentElement.clientWidth * document.documentElement.clientHeight < 450000) {
-          useViewport = true
+          useViewport = true;
         }
       }
       else if (intensity == "viewport-all") {
-        useViewport = true
+        useViewport = true;
       }
     }
   }
   else {
-    const milliseconds = parseInt(intensity)
+    const milliseconds = parseInt(intensity);
     if (!isNaN(milliseconds)) {
-      delayOnHover = milliseconds
+      delayOnHover = milliseconds;
     }
   }
 }
@@ -663,153 +674,153 @@ if (isSupported) {
   const eventListenersOptions = {
     capture: true,
     passive: true,
-  }
+  };
 
   if (!useMousedownOnly) {
-    document.addEventListener('touchstart', touchstartListener, eventListenersOptions)
+    document.addEventListener('touchstart', touchstartListener, eventListenersOptions);
   }
 
   if (!useMousedown) {
-    document.addEventListener('mouseover', mouseoverListener, eventListenersOptions)
+    document.addEventListener('mouseover', mouseoverListener, eventListenersOptions);
   }
   else {
-    document.addEventListener('mousedown', mousedownListener, eventListenersOptions)
+    document.addEventListener('mousedown', mousedownListener, eventListenersOptions);
   }
 
   if (useViewport) {
-    let triggeringFunction
+    let triggeringFunction;
     if (window.requestIdleCallback) {
       triggeringFunction = function(callback) {
         requestIdleCallback(callback, {
           timeout: 1500,
-        })
-      }
+        });
+      };
     }
     else {
       triggeringFunction = function(callback) {
-        callback()
-      }
+        callback();
+      };
     }
 
     triggeringFunction(function() {
       const intersectionObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            const linkElement = entry.target
-            intersectionObserver.unobserve(linkElement)
-            preload(linkElement.href)
+            const linkElement = entry.target;
+            intersectionObserver.unobserve(linkElement);
+            preload(linkElement.href);
           }
-        })
-      })
+        });
+      });
 
       document.querySelectorAll('a').forEach(function(linkElement) {
         if (isPreloadable(linkElement)) {
-          intersectionObserver.observe(linkElement)
+          intersectionObserver.observe(linkElement);
         }
-      })
-    })
+      });
+    });
   }
 }
 
 function touchstartListener(event) {
   /* Chrome on Android calls mouseover before touchcancel so `lastTouchTimestamp`
    * must be assigned on touchstart to be measured on mouseover. */
-  lastTouchTimestamp = performance.now()
+  lastTouchTimestamp = performance.now();
 
-  const linkElement = event.target.closest('a')
+  const linkElement = event.target.closest('a');
 
   if (!isPreloadable(linkElement)) {
-    return
+    return;
   }
 
-  preload(linkElement.href)
+  preload(linkElement.href);
 }
 
 function mouseoverListener(event) {
   if (performance.now() - lastTouchTimestamp < 1100) {
-    return
+    return;
   }
 
-  const linkElement = event.target.closest('a')
+  const linkElement = event.target.closest('a');
 
   if (!isPreloadable(linkElement)) {
-    return
+    return;
   }
 
-  linkElement.addEventListener('mouseout', mouseoutListener, {passive: true})
+  linkElement.addEventListener('mouseout', mouseoutListener, {passive: true});
 
   mouseoverTimer = setTimeout(function() {
-    preload(linkElement.href)
-    mouseoverTimer = undefined
-  }, delayOnHover)
+    preload(linkElement.href);
+    mouseoverTimer = undefined;
+  }, delayOnHover);
 }
 
 function mousedownListener(event) {
-  const linkElement = event.target.closest('a')
+  const linkElement = event.target.closest('a');
 
   if (!isPreloadable(linkElement)) {
-    return
+    return;
   }
 
-  preload(linkElement.href)
+  preload(linkElement.href);
 }
 
 function mouseoutListener(event) {
   if (event.relatedTarget && event.target.closest('a') == event.relatedTarget.closest('a')) {
-    return
+    return;
   }
 
   if (mouseoverTimer) {
-    clearTimeout(mouseoverTimer)
-    mouseoverTimer = undefined
+    clearTimeout(mouseoverTimer);
+    mouseoverTimer = undefined;
   }
 }
 
 function isPreloadable(linkElement) {
   if (!linkElement || !linkElement.href) {
-    return
+    return;
   }
 
   if (useWhitelist && !('instant' in linkElement.dataset)) {
-    return
+    return;
   }
 
   if (!allowExternalLinks && linkElement.origin != location.origin && !('instant' in linkElement.dataset)) {
-    return
+    return;
   }
 
   if (!['http:', 'https:'].includes(linkElement.protocol)) {
-    return
+    return;
   }
 
   if (linkElement.protocol == 'http:' && location.protocol == 'https:') {
-    return
+    return;
   }
 
   if (!allowQueryString && linkElement.search && !('instant' in linkElement.dataset)) {
-    return
+    return;
   }
 
   if (linkElement.hash && linkElement.pathname + linkElement.search == location.pathname + location.search) {
-    return
+    return;
   }
 
   if ('noInstant' in linkElement.dataset) {
-    return
+    return;
   }
 
-  return true
+  return true;
 }
 
 function preload(url) {
   if (prefetches.has(url)) {
-    return
+    return;
   }
 
-  const prefetcher = document.createElement('link')
-  prefetcher.rel = 'prefetch'
-  prefetcher.href = url
-  document.head.appendChild(prefetcher)
+  const prefetcher = document.createElement('link');
+  prefetcher.rel = 'prefetch';
+  prefetcher.href = url;
+  document.head.appendChild(prefetcher);
 
-  prefetches.add(url)
+  prefetches.add(url);
 }
