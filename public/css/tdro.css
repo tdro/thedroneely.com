@@ -2265,6 +2265,11 @@ fieldset[disabled] .radio {
   top: 0;
 }
 
+.dropdown.is-menu .dropdown-menu {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
 .dropdown-menu {
   display: none;
   left: 0;

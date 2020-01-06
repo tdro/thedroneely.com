@@ -40,7 +40,7 @@
                 <div class="navbar-burger navbar-item navbar__icon has-text-dark has-tap-transparent">
                     <?php
                       $id = 'mobile-compact';
-                      $type = 'is-cover is-right';
+                      $type = 'is-menu is-right';
                       $icon = feathericon('menu');
                       $label = <<<insert
                       <span class="is-block has-text-centered">
