@@ -12,7 +12,6 @@
 
             <a class="underline" href="/resume">Resume</a> |
 
-            <a class="underline" href="https://www.thedroneely.com/git/explore/repos">Source</a> |
 
             <a class="underline" rel="me" href="https://gitlab.com/tdro">Gitlab</a> |
 
@@ -27,7 +26,10 @@
             </p>
 
             <p class="has-text-grey-dark is-size-7">
-              Copyright &copy; <?php echo date("Y"); ?> Thedro Neely
+             The content for this site is <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>.
+             The <a href="https://www.thedroneely.com/git/thedroneely/thedroneely.com">source code</a>
+             for this site is <a href="https://opensource.org/licenses/GPL-3.0">GPL</a>.<br>
+             Copyright &copy; 2018 &mdash; <?php echo date("Y"); ?>
             </p>
 
             <p class="is-hidden h-card">
