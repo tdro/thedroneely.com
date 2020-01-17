@@ -24,16 +24,40 @@ function base64(string $path)
 
 function views(string $folder, string $name)
 {
-    return $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/' . $folder . '/' . $name .'.php';
+    return $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/'
+    . $folder . '/' . $name .'.php';
 }
 
-function fetch(string $path, string $field)
+function cache(string $filename, string $data)
 {
-    $config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';
-    $json = file_get_contents(
-        $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME']
-        .  $path . '?token=' . $config['cms']['token']
+    file_put_contents(
+        $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/storage/cache/'
+        . base64_encode($filename), $data
     );
-    $data = json_decode($json, true);
+}
+
+function fetch(string $uri, string $field)
+{
+    if (file_exists(
+        $_SERVER['DOCUMENT_ROOT'] . '/..'
+        . '/app/storage/cache/' . base64_encode($uri . $field)
+    )
+    ) {
+        echo file_get_contents(
+            $_SERVER['DOCUMENT_ROOT'] . '/..'
+            . '/app/storage/cache/' . base64_encode($uri . $field)
+        );
+          return;
+    }
+
+    $config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';
+
+    $request = file_get_contents(
+        $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME']
+        .  $uri . '?token=' . $config['cms']['token']
+    );
+
+    $data = json_decode($request, true);
+    cache($uri . $field, $data[$field]);
     echo $data[$field];
 }
