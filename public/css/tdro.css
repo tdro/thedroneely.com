@@ -205,7 +205,7 @@ pre {
 }
 
 body {
-  color: #000;
+  color: #222;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.8;
@@ -4355,7 +4355,7 @@ li a:focus span,
 .serif > a:focus,
 .underline:focus,
 .isso-comment > div.text-wrapper > .text a:focus,
-.front__more:focus { background-color: #ffeb99 !important; color: black !important; outline: none; }
+.front__more:focus { background-color: #fefe98 !important; color: black !important; outline: none; }
 
 a:focus img { box-shadow: 0 0 40px 2px #999; }
 
