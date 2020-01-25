@@ -221,6 +221,7 @@ code {
   font-size: 0.735em;
   font-weight: normal;
   border-radius: 3px;
+  word-break: break-all;
 }
 
 p code { font-size: 1rem; }
