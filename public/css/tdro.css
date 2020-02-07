@@ -282,10 +282,12 @@ pre {
 }
 
 pre code {
+  display: inline-block;
   background-color: transparent;
   color: currentColor;
   font-size: 1em;
   padding: 0;
+  min-width: 100%;
 }
 
 table td,
