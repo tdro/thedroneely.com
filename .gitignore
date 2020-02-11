@@ -2,6 +2,7 @@ AppConfig.php
 /cockpit
 /vendor
 /node_modules
+/app/storage
 public/dist
 public/tags
 public/posts
@@ -15,3 +16,5 @@ public/sitemap.xml
 generators/hugo/content
 generators/hugo/public
 openring.html
+keybase.txt
+google[a-z0-9]*.html
