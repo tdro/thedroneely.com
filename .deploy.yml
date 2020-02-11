@@ -15,21 +15,31 @@
 
         - name: Fetching live static content
           synchronize:
-            src: "/srv/http/{{ site }}/generators/hugo/content"
+            src: "{{ current }}/generators/hugo/content"
             dest: generators/hugo
             mode: pull
 
         - name: Fetching live image content
           synchronize:
-            src: "/srv/http/{{ site }}/public/images"
+            src: "{{ current }}/public/images"
             dest: public
             mode: pull
 
         - name: Fetching live video content
           synchronize:
-            src: "/srv/http/{{ site }}/public/videos"
+            src: "{{ current }}/public/videos"
             dest: public
             mode: pull
+
+        - name: Fetching live CMS database assets
+          synchronize:
+            src: "{{ current}}/{{ item }}"
+            dest: .
+            mode: pull
+          with_items:
+            - "cockpit/storage/data/collections.sqlite"
+            - "cockpit/storage/collections"
+            - "cockpit/storage/singleton"
 
       tags:
         - synchronize
@@ -165,6 +175,26 @@
             dest: "/srv/http/staging/{{ site }}/public"
             rsync_opts:
               - "-zz"
+
+        - name: Synchronizing live CMS content
+          synchronize:
+            src: "{{ item.src }}"
+            dest: "/srv/http/staging/{{ site }}/{{ item.dest }}"
+            rsync_opts:
+              - "-zz"
+          with_items:
+
+            -
+              src: collections.sqlite
+              dest: cockpit/storage/data
+
+            -
+              src: collections
+              dest: cockpit/storage
+
+            -
+              src: singleton
+              dest: cockpit/storage
 
         - name: Setting permissions
           file:
