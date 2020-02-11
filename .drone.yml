@@ -1,6 +1,6 @@
 kind: pipeline
+type: docker
 name: build-package-deploy
-
 
 steps:
 
@@ -14,7 +14,7 @@ steps:
 
 
 - name: secrets
-  image: alpine:3.10
+  image: serve.work/alpine-ci:3.11.3
 
   environment:
 
@@ -44,21 +44,21 @@ steps:
   commands:
 
   - mv AppConfigBuild.php AppConfig.php
-  - sed -i "s|pgsql_database|$PGSQL_DATABASE|" AppConfig.php
-  - sed -i "s|pgsql_username|$PGSQL_USERNAME|" AppConfig.php
-  - sed -i "s|pgsql_password|$PGSQL_PASSWORD|" AppConfig.php
-  - sed -i "s|email_host|$EMAIL_HOST|" AppConfig.php
-  - sed -i "s|email_port|$EMAIL_PORT|" AppConfig.php
-  - sed -i "s|email_name|$EMAIL_NAME|" AppConfig.php
-  - sed -i "s|email_username|$EMAIL_USERNAME|" AppConfig.php
-  - sed -i "s|email_password|$EMAIL_PASSWORD|" AppConfig.php
-  - sed -i "s|cms_api_token|$CMS_API_TOKEN|" AppConfig.php
-  - echo "$KEYBASE_VERIFICATION" > public/.well-known/keybase.txt
-  - echo "$GOOGLE_SITE_VERIFICATION" > public/$(echo $GOOGLE_SITE_VERIFICATION | awk '{ print $2 }')
+  - sed -i "s|pgsql_database|$(echo $PGSQL_DATABASE | base64 -d)|" AppConfig.php
+  - sed -i "s|pgsql_username|$(echo $PGSQL_USERNAME | base64 -d)|" AppConfig.php
+  - sed -i "s|pgsql_password|$(echo $PGSQL_PASSWORD | base64 -d)|" AppConfig.php
+  - sed -i "s|email_host|$(echo $EMAIL_HOST | base64 -d)|" AppConfig.php
+  - sed -i "s|email_port|$(echo $EMAIL_PORT | base64 -d)|" AppConfig.php
+  - sed -i "s|email_name|$(echo $EMAIL_NAME | base64 -d)|" AppConfig.php
+  - sed -i "s|email_username|$(echo $EMAIL_USERNAME | base64 -d)|" AppConfig.php
+  - sed -i "s|email_password|$(echo $EMAIL_PASSWORD | base64 -d)|" AppConfig.php
+  - sed -i "s|cms_api_token|$(echo $CMS_API_TOKEN | base64 -d)|" AppConfig.php
+  - echo "$KEYBASE_VERIFICATION" | base64 -d > public/.well-known/keybase.txt
+  - echo "$GOOGLE_SITE_VERIFICATION" | base64 -d > public/$(echo $GOOGLE_SITE_VERIFICATION | base64 -d | awk '{ print $2 }')
 
 
 - name: synchronize
-  image: alpine:3.10
+  image: serve.work/alpine-ci:3.11.3
 
   environment:
 
@@ -68,6 +68,8 @@ steps:
      from_secret: ssh_key
     SSH_KEY_PASSWORD:
       from_secret: ssh_key_password
+    SSH_KNOWN_HOSTS:
+      from_secret: ssh_known_hosts
     SERVER_USER:
       from_secret: server_user
     ORIGIN_HOST:
@@ -79,66 +81,23 @@ steps:
 
   commands:
 
-  - apk add openssh
-  - echo "$SSH_KEY" > ssh-key && chmod 600 ssh-key
+  - echo "$SSH_KEY" | base64 -d > ssh-key && chmod 600 ssh-key
   - eval $(ssh-agent)
-  - echo "$SSH_KEY_PASSWORD" | ssh-add ssh-key
+  - echo "$SSH_KEY_PASSWORD" | base64 -d | ssh-add ssh-key
+  - echo "$SSH_KNOWN_HOSTS" | base64 -d > /etc/ssh/ssh_known_hosts
 
-  - >
-    scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key
-    $SERVER_USER@$NAME:/srv/http/thedroneely.com/generators/hugo/content generators/hugo/
+  - ansible -m ping upstream
 
-  - ls -lR generators/hugo/content
-
-  - >
-    scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key
-    $SERVER_USER@$NAME:/srv/http/thedroneely.com/cockpit/storage/data/collections.sqlite .
-
-  - ls -la
-
-  - >
-    scp -rp -o StrictHostKeyChecking=no -P $ORIGIN_PORT -vT -i ssh-key collections.sqlite
-    $ORIGIN_USER@$ORIGIN_HOST:/srv/http/staging/thedroneely.com/cockpit/storage/data/collections.sqlite.new
-
-  - >
-    ssh -o StrictHostKeyChecking=no -p $ORIGIN_PORT -vT -i ssh-key $ORIGIN_USER@$ORIGIN_HOST
-    '
-    cd /srv/http/staging/thedroneely.com/cockpit/storage/data/ &&
-    cmp --silent collections.sqlite collections.sqlite.new ||
-    {
-      cp collections.sqlite collections.sqlite-$(date +%H%M-%d%m-%Y) && cp collections.sqlite.new collections.sqlite &&
-      touch collections.sqlite;
-    }
-    '
-
-  - ls -la
-
-  -  scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$NAME:/srv/http/thedroneely.com/public/images .
-
-  -  scp -rp -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$NAME:/srv/http/thedroneely.com/public/videos .
-
-  - ls -la
-
-  - >
-    scp -r -o StrictHostKeyChecking=no -P $ORIGIN_PORT -vT -i ssh-key images/*
-    $ORIGIN_USER@$ORIGIN_HOST:/srv/http/staging/thedroneely.com/public/images
-
-  - >
-    ssh -o StrictHostKeyChecking=no -p $ORIGIN_PORT -vT -i ssh-key $ORIGIN_USER@$ORIGIN_HOST
-    'find /srv/http/staging/thedroneely.com/public/images -type f -exec touch -d "2 days ago" {} +'
-
-  - >
-    scp -r -o StrictHostKeyChecking=no -P $ORIGIN_PORT -vT -i ssh-key videos/*
-    $ORIGIN_USER@$ORIGIN_HOST:/srv/http/staging/thedroneely.com/public/videos
+  - ansible-playbook .deploy.yml --tags "synchronize"
 
 
 - name: minify
-  image: alpine:3.10
+  image: serve.work/alpine-ci:3.11.3
 
   commands:
 
-  - wget https://github.com/tdewolff/minify/releases/download/v2.5.0/minify_2.5.0_linux_amd64.tar.gz
-  - tar -xvf minify_2.5.0_linux_amd64.tar.gz
+  - wget https://github.com/tdewolff/minify/releases/download/v2.5.0/minify_2.5.0_linux_amd64.tar.gz -O minify.tar.gz
+  - tar -xvf minify.tar.gz
 
   - ./minify --version
   - ./minify public/css/tdro.css > public/css/tdro.min.$(date +%d%m%Y%H%M).css
@@ -155,7 +114,7 @@ steps:
 
 
 - name: prepare
-  image: alpine:3.10
+  image: serve.work/alpine-ci:3.11.3
 
   commands:
 
@@ -165,7 +124,7 @@ steps:
 
 
 - name: package
-  image: alpine:3.10
+  image: serve.work/alpine-ci:3.11.3
 
   environment:
 
@@ -175,27 +134,27 @@ steps:
       from_secret: ssh_key
     SSH_KEY_PASSWORD:
       from_secret: ssh_key_password
+    SSH_KNOWN_HOSTS:
+      from_secret: ssh_known_hosts
     SERVER_USER:
       from_secret: server_user
 
   commands:
 
-  - apk add openssh
-  - echo "$SSH_KEY" > ssh-key && chmod 600 ssh-key
+  - echo "$SSH_KEY" | base64 -d > ssh-key && chmod 600 ssh-key
   - eval $(ssh-agent)
-  - echo "$SSH_KEY_PASSWORD" | ssh-add ssh-key
+  - echo "$SSH_KEY_PASSWORD" | base64 -d | ssh-add ssh-key
+  - echo "$SSH_KNOWN_HOSTS" | base64 -d > /etc/ssh/ssh_known_hosts
 
   - >
     tar -zcvf $NAME.tar.gz app bootstrap generators
     public vendor AppConfig.php composer.json composer.lock
 
-  - >
-    scp -r -o StrictHostKeyChecking=no -vT -i ssh-key
-    $NAME.tar.gz $SERVER_USER@$NAME:/srv/deploys/$NAME/
+  - scp -r -vT -i ssh-key $NAME.tar.gz $(echo $SERVER_USER | base64 -d)@$NAME:/srv/deploys/$NAME/
 
 
 - name: deploy
-  image: alpine:3.10
+  image: serve.work/alpine-ci:3.11.3
 
   environment:
 
@@ -205,51 +164,16 @@ steps:
       from_secret: ssh_key
     SSH_KEY_PASSWORD:
       from_secret: ssh_key_password
-    SERVER_USER:
-      from_secret: server_user
+    SSH_KNOWN_HOSTS:
+      from_secret: ssh_known_hosts
 
   commands:
 
-  - apk add openssh
-  - echo "$SSH_KEY" > ssh-key && chmod 600 ssh-key
+  - export DATE=$(date +%H%M-%d%m-%Y)
+
+  - echo "$SSH_KEY" | base64 -d > ssh-key && chmod 600 ssh-key
   - eval $(ssh-agent)
-  - echo "$SSH_KEY_PASSWORD" | ssh-add ssh-key
+  - echo "$SSH_KEY_PASSWORD" | base64 -d | ssh-add ssh-key
+  - echo "$SSH_KNOWN_HOSTS" | base64 -d > /etc/ssh/ssh_known_hosts
 
-  - >
-    ssh -o StrictHostKeyChecking=no -vT -i ssh-key $SERVER_USER@$NAME
-    '
-    export DATE=$(date +%H%M-%d%m-%Y) NAME=thedroneely.com &&
-    cd /srv/deploys/$NAME &&
-
-    mkdir -p $NAME-$DATE/public/js $NAME-$DATE/public/css &&
-    cp -r /srv/deploys/$NAME/$NAME-deploy/public/js/*min* $NAME-$DATE/public/js/ &&
-    cp -r /srv/deploys/$NAME/$NAME-deploy/public/css/*min* $NAME-$DATE/public/css/ &&
-
-    tar -xvf $NAME.tar.gz -C $NAME-$DATE &&
-    rm $NAME.tar.gz &&
-
-    cp -r /srv/deploys/$NAME/$NAME-deploy/cockpit $NAME-$DATE/ &&
-    cp -r /srv/deploys/$NAME/$NAME-deploy/public/images $NAME-$DATE/public/ &&
-    cp -r /srv/deploys/$NAME/$NAME-deploy/public/uploads $NAME-$DATE/public/ &&
-    cp -r /srv/deploys/$NAME/$NAME-deploy/public/videos $NAME-$DATE/public/ &&
-    cp -r /srv/deploys/$NAME/$NAME-deploy/public/download $NAME-$DATE/public/ || true &&
-
-    openring -s "https://drewdevault.com/feed.xml" -s "https://mxb.dev/feed.xml" -s "https://www.taniarascia.com/rss.xml" < $NAME-$DATE/generators/openring/template.html > $NAME-$DATE/generators/hugo/themes/tdro/layouts/partials/openring.html &&
-
-    cd $NAME-$DATE/generators/hugo && hugo &&
-    cd /srv/deploys/$NAME &&
-
-    chattr -i -Rf $(ls -t | awk "NR>8") || true &&
-    rm -rf $(ls -t | awk "NR>8") &&
-
-    ln -s $NAME-$DATE $NAME-deploy-$DATE &&
-    mv -Tf $NAME-deploy-$DATE $NAME-deploy &&
-
-    chown nginx:nginx -R $NAME-deploy $NAME-$DATE &&
-    chattr +i $NAME-$DATE/generators/hugo/content/posts/archive.md &&
-    chattr +i $NAME-$DATE/generators/hugo/content/projects/archive.md &&
-
-    find $NAME-$DATE/public/images -type f -exec touch -d "2 days ago" {} + &&
-
-    ls -la
-    '
+  - ansible-playbook .deploy.yml --tags "deploy"
