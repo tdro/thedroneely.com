@@ -12,7 +12,7 @@
     type="submit"
     value="light"
   >
-    <?php echo featherIcon('sun'); ?>
+    <?php echo featherIcon('sun', 'is-hidden-mobile'); ?>
     <span>Light</span>
   </button>
 
@@ -25,7 +25,7 @@
     type="submit"
     value="dark"
   >
-    <?php echo featherIcon('moon'); ?>
+    <?php echo featherIcon('moon', 'is-hidden-mobile'); ?>
     <span>Dark</span>
   </button>
 
