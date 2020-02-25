@@ -4268,6 +4268,7 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
   background-color: #f2f2f2;
   border-width: 0; color: #444;
   border-color: transparent !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
 
