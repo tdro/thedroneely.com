@@ -31,7 +31,7 @@
   box-shadow: none;
   display: inline-flex;
   font-size: 1rem;
-  height: 2.25em;
+  min-height: 2.25em;
   justify-content: flex-start;
   line-height: 1.5;
   padding-bottom: calc(0.375em - 1px);
@@ -1954,7 +1954,6 @@ fieldset[disabled] .select select:-ms-input-placeholder,
 }
 
 .textarea:not([rows]) {
-  max-height: 600px;
   min-height: 120px;
 }
 
@@ -4556,6 +4555,17 @@ blockquote p { font-size: 1.3rem !important; }
     margin: 3px 15px 0 0;
 }
 
+.isso-comment blockquote {
+    margin: 2rem 0;
+}
+
+.isso-comment blockquote p {
+    font-size: 0.975rem !important;
+    margin: 0 !important;
+    border-left: 3px solid #999;
+    padding-left: 0.5rem;
+}
+
 .isso-comment > div.avatar > svg {
     max-width: 48px;
     max-height: 48px;
@@ -4601,11 +4611,11 @@ blockquote p { font-size: 1.3rem !important; }
 
 .isso-comment > div.text-wrapper > .textarea-wrapper .textarea,
 .isso-comment > div.text-wrapper > .textarea-wrapper .preview {
-    margin-top: 0.2em;
+  margin: 0.25rem 0;
 }
 
 .isso-comment > div.text-wrapper > div.text p:last-child {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.25rem;
 }
 
 .isso-comment > div.text-wrapper > div.text h1,
