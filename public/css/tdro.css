@@ -4165,11 +4165,17 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
  * Custom Resets
  */
 
-/* article, video, and code highlights */
-
 article.content { min-height: 452px; }
 
 video { display: inline-block; box-shadow: 0 0.25rem 1rem rgba(48,55,66,.3); }
+
+a { border-bottom: 1px solid #999; }
+
+a:hover { border-bottom: 2px solid #999; }
+
+figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
+.is-mobile .has-text-centered > a, .content li a, .article__list li a,
+.resume__label, .resume__container a, .isso-comment-footer a { border-bottom: none !important; }
 
 a code { color: #0147b7; }
 
@@ -4178,7 +4184,9 @@ a code { color: #0147b7; }
 .medium-zoom-overlay { background-color: #fff; background-color: rgba(255, 255, 255, .9); }
 
 
-/* more posts and projects link frame */
+/*
+ * More posts and projects link
+ */
 
 .introduction { padding: 1em; margin-top: 0.75em; }
 
@@ -4271,7 +4279,9 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 }
 
 
-/* contact form */
+/*
+ * Contact Form
+ */
 
 .alert { color: #f00; }
 .agree { display: none; }
@@ -4283,14 +4293,20 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 }
 
 
-/* footer */
+/*
+ * Footer
+ */
 
 .footer__section { line-height: 2.2; }
 .hero-foot > .footer > .columns { margin: 0; }
-.footer a { color: #333; border-bottom: 1px solid #333; }
+.footer a { color: #333; }
 
 
-/* posts and projects */
+/*
+ * Posts and Projects
+ */
+
+.article__title { padding-bottom: 5px; }
 
 .article__date { margin-bottom: 0.75rem; }
 .article__divider { background-color: transparent; }
@@ -4316,7 +4332,9 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 .webring .articles h2 { margin-bottom: 0.1em; }
 
 
-/* resume page */
+/*
+ * Resume Page
+ */
 
 .resume__container { padding: 0 3em 0 3em; max-width: 1152px; }
 .resume__section { padding: 0 1.5em; }
@@ -4345,13 +4363,10 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 }
 
 
-/* underline links */
 
-.underline,
-.isso-comment > div.text-wrapper > .text a,
-.sans-serif a, .serif a { border-bottom: 1px solid #999; }
-
-/* focus links */
+/*
+ * Focus Links
+ */
 
 .focus-link:focus,
 li a:focus,
@@ -4368,13 +4383,17 @@ a:focus img { box-shadow: 0 0 40px 2px #999; }
 .is-success:focus, .is-link:focus { background-color: #ebebeb !important }
 
 
-/* figure */
+/*
+ * Figures
+ */
 
 figure div { height: 0; }
 figcaption { font-size: 0.9em; margin-top: 1.5em; }
 
 
-/* mobile theme toggle button */
+/*
+ * Theme toggle
+ */
 
 .theme-toggle-button { border-radius: 0; height: 100%; padding: 0 0.35em; width: 100%; font-weight: 400; }
 
@@ -4383,7 +4402,9 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 }
 
 
-/* custom helpers */
+/*
+ * Custom Helpers
+ */
 
 .has-padding-none { padding: 0 !important; }
 .has-padding-left-md { padding-left: 0.5em !important; }
@@ -4396,7 +4417,10 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 .has-spacing-widest { letter-spacing: 0.1em }
 .has-tap-transparent { -webkit-tap-highlight-color: transparent; }
 
-/* table of contents */
+
+/*
+ * Table of Contents
+ */
 
 details summary { cursor: pointer;}
 
@@ -4404,7 +4428,10 @@ nav#TableOfContents li:hover { background-color: #f1f1f1; }
 nav#TableOfContents ul { margin-left: -0.5em; }
 nav#TableOfContents a { display: block; color: #555; padding-left: 0.5rem; }
 
-/* tufte css */
+
+/*
+ * Tufte CSS
+ */
 
 .leftnote {
   float: left;
@@ -4491,7 +4518,9 @@ blockquote p { font-size: 1.3rem !important; }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .quote { height: 0; } } /* ie quote height fix */
 
 
-/* isso comments */
+/*
+ * Isso comments
+ */
 
 #isso-thread * {
     -webkit-box-sizing: border-box;
@@ -4817,7 +4846,9 @@ blockquote p { font-size: 1.3rem !important; }
     }
 }
 
-/* Uppy CSS Rules */
+/*
+ * Uppy CSS
+ */
 
 .uppy-Dashboard-inner {
   background-color: #fff !important;
