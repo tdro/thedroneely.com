@@ -4668,7 +4668,12 @@ blockquote p { font-size: 1.3rem !important; }
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer .votes {
-    color: gray;
+    background-color: #014cc6;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-weight: bold;
+    color: white;
+    margin-right: 0.5rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer .upvote svg,
