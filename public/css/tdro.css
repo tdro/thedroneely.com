@@ -4268,6 +4268,7 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 .item__box:hover svg, .item__box:focus svg { fill: currentColor; color: #000; }
 .item__no__hover:hover svg, .item__no__hover:focus svg { fill: transparent !important; }
 .item__box {
+  height: 2rem;
   font-weight: 400;
   margin-left: 0;
   margin-right: 0.7rem;
