@@ -2730,6 +2730,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .pagination-link:hover {
   border-color: #b5b5b5;
   color: #363636;
+  border-width: 1px;
 }
 
 .pagination-previous:focus,
