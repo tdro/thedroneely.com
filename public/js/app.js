@@ -13,9 +13,21 @@ function remClass (el, cl) { if (el) { var a = el.className.split(' '); arem(a, 
 function togClass (el, cl) { if (hasClass(el, cl)) { remClass(el, cl); return; } addClass(el, cl); }
 function runOnce(action) { runOnce = function(){}; action(); }
 
+
+var settings = { pager: {} };
 var dropdownInputList = byClass(document, 'dropdown-input');
 var dropdownContentList = byClass(document, 'dropdown-content');
 var dropdownMenuList = byClass(document, 'dropdown');
+
+window.onload = function () {
+  if (settings['pager'][window.location.href]) {
+    window.scrollTo(0, settings['pager'][window.location.href]);
+  }
+};
+settings['pager'][window.location.href] = window.pageYOffset;
+if (localStorage['settings']) {
+  settings = JSON.parse(localStorage['settings']);
+}
 
 
 /*
@@ -103,6 +115,9 @@ var navbarHeight = navbar.offsetHeight;
 var scrollReady = 0;
 
 window.onscroll = function() {
+
+settings['pager'][window.location.href] = window.pageYOffset;
+localStorage['settings'] = JSON.stringify(settings);
 
     dropdownHide(dropdownInputList);
 
