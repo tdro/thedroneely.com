@@ -4835,6 +4835,11 @@ blockquote p { font-size: 1.3rem !important; }
     padding-bottom: 10px;
 }
 
+
+.isso-postbox > .form-wrapper > .notification-section input[name="notification"] {
+  margin-right: 0.5rem;
+}
+
 @media screen and (max-width:600px) {
     .isso-postbox > .form-wrapper > .auth-section .input-wrapper {
         display: inline-block;
