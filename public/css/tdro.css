@@ -4264,7 +4264,7 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 
 .item__box span { padding-left: 10px; }
 .item__box svg { stroke-width: 1.5px; width: 20px; height: 20px; }
-.item__box:hover svg, .item__box:focus svg { fill: currentColor; color: #000; }
+.item__box:hover, .item__box:hover svg, .item__box:focus svg { fill: currentColor; color: #000; }
 .item__no__hover:hover svg, .item__no__hover:focus svg { fill: transparent !important; }
 .item__box {
   height: 2rem;
@@ -4273,9 +4273,8 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
   margin-right: 0.7rem;
   padding: 0.25rem 1rem;
   background-color: #f2f2f2;
-  border-width: 0; color: #444;
-  border-color: transparent !important;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border: 0 solid transparent !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
 
