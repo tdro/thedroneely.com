@@ -4166,6 +4166,14 @@ figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
 
 .medium-zoom-overlay { background-color: #fff; background-color: rgba(255, 255, 255, .9); }
 
+/*
+ * Text selection
+ */
+
+::selection { background-color: #C4E3F3; color: #000; }
+::-webkit-selection { background-color: #C4E3F3; color: #000; }
+::-moz-selection { background-color: #C4E3F3; color: #000; }
+
 
 /*
  * More posts and projects link
