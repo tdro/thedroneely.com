@@ -4493,6 +4493,7 @@ mark { background-color: transparent; color: unset; }
 label { cursor: pointer; }
 label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 .sidenote, .marginnote { display: none; }
+.tableofcontents { display: none !important; }
 .sidenote-mark, .marginnote-mark { border-bottom: 1px dashed #999; }
 .marginnote-mark:after { content: "\0002B"; font-weight: bold; }
 .sideimage { margin: 0 !important; left: 0 !important; width: 100% !important; }
