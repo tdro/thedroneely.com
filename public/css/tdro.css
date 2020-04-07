@@ -4451,8 +4451,6 @@ nav#TableOfContents a { display: block; color: #555; padding-left: 0.5rem; }
 
 .sidenote, .marginnote { -ms-hyphens: auto; -ms-word-break: normal; overflow-wrap: break-word; word-break: break-word; }
 
-.sideimage a, .sideimage a:focus { border-bottom: 1px solid transparent; background-color: transparent !important; }
-
 @media (min-width: 769px) { .rightnote { padding-right: 1.125em; } .leftnote { text-align: right; padding-left: 1.125em; } .leftnote, .rightnote { max-width: 22em; } }
 @media (min-width: 2000px) { .leftnote { margin-left: -28em; } .rightnote { margin-right: -28em; } }
 
@@ -4476,6 +4474,9 @@ mark { background-color: transparent; color: unset; }
 
 .sidenote-container:hover .sidenote-mark,
 .sidenote-container:hover .sidenote mark { background-color: #fefe98; color: #000; }
+.sidenote-container:hover .sidenote a { background-color: #fefe98; color: #000; border-color: dodgerblue; }
+
+.sideimage a, .sideimage a:focus { border-bottom: 1px solid transparent !important; background-color: transparent !important; }
 
 @media (max-width: 768px) {
 .sidenote-toggle:checked + .sidenote,
