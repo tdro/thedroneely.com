@@ -4573,8 +4573,9 @@ blockquote p { font-size: 1.3rem !important; }
 .isso-comment > div.avatar {
     display: block;
     float: left;
-    width: 7%;
-    margin: -3px 15px 0 0;
+    width: 16px;
+    height: 16px;
+    margin: 2px 12px 0 0;
 }
 
 .isso-comment blockquote {
