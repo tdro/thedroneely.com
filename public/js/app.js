@@ -1,5 +1,5 @@
 /**
- * Functions
+ * General Functions
  */
 function posf (f, a) { for (var i=0; i < a.length; i++) { if (f(a[i])) {return i;} } return -1; }
 function apos (x, a) { return (typeof x == 'function') ? posf(x,a) : Array.prototype.indexOf.call(a,x); }
@@ -13,37 +13,38 @@ function remClass (el, cl) { if (el) { var a = el.className.split(' '); arem(a, 
 function togClass (el, cl) { if (hasClass(el, cl)) { remClass(el, cl); return; } addClass(el, cl); }
 function runOnce(action) { runOnce = function(){}; action(); }
 
+/**
+ * Remove url query string on load
+ */
+var url = window.location.href.split('?')[0];
+window.history.replaceState(null, null, url);
 
+/**
+ * Settings array
+ */
 var settings = { pager: {} };
-var dropdownInputList = byClass(document, 'dropdown-input');
-var dropdownContentList = byClass(document, 'dropdown-content');
-var dropdownMenuList = byClass(document, 'dropdown');
 
 window.onload = function () {
-  if (settings['pager'][window.location.href]) {
-    window.scrollTo(0, settings['pager'][window.location.href]);
-  }
+  if (settings['pager'][window.location.href]) { window.scrollTo(0, settings['pager'][window.location.href]); }
 };
+
 settings['pager'][window.location.href] = window.pageYOffset;
-if (localStorage['settings']) {
-  settings = JSON.parse(localStorage['settings']);
-}
+
+if (localStorage['settings']) { settings = JSON.parse(localStorage['settings']); }
 
 
 /*
- * Hide dropdown
+ * Dropdown functions
  */
 function dropdownHide(element, event) {
+  /* Hide dropdown elements */
   for (var i = 0; i < element.length; i++) {
     element[i].checked = false;
   }
 }
 
-
-/*
- * Hide dropdown when clicked outside of region
- */
 function dropdownClickHide(element, event) {
+  /* Hide dropdown when clicked outside of region */
   for (var i = 0; i < element.length; i++) {
     let click = element[i].contains(event.target);
     if (!click && dropdownInputList[i].checked === true) { dropdownHide(dropdownInputList); }
@@ -52,7 +53,7 @@ function dropdownClickHide(element, event) {
 
 
 /*
- * Hide dropdown when far away
+ * Hide dropdown when the mouse is far away
  */
 document.addEventListener('mousemove', function(event) {
   let mouseX = event.pageX;
@@ -84,7 +85,7 @@ document.addEventListener('mousemove', function(event) {
 
 
 /*
- * Document click event
+ * Click events
  */
 document.addEventListener('click', function(event) {
   dropdownClickHide(dropdownMenuList, event);
@@ -92,7 +93,7 @@ document.addEventListener('click', function(event) {
 
 
 /*
- * Document touch start event
+ * Touch start events
  */
 document.addEventListener('touchstart', function(event) {
   dropdownClickHide(dropdownMenuList, event);
@@ -100,19 +101,16 @@ document.addEventListener('touchstart', function(event) {
 
 
 /**
- * Remove url query string on load
- */
-var url = window.location.href.split('?')[0];
-window.history.replaceState(null, null, url);
-
-
-/**
- * Hide elements on scroll events
+ * Scroll events
  */
 var previousPosition = window.pageYOffset;
 var navbar = document.getElementById("navbar");
 var navbarHeight = navbar.offsetHeight;
 var scrollReady = 0;
+
+var dropdownInputList = byClass(document, 'dropdown-input');
+var dropdownContentList = byClass(document, 'dropdown-content');
+var dropdownMenuList = byClass(document, 'dropdown');
 
 window.onscroll = function() {
 
