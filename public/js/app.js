@@ -24,9 +24,9 @@ window.history.replaceState(null, null, url);
  */
 var settings = { pager: {} };
 
-window.onload = function () {
+window.addEventListener('load', function(event) {
   if (settings['pager'][window.location.href]) { window.scrollTo(0, settings['pager'][window.location.href]); }
-};
+});
 
 settings['pager'][window.location.href] = window.pageYOffset;
 
@@ -112,10 +112,10 @@ var dropdownInputList = byClass(document, 'dropdown-input');
 var dropdownContentList = byClass(document, 'dropdown-content');
 var dropdownMenuList = byClass(document, 'dropdown');
 
-window.onscroll = function() {
+window.addEventListener('scroll', function(event) {
 
-settings['pager'][window.location.href] = window.pageYOffset;
-localStorage['settings'] = JSON.stringify(settings);
+    settings['pager'][window.location.href] = window.pageYOffset;
+    localStorage['settings'] = JSON.stringify(settings);
 
     dropdownHide(dropdownInputList);
 
@@ -134,7 +134,7 @@ localStorage['settings'] = JSON.stringify(settings);
 
     previousPosition = currentPosition;
     scrollReady = 1;
-};
+});
 
 /**
  * Medium Zoom 1.0.4
