@@ -98,7 +98,7 @@
                     ?>
                     </div>
 
-                    <a href="/projects/"
+                    <a href="/projects/page/2/"
                     class="front__more is-block has-text-centered">
                         See More Projects
                         <?php featherIcon('chevron-right'); ?>
