@@ -4449,7 +4449,17 @@ nav#TableOfContents a { display: block; color: #555; padding-left: 0.5rem; }
   color: #444;
 }
 
-.sidenote, .marginnote { -ms-hyphens: auto; -ms-word-break: normal; overflow-wrap: break-word; word-break: break-word; }
+.sidenote, .marginnote {
+  -ms-hyphens: auto;
+  -ms-word-break: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sidenote:hover, .marginnote:hover { -webkit-user-select: inherit; -ms-user-select: inherit; user-select: inherit; }
 
 @media (min-width: 769px) { .rightnote { padding-right: 1.125em; } .leftnote { text-align: right; padding-left: 1.125em; } .leftnote, .rightnote { max-width: 22em; } }
 @media (min-width: 2000px) { .leftnote { margin-left: -28em; } .rightnote { margin-right: -28em; } }
