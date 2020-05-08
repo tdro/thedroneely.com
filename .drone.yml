@@ -53,7 +53,6 @@ steps:
   - sed -i "s|email_username|$(echo $EMAIL_USERNAME | base64 -d)|" AppConfig.php
   - sed -i "s|email_password|$(echo $EMAIL_PASSWORD | base64 -d)|" AppConfig.php
   - sed -i "s|cms_api_token|$(echo $CMS_API_TOKEN | base64 -d)|" AppConfig.php
-  - echo "$KEYBASE_VERIFICATION" | base64 -d > public/.well-known/keybase.txt
   - echo "$GOOGLE_SITE_VERIFICATION" | base64 -d > public/$(echo $GOOGLE_SITE_VERIFICATION | base64 -d | awk '{ print $2 }')
 
 
