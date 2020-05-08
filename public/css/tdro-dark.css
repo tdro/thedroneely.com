@@ -21,8 +21,8 @@ body, .sans-serif a, .serif a, nav#TableOfContents a { color: #cad6e2 }
 .title, .content h1, .content h2, .content h3 { color: #ddd; }
 .button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #cad6e2; color: #cad6e2; border-width: 1px; }
 .input, .textarea { background-color: #002e42; border-color: transparent; color: white; }
-.item__box { color: #fff; background-color: #002e42; }
-.item__box:hover svg, .item__box:focus svg { color: #fff; }
+.item__box { color: #ddd; background-color: #002e42; }
+.item__box:hover, .item__box:hover svg, .item__box:focus svg { color: #fff; }
 .message__success { background-color: #55a1ec; border: 1px solid #1259a1;  color: black; }
 .pagination-link.is-current { background-color: #75b2f0; border-color: #75b2f0; color: #212121 !important; }
 .pagination-previous, .pagination-next, .pagination-link { border-color: #002e42; color: #cad6e2; min-width: 2.25em; }
