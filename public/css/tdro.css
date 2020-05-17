@@ -201,7 +201,7 @@ code,
 pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: Consolas, monaco, monospace;
+  font-family: 'Fira Code', Consolas, monaco, monospace;
 }
 
 body {
