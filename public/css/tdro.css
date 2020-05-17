@@ -4457,6 +4457,7 @@ nav#TableOfContents a { display: block; color: #555; padding-left: 0.5rem; }
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  letter-spacing: 0.01rem;
 }
 
 .sidenote:hover, .marginnote:hover { -webkit-user-select: inherit; -ms-user-select: inherit; user-select: inherit; }
