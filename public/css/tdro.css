@@ -198,7 +198,8 @@ textarea,
 }
 
 code,
-pre {
+pre,
+.monospace {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
   font-family: 'Fira Code', Consolas, monaco, monospace;
@@ -4309,14 +4310,16 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 }
 
 .article__updated { padding: 0.5em; }
-.article__list { line-height: 2.5; }
+ul.article__list { line-height: 2.5; }
 .article__list li:hover { background-color: #f1f1f1; }
 .article__list a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-left: 1rem;
 }
+.article__list__date { padding-right: 1rem; text-transform: uppercase; }
+.article__list a, h1.article__list { padding: 0 0.5rem; }
+
 
 .webring li { padding-top: 1em; }
 .webring ul { margin-top: 0.5em; }
