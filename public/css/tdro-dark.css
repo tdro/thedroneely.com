@@ -17,11 +17,11 @@ body, .sans-serif a, .serif a, nav#TableOfContents a { color: #cad6e2 }
 .footer a { color: #bbb; }
 .footer { padding: 1.5rem; }
 .navbar { box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5); }
-.navbar, .navbar-menu { background-color: #001f2c; background-color: rgba(0, 31, 44, 0.95); }
+.navbar, .navbar-menu { background-color: #002e42; background-color: rgba(0, 46, 66, 0.95); }
 .title, .content h1, .content h2, .content h3 { color: #ddd; }
 .button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #cad6e2; color: #cad6e2; border-width: 1px; }
 .input, .textarea { background-color: #002e42; border-color: transparent; color: white; }
-.item__box { color: #ddd; background-color: #002e42; }
+.item__box { color: #ddd; background-color: #004766; }
 .item__box:hover, .item__box:hover svg, .item__box:focus svg { color: #fff; }
 .message__success { background-color: #55a1ec; border: 1px solid #1259a1;  color: black; }
 .pagination-link.is-current { background-color: #75b2f0; border-color: #75b2f0; color: #212121 !important; }
