@@ -4216,7 +4216,7 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 
 @media screen and (min-width: 1088px) { .navbar-menu, .navbar-item { display: inline-block; } }
 
-@media screen and (min-width: 524px) {
+@media screen and (min-width: 525px) {
   .navbar__active { border-bottom: 2px solid dodgerblue !important; }
   a.navbar-item { border-bottom: 2px solid transparent; }
   a.navbar-item:hover { border-bottom: 2px solid dodgerblue; }
