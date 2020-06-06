@@ -4,7 +4,7 @@ html { background-color: #001f2c; }
 a { color: #75b2f0; }
 a.navbar-item:hover { color: #fff !important; }
 img { box-shadow: none; filter: brightness(75%); }
-body, .sans-serif a, .serif a, nav#TableOfContents a { color: #cad6e2 }
+body, .sans-serif a, .serif a, .document h2 a, .document h3 a, nav#TableOfContents a { color: #cad6e2 }
 .article__list li:hover, nav#TableOfContents li:hover { background-color: #002e42; }
 .leftnote, .rightnote, mark { color: #a9bdd0; }
 .medium-zoom-overlay { background-color: #001f2c; background-color: rgba(0, 31, 44, .9); }

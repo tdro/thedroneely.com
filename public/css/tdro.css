@@ -212,12 +212,6 @@ body {
   line-height: 1.8;
 }
 
-a {
-  color: #014cc6;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 code {
   font-size: 0.735em;
   font-weight: normal;
@@ -227,10 +221,6 @@ code {
   overflow-wrap: break-word;
   word-break: break-word;
 }
-
-p code { font-size: 1rem; }
-
-.marginnote code, .sidenote code { font-size: 0.8em; }
 
 hr {
   background-color: #ddd;
@@ -601,50 +591,6 @@ table th {
 
 .has-text-white {
   color: white !important;
-}
-
-a.has-text-white:hover, a.has-text-white:focus {
-  color: #e6e6e6 !important;
-}
-
-.has-background-white {
-  background-color: white !important;
-}
-
-.has-text-black {
-  color: #0a0a0a !important;
-}
-
-a.has-text-black:hover, a.has-text-black:focus {
-  color: black !important;
-}
-
-.has-background-black {
-  background-color: #0a0a0a !important;
-}
-
-.has-text-light {
-  color: whitesmoke !important;
-}
-
-a.has-text-light:hover, a.has-text-light:focus {
-  color: #dbdbdb !important;
-}
-
-.has-background-light {
-  background-color: whitesmoke !important;
-}
-
-.has-text-dark {
-  color: #363636 !important;
-}
-
-a.has-text-dark:hover, a.has-text-dark:focus {
-  color: #1c1c1c !important;
-}
-
-.has-background-dark {
-  background-color: #363636 !important;
 }
 
 .has-text-primary {
@@ -1336,7 +1282,6 @@ fieldset[disabled] .button {
     max-width: 1152px;
   }
 }
-
 
 .content li + li {
   margin-top: 0.5em;
@@ -4147,6 +4092,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   padding: 1.5rem;
 }
 
+
 /*
  * Custom Resets
  */
@@ -4155,17 +4101,22 @@ article.content { min-height: 452px; }
 
 video { display: inline-block; box-shadow: 0 0.25rem 1rem rgba(48,55,66,.3); }
 
-a { border-bottom: 1px solid #999; }
+p code { font-size: 1rem; }
 
+a { border-bottom: 1px solid #999; color: #014cc6; cursor: pointer; text-decoration: none; }
 a:hover { border-bottom: 2px solid #999; }
+
+.sans-serif a, .serif a, .document h2 a, .document h3 a { color: #222; }
+.serif { font-family: Charter, Georgia, 'Book Antiqua', serif; }
+.is-size-serif { font-size: 1.25rem !important; }
 
 figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
 .is-mobile .has-text-centered > a, .content li a, .article__list li a,
 .resume__label, .resume__container a, .isso-comment-footer a { border-bottom: none !important; }
 
 .image__thumbnail { max-height: 222px; }
-
 .medium-zoom-overlay { background-color: #fff; background-color: rgba(255, 255, 255, .9); }
+
 
 /*
  * Text selection
@@ -4177,17 +4128,13 @@ figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
 
 
 /*
- * More posts and projects link
+ * Front page
  */
 
 .introduction { padding: 1em; margin-top: 0.75em; }
 
 .front__more { text-transform: uppercase; }
 .front__more svg { vertical-align: bottom; }
-
-.sans-serif a, .serif a { color: #222; }
-.is-size-serif { font-size: 1.25rem !important; }
-.serif { font-family: Charter, Georgia, 'Book Antiqua', serif; }
 
 .recent__article p, .article__summary { margin-bottom: 0.5em; }
 
@@ -4359,7 +4306,6 @@ ul.article__list { line-height: 2.5; }
 }
 
 
-
 /*
  * Focus Links
  */
@@ -4464,6 +4410,8 @@ nav#TableOfContents a { display: block; color: #555; padding-left: 0.5rem; }
   user-select: none;
   letter-spacing: 0.01rem;
 }
+
+.marginnote code, .sidenote code { font-size: 0.8em; }
 
 .sidenote:hover, .marginnote:hover { -webkit-user-select: inherit; -ms-user-select: inherit; user-select: inherit; }
 
