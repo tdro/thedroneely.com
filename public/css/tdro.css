@@ -4279,15 +4279,16 @@ ul.article__list { line-height: 2.5; }
  * Resume Page
  */
 
+.max__height { min-height: 100vh; }
+
 .resume__container { padding: 0 3em 0 3em; max-width: 1152px; }
 .resume__section { padding: 0 1.5em; }
 .resume__break { padding: 0.75em 1.5em; }
 .resume__column { padding: 0; }
-.resume__label { padding: 10px; color: white; border-radius: 3px; }
-.resume__label:hover { background-color: #fcfcfc; color: #333; }
+.resume__label { padding: 10px; color: #fff !important; border-radius: 3px; }
+.resume__label:hover { background-color: #fcfcfc; color: #333 !important; }
 
-.max__height { min-height: 100vh; }
-.inline__padding { display: inline-block; margin: 0.5em; border-bottom: 1px solid transparent; }
+.inline__padding { display: inline-block; margin: 0.5em; border-bottom: 1px solid transparent !important; }
 
 @media screen and (min-width: 769px) { .column__right { max-height: 100vh; overflow: auto; } }
 
