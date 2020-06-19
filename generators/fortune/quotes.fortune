@@ -1,0 +1,1671 @@
+A debugged program is one for which you have not yet found the conditions
+that make it fail. — Jerry Ogdin
+%
+If a million people say a foolish thing, it is still a foolish thing. —
+Anatole France
+%
+“And who better understands the Unix—nature?” Master Foo asked. “Is it
+he who writes the ten thousand lines, or he who, perceiving the emptiness of
+the task, gains merit by not coding?” Upon hearing this, the programmer was
+enlightened.
+— The Unix Koans of Master Foo
+%
+Immortality — a fate worse than death. — Edgar A. Shoaff
+%
+Intellect annuls Fate.
+So far as a man thinks, he is free. — Ralph Waldo Emerson
+%
+Let's call it an accidental feature. — Larry Wall
+%
+In the long run we are all dead. — John Maynard Keynes
+%
+A lot of people I know believe in positive thinking, and so do I. I
+believe everything positively stinks. — Lew Col
+%
+Ah, but a man's grasp should exceed his reach,
+Or what's a heaven for? Robert Browning, — "Andrea del Sarto"
+%
+All hope abandon, ye who enter here! — Dante Alighieri
+%
+All men know the utility of useful things;
+but they do not know the utility of futility. — Chuang—tzu
+%
+And ever has it been known that love knows not its own depth until the
+hour of separation. — Kahlil Gibran
+%
+Besides, I think Slackware sounds better than 'Microsoft,' don't you? —
+Patrick Volkerding
+%
+Waving away a cloud of smoke, I look up, and I'm blinded by a bright, white
+light.  It's God. No, not Richard Stallman, or Linus Torvalds, but God. In
+a booming voice, He says: "THIS IS A SIGN. USE LINUX, THE FREE UNIX SYSTEM
+FOR THE 386. — Matt Welsh
+%
+Never trust an operating system you don't have sources for. — Unknown
+Source
+%
+Parkinson's Fifth Law: If there is a way to delay an important decision, the
+good bureaucracy, public or private, will find it.
+%
+Reliable source: The guy you just met.
+%
+Thyme's Law: Everything goes wrong at once.
+%
+Netscape is not a newsreader, and probably never shall be. — Tom Christiansen
+%
+You can learn many things from children.  How much patience you have,
+for instance. — Franklin P. Jones
+%
+To be is to program.
+%
+There's no easy quick way out, we're gonna have to live through our
+whole lives, win, lose, or draw. — Walt Kelly
+%
+Illiterate?  Write today, for free help!
+%
+Like winter snow on summer lawn, time past is time gone.
+%
+Hlade's Law: If you have a difficult task, give it to a lazy person —
+they will find an easier way to do it.
+%
+Davis' Law of Traffic Density: The density of rush—hour traffic
+is directly proportional to 1.5 times the amount of extra time
+you allow to arrive on time.
+%
+Resisting temptation is easier when you think you'll probably get
+another chance later on.
+%
+Do more than anyone expects, and pretty soon everyone will expect more.
+%
+Turnaucka's Law: The attention span of a computer is only as long as its
+electrical cord.
+%
+Power tends to corrupt, absolute power corrupts absolutely. — Lord Acton
+%
+We can predict everything, except the future.
+%
+A strong conviction that something must be done is the parent of many
+bad measures. — Daniel Webste
+%
+Agnes' Law: Almost everything in life is easier to get into than out of.
+%
+Weiler's Law: Nothing is impossible for the man who doesn't have to do it
+himself.
+%
+Hanlon's Razor: Never attribute to malice that which is adequately explained
+by stupidity.
+%
+Hofstadter's Law: It always takes longer than you expect, even when you take
+Hofstadter's Law into account.
+%
+Murphy's Law of Research: Enough research will tend to support your theory.
+%
+Pryor's Observation: How long you live has nothing to do
+with how long you are going to be dead.
+%
+Whitehead's Law: The obvious answer is always overlooked.
+%
+G. B. Shaw's Law: Those who can — do.
+Those who can't — teach.
+Martin's Extension: Those who cannot teach — administrate.
+%
+Johnson's First Law: When any mechanical contrivance fails, it will do so at the
+most inconvenient possible time.
+%
+Guru: A computer owner who can read the manual.
+%
+First law of debate: Never argue with a fool. People might not know the
+difference.
+%
+Woodward's Law: A theory is better than its explanation.
+%
+Lie: A very poor substitute for the truth, but the only one discovered to date.
+%
+Hildebrant's Principle: If you don't know where you are going, any road will
+get you there.
+%
+Committee: A group of men who individually can do nothing but as a group
+decide that nothing can be done. — Fred Allen
+%
+“The stronger a culture, the less it fears the radical fringe.
+The more paranoid and precarious a culture, the less tolerance it offers.”
+— Joel Salatin, Everything I Want to Do Is Illegal: War Stories from the
+Local Food Front
+%
+“The command—line tools of Unix are crude and backward,” he scoffed.
+“Modern, properly designed operating systems do everything through a
+graphical user interface.”
+Master Foo said nothing, but pointed at the moon. A nearby dog began to bark at
+the master's hand.
+— The Unix Koans of Master Foo
+%
+The master replied: “There is a defect, and I am considering the best way to
+repair it.”
+The novice said, “You preach often about the importance of setting priorities.
+How, then, can you obsess about something so tiny and unimportant?” Without
+saying a word,
+the master raised his staff and brought it down hard upon
+the bare left foot of the novice, breaking his smallest toe.
+— Codeless Code
+%
+“Master Foo, I am gravely troubled. In my youth, those who followed the Great
+Way of Unix used
+software that was simple and unaffected, like ed and mailx. Today, they use vim
+and mutt.
+Tomorrow I fear they will use KMail and Evolution, and Unix will have become
+like
+Windows — bloated and covered over with GUIs.”
+Master Foo said: “But what software do you use when you want to draw a
+poster?”
+— The Unix Koans of Master Foo
+%
+“Master Foo,” he asked “why do Unix users not employ antivirus programs?
+And defragmentors? And malware cleaners?”
+Master Foo smiled, and said “When your house is well constructed,
+there is no need to add pillars to keep the roof in place.”
+— The Unix Koans of Master Foo
+%
+The recruiter said, “I have observed that Unix hackers scowl or become
+annoyed when
+I ask them how many years of experience they have in a new programming
+language. Why is this so?”
+Master Foo stood, and began to pace across the office floor.
+The recruiter was puzzled, and asked “What are you doing?”
+“I am learning to walk,” replied Master Foo.
+— The Unix Koans of Master Foo
+%
+“Is your code ever completely without stain and flaw?” demanded Master Foo.
+“No,” admitted the zealot, “no man's is.”
+“The wisdom of the Patriarchs” said Master Foo, “was that they knew they
+were fools.”
+Upon hearing this, the zealot was enlightened.
+— The Unix Koans of Master Foo
+%
+Lewis's Law of Travel: The first piece of luggage out of the chute doesn't
+belong to anyone, ever.
+%
+Dow's Law: In a hierarchical organization, the higher the level,
+the greater the confusion.
+%
+Option Paralysis: The tendency, when given unlimited choices, to make none.
+— Douglas Coupland, "Generation X: Tales for an Accelerated
+%
+Slous' Contention: If you do a job too well, you'll get stuck with it.
+%
+Udall's Fourth Law: Any change or reform you make is going to have consequences
+you
+don't like.
+%
+Sacher's Observation: Some people grow with responsibility — others merely
+swell.
+%
+Law of the Jungle: He who hesitates is lunch.
+%
+Fifth Law of Procrastination: Procrastination avoids boredom; one never has the
+feeling that
+there is nothing important to do.
+%
+Boucher's Observation: He who blows his own horn always plays the music
+several octaves higher than originally written.
+%
+Booker's Law: An ounce of application is worth a ton of abstraction.
+%
+Williams and Holland's Law: If enough data is collected, anything may be proven
+by statistical
+methods.
+%
+Burke's Postulates: Anything is possible if you don't know what you are talking
+about.
+Don't create a problem for which you do not have the answer.
+%
+The Fifth Rule: You have taken yourself too seriously.
+%
+Barth's Distinction: There are two types of people: those who divide people
+into two
+types, and those who don't.
+%
+Hanson's Treatment of Time: There are never enough hours in a day, but always
+too many days
+before Saturday.
+%
+Peers's Law: The solution to a problem changes the nature of the problem.
+%
+Stone's Law: One man's "simple" is another man's "huh?"
+%
+Government's Law: There is an exception to all laws.
+%
+Hitchcock's Staple Principle: The stapler runs out of staples only while you
+are trying to
+staple something.
+%
+Finagle's Seventh Law: The perversity of the universe tends toward a maximum.
+%
+Chism's Law of Completion: The amount of time required to complete a government
+project is
+precisely equal to the length of time already spent on it.
+%
+Chisolm's First Corollary to Murphy's Second Law: When things just can't
+possibly get any worse, they will.
+%
+Murphy's Laws: (1) If anything can go wrong, it will.
+(2) Nothing is as easy as it looks.
+(3) Everything takes longer than you think it will.
+%
+Carswell's Corollary: Whenever man comes up with a better mousetrap,
+nature invariably comes up with a better mouse.
+%
+Putt's Law: Technology is dominated by two types of people:
+Those who understand what they do not manage.
+Those who manage what they do not understand.
+%
+Rule of the Great: When people you greatly admire appear to be thinking deep
+thoughts, they probably are thinking about lunch.
+%
+There must be more to life than having everything. — Maurice Sendak
+%
+In every hierarchy the cream rises until it sours. — Dr. Laurence J. Peter
+%
+The rich have become richer, and the poor have become poorer;
+and the vessel of the State is driven between the Scylla and Charybdis of
+anarchy and despotism.
+— Percy Bysshe Shelley
+%
+While money can't buy happiness, it certainly lets you choose your own
+form of misery.
+%
+He has not acquired a fortune; the fortune has acquired him. — Bion
+%
+How come everyone's going so slow if it's called rush hour?
+%
+Work expands to fill the time available. — Cyril Northcote Parkinson, “The
+Economist”, 1955
+%
+Getting the job done is no excuse for not following the rules.
+Corollary: Following the rules will not get the job done.
+%
+Every cloud has a silver lining; you should have sold it, and bought titanium.
+%
+To avoid criticism, do nothing, say nothing, be nothing. — Elbert Hubbard
+%
+To get something done, a committee should consist of no more than three
+persons, two of them absent.
+%
+If a thing's worth doing, it is worth doing badly. — G. K. Chesterton
+%
+There's no such thing as a free lunch. — Milton Friedman
+%
+The first lesson of economics is scarcity: there is never enough of anything to
+fully satisfy all those who want it. The first lesson of politics is to
+disregard the first lesson of economics. — Thomas Sowell
+%
+The problem isn't that Johnny can't read. The problem isn't even that Johnny
+can't think. The problem is that Johnny doesn't know what thinking is; he
+confuses it with feeling. — Thomas Sowell
+%
+It takes considerable knowledge just to realize the extent of your own
+ignorance. — Thomas Sowell
+%
+If you only have a hammer, you tend to see every problem as a nail. — Maslow
+%
+Ninety percent of everything is crap. — Theodore Sturgeon
+%
+It's easier to take it apart than to put it back together. — Washlesky
+%
+Before you ask more questions, think about whether you really want to
+know the answers. — Gene Wolfe, "The Claw of the Conciliator"
+%
+Your picture of the world often changes just before you get it into focus.
+%
+You can observe a lot just by watching. — Yogi Berra
+%
+Always borrow money from a pessimist; he doesn't expect to be paid back.
+%
+In war, truth is the first casualty. — U Thant
+%
+The hardware designer said: “It is rumored that you are a great programmer.
+How many lines of code do you write per year?”
+Master Foo replied with a question: “How many square inches of silicon do you
+lay out per year?” — The Unix Koans of Master Foo
+%
+The student said: “How, then, are those enlightened in the Unix Way to return
+to the Windows world?”
+Master Foo said: “To return to Windows, you have but to boot it up.” —
+The Unix Koans of Master Foo
+%
+The master considered this, and said: “It is certain that we could forgo
+testing altogether, if we knew our code to be perfect. How, then, may we
+achieve perfection?”
+“Through practice,” said one monk.
+“Through diligent study,” said another.
+“Through the appeasement of the proper gods,” said a third.
+— Codeless Code
+%
+If you live long enough, you'll see that every victory turns into a defeat. —
+Simone de Beauvoir
+%
+Truth is stranger than fiction, but it is because fiction is obliged to stick
+to possibilities; truth isn't.
+— Mark Twain
+%
+There are some people so addicted to exaggeration that they can't tell the
+truth without lying. — Josh Billings
+%
+“They that soar too high, often fall hard, making a low and level dwelling
+preferable.
+The tallest trees are most in the power of the winds, and ambitious men of the
+blasts of fortune.
+Buildings have need of a good foundation, that lie so much exposed to the
+weather.”
+— Dale Carnegie, The Art of Public Speaking
+%
+“Speech is silvern, Silence is golden; Speech is human, Silence is divine.”
+— Dale Carnegie, The Art of Public Speaking
+%
+The woods are lovely, dark and deep.
+— Robert Frost
+%
+Before attempting to compile this virus make sure you have the correct version
+of glibc installed,
+and that your firewall rules are set to ‘allow everything’.
+— “Why GNU/Linux Viruses are fairly uncommon” from Charlie Harvey
+%
+The words fly away, the writings remain.
+%
+Rule of Life Number One — Never get separated from your luggage.
+%
+He who knows nothing, knows nothing.
+But he who knows he knows nothing knows something.
+And he who knows someone whose friend's wife's brother knows nothing,
+he knows something.  Or something like that.
+%
+“The biggest problem facing software engineering is the one it will
+never solve — politics.” — Gavin Baker, ca 1996, An unusually cynical
+moment inspired
+by working on a large project beseiged by politics.
+%
+(1) The world is full of fascinating problems waiting to be solved.
+(2) No problem should ever have to be solved twice.
+(3) Boredom and drudgery are evil.
+(4) Freedom is good.
+(5) Attitude is no substitute for competence.
+— Eric S. Raymond
+%
+“Give someone a program, and you’ll frustrate them for a day.
+Teach someone to program, and you’ll frustrate them for a lifetime.”
+— Unknown
+%
+“No individual raindrop considers itself responsible for the flood.”
+— Unknown
+%
+“We’ve gotten to the point where everybody’s got a right and nobody’s
+got a responsibility.”
+— Newton Minow
+%
+“A library is infinity under a roof.”
+— Gail Carson Levine
+%
+“If you torture the data long enough, it will confess to anything.”
+— Darrell Huff, How to Lie With Statistics
+%
+“You can’t wake a person who is pretending to be asleep.”
+— Navajo Proverb
+%
+“During the gold rush its a good time to be in the pick and shovel
+business.”
+— Mark Twain
+%
+The 1% Rule: The number of people who create content on the Internet represents
+approximately
+1% of the people who view that content.
+%
+Those who have some means think that the most important thing in the
+world is love. The poor know that it is money. — Gerald Brenan
+%
+I know not with what weapons World War III will be fought, but World
+War IV will be fought with sticks and stones. — Albert Einstein
+%
+Why is the alphabet in that order? Is it because of that song? — Steven Wright
+%
+Important letters which contain no errors will develop errors in the mail.
+Corresponding errors will show up in the duplicate while the Boss is reading
+it. Vital papers will demonstrate their vitality by spontaneously moving
+from where you left them to where you can't find them.
+%
+If the code and the comments disagree, then both are probably wrong. — Norm
+Schryer
+%
+It is easy when we are in prosperity to give advice to the afflicted. —
+Aeschylus
+%
+Olmstead's Law: After all is said and done, a hell of a lot more is said than
+done.
+%
+I wish there was a knob on the TV to turn up the intelligence.  There's a
+knob called "brightness", but it doesn't seem to work. — Gallagher
+%
+Technological progress has merely provided us with more efficient means
+for going backwards. — Aldous Huxley
+%
+Anthony's Law of the Workshop: Any tool when dropped, will roll into the least
+accessible
+corner of the workshop.
+%
+Remember that there is an outside world to see and enjoy. — Hans Liepmann
+%
+Flying is the second greatest feeling you can have. The greatest feeling?
+Landing... Landing is the greatest feeling you can have.
+%
+"There is nothing new under the sun, but there are lots of old things
+ we don't know yet." — Ambrose Bierce
+%
+If you want to travel around the world and be invited to speak at a lot
+of different places, just write a Unix operating system. — Linus Torvalds
+%
+Hope deferred maketh the heart sick: but when the desire cometh, it is a tree
+of life.
+— Proverbs
+%
+If the tree fall toward the south, or toward the north, in the place where the
+tree falleth, there it shall be.
+— Ecclesiastes
+%
+“A blow that would kill a civilized man soon heals on a savage. The higher we
+go in the scale of life,
+the greater is the capacity for suffering.”
+— Dale Carnegie, The Art of Public Speaking
+%
+“The gun that scatters too much does not bag the birds.”
+— Dale Carnegie, The Art of Public Speaking
+%
+“All the labour of man is for his mouth, and yet the appetite is not
+filled.”
+— Ecclesiastes
+%
+The Fifth Law of Computer Programming: Any given program will expand to fill
+all available memory.
+%
+Corcoroni's First Law of Bus Transportation: The bus that left the stop just
+before you got there is your bus.
+%
+Law of Annoyance: When working on a project, if you put away a tool that you're
+certain you're finished with,
+you will need it instantly.
+%
+The First Discovery of Christmas Morning: Batteries not included.
+%
+Corcoroni's Third Law of Bus Transportation: All buses heading in the opposite
+direction drive off the face of
+the earth and never return.
+%
+Durrell's Parameter: The faster the plane, the narrower the seats.
+%
+Ettorre's Observation: The other line moves faster.
+Corollary: Don't try to change lines. The other line — the one you were in
+originally — will then move faster.
+%
+Ehrman's Commentary: Things will get worse before they will get better. Who
+said things would get better?
+%
+Ducharme's Precept: Opportunity always knocks at the least opportune moment.
+%
+Dijkstra's Prescription for Programming Inertia: If you don't know what your
+program is supposed to do, you'd better
+not start writing it.
+%
+Commoner's First Law of Ecology: No action is without side—effects.
+%
+Cohn's Law: The more time you spend in reporting on what you are doing, the
+less time you have to do anything.
+Stability is achieved when you spend all your time doing nothing but reporting
+on the nothing you are doing.
+%
+Law of Permanence: Political power is as permanent as today's newspaper.
+Ten years from now, few will know or care who the most powerful man in any
+state was today.
+%
+Clarke's Third Law: Any sufficiently advanced technology is indistinguishable
+from magic.
+%
+Cheops's Law: Nothing ever gets built on schedule or within budget.
+%
+Hacker's Law: The belief that enhanced understanding will necessarily stir a
+nation or an
+organization to action is one of mankind's oldest illusions.
+%
+Harris's Lament: All the good ones are taken.
+%
+Issawi's Law of the Conservation of Evil: The total amount of evil in any
+system remains constant.
+Hence, any diminution in one direction — for instance, a reduction in poverty
+or unemployment —
+is accompanied by an increase in another, e.g., crime or air pollution.
+%
+Kelley's Law: Last guys don't finish nice.
+%
+Knoll's Law of Media Accuracy: Everything you read in the newspapers is
+absolutely true except for that
+rare story of which you happen to have firsthand knowledge.
+%
+Kohn's Second Law: Any experiment is reproducible until another laboratory
+tries to repeat it.
+%
+Lowrey's Law of Expertise: Just when you get really good at something, you
+don't need to do it any more.
+%
+Lynch's Law: When the going gets tough, everybody leaves.
+%
+Martin's Law of Communication: The inevitable result of improved and enlarged
+communication between
+different levels in a hierarchy is a vastly increased area of misunderstanding.
+%
+Cahn's Axiom: When all else fails, read the instructions.
+%
+Horngren's Observation: The real world is a special case.
+%
+Merkin's Maxim: When in doubt, predict that the present trend will continue.
+%
+Comins' Law: People will accept your idea much more readily if you tell them
+Benjamin Franklin said it first.
+%
+Rosenfield's Regret: The most delicate component will be dropped.
+%
+Cunningham's Law: The best way to get the right answer on the internet is not
+to ask a question; it's to post the wrong answer.
+%
+Connected. Take this REPL, brother, and may it serve you well.
+%
+First Law of Laboratory Work: Hot glass looks exactly the same as cold glass.
+%
+Leahy's Law: If a thing is done wrong often enough, it becomes right.
+%
+Luce's Law: No good deed goes unpunished.
+%
+Putt's Corollary: Every technical hierarchy, in time, develops a competence
+inversion.
+%
+Reed's Law: The utility of large networks, particularly social networks, scales
+exponentially with the size of the network.
+%
+Premature optimization is the root of all evil. — Donald Knuth
+%
+The Pareto Principle: Most things in life are not distributed evenly.
+%
+The KISS principle: Keep it simple, stupid.
+%
+Goodhart's Law: When a measure becomes a target, it ceases to be a good measure.
+%
+Are we consing yet?
+%
+The first thing a man will do for his ideals is lie. — Joseph Aloïs Schumpeter
+%
+“The man who does not read has no advantage over the man who cannot read.”
+— Mark Twain
+%
+Known Knowns, Known Unknowns, Unknown Unknowns.
+%
+Historian’s Rule: Any event, once it has occurred, can be made to appear
+inevitable by a competent historian.
+%
+Dunning—Kruger Effect: If you're incompetent, you can't know you're
+incompetent. The skills you need to produce a right answer
+are exactly the skills you need to recognize what a right answer is.
+Conclusion: Poor performers are not in a position to recognize
+the shortcomings in their performance.
+%
+Gretzky's Truism: You miss 100% of the shots you never take.
+%
+Gresham's Law: Bad money drives out good.
+%
+Glasow's Comment: There's something wrong if you're always right.
+%
+Franklin's Rule: Blessed is he who expects nothing, for he shall not be
+disappointed.
+%
+Fetridge's Law: Important things that are supposed to happen do not happen,
+especially when people are looking.
+%
+Farkus' Law: There will always be a closer parking space than the one you
+found. Goodman's Corollary: But if
+you go looking for it, someone else will already have taken it.
+%
+Hagenbach and Nuremberg's Poor Defense: “I was only following orders, sir. An
+order is an order.”
+%
+McIntyre’s First Law: Under the right circumstances, anything I tell you
+could be wrong.
+%
+Those who don't understand Unix are condemned to reinvent it, poorly.
+— Henry Spencer, in Introducing Regular Expressions (2012) by Michael
+Fitzgerald
+%
+Hoare's Law of Large Problems: Inside every large problem is a small problem
+struggling to get out.
+%
+Due to a shortage of devoted followers, the production of great leaders has
+been discontinued.
+%
+Any sufficiently advanced technology is indistinguishable from a rigged demo.
+%
+Health is merely the slowest possible rate at which one can die.
+%
+It is against the grain of modern education to teach children to program.
+What fun is there in making plans, acquiring discipline in organizing thoughts,
+devoting attention to detail, and learning to be self—critical? — Alan
+Perlis
+%
+Non—Reciprocal Laws of Expectations: Negative expectations yield negative
+results.
+Positive expectations yield negative results.
+%
+Gerrold's Laws of Infernal Dynamics: (1) An object in motion will always be
+headed in the wrong direction.
+(2) An object at rest will always be in the wrong place.
+(3) The energy required to change either one of these states will always be
+more than you wish to expend,
+but never so much as to make the task totally impossible.
+%
+Kinkler's First Law: Responsibility always exceeds authority.
+%
+Kinkler's Second Law: All the easy problems have been solved.
+%
+There are no games on this system.
+%
+Committee Rules: (1) Never arrive on time, or you will be stamped a beginner.
+(2) Don't say anything until the meeting is half over; this stamps you as being
+wise.
+(3) Be as vague as possible; this prevents irritating the others.
+(4) When in doubt, suggest that a subcommittee be appointed.
+(5) Be the first to move for adjournment; this will make you popular — it's
+what everyone is waiting for.
+%
+Ogden's Law: The sooner you fall behind, the more time you have to catch up.
+%
+“About the time we think we can make ends meet, somebody moves the ends.”
+— Herbert Hoover
+%
+Chesterton's Fence: Reforms should not be made until the reasoning behind the
+existing state of affairs is understood.
+%
+I returned, and saw under the sun, that the race is not to the swift, nor the
+battle to the strong, neither yet bread to
+the wise, nor yet riches to men of understanding, nor yet favour to men of
+skill;
+but time and chance happeneth to them all. — Ecclesiastes
+%
+Schmidt's Law: If you mess with a thing long enough, it'll break. Wyszkowski's
+Second Law: Anything can be made to work
+if you fiddle with it long enough.
+%
+Hoover's Affirmation: Blessed are the young for they shall inherit the national
+debt.
+%
+Sueker's Note: If you need "n" items of anything, you will have "n-1" in
+stock.
+%
+Always remember that you are absolutely unique. Just like everyone else. —
+Margaret Mead
+%
+DRY: Don’t repeat yourself. WET: Write everything twice.
+%
+Isaiah's Observation: And judgment is turned away backward, and justice
+standeth afar off: for truth is fallen in the street,
+and equity cannot enter.
+%
+The best things in life are for a fee.
+%
+“It is by the fortune of God that, in this country, we have three benefits:
+freedom of speech, freedom of thought, and the
+wisdom never to use either.” — Mark Twain
+%
+The Sixth Commandment of Frisbee: The greatest single aid to distance is for
+the disc to be going in a
+direction you did not want. (Goes the wrong way = Goes a long way.) — Dan
+Roddick
+%
+Of course you have a purpose — to find a purpose.
+%
+Unix gives you just enough rope to hang yourself — and then a couple
+of more feet, just to be sure. — Eric Allman
+%
+Connected. Hacks and glory await!
+%
+Connected. May the source be with you!
+%
+Survivorship Bias: Concentrating on the people or things that "survived" some
+process and inadvertently
+overlooking those that didn't because of their lack of visibility.
+%
+Curse of Knowledge: When better informed people find it extremely difficult
+to think about problems from
+the perspective of lesser informed people.
+%
+“The best way to control the opposition is to lead it ourselves.” —
+Vladimir Lenin
+%
+Going to church does not make a person religious, nor does going to school make
+a person educated,
+any more than going to a garage makes a person a car.
+%
+What the large print giveth, the small print taketh away.
+%
+Anyone can hold the helm when the sea is calm. — Publius Syrus
+%
+Power corrupts. And atomic power corrupts atomically.
+%
+Nearly all men can stand adversity, but if you want to test a man's character,
+give him power. — Abraham Lincoln
+%
+Now and then an innocent person is sent to the legislature.
+%
+If entropy is increasing, where is it coming from?
+%
+When in doubt, use brute force. — Ken Thompson
+%
+Grelb's Reminder: Eighty percent of all people consider themselves to be above
+average drivers.
+%
+Just when you thought you were winning the rat race, along comes a faster rat!
+%
+The trouble with being punctual is that people think you have nothing more
+important to do.
+%
+To iterate is human, to recurse, divine. — Robert Heller
+%
+Just as most issues are seldom black or white, so are most good solutions
+seldom black or white.
+Beware of the solution that requires one side to be totally the loser and the
+other side to be totally the winner.
+The reason there are two sides to begin with usually is because neither side
+has all the facts.
+Therefore, when the wise mediator effects a compromise, he is not acting from
+political motivation.
+Rather, he is acting from a deep sense of respect for the whole truth. —
+Stephen R. Schwambach
+%
+One reason why George Washington Is held in such veneration: He never blamed
+his problems
+on the former Administration. — George O. Ludcke
+%
+If a tree falls in a forest and no one is around to hear it, does it make a
+sound?
+If you didn't get caught, did you really do it?
+%
+Rhode's Law: When any principle, law, tenet, probability, happening,
+circumstance, or result can in no way be directly,
+indirectly, empirically, or circuitously proven, derived, implied, inferred,
+induced, deducted, estimated, or scientifically
+guessed, it will always for the purpose of convenience, expediency, political
+advantage, material gain, or personal comfort,
+or any combination of the above, or none of the above, be unilaterally and
+unequivocally assumed, proclaimed, and adhered
+to as absolute truth to be undeniably, universally, immutably, and infinitely
+so, until such time as it
+becomes advantageous to assume otherwise, maybe.
+%
+The trouble with doing something right the first time is that nobody
+appreciates how difficult it was.
+%
+Modern Unix is a catastrophe. It’s the “Un—Operating System”:
+unreliable,
+unintuitive, unforgiving, unhelpful, and underpowered. Little is more
+frustrating
+than trying to force Unix to do something useful and nontrivial. — The Unix
+Haters Handbook
+%
+All syllogisms have three parts; therefore this is not a syllogism.
+%
+If you perceive that there are four possible ways in which a procedure can go
+wrong,
+and circumvent these, then a fifth way will promptly develop.
+%
+Miksch's Law: If a string has one end, then it has another end.
+%
+Irrationality is the square root of all evil. — Douglas Hofstadter
+%
+Jone's Law: The man who smiles when things go wrong has thought of someone to
+blame it on.
+%
+Parkinson's Fourth Law: The number of people in any working group tends to
+increase regardless
+of the amount of work to be done.
+%
+Wicker's Law: Government expands to absorb revenue and then some.
+%
+Mr. Cole's Axiom: The sum of the intelligence on the planet is a constant; the
+population is growing.
+%
+Never put off till tomorrow what you can avoid all together.
+%
+“If you give someone your name, they can take your soul. If you give them
+your birthday,
+they can control your life.” — Yuuko Ichihara
+%
+King Solomon's Lament: There is no remembrance of former things; neither shall
+there be any
+remembrance of things that are to come with those that shall come after.
+%
+Friendship: A ship big enough to carry
+two in fair weather, but only one in foul. — The Devil's Dictionary
+%
+“You really think someone would do that? Just go on the internet and tell
+lies?”
+— Buster the Myth Maker
+%
+“We pigs are brainworkers. The whole management and organisation of this farm
+depend on us.
+Day and night we are watching over your welfare. It is for your sake that we
+drink the milk and eat those apples.”
+— George Orwell's Animal Farm
+%
+Andrea: Unhappy the land that has no heroes. Galileo: No, unhappy the land that
+needs heroes.
+— Bertolt Brecht, "Life of Galileo"
+%
+User: A programmer who will believe anything you tell him. — The New Hacker's
+Dictionary
+%
+Testing can show the presence of bugs, but not their absence. — Dijkstra
+%
+Gumperson's Law: The probability of a given event occurring is inversely
+proportional to its desirability.
+%
+It is easier to port a shell than a shell script. — Larry Wall
+%
+Logic doesn't apply to the real world. — Marvin Minsky
+%
+Those who do not do politics will be done in by politics. — French Proverb
+%
+It's not what you know, it's who you know.
+%
+Leibowitz's Rule: When hammering a nail, you will never hit your finger if you
+hold the hammer with both hands.
+%
+When the government's remedies don't match your problem, you
+modify the problem, not the remedy.
+%
+Just because everything is different doesn't mean anything has changed. —
+Irene Peter
+%
+Any great truth can — and eventually will — be expressed as a cliche — a
+cliche is a
+sure and certain way to dilute an idea. For instance, my grandmother used to
+say, "The black
+cat is always the last one off the fence." I have no idea what she meant, but
+at one time,
+it was undoubtedly true. — Solomon Short
+%
+When I was a boy I was told that anybody could become President. Now I'm
+beginning to believe it. — Clarence Darrow
+%
+Science is built up with facts, as a house is with stones. But a collection of
+facts is no more a science than a heap
+of stones is a house. — Henri Poincaré
+%
+Insanity is the final defense.
+%
+Mosher's Law of Software Engineering: Don't worry if it doesn't work right. If
+everything did, you'd be out of a job.
+%
+Swipple's Rule of Order: He who shouts the loudest has the floor.
+%
+There are no solutions. There are only trade-offs. — Thomas Sowell in A
+Conflict of Visions: Ideological Origins of
+Political Struggles
+%
+For the love of life, there's a trade-off. We could loose it all — but we'll
+go down fighting. — David Sylvian
+%
+The nice thing about standards is that there are so many of them to choose
+from. — Andrew S. Tanenbaum
+%
+Real users never know what they want, but they always know when your program
+doesn't deliver it.
+%
+Democracy is a device that ensures we shall be governed no better than we
+deserve. — George Bernard Shaw
+%
+A candidate is a person who gets money from the rich and votes from the poor to
+protect them from each other
+or something like that.
+%
+Fudd's First Law of Opposition: Push something hard enough and it will fall
+over.
+%
+The Roman Rule: The one who says it cannot be done should never interrupt the
+one who is doing it.
+%
+Betteridge's Law of Headlines: Any headline that ends in a question mark can be
+answered by the word no.
+%
+What people say, what people do, and what they say they do are entirely
+different things. — Margaret Mead
+%
+Newton's Flaming Laser Sword: What cannot be settled by experiment is not worth
+debating.
+%
+The Sagan Standard: Extraordinary claims require extraordinary evidence.
+%
+Wirth's Law: Software gets slower more quickly than hardware gets faster.
+%
+Let justice prevail even though the heavens may fall.
+%
+Zawinski's Law: Every program attempts to expand until it can read mail.
+Corollary: Those programs which cannot expand are replaced by ones which can.
+%
+Gates's Law: The speed of software halves every 18 months.
+%
+Lubarsky's Law of Cybernetic Entomology: There is always one more bug.
+%
+With great privilege comes great responsibility.
+%
+Kernighan's Law: Everyone knows that debugging is twice as hard as writing a
+program
+in the first place. So if you're as clever as you can be when you write it, how
+will you ever debug it?
+%
+Wiio's First Law of Communication: Communication usually fails, except by
+accident. Corollary: (1)
+If communication can fail, it will. (2) If communication cannot fail, it still
+most usually fails.
+(3) If communication seems to succeed in the intended way, there's a
+misunderstanding.
+(4) If you are content with your message, communication certainly fails.
+%
+Wiio's Second Law of Communication: If a message can be interpreted in several
+ways, it will be
+interpreted in a manner that maximizes the damage.
+%
+Wiio's Third Law of Communication: There is always someone who knows better
+than you what you meant with your message.
+%
+Wiio's Fourth Law of Communication: The more we communicate, the worse
+communication succeeds. Corollary:
+The more we communicate, the faster misunderstandings propagate.
+%
+Wiio's Fifth Law of Communication: In mass communication, the important thing
+is not how things are but how they seem to be.
+%
+Wiio's Sixth Law of Communication: The importance of a news item is inversely
+proportional to the square of the distance.
+%
+Wiio's Seventh Law of Communication: The more important the situation is, the
+more probable you had forgotten an essential
+thing that you remembered a moment ago.
+%
+“We buy things we don't need with money we don't have to impress people we
+don't like.” — Dave Ramsey
+%
+Just living in the database.
+%
+To protect your rights, we need to prevent others from denying you these rights
+or asking you to surrender these rights.
+Therefore, you have certain responsibilities — responsibilities to respect
+the freedom of others.
+%
+We trust you have received the usual lecture from the local system
+administrator. It usually boils down to these three things:
+(1) Respect the privacy of others.
+(2) Think before you type.
+(3) With great power comes great responsibility.
+%
+Frequency Illusion (Baader—Meinhof Phenomenon): The illusion where something
+that has recently come to one's
+attention suddenly seems to appear with improbable frequency shortly afterwards.
+%
+The Backdraft Phenomenon: A rapid or explosive burning of superheated gasses in
+a fire, caused when oxygen rapidly
+enters an oxygen—depleted environment.
+%
+March comes in like a lion and goes out like a lamb.
+%
+Perhaps the most widespread illusion is that if we were in power we would
+behave very differently from those who now hold it — when, in truth, in
+order to get power we would have to become very much like them.
+%
+Software is much harder to change en masse than hardware. C++ and Java, say,
+are presumably growing faster than plain C, but I bet C will still be around.
+For infrastructure technology, C will be hard to displace. — Dennis Ritchie
+%
+Pray to God, but keep rowing to shore. — Russian Sailor's Proverb
+%
+Do you guys know what you're doing, or are you just hacking?
+%
+Jacquin's Postulate on Democratic Government: No man's life, liberty, or
+property are safe while the
+legislature is in session.
+%
+I never cheated an honest man, only rascals. They wanted something for
+nothing. I gave them nothing for something. — The Yellow Kid
+%
+Seeing is deceiving. It's eating that's believing. — James Thurber
+%
+A great nation is any mob of people which produces at least one honest
+man a century.
+%
+Nothing makes a person more productive than the last minute.
+%
+Don't believe everything you read on the Internet.
+%
+One man's simple is another man's complex.
+%
+Every so often the stars align.
+%
+Nobody wants a backup, everybody wants a restore.
+%
+Kingmaker Scenario: A player who is unable to win has the ability
+to influence who will win.
+%
+Programmers do it bit by bit.
+%
+Brontosaurus Principle: Organizations can grow faster than their brains can
+manage them
+in relation to their environment and to their own physiology:  when this
+occurs, they are
+an endangered species. — Thomas K. Connellan
+%
+Today will be remembered until tomorrow.
+%
+It's ten o'clock. Do you know where your processes are?
+%
+It's ten o'clock. Do you know where your backups are?
+%
+It's ten o'clock. Do you know where the source code is?
+%
+This is a test of the emergency broadcast system. Had there been an
+actual emergency, then you would no longer be here.
+%
+To teach is to learn twice. — Joseph Joubert
+%
+Measure with a micrometer. Mark with chalk. Cut with an axe.
+%
+The so—called lessons of history are for the most part the rationalizations
+of the victors. History is written by the survivors. — Max Lerner
+%
+(1) Everything depends. (2) Nothing is always. (3) Everything is sometimes.
+%
+Ryan's Law: Make three correct guesses consecutively and you will establish
+yourself as an expert.
+%
+Fast, cheap, good: pick one.
+%
+My guidingstar always is, “Get hold of portable property”. — Charles
+Dickens in “Great Expectations”
+%
+If you can lead it to water and force it to drink, it isn't a horse.
+%
+C is quirky, flawed, and an enormous success. — Dennis Ritchie
+%
+Use only as directed.
+%
+If the meanings of “true” and “false” were switched, then this sentence
+would not be false.
+%
+Freedom is slavery. Ignorance is strength. War is peace. — George Orwell's
+1984
+%
+A truth that's told with bad intent
+beats all the lies you can invent. — William Blake
+%
+You don't have to know how the computer works, just how to work the computer.
+%
+It is your concern when your neighbor's wall is on fire. — Quintus Horatius
+Flaccus (Horace)
+%
+Tell the truth and run. — Yugoslav Proverb
+%
+It's not easy, being green. — Kermit The Frog
+%
+Value your freedom or you will lose it, teaches history. ‘Don’t bother us
+with politics’,
+respond those who don't want to learn.
+— Richard Stallman
+%
+A prudent man foreseeth the evil, and hideth himself: but the simple pass on,
+and are punished.
+— Proverbs
+%
+Original thought is like original sin: both happened before you were born
+to people you could not have possibly met. — Fran Lebowitz, “Social
+Studies”
+%
+In order to get a loan you must first prove that you don't need it. Wait, is it
+the other way around?
+%
+“We learn from history that we learn nothing from history.” — George
+Bernard Shaw
+%
+You are the only person to ever get this message.
+%
+Steele's Law: There exist tasks which cannot be done by more than ten men
+or fewer than one hundred.
+%
+For every problem there is one solution which is simple, neat, and wrong.
+— H. L. Mencken
+%
+Rights, Responsibility, Opportunity, and Privilege.
+%
+Measure twice, cut once.
+%
+No matter what happens, there is always someone who knew it would.
+%
+Any sufficiently advanced bug is indistinguishable from a feature.
+— Rich Kulawiec
+%
+Fools rush in where angels fear to tread.
+%
+Jack of all trades, master of some.
+%
+In these matters the only certainty is that there is nothing certain.
+— Pliny the Elder
+%
+“There is no such thing as good writing,
+only good rewriting.” — Robert Graves
+%
+Preudhomme's Law of Window Cleaning: It's on the other side.
+%
+If you think the problem is bad now, just wait until we've solved it. —
+Arthur Kasspe
+%
+Can anything be sadder than work left unfinished? Yes, work never begun.
+%
+If you think the pen is mightier than the sword, the next time someone pulls
+out a sword I'd like to see you get up there with your pen.
+%
+He that teaches himself has a fool for a master.
+— Benjamin Franklin
+%
+Mix's Law: There is nothing more permanent than a temporary building and a
+temporary tax.
+%
+Unix: Some say the learning curve is steep, but you only have to climb it once.
+— Karl Lehenbauer
+%
+Don't kid yourself.  Little is relevant, and nothing lasts forever.
+%
+Politicians are the same all over. They promise to build a bridge even
+where there is no river. — Nikita Khrushchev
+%
+It takes less time to do a thing right than it does to explain why you
+did it wrong. — H. W. Longfellow
+%
+Your code should be more efficient!
+%
+“One of the first things taught in introductory statistics textbooks is that
+correlation
+is not causation. It is also one of the first things forgotten.” — Thomas
+Sowell in
+The Vision of the Anointed
+%
+“One of the sad signs of our times is that we have demonized those who
+produce,
+subsidized those who refuse to produce, and canonized those who complain.”
+— Thomas Sowell in The Vision of the Anointed
+%
+“People make money for themselves, not for their country.”
+— John Bagot Glubb in The Fate of Empires
+%
+“If we are considering the history of our own country, we write at
+length of the periods when our ancestors were prosperous and victorious,
+but we pass quickly over their shortcomings or their defeats.”
+— John Bagot Glubb in The Fate of Empires
+%
+Inner—Platform Effect: The tendency of software architects to create a system
+so customizable
+as to become a replica, and often a poor replica, of the software development
+platform they are using.
+%
+“It doesn't matter how smart you are unless you stop and think.”
+— Thomas Sowell
+%
+“When you want to help people, you tell them the truth. When you want to help
+yourself, you tell them what they want to hear.”
+— Thomas Sowell
+%
+“Intellect is not wisdom.”
+— Thomas Sowell in Intellectuals and Society
+%
+“When people get used to preferential treatment, equal treatment seems like
+discrimination.”
+— Thomas Sowell
+%
+“I am so old that I can remember when other people’s achievements were
+considered to be an inspiration, rather than a grievance.”
+— Thomas Sowell
+%
+The cloud is just someone else's computer.
+%
+Hoffer's Discovery: The grand act of a dying institution is to issue a newly
+revised, enlarged edition of the policies and procedures manual.
+%
+You can tell the ideals of a nation by its advertisements.
+—	Norman Douglas
+%
+“Momentary masters of a fraction of a dot.” — Carl Sagan
+%
+He who is content with his lot probably has a lot.
+%
+“It takes a village to raise a child and somebody said it takes a village
+idiot to believe that.
+It is part of the whole thing of third parties wanting to make decisions for
+which they pay no price for when they’re wrong.”
+— Thomas Sowell
+%
+The best is the enemy of the good.
+%
+“If you want a vision of the future, imagine a boot stamping on a human face
+— forever.”
+— George Orwell's 1984
+%
+The stars are bright. But give no light. The world spins backwards every day.
+— The Singing Sea
+%
+“People who pride themselves on their ‘complexity’ and deride others for
+being ‘simplistic’ should
+realize that the truth is often not very complicated. What gets complex is
+evading the truth.”
+— Thomas Sowell in Barbarians Inside The Gates and Other Controversial Essays
+%
+We aren’t in your region yet.
+%
+“In real open source, you have the right to control your own destiny.” —
+Linus Torvalds
+%
+Embrace, Extend, and Extinguish.
+%
+Astroturfing: The deceptive practice of presenting an orchestrated marketing or
+public
+relations campaign in the guise of unsolicited comments from members of the
+public — fake
+grass roots support.
+%
+The right creature in the right place.
+%
+Weinberg’s Law: If builders built buildings the way the programmers wrote
+programs, the first woodpecker that came along would destroy civilization.
+%
+Feed a dog for three days and he will remember your kindness for three years;
+feed a cat for three years and she will
+forget your kindness in three days.
+%
+If thou faint in the day of adversity, thy strength is small. — Proverbs
+%
+Nobody goes there anymore. It's too crowded. — Yogi Berra
+%
+Force has no place where there is need of skill. — Herodotus
+%
+Drew's Law of Highway Biology: The first bug to hit a clean windshield
+lands directly in front of your eyes.
+%
+If we do not change our direction we are likely to end up where we are headed.
+%
+In theory, there is no difference between theory and practice.  In practice,
+there is.
+%
+The explanation requiring the fewest assumptions is the most likely to be
+correct. — William of Occam
+%
+The probability of someone watching you is proportional to the
+stupidity of your action.
+%
+Hell is empty and all the devils are here. — Shakespeare, "The Tempest"
+%
+“If stupidity got us into this mess, then why can't it get us out?”
+— Will Rogers
+%
+Advice from an old carpenter: measure twice, saw once.
+%
+We must believe in free will. We have no choice. — Isaac B. Singer
+%
+Flon's Law: There is not now, and never will be, a language in
+which it is the least bit difficult to write bad programs.
+%
+This space intentionally left blank.
+%
+Katz' Law: Men and nations will act rationally when
+all other possibilities have been exhausted.
+%
+History teaches us that men and nations behave wisely once they have
+exhausted all other alternatives. — Abba Eban
+%
+Just fight it out.
+%
+Murphy's Eleventh Law: It is impossible to make anything foolproof because
+fools are so ingenious.
+%
+Corporate Republic: A theoretical form of government run primarily like a
+business, involving a board of directors and executives, in which all aspects
+of society are privatized by a single, or small groups of companies.
+%
+Measure once, cut thrice.
+%
+Oppression: The malicious or unjust treatment or exercise of power,
+often under the guise of governmental authority or cultural opprobrium.
+%
+No man is an island entire of itself; every man
+is a piece of the continent, a part of the main. — John Donne
+%
+Deception: An act or statement which misleads, hides the truth, or promotes a belief,
+concept, or idea that is not true. It is often done for personal gain or advantage.
+Deception can involve dissimulation, propaganda, and sleight of hand, as well as
+distraction, camouflage, or concealment.
+%
+Brooks's Law: Adding manpower to a late software project makes it later.
+%
+The right tool for the right job.
+%
+Failed to suspend system via logind: There's already a shutdown or
+sleep operation in progress.
+%
+Whistler's Law: You never know who is right, but you always know who is in charge.
+%
+You must realize that the computer has it in for you. The irrefutable
+proof of this is that the computer always does what you tell it to do.
+%
+I heard a definition of an intellectual, that I thought was very interesting:
+a man who takes more words than are necessary to tell more than he knows.
+— Dwight D. Eisenhower
+%
+Appearances often are deceiving. — Aesop
+%
+Prices subject to change without notice.
+%
+No man is an island if he's on at least one mailing list.
+%
+Talent does what it can.
+Genius does what it must.
+You do what you get paid to do.
+%
+Experiments must be reproducible; they should all fail in the same way.
+%
+When the ax entered the forest, the trees said, "The handle is one of us!"
+— Turkish Proverb
+%
+We have seen the light at the end of the tunnel, and it's out.
+%
+Why can't you be a non-conformist like everyone else?
+%
+Subject to change without notice.
+%
+People tend to make rules for others and exceptions for themselves.
+%
+Today is the tomorrow you worried about yesterday.
+%
+Van Roy's Truism: Life is a whole series of circumstances beyond your control.
+%
+Competition Law: A law that promotes or seeks to maintain market competition
+by regulating anti-competitive conduct by companies.
+%
+Don't believe everything you see or hear on the news.
+%
+Newton's Third Law: For every action, there is an equal and opposite reaction.
+%
+The Fediverse: An ensemble of federated servers that are used for web publishing
+and file hosting, which while independently hosted, can intercommunicate with each other.
+%
+There is enough treachery, hatred, violence, absurdity in the average
+human being to supply any given army on any given day. — The Genius of the Crowd
+%
+Don't be evil.
+%
+The personal becomes the political.
+%
+It is when I struggle to be brief that I become obscure. — Quintus Horatius
+Flaccus (Horace)
+%
+Honesty is the best policy, but insanity is a better defense.
+%
+History is the version of past events that people have decided to agree on.
+— Napoleon Bonaparte, "Maxims"
+%
+Finster's Law: A closed mouth gathers no feet.
+%
+The medium is the message. — Marshall McLuhan
+%
+Shick's Law: There is no problem a good miracle can't solve.
+%
+A year spent in artificial intelligence is enough to make one believe in God.
+— Alan Perlis
+%
+Kington's Law of Perforation: If a straight line of holes is made in a piece
+of paper, such as a sheet of stamps or a check, that line becomes the strongest
+part of the paper.
+%
+Lisp users: Due to the holiday next Monday, there will be no garbage collection.
+%
+Anything cut to length will be too short.
+%
+Arnold's Laws of Documentation:
+(1) If it should exist, it doesn't.
+(2) If it does exist, it's out of date.
+(3) Only documentation for useless programs transcends the first two laws.
+%
+If you do something right once, someone will ask you to do it again.
+%
+This land is mine, God gave this land to me. — The Exodus Song
+%
+Here's a dirty little secret: Very few people know what they're doing.
+%
+Never trust a computer you can't repair yourself.
+%
+Fresco's Discovery: If you knew what you were doing you'd probably be bored.
+Corollary: Just because you're bored doesn't mean you know what you're doing.
+%
+Maryann's Law: You can always find what you're not looking for.
+%
+Langer's Law: If the line moves quickly, you're in the wrong line.
+%
+Beryl's Second Law: It's always easy to see both sides of an issue
+you are not particularly concerned about.
+%
+Herman's Law: A good scapegoat is almost as good as a solution.
+%
+Irene's Law: There is no right way to do the wrong thing.
+%
+The world wants to be deceived. — Sebastian Brant
+%
+No matter what anyone tells you, isometric exercises cannot be done
+quietly at your desk at work. People will suspect manic tendencies as
+you twitter around in your chair.
+%
+How many comments on the Internet do you surmise are fake?
+%
+People never lie so much as after a hunt, during a war, or before an election.
+— Otto Von Bismarck
+%
+If you wish to succeed, consult three old people. — Chinese Proverb
+%
+If you resist reading what you disagree with, how will you ever acquire
+deeper insights into what you believe? The things most worth reading
+are precisely those that challenge our convictions. — Unknown
+%
+Linux sucks.
+%
+Will I be accused of being an elitist if I use Arch Linux?
+%
+We are Microsoft. You will be assimilated. Resistance is futile.
+%
+Occam's Eraser: The philosophical principle that even the simplest
+solution is bound to have something wrong with it.
+%
+Membership dues are not refundable.
+%
+If I do not want others to quote me, I do not speak. — Phil Wayne
+%
+Your mileage may vary.
+%
+Laura's Law: No child throws up in the bathroom.
+%
+Another day, another dollar.
+%
+Most public domain software is free, at least at first glance.
+%
+When we write programs that "learn", it turns out we do and they don't.
+%
+“All animals are equal, but some animals are more equal than others.”
+— George Orwell's Animal Farm
+%
+“Perhaps the most dangerous by-product of the age of intellect is
+the unconscious growth of the idea that the human brain can solve
+the problems of the world ... In a wider national sphere, the survival
+of the nation depends basically on the loyalty and self‑sacrifice of
+the citizens.”
+— John Bagot Glubb in The Fate of Empires and Search for Survival
+%
+If everything seems to be going well, you have obviously overlooked something.
+%
+Rules for thee, but not for me.
+%
+Worrying is like rocking in a rocking chair — It gives you something to do,
+but it doesn't get you anywhere.
+%
+Some people are backed by cosmic luck.
+%
+You can't handle the truth.
+%
+Gyre: A spiral or vortex.
+%
+The decentralized web is coming.
+%
+The children of the magenta line.
+%
+I've got no strings. — Pinocchio
+%
+The systemd-journald sucks.
+%
+Fame and fortune.
+%
+Every man has his price.
+%
+A morsel of genuine history is a thing so rare as to be always valuable.
+— Thomas Jefferson
+%
+Every way of a man is right in his own eyes. — Proverbs
+%
+The typical citizen drops down to a lower level of mental
+performance as soon as he enters the political field. He argues and
+analyzes in a way which he would readily recognize as infantile within
+the sphere of his real interests. He becomes a primitive again.
+— Joseph Aloïs Schumpeter
+%
+“This civilization is rapidly passing away, however. Let us rejoice
+or else lament the fact as much as everyone of us likes;
+but do not let us shut our eyes to it.”
+— Joseph Aloïs Schumpeter in Capitalism, Socialism and Democracy
+%
+“The masses have not always felt themselves to be frustrated and
+exploited. But the intellectuals that formulated their views for
+them have always told them that they were, without necessarily
+meaning by it anything precise.”
+— Joseph Aloïs Schumpeter in Capitalism, Socialism, and Democracy
+%
+The stock exchange is a poor substitute for the Holy Grail.
+— Joseph Aloïs Schumpeter
+%
+Advice from an old carpenter: Use the right tool for the right job.
+%
+Hypocrisy: A pretense of having a virtuous, moral, or religious character.
+%
+The mob is a society of bodies voluntarily bereaving themselves of
+reason, and traversing its work. The mob is man voluntarily descending
+to the nature of the beast. — Ralph Waldo Emerson
+%
+A mob kills the wrong man was flashed in a newspaper headline lately.
+%
+Most people have two reasons for doing anything — a good reason, and
+the real reason.
+%
+Formatted to fit your screen.
+%
+Magary's Principle:
+When there is a public outcry to cut deadwood and fat from any
+government bureaucracy, it is the deadwood and the fat that do
+the cutting, and the public's services are cut.
+%
+Priming: The phenomenon whereby exposure to one stimulus influences
+a response to a subsequent stimulus, without conscious guidance
+or intention.
+%
+Absence of evidence is not evidence of absence.
+%
+YAML sucks.
+%
+Kubernetes sucks.
+%
+Sacred cow: An idea, custom, person, or institution unreasonably
+held to be immune to criticism.
+%
+Everybody wants to be a cat.
+%
+Today is what happened to yesterday.
+%
+The questions remain the same. The answers are eternally variable.
+%
+You want it in one line? Does it have to fit in 80 columns?
+— Larry Wall
+%
+As long as the answer is right, who cares if the question is wrong?
+%
+“The belly is an ungrateful wretch, it never remembers past favors,
+it always wants more tomorrow.”
+— Aleksandr Solzhenitsyn in One Day in the Life of Ivan Denisovich
+%
+“Beat a dog once and you only have to show him the whip.”
+— Aleksandr Solzhenitsyn in One Day in the Life of Ivan Denisovich
+%
+Truth has no special time of its own. Its hour is now — always.
+— Albert Schweitzer
+%
+My computer can beat up your computer. — Karl Lehenbauer
+%
+Curiosity killed the cat, but satisfaction brought her back to life.
+%
+If you are good, you will be assigned all the work. If you are real
+good, you will get out of it.
+%
+What orators lack in depth they make up in length.
+%
+You climb to reach the summit, but once there, discover that all roads
+lead down. — Stanislaw Lem in "The Cyberiad"
+%
+The people sensible enough to give good advice are usually sensible
+enough to give none.
+%
+Freedom of the press is for those who happen to own one.
+— A.J. Liebling
+%
+We are all born equal ... just some of us are more equal than others.
+%
+What we cannot speak about we must pass over in silence.
+— Wittgenstein
+%
+The way of the world is to praise dead saints and prosecute live ones.
+— Nathaniel Howe
+%
+“Has it ever occcured to you, Winston, that by the year 2050, at the
+very latest, not a single human being will be alive who could
+understand such a conversation as we are having now?”
+— George Orwell in 1984
+%
+“With software there are only two possibilites: either the users
+control the programme or the programme controls the users. If
+the programme controls the users, and the developer controls
+the programme, then the programme is an instrument of unjust power.”
+— Richard Stallman
+%
+Learned men are the cisterns of knowledge, not the fountainheads.
+%
+You can go anywhere you want if you look serious and carry a clipboard.
+%
+Look! Before our very eyes, the future is becoming the past.
+%
+Linux is obsolete. — Andrew Tanenbaum
+%
+Every man thinks God is on his side. — Jean Anouilh, "The Lark"
+%
+Man is by nature a political animal. — Aristotle
+%
+Be not deceived: evil communications corrupt good manners.
+%
+Divide first, then conquer.
+%
+The game is rigged.

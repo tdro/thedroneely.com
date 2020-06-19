@@ -48,8 +48,7 @@
 
                     <span class="quote marginnote leftnote">
                     <span class="has-text-weight-bold has-margin-bottom-sm is-block">Random Quote</span>
-                    <?php $quote = shell_exec('fortune quotes'); ?>
-                    <?php echo $quote; ?>
+                    <?php echo shell_exec('fortune ' . dirname($_SERVER['DOCUMENT_ROOT']) . '/generators/fortune/quotes.fortune'); ?>
                     </span>
 
                     </div>
