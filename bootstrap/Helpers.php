@@ -50,7 +50,7 @@ function fetch(string $uri, string $field)
           return;
     }
 
-    $config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';
+    $config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/config.php';
 
     $request = file_get_contents(
         $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME']

@@ -7,7 +7,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/vendor/autoload.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/bootstrap/Helpers.php';
 
 /* source config file */
-$config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/AppConfig.php';
+$config = include $_SERVER['DOCUMENT_ROOT'] . '/..' . '/config.php';
 
 /* connect database */
 $contact['database'] = new QueryBuilder(Connection::make($config['database']));

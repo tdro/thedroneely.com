@@ -35,7 +35,7 @@ class Form
     public function submit()
     {
         // Include mail config
-        $config = include '../AppConfig.php';
+        $config = include '../config.php';
 
         $mail = new PHPMailer(true);
 
