@@ -1,0 +1,4 @@
+#!/bin/sh -eu
+cachedir=$(dirname "$(pwd)")/app/storage/cache;
+rm -r "${cachedir:?}/"* > /dev/null 2>&1 || { echo "Nothing to invalidate in ${cachedir:?}" && exit; };
+echo "Cache invalidated in ${cachedir:?}";
