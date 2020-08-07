@@ -1,4 +1,7 @@
 {
+    "config": {
+      "autoloader-suffix": "tdro"
+     },
     "autoload" : {
         "classmap": [ "./" ],
         "exclude-from-classmap": [ "/cockpit/" ]
