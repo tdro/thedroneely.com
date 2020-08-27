@@ -4516,8 +4516,11 @@ blockquote p { font-size: 1.3rem !important; }
 }
 
 #isso-thread .textarea {
+    height: auto !important;
     line-height: 1.8;
     outline: 0;
+    overflow: auto;
+    resize: auto;
 }
 
 #isso-thread .textarea.placeholder {
