@@ -4103,6 +4103,8 @@ video { display: inline-block; box-shadow: 0 0.25rem 1rem rgba(48,55,66,.3); }
 
 p code { font-size: 1rem; }
 
+strong code { font-weight: 700; }
+
 a { border-bottom: 1px solid #999; color: #014cc6; cursor: pointer; text-decoration: none; }
 a:hover { border-bottom: 2px solid #999; }
 
