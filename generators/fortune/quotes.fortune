@@ -53,7 +53,7 @@ Thyme's Law: Everything goes wrong at once.
 %
 Netscape is not a newsreader, and probably never shall be. — Tom Christiansen
 %
-You can learn many things from children.  How much patience you have,
+You can learn many things from children. How much patience you have,
 for instance. — Franklin P. Jones
 %
 To be is to program.
@@ -61,7 +61,7 @@ To be is to program.
 There's no easy quick way out, we're gonna have to live through our
 whole lives, win, lose, or draw. — Walt Kelly
 %
-Illiterate?  Write today, for free help!
+Illiterate? Write today for free help!
 %
 Like winter snow on summer lawn, time past is time gone.
 %
@@ -80,7 +80,10 @@ Do more than anyone expects, and pretty soon everyone will expect more.
 Turnaucka's Law: The attention span of a computer is only as long as its
 electrical cord.
 %
-Power tends to corrupt, absolute power corrupts absolutely. — Lord Acton
+Power tends to corrupt and absolute power corrupts absolutely.
+Great men are almost always bad men, even when they exercise influence
+and not authority; still more when you superadd the tendency of the
+certainty of corruption by authority. — Lord Acton
 %
 We can predict everything, except the future.
 %
@@ -305,7 +308,8 @@ confuses it with feeling. — Thomas Sowell
 It takes considerable knowledge just to realize the extent of your own
 ignorance. — Thomas Sowell
 %
-If you only have a hammer, you tend to see every problem as a nail. — Maslow
+If you only have a hammer, you tend to see every problem as a nail.
+— Maslow's Golden Hammer
 %
 Ninety percent of everything is crap. — Theodore Sturgeon
 %
@@ -380,8 +384,7 @@ he knows something.  Or something like that.
 %
 “The biggest problem facing software engineering is the one it will
 never solve — politics.” — Gavin Baker, ca 1996, An unusually cynical
-moment inspired
-by working on a large project beseiged by politics.
+moment inspired by working on a large project besieged by politics.
 %
 (1) The world is full of fascinating problems waiting to be solved.
 (2) No problem should ever have to be solved twice.
@@ -606,12 +609,6 @@ Known Knowns, Known Unknowns, Unknown Unknowns.
 Historian’s Rule: Any event, once it has occurred, can be made to appear
 inevitable by a competent historian.
 %
-Dunning—Kruger Effect: If you're incompetent, you can't know you're
-incompetent. The skills you need to produce a right answer
-are exactly the skills you need to recognize what a right answer is.
-Conclusion: Poor performers are not in a position to recognize
-the shortcomings in their performance.
-%
 Gretzky's Truism: You miss 100% of the shots you never take.
 %
 Gresham's Law: Bad money drives out good.
@@ -689,8 +686,7 @@ existing state of affairs is understood.
 I returned, and saw under the sun, that the race is not to the swift, nor the
 battle to the strong, neither yet bread to
 the wise, nor yet riches to men of understanding, nor yet favour to men of
-skill;
-but time and chance happeneth to them all. — Ecclesiastes
+skill; but time and chance happeneth to them all. — Ecclesiastes
 %
 Schmidt's Law: If you mess with a thing long enough, it'll break. Wyszkowski's
 Second Law: Anything can be made to work
@@ -751,6 +747,8 @@ What the large print giveth, the small print taketh away.
 Anyone can hold the helm when the sea is calm. — Publius Syrus
 %
 Power corrupts. And atomic power corrupts atomically.
+%
+Power corrupts. And big power corrupts bigly.
 %
 Nearly all men can stand adversity, but if you want to test a man's character,
 give him power. — Abraham Lincoln
@@ -1467,7 +1465,7 @@ No matter what anyone tells you, isometric exercises cannot be done
 quietly at your desk at work. People will suspect manic tendencies as
 you twitter around in your chair.
 %
-How many comments on the Internet do you surmise are fake?
+How many comments on the internet do you surmise are fake?
 %
 People never lie so much as after a hunt, during a war, or before an election.
 — Otto Von Bismarck
@@ -1633,20 +1631,18 @@ enough to give none.
 Freedom of the press is for those who happen to own one.
 — A.J. Liebling
 %
-We are all born equal ... just some of us are more equal than others.
-%
 What we cannot speak about we must pass over in silence.
 — Wittgenstein
 %
 The way of the world is to praise dead saints and prosecute live ones.
 — Nathaniel Howe
 %
-“Has it ever occcured to you, Winston, that by the year 2050, at the
+“Has it ever occurred to you, Winston, that by the year 2050, at the
 very latest, not a single human being will be alive who could
 understand such a conversation as we are having now?”
-— George Orwell in 1984
+— George Orwell's 1984
 %
-“With software there are only two possibilites: either the users
+“With software there are only two possibilities: either the users
 control the programme or the programme controls the users. If
 the programme controls the users, and the developer controls
 the programme, then the programme is an instrument of unjust power.”
@@ -1669,3 +1665,721 @@ Be not deceived: evil communications corrupt good manners.
 Divide first, then conquer.
 %
 The game is rigged.
+%
+This service is no longer available.
+%
+Gamification: The application of game-design elements and
+game principles in non-game contexts.
+%
+You made this? I made this.
+%
+“Tomorrow’s illiterate will not be the man who can’t read;
+he will be the man who has not learned how to learn.”
+— Alvin Toffler's Future Shock
+%
+How users read on the web: They don't. — Jakob Nielsen
+%
+Wilt thou set thine eyes upon that which is not? For riches
+certainly make themselves wings; they fly away as
+an eagle toward heaven. — Proverbs
+%
+Maybe GitHub was down?
+%
+Babylon was taken in one night.
+%
+Move fast and fix things.
+%
+Sharp like an edge of a samurai sword.
+The mental blade cuts through flesh and bone.
+Though my mind’s at peace, the world’s out of order.
+Missing the inner heat, life gets colder.
+— Nujabes’ Battlecry
+%
+A freelancer.
+A battle cry of a hawk make a dove fly and a tear dry.
+Wonder why a lone wolf don't run with a clan.
+Only trust your instincts and be one with the plan.
+— Nujabes’ Battlecry
+%
+The ultimate reward is honor, not awards.
+At odds with the times in wars with no lords.
+— Nujabes’ Battlecry
+%
+“You never change things by fighting the existing reality.
+To change something, build a new model that makes the existing model obsolete.”
+— Richard Buckminster 'Bucky' Fuller
+%
+“If you have always believed that everyone should play by the same rules and be
+judged by the same standards, that would have gotten you labeled a radical 50 years ago,
+a liberal 25 years ago and a racist today.”
+— Thomas Sowell, born in the 1930's
+%
+The web is not just Firefox or Chrome.
+%
+The algorithm is your boss.
+%
+Who needs documentation anyway?
+%
+“Sooner or later, everything old is new again.”
+― Stephen King, The Colorado Kid
+%
+Public Service Announcement: The production of great leaders has
+been discontinued.
+%
+Three questions that would destroy most arguments: Compared to what?
+At what cost? What hard evidence do you have? — Thomas Sowell
+%
+“Less than fifty years after the amazing scientific discoveries under Mamun,
+the Arab Empire collapsed. Wonderful and beneficent as was the
+progress of science, it did not save the empire from chaos.”
+― John Bagot Glubb in The Fate of Empires and Search for Survival
+%
+“Another remarkable and unexpected symptom of national decline is the
+intensification of internal political hatreds. One
+would have expected that, when the survival
+of the nation became precarious, political
+factions would drop their rivalry and stand
+shoulder-to-shoulder to save their country.”
+― John Bagot Glubb in The Fate of Empires and Search for Survival
+%
+“In short, numbers are accepted as evidence when they agree with
+preconceptions, but not when they don’t.”
+― Thomas Sowell in The Vision of the Anointed
+%
+“Civilizations die from suicide, not by murder.”
+― Arnold Toynbee
+%
+“Throughout history many nations have suffered a physical defeat,
+but that has never marked the end of a nation. But when a
+nation has become the victim of a psychological defeat,
+then that marks the end of a nation.”
+― Ibn Khaldun in The Muqaddimah: An Introduction to History, 1377
+%
+You are not authorized to repair this device.
+%
+Minority rule. Majority rule.
+%
+Up and down go the arguers getting nowhere fast.
+%
+Echo chambers and epistemic bubbles.
+%
+What's old is new again.
+%
+Cease and desist.
+%
+The network effect.
+%
+“Let us not look back in anger, nor forward in fear, but
+around us in awareness.” ― James Thurber
+%
+We are experiencing system trouble ― do not adjust your terminals.
+%
+We the unwilling, led by the ungrateful, are doing the impossible.
+We've done so much, for so long, with so little,
+that we are now qualified to do something with nothing. ― Unknown
+%
+Politics is the ability to foretell what is going to happen tomorrow, next
+week, next month, and next year. And to have the ability afterwards to
+explain why it didn't happen. ― Winston Churchill
+%
+Knocked, you weren't in. ― Opportunity
+%
+Information asymmetry.
+%
+Gilb's First Law of Unreliability:
+Computers are unreliable, but humans are even more
+unreliable. Corollary: At the source of every error which is
+blamed on the computer you will find at least two
+human errors, including the error of blaming it on
+the computer.
+%
+Gilb's Second Law of Unreliability:
+Any system which depends on human reliability is
+unreliable.
+%
+Gilb's Third Law of Unreliability:
+Undetectable errors are infinite in variety, in
+contrast to detectable errors, which by definition are limited.
+%
+Gilb's Fourth Law of Unreliability:
+Investment in reliability will increase until it exceeds the
+probable cost of errors, or until someone insists on getting
+some useful work done.
+%
+You get what you pay for.
+%
+Make a wish, it just might come true.
+%
+It is easier to change the specification to fit the program
+than vice versa.
+%
+Politicians speak for their parties, and parties never are, never have
+been, and never will be wrong. ― Walter Dwight
+%
+Too clever is dumb. Too dumb is clever.
+%
+Made with real ingredients.
+%
+All that is gold does not glitter, not all those who wander are lost.
+%
+Just because a message may never be received does not mean it is
+not worth sending.
+%
+A novice was trying to fix a broken lisp machine by turning the
+power off and on. Knight, seeing what the student was doing spoke sternly,
+"You cannot fix a machine by just power-cycling it with no understanding
+of what is going wrong." Knight turned the machine off and on. The
+machine worked.
+%
+One size fits all, doesn't fit anyone.
+%
+Something's rotten in the state of Denmark. ― Shakespeare
+%
+All generalizations are false, including this one.
+― Unknown
+%
+No snowflake in an avalanche ever feels responsible.
+%
+Shut off the engine before fueling.
+%
+There's an old proverb that says just about whatever you want it to.
+%
+There's a quote that says just about whatever you want it to.
+%
+Perhaps one possible reason that things aren't going according to plan
+is that there never was a plan in the first place.
+%
+Rules, Regulations, and Requirements.
+%
+Bots. Bots everywhere.
+%
+Remember, Grasshopper, falling down 1000 stairs begins by tripping over
+the first one. ― Confusion
+%
+Money makes the world go round. Nothing more, nothing less.
+%
+If complexity got us into this mess, then why can't it get us out?
+%
+The Four Olds: Old Customs, Old Culture, Old Habits, and Old Ideas
+%
+What is the opposite of clickbait?
+%
+Might makes right: History is written by the victors.
+%
+You cannot stop link rot.
+%
+When in trouble or in doubt,
+run in circles, scream and shout.
+%
+The biggest problem with communication is the illusion that it has occurred.
+%
+“Of all men’s miseries the bitterest is this: to know so much and
+to have control over nothing.”
+― Herodotus, The Histories
+%
+Click Farm: A place where a large group of workers are hired
+to click on paid advertising links.
+%
+There are two sides to every issue: one side is right and the
+other is wrong, but the middle is always evil. The man who is
+wrong still retains some respect for truth, if only by accepting
+the responsibility of choice. But the man in the middle is the
+knave who blanks out the truth in order to pretend that no
+choice or values exist. ― Ayn Rand, Atlas Shrugged
+%
+If wishes were horses, beggars would ride.
+%
+The best lack all conviction, while the worst
+are full of passionate intensity. ― William Butler Yeats
+%
+NixOS sucks.
+%
+Software is utterly broken.
+%
+To continue reading, subscribe today.
+%
+The man who does not read code has no advantage
+over the man who cannot read code.
+%
+Fortune favors the fortunate.
+%
+It is much easier to suggest solutions when you know
+nothing about the problem.
+%
+The trouble with computers is that they do what you tell them, not what
+you want. ― D. Cohen
+%
+War is delightful to those who have had no experience of it.
+― Desiderius Erasmus Roterodamus
+%
+Every so often the algorithm consults /dev/random for advice.
+%
+Everyone thinks they are reasonable.
+%
+It's only a matter of time.
+%
+The well has been poisoned.
+%
+Zero trust.
+%
+Lisp, Lisp, Lisp Machine,
+Lisp Machine is Fun.
+Lisp, Lisp, Lisp Machine,
+Fun for everyone.
+%
+Don't panic.
+%
+We are inclined to believe those we do not know, because they have
+never deceived us. ― Samuel Johnson
+%
+Knowledge is of two kinds. We know a subject ourselves, or
+we know where we can find information upon it.
+― Samuel Johnson
+%
+Join in on the new game that's sweeping the country.
+It's called "Bureaucracy". Everybody stands in a circle.
+The first person to do anything loses. Start!
+%
+An optimist believes we live in the best world possible;
+a pessimist fears that this is true.
+%
+As of next week, passwords will be entered in morse code.
+%
+If life is merely a game, the question still remains: for whose amusement?
+%
+Just read the instructions.
+%
+Like, subscribe, and hit the bell icon.
+%
+All systems operational.
+%
+Justice standeth afar off.
+%
+Speak your mind at your own peril.
+%
+My hammer is better than your hammer.
+%
+The question of whether computers can think is just like the question of
+whether submarines can swim. ― Edsger W. Dijkstra
+%
+Weiner's Law of Libraries: There are no answers, only cross references.
+%
+Nothing is ever a total loss; it can always serve as a bad example.
+%
+Meader's Law: Whatever happens to you, it will previously
+have happened to everyone you know, only more so.
+%
+Most seminars have a happy ending. Everyone's glad when they're over.
+%
+He who fights and runs away lives to fight another day.
+%
+Youth is when you blame all your troubles on your parents; maturity is
+when you learn that everything is the fault of the younger generation.
+%
+Reading is to the mind what exercise is to the body.
+%
+Never put off until tomorrow what you can do today. There might be a
+law against it by that time.
+%
+Wisdom is better than weapons of war.
+%
+Put all eggs in one basket. Make sure to count them before they hatch.
+%
+“Please, sir, I want some more.” ― Charles Dickens, Oliver Twist
+%
+The wise man's eyes are in his head.
+%
+Bread and circuses.
+%
+The forty―eight laws of weakness.
+%
+Silent majorities, loud minorities.
+%
+The poor is hated even of his own neighbour:
+but the rich hath many friends.
+― Proverbs
+%
+Beware of those who talk a good metagame.
+%
+Just because you can, doesn't mean you should.
+%
+Even if you can deceive people about a product
+through misleading statements,
+sooner or later the product will speak for itself.
+―	Hajime Karatsu
+%
+Normal times may possibly be over forever.
+%
+Many people are desperately looking for some wise advice which will
+recommend that they do what they want to do.
+%
+Did it ever occur to you that fat chance and slim chance
+mean the same thing? Or that we drive on parkways and park
+on driveways?
+%
+To believe in personal responsibility would be to destroy the whole
+special role of the anointed, whose vision casts them in the role
+of rescuers of people treated unfairly by society.
+― Thomas Sowell, The Vision of the Anointed: Self-Congratulation
+as a Basis for Social Policy
+%
+Why be difficult when, with a bit of effort, you could
+be impossible?
+%
+Those who don't know, talk. Those who don't talk, know.
+%
+No one lives forever.
+%
+Dark Pattern: An interface that has been carefully crafted to
+mislead a user.
+%
+When a fellow says, "It ain't the money but the principle of the thing,"
+it's the money. ― Kim Hubbard
+%
+Major premise: Sixty men can do sixty times as much work as one man.
+Minor premise: A man can dig a posthole in sixty seconds.
+Conclusion: Sixty men can dig a posthole in one second.
+― The Devil's Dictionary
+%
+Does freedom of speech actually exist?
+%
+Let us count the beans.
+%
+The uploader has not made this video available in your country.
+%
+Clickbait works every time.
+%
+You can be replaced by this computer, maybe.
+%
+People will do tomorrow what they did today because that is what they
+did yesterday.
+%
+Everything might be different in the present if only one thing had
+been different in the past.
+%
+Fiefdoms still exist.
+%
+Where there is a personality, there is a cult.
+%
+Look on my Works, ye Mighty, and despair!
+Nothing beside remains. ― Percy Bysshe Shelley's Ozymandias
+%
+Everything ends badly. Otherwise it wouldn't end.
+%
+Imagine if every Thursday your shoes exploded if you tied them the usual
+way. This happens to us all the time with computers, and nobody thinks of
+complaining. ― Jeff Raskin
+%
+Utility is when you have one telephone, luxury is when you have two,
+opulence is when you have three ― and paradise is when you have none.
+―	Doug Larson
+%
+It is fortune, not wisdom, that rules man's life.
+%
+Fact or Opinion.
+%
+Even the earth itself cannot contain all the evil.
+%
+Many are called, few are chosen. Fewer still get to do the choosing.
+%
+“Liberty is always dangerous, but it is the safest thing we have.”
+― Harry Emerson Fosdick
+%
+People who claim they don't let little things bother them have never
+slept in a room with a single mosquito.
+%
+Now there was found in it a poor wise man, and he by his wisdom
+delivered the city; yet no man remembered that same poor man.
+— Ecclesiastes
+%
+If you're happy, you're successful.
+%
+The internet is the greatest game of telephone in existence.
+%
+Crush the competition.
+%
+Buy the competition.
+%
+Those of you who think you know everything are annoying those of
+us who do.
+%
+It is easier to find people fit to govern themselves than
+people fit to govern others. — Lord Acton
+%
+“Everybody likes to get as much power as circumstances
+allow, and nobody will vote for a self-denying ordinance.”
+— Lord Acton
+%
+“Official truth is not actual truth.” — Lord Acton
+%
+Welcome to dependency hell.
+%
+Talk is truly cheap.
+%
+This website is too bloated.
+%
+After the game the king and the pawn go in the same box.
+—	Italian Proverb
+%
+Experience is a good teacher, but she sends in terrific bills.
+— Minna Antrim, “Naked Truth and Veiled Allusions”
+%
+It's a good thing we don't get all the government we pay for.
+%
+The kind of danger people most enjoy is the kind they can watch from
+a safe place.
+%
+The truth eventually comes out.
+%
+Newer isn’t always better.
+%
+He who foresees calamities suffers them twice over.
+%
+Sometimes you don't get what you pay for.
+%
+Always sort by controversial.
+%
+Once they go up, who cares where they come down?
+That's not my department.
+%
+And what might your name be? “Alexander.” So, you can talk?
+“Y-Yes, sir.” Take him back! He can still talk!
+— Pinocchio's Pleasure Island
+%
+Flattery will get you everywhere.
+%
+According to the latest official figures, 43% of all
+statistics are totally worthless.
+%
+Unix Express: All passengers bring a piece of the aeroplane and a
+box of tools with them to the airport. They gather on
+the tarmac, arguing constantly about what kind of plane
+they want to build and how to put it together. Eventually,
+the passengers split into groups and build several different aircraft,
+but give them all the same name. Some passengers actually
+reach their destinations. All passengers believe they got there.
+%
+The network effect is powerful.
+%
+The strong give up and move away, while the weak give up and stay.
+%
+Academic politics is the most vicious and bitter form of politics,
+because the stakes are so low. — Wallace Sayre
+%
+Stolen waters are sweet.
+%
+“The reasonable man adapts himself to the world: the unreasonable
+one persists in trying to adapt the world to himself. Therefore
+all progress depends on the unreasonable man.”
+— George Bernard Shaw, Man and Superman
+%
+As I pass through my incarnations in every age and race,
+I make my proper prostrations to the Gods of the market-place.
+— Rudyard Kipling, The Gods of the Copybook Headings
+%
+Maybe users like spam?
+%
+Appeal to Novelty: It's current year, you're wrong.
+%
+A poor man that oppresseth the poor is like a sweeping rain which
+leaveth no food. — Proverbs
+%
+Talking past each other: A situation where two or more people talk
+about different subjects, while believing that they are talking
+about the same thing.
+%
+Not all problems need technological solutions.
+%
+Many times a technical solution merely replaces old problems with
+new ones.
+%
+The cheapest, fastest, and most reliable components are those that
+aren’t there. — Gordon Bell
+%
+Controlling complexity is the essence of computer programming.
+— Brian Kernighan
+%
+UNIX was not designed to stop its users from doing stupid things,
+as that would also stop them from doing clever things. — Doug Gwyn
+%
+Life is too short to run proprietary software. — Bdale Garbee
+%
+The central enemy of reliability is complexity. — Geer
+%
+Essentially everyone, when they first build a distributed
+application, makes the following eight assumptions.
+All prove to be false in the long run and all cause big
+trouble and painful learning experiences.
+(1) The network is reliable.
+(2) Latency is zero.
+(3) Bandwidth is infinite.
+(4) The network is secure.
+(5) Topology doesn’t change.
+(6) There is one administrator.
+(7) Transport cost is zero.
+(8) The network is homogeneous.
+— Peter Deutsch
+%
+Most software today is very much like an Egyptian
+pyramid with millions of bricks piled on top of each other,
+with no structural integrity, but just done by brute force
+and thousands of slaves. — Alan Kay
+%
+Complexity kills. It sucks the life out of developers,
+it makes products difficult to plan, build and test,
+it introduces security challenges and it causes end-user
+and administrator frustration. — Ray Ozzie
+%
+Increasingly, people seem to misinterpret complexity as
+sophistication, which is baffling—the incomprehensible should
+cause suspicion rather than admiration. Possibly this trend
+results from a mistaken belief that using a somewhat
+mysterious device confers an aura of power on the user.
+— Niklaus Wirth
+%
+My definition of an expert in any field is a person who
+knows enough about what’s really going on to be scared.
+— P. J. Plauger
+%
+The best code is no code at all.
+%
+The most amazing achievement of the computer software
+industry is its continuing cancellation of the steady
+and staggering gains made by the computer hardware industry.
+— Henry Petroski
+%
+Software sucks because users demand it to. — Nathan Myhrvold
+%
+Join in on the new game that's sweeping the world.
+It's called "Corruption". Every Government stands in a circle.
+The first one to improve the state of the country loses. Begin!
+%
+Are most politicians liars?
+%
+Flights of fancy.
+%
+Shill: A plant or a stooge who publicly helps or gives
+credibility to a person or organization without disclosing
+that they have a close relationship with the person or organization.
+%
+It's almost time to pay the piper.
+%
+Planned Obsolescence: A policy of planning or designing a product
+with an artificially limited useful life, so that it becomes obsolete.
+%
+The genius of our ruling class is that it has kept a majority of the
+people from ever questioning the inequity of a system where most people
+drudge along paying heavy taxes for which they get nothing in return.
+—	Gore Vidal
+%
+Specifications subject to change without notice.
+%
+Good leaders being scarce, following yourself is now allowed.
+%
+Three rules for sounding like an expert:
+(1) Oversimplify your explanations to the point of uselessness.
+(2) Always point out second-order effects, but never point out when they
+can be ignored.
+(3) Come up with three rules of your own.
+%
+When you’re down and out, lift up your voice and shout,
+"I’M DOWN AND OUT”!
+%
+One planet is all you get.
+%
+“Information is power. But like all power, there are those who want
+to keep it for themselves.”
+― Aaron Swartz
+%
+This page intentionally left blank.
+%
+Books are better than the internet.
+%
+It’s difficult to get a man to understand something when his salary depends
+on his not understanding it.
+%
+Sometimes the only winning move is not to play.
+%
+This economy is not sustainable.
+%
+One weird trick advertisements.
+%
+A clever prophet makes sure of the event first.
+%
+And miles to go before I sleep.
+— Robert Frost
+%
+Committees have become so important nowadays that subcommittees have to
+be appointed to do the work.
+%
+The high cost of living hasn't affected its popularity.
+%
+Always wear your seat belt.
+%
+People actually believe what they read on social media.
+%
+Contestants have been briefed on some of the questions before the show.
+%
+Mankind is poised midway between the gods and the beasts.
+— Plotinus
+%
+People want either less corruption or more of a chance to
+participate in it.
+%
+While you don't greatly need the outside world, it's still very
+reassuring to know that it's still there.
+%
+Clovis’ Consideration of an Atmospheric Anomaly:
+The perversity of nature is nowhere better demonstrated
+than by the fact that, when exposed to the same atmosphere,
+bread becomes hard while crackers become soft.
+%
+Everything that can be invented has been invented.
+— Charles Duell
+%
+Where do you think you're going today?
+%
+Education is what survives when what has been learnt has been forgotten.
+— B. F. Skinner
+%
+There’s no heavier burden than a great potential.
+%
+Blutarsky's Axiom: Nothing is impossible for the man who will not
+listen to reason.
+%
+One man tells a falsehood, a hundred repeat it as the truth.
+%
+A complex system that works is invariably found to have evolved from a
+simple system that works.
+%
+Larkinson’s Law: All laws are basically false.
+%
+What fools these mortals be. — Lucius Annaeus Seneca
+%
+Time and tide wait for no man.
+%
+Talk is cheap because supply always exceeds demand.
+%
+One nuclear bomb can ruin your whole day.
+%
+Are you making all this up as you go along?
+%
+Fast React applications are rare.
+%
+One man's utopia is another man's dystopia.
+%
+Thanks for coming to my TED talk.
+%
+Redundant topology.
+%
+Their business model is spam.
+%
+Teamwork is essential — it allows you to blame someone else.
+%
+“When I die, I want the people I did group projects with to lower
+me into my grave so they can let me down one last time.”
+%
+The internet is utterly broken.
+%
+If Bill Gates is the devil then Linus Torvalds must be the messiah.
+— Unknown
