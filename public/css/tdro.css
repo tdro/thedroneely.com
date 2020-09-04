@@ -4323,7 +4323,7 @@ li a:focus span,
 .isso-comment > div.text-wrapper > .text a:focus,
 .front__more:focus { background-color: #fefe98 !important; color: black !important; outline: none; }
 
-a:focus img { box-shadow: 0 0 40px 2px #999; }
+a:focus img { outline: 2px solid; }
 a:hover img { box-shadow: 0 8px 32px #999; }
 
 .is-success:focus, .is-link:focus { background-color: #ebebeb !important }

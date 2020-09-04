@@ -2,6 +2,8 @@
 
 html { background-color: #001f2c; }
 a { color: #75b2f0; }
+a:hover img { outline: 6px dashed #75b2f0; box-shadow: none; }
+a:focus img { outline: 9px dashed #75b2f0; }
 a.navbar-item:hover { color: #fff !important; }
 img { box-shadow: none; filter: brightness(75%); }
 body, .sans-serif a, .serif a, .document h2 a, .document h3 a, nav#TableOfContents a { color: #cad6e2 }
