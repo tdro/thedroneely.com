@@ -1,7 +1,5 @@
-AppConfig.php
 /cockpit
 /vendor
-/node_modules
 /app/storage
 public/dist
 public/tags
@@ -15,6 +13,7 @@ public/rss.xml
 public/sitemap.xml
 generators/hugo/content
 generators/hugo/public
+openring
 openring.html
-keybase.txt
+quotes.fortune.dat
 google[a-z0-9]*.html
