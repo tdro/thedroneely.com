@@ -18,7 +18,7 @@
 
             <a class="underline" rel="me" href="https://github.com/tdro">Github</a> |
 
-            <a class="underline" href="https://www.thedroneely.com/analytics">Analytics</a> |
+            <a class="underline" href="/analytics">Analytics</a> |
 
             <a class="underline" href="#">Back To Top</a>
 

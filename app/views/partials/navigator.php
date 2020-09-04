@@ -62,7 +62,7 @@
 
                     <div class="navbar__left column">
                         <a title="Go to Website Repository"
-                        href="https://www.thedroneely.com/git/explore/repos"
+                        href="/git/explore/repos"
                         class="navbar-item item__box button is-inline-flex">
                         <?php echo featherIcon('git-commit'); ?>
                         <span>Repo</span>
