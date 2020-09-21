@@ -25,13 +25,11 @@ window.history.replaceState(null, null, url);
 var settings = { pager: {} };
 
 window.addEventListener('load', function(event) {
-  if (settings['pager'][window.location.href]) { window.scrollTo(0, settings['pager'][window.location.href]); }
+  if (localStorage['settings']) { settings = JSON.parse(localStorage['settings']); }
+  if (settings['pager'][window.location.href]) { window.scrollTo(0, settings['pager'][window.location.href]); return; }
+  settings['pager'][window.location.href] = 0;
+  localStorage['settings'] = JSON.stringify(settings);
 });
-
-settings['pager'][window.location.href] = window.pageYOffset;
-
-if (localStorage['settings']) { settings = JSON.parse(localStorage['settings']); }
-
 
 /*
  * Dropdown functions
@@ -50,7 +48,6 @@ function dropdownClickHide(element, event) {
     if (!click && dropdownInputList[i].checked === true) { dropdownHide(dropdownInputList); }
   }
 }
-
 
 /*
  * Hide dropdown when the mouse is far away
@@ -83,14 +80,12 @@ document.addEventListener('mousemove', function(event) {
 
 });
 
-
 /*
  * Click events
  */
 document.addEventListener('click', function(event) {
   dropdownClickHide(dropdownMenuList, event);
 });
-
 
 /*
  * Touch start events
@@ -99,14 +94,13 @@ document.addEventListener('touchstart', function(event) {
   dropdownClickHide(dropdownMenuList, event);
 });
 
-
 /**
  * Scroll events
  */
 var previousPosition = window.pageYOffset;
 var navbar = document.getElementById("navbar");
 var navbarHeight = navbar.offsetHeight;
-var scrollReady = 0;
+var scrolls = 0;
 
 var dropdownInputList = byClass(document, 'dropdown-input');
 var dropdownContentList = byClass(document, 'dropdown-content');
@@ -114,15 +108,14 @@ var dropdownMenuList = byClass(document, 'dropdown');
 
 window.addEventListener('scroll', function(event) {
 
-    settings['pager'][window.location.href] = window.pageYOffset;
-    localStorage['settings'] = JSON.stringify(settings);
-
     dropdownHide(dropdownInputList);
 
     var currentPosition = window.pageYOffset;
     var velocity = previousPosition - currentPosition;
 
-    if (scrollReady == 1) {
+    settings['pager'][window.location.href] = currentPosition;
+
+    if (scrolls > 3) {
       if (velocity > 75 || currentPosition < navbarHeight) {
         remClass(navbar, 'headroom');
       } else if (velocity < -25) {
@@ -130,10 +123,12 @@ window.addEventListener('scroll', function(event) {
       } else if (currentPosition > navbarHeight) {
         runOnce(function () { addClass(navbar, 'headroom'); });
       }
+
+      localStorage['settings'] = JSON.stringify(settings);
     }
 
     previousPosition = currentPosition;
-    scrollReady = 1;
+    scrolls++;
 });
 
 /**
