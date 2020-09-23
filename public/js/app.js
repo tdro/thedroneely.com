@@ -25,9 +25,10 @@ window.history.replaceState(null, null, url);
 var settings = { pager: {} };
 
 window.addEventListener('load', function(event) {
+  if (url.indexOf("#") >= 0) { return; }
   if (localStorage['settings']) { settings = JSON.parse(localStorage['settings']); }
-  if (settings['pager'][window.location.href]) { window.scrollTo(0, settings['pager'][window.location.href]); return; }
-  settings['pager'][window.location.href] = 0;
+  if (settings['pager'][url]) { window.scrollTo(0, settings['pager'][url]); return; }
+  settings['pager'][url] = 1;
   localStorage['settings'] = JSON.stringify(settings);
 });
 
@@ -113,7 +114,7 @@ window.addEventListener('scroll', function(event) {
     var currentPosition = window.pageYOffset;
     var velocity = previousPosition - currentPosition;
 
-    settings['pager'][window.location.href] = currentPosition;
+    settings['pager'][url] = currentPosition;
 
     if (scrolls > 3) {
       if (velocity > 75 || currentPosition < navbarHeight) {
