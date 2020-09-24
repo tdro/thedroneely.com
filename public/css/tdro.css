@@ -4108,6 +4108,14 @@ strong code { font-weight: 700; }
 a { border-bottom: 1px solid #999; color: #014cc6; cursor: pointer; text-decoration: none; }
 a:hover { border-bottom: 2px solid #999; }
 
+:target::before {
+  content: '';
+  display: block;
+  height: 5rem;
+  margin-top: -5rem;
+  visibility: hidden;
+}
+
 .sans-serif a, .serif a, .document h2 a, .document h3 a { color: #222; }
 .serif { font-family: Charter, Georgia, 'Book Antiqua', serif; }
 .is-size-serif { font-size: 1.25rem !important; }
