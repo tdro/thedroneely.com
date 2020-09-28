@@ -14,10 +14,15 @@ function togClass (el, cl) { if (hasClass(el, cl)) { remClass(el, cl); return; }
 function runOnce(action) { runOnce = function(){}; action(); }
 
 /**
- * Remove url query string on load
+ * Remove url query string
  */
 var url = window.location.href.split('?')[0];
 window.history.replaceState(null, null, url);
+
+/**
+ * Remove url hash to store in pager
+ */
+var url = window.location.href.split('#')[0];
 
 /**
  * Settings array
@@ -25,10 +30,14 @@ window.history.replaceState(null, null, url);
 var settings = { pager: {} };
 
 window.addEventListener('load', function(event) {
-  if (url.indexOf("#") >= 0) { return; }
   if (localStorage['settings']) { settings = JSON.parse(localStorage['settings']); }
+  if (window.location.href.indexOf("#") >= 0) {
+    settings['pager'][url] = window.pageYOffset + 1;
+    localStorage['settings'] = JSON.stringify(settings);
+    return;
+  }
   if (settings['pager'][url]) { window.scrollTo(0, settings['pager'][url]); return; }
-  settings['pager'][url] = 1;
+  settings['pager'][url] = window.pageYOffset + 1;
   localStorage['settings'] = JSON.stringify(settings);
 });
 
