@@ -14,8 +14,6 @@
 
             <a class="underline" rel="me" href="https://gitlab.com/tdro">Gitlab</a> |
 
-            <a class="underline" rel="me" href="https://twitter.com/thedroneely">Twitter</a> |
-
             <a class="underline" rel="me" href="https://github.com/tdro">Github</a> |
 
             <a class="underline" href="/analytics">Analytics</a> |
