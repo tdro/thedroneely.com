@@ -4179,6 +4179,8 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
   a.navbar-item:hover { border-bottom: 2px solid dodgerblue; }
 }
 
+@media screen and (max-width: 400px) { .is-mobile { display: block !important; } .is-mobile .column { width: 100% !important; } }
+
 .navbar-mobile, .navbar-burger { display: none; }
 
 .navbar__left { display: inline-flex; justify-content: flex-start; }
