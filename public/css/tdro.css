@@ -1290,7 +1290,7 @@ fieldset[disabled] .button {
 .content blockquote:not(:last-child),
 .content pre:not(:last-child),
 .content table:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 1.5rem;
 }
 
 .content h1,
@@ -4089,10 +4089,11 @@ a:hover { border-bottom: 2px solid #999; }
 ol {
   counter-reset: ol;
   margin-left: 2.75rem;
-  margin-top: 1em;
+  margin-top: 1.5rem;
 }
 
-ol li { list-style: none; font-size: 1.25rem; }
+ol li { -ms-hyphens: auto; -ms-word-break: normal; overflow-wrap: break-word;
+        word-break: break-word; font-size: 1.25rem; list-style: none; }
 
 ol li + li { margin-top: 1rem !important; }
 
@@ -4114,7 +4115,7 @@ ol li:before {
 .sans-serif a, .serif a, .document h2 a, .document h3 a { color: #222; }
 
 figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
-.is-mobile .has-text-centered > a, .content li a, .article__list li a,
+.is-mobile .has-text-centered > a, .article__list li a, ol li > a,
 .resume__label, .resume__container a, .isso-comment-footer a { border-bottom: none !important; }
 
 .image__thumbnail { max-height: 222px; }
