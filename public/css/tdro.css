@@ -119,10 +119,6 @@ h6 {
   font-weight: normal;
 }
 
-ul {
-  list-style: none;
-}
-
 button,
 input,
 select,
@@ -1338,33 +1334,7 @@ fieldset[disabled] .button {
   margin-bottom: 1.3em !important;
 }
 
-.content ol {
-  list-style-position: outside;
-  margin-left: 2em;
-  margin-top: 1em;
-}
-
-.content ol:not([type]) {
-  list-style-type: decimal;
-}
-
-.content ol:not([type]).is-lower-alpha {
-  list-style-type: lower-alpha;
-}
-
-.content ol:not([type]).is-lower-roman {
-  list-style-type: lower-roman;
-}
-
-.content ol:not([type]).is-upper-alpha {
-  list-style-type: upper-alpha;
-}
-
-.content ol:not([type]).is-upper-roman {
-  list-style-type: upper-roman;
-}
-
-.content ul {
+.content ul, ul {
   list-style: none;
   margin-top: 1em;
 }
@@ -4116,9 +4086,32 @@ a:hover { border-bottom: 2px solid #999; }
   visibility: hidden;
 }
 
-.sans-serif a, .serif a, .document h2 a, .document h3 a { color: #222; }
-.serif { font-family: Charter, Georgia, 'Book Antiqua', serif; }
+ol {
+  counter-reset: ol;
+  margin-left: 2.75rem;
+  margin-top: 1em;
+}
+
+ol li { list-style: none; font-size: 1.25rem; }
+
+ol li + li { margin-top: 1rem !important; }
+
+ol li:before {
+  border-radius: 100%;
+  border: 1px solid;
+  content: counter(ol);
+  counter-increment: ol;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: -2.75rem;
+  margin-top: 0.25rem;
+  padding: 0 0.5rem;
+  position: absolute;
+}
+
 .is-size-serif { font-size: 1.25rem !important; }
+.serif, ol li { font-family: Charter, Georgia, 'Book Antiqua', serif; }
+.sans-serif a, .serif a, .document h2 a, .document h3 a { color: #222; }
 
 figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
 .is-mobile .has-text-centered > a, .content li a, .article__list li a,
