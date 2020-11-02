@@ -4115,7 +4115,7 @@ ol li:before {
 .sans-serif a, .serif a, .document h2 a, .document h3 a { color: #222; }
 
 figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
-.is-mobile .has-text-centered > a, .article__list li a, ol li > a,
+.is-mobile .has-text-centered > a, .article__list li a, ol li > a, .tableofcontents li a,
 .resume__label, .resume__container a, .isso-comment-footer a { border-bottom: none !important; }
 
 .image__thumbnail { max-height: 222px; }
