@@ -4448,7 +4448,7 @@ mark { background-color: transparent; color: unset; }
 .sidenote-container:hover .sidenote mark { background-color: #fefe98; color: #000; }
 .sidenote-container:hover .sidenote a { background-color: #fefe98; color: #000; border-color: dodgerblue; }
 
-.sideimage a, .sideimage a:focus { border-bottom: 1px solid transparent !important; background-color: transparent !important; }
+.sideimage > a, .sideimage a:focus { border-bottom: 1px solid transparent !important; background-color: transparent !important; }
 
 @media (max-width: 768px) {
 .sidenote-toggle:checked + .sidenote,
