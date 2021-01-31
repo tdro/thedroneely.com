@@ -4121,6 +4121,13 @@ figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
 .image__thumbnail { max-height: 222px; }
 .medium-zoom-overlay { background-color: #fff; background-color: rgba(255, 255, 255, .9); }
 
+/*
+ * Fonts
+ */
+
+.smallcaps { font-variant: small-caps; letter-spacing: 0.05rem; line-height: 0; text-transform: lowercase; }
+.smallcapsintro { font-size: 2rem !important; text-transform: none; }
+
 
 /*
  * Text selection
@@ -4476,7 +4483,6 @@ blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1.3rem; }
 blockquote p { font-size: 1.3rem !important; }
 
 .document .subtitle { margin-top: 0 !important; margin-bottom: 1.5em !important; }
-.is-small-caps { font-variant: small-caps; }
 .recent__article .marginnote, .recent__article .sidenote { margin-top: 0 !important; }
 
 @media (max-width: 768px) { .recent__article .columns, .content blockquote, .highlight { clear: both; } }
