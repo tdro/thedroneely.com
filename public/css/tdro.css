@@ -4115,6 +4115,7 @@ table td:not([align]), table th:not([align]) { text-align: left; }
 table { width: 100%; border-collapse: collapse; border-spacing: 0; }
 table th { font-weight: 700; font-variant: small-caps; text-transform: lowercase; letter-spacing: 0.05rem; padding: 0.4rem; }
 table, table code { font-size: 1.15rem; }
+@media (max-width: 550px) { table { table-layout: fixed; } }
 
 
 /*
