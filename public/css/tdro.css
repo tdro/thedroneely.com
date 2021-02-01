@@ -3776,7 +3776,7 @@ p code { font-size: 1rem; }
 
 strong code { font-weight: 700; }
 
-a { border-bottom: 1px solid #999; color: #014cc6; cursor: pointer; text-decoration: none; }
+a { border-bottom: 1px solid #999; color: #014cc6; cursor: pointer; text-decoration: none; overflow-wrap: break-word; }
 a:hover { border-bottom: 2px solid #999; }
 
 :target::before {
