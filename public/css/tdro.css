@@ -168,24 +168,6 @@ section {
   display: block;
 }
 
-body,
-button,
-input,
-select,
-textarea,
-.sans-serif {
-  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
-  'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
-code,
-pre,
-.monospace {
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
-  font-family: 'Fira Code', Consolas, monaco, monospace;
-}
-
 body {
   color: #222;
   font-size: 1rem;
@@ -3829,9 +3811,6 @@ ol li:before {
   position: absolute;
 }
 
-.is-size-serif { font-size: 1.25rem !important; }
-.serif, ol li { font-family: Charter, Georgia, 'Book Antiqua', serif; }
-.sans-serif a, .serif a, .document h2 a, .document h3 a { color: #222; }
 
 figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
 .is-mobile .has-text-centered > a, .article__list li a, ol li > a, .tableofcontents li a,
@@ -3843,6 +3822,25 @@ figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
 /*
  * Fonts
  */
+
+body, button, input, select, textarea, .sans-serif {
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+  'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.serif, ol li { font-family: Charter, Georgia, 'Book Antiqua', serif; }
+
+code, pre, blockquote > p.serif, .monospace {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: 'Fira Code', Consolas, monaco, monospace;
+}
+
+.is-size-serif { font-size: 1.25rem !important; }
+.sans-serif a, .serif a, .document h2 a, .document h3 a { color: #222; }
+
+blockquote .blockquote-footer { margin-top: 1.3rem; }
+blockquote > p.serif { font-size: 1.2rem !important; }
 
 .smallcaps { font-variant: small-caps; letter-spacing: 0.05rem; line-height: 0; text-transform: lowercase; }
 .smallcapsintro { font-size: 2rem !important; text-transform: none; }
@@ -4212,8 +4210,6 @@ label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 .sidenote mark { background-color: transparent !important; color: unset !important; }
 }
 
-blockquote .blockquote-footer { font-size: 1.1rem; margin-top: 1.3rem; }
-blockquote p { font-size: 1.3rem !important; }
 
 .document .subtitle { margin-top: 0 !important; margin-bottom: 1.5em !important; }
 .recent__article .marginnote, .recent__article .sidenote { margin-top: 0 !important; }
