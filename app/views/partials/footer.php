@@ -1,4 +1,3 @@
-
 <footer class="hero-foot">
   <div class="footer">
     <div class="container">
@@ -24,7 +23,7 @@
 
             <p class="has-text-grey-dark is-size-7">
              The content for this site is <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>.
-             The <a href="https://www.thedroneely.com/git/thedroneely/thedroneely.com">source code</a>
+             The <a href="/git/thedroneely/thedroneely.com">source code</a>
              for this site is <a href="https://opensource.org/licenses/GPL-3.0">GPL</a>.<br>
              Copyright &copy; 2018 &mdash; <?php echo date("Y"); ?>
             </p>
