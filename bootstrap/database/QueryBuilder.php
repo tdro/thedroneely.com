@@ -25,7 +25,7 @@ class QueryBuilder
             ':' . implode(', :', array_keys($data))
         );
 
-        $statment = $this->pdo->prepare($sql);
-        $statment->execute($data);
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute($data);
     }
 }
