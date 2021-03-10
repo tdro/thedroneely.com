@@ -1,0 +1,62 @@
+#!/bin/sh -eu
+
+timestamp='.update-thumbnails'
+directory='images'
+jpegoptim='jpegoptim --strip-all --verbose'
+jpegoptim_images="$jpegoptim --max 80"
+jpegoptim_thumbnails="$jpegoptim --max 20"
+pngquant='pngquant --skip-if-larger --strip --verbose --ext .png --force'
+pngquant_images="$pngquant --quality 80"
+pngquant_thumbnails="$pngquant --quality 20"
+cwebp='cwebp -m 6'
+cwebp_images="$cwebp -near_lossless 0 -q 80"
+cwebp_thumbnails="$cwebp -q 20"
+gif2webp='gif2webp -min_size -loop_compatibility -metadata none -m 6 -q 80'
+gifsicle='gifsicle --optimize=3 --crop 270x160 --colors=64 --lossy=100'
+mogrify_thumbnails='mogrify -path thumbnails -auto-orient -quiet -thumbnail x222'
+
+cd "$directory" || exit 1;
+mkdir -p thumbnails;
+
+for image in *; do
+
+  file=$(file --mime-type "$image")
+  name=${image%.*}
+  mime=${file#*: }
+
+  if test "$image" -nt "$timestamp"; then
+
+    while [ "$mime" = "image/png" ] || [ "$mime" = "image/jpeg" ]; do
+      { [ -f "$name.png" ] && [ -f "$name.jpg" ]; } && break;
+      mogrify -format jpg -quiet "$name.png" || true;
+      mogrify -format png -quiet "$name.jpg" || true;
+    done
+
+    if [ "$mime" = "image/png" ] || [ "$mime" = "image/png" ]; then
+
+      $pngquant_images "$name.png" || true;
+      $mogrify_thumbnails "$name.png";
+      $pngquant_thumbnails "thumbnails/$name.png" || true;
+
+      $jpegoptim_images "$name.jpg";
+      $mogrify_thumbnails "$name.jpg";
+      $jpegoptim_thumbnails "thumbnails/$name.jpg";
+
+      if [ "$(wc -c < "$name.png")" -lt "$(wc -c < "$name.jpg")" ]; then
+        $cwebp_images "$name.png" -o "$name.webp";
+        $cwebp_thumbnails "thumbnails/$name.png" -o "thumbnails/$name.webp";
+      else
+        $cwebp_images "$name.jpg" -o "$name.webp";
+        $cwebp_thumbnails "thumbnails/$name.jpg" -o "thumbnails/$name.webp";
+      fi
+    fi
+
+    if [ "$mime" = "image/gif" ]; then
+      $gif2webp "$image" -o "$name.webp";
+      $gifsicle "$image" "#0-50" -o "thumbnails/$image";
+    fi
+  fi
+done
+
+touch "$timestamp";
+printf "Images and thumbnails in '%s' updated.\n" "$PWD";

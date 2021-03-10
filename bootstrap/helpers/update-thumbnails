@@ -1,9 +1,0 @@
-#!/bin/sh -eu
-cd images || exit 1;
-mogrify -path thumbnails -auto-orient -quiet -thumbnail x222 $(find . -maxdepth 1 -regex '.*\.\(jpg\|png\)' -type f -mmin -60);
-mogrify -format png -quiet thumbnails/*.jpg || true;
-rm -rf thumbnails/*.jpg;
-find . -name '*.png' -mmin -60 -exec pngquant -v --quality 85 --ext .png --force {} \;
-find . -name '*.jpg' -mmin -60 -exec jpegoptim -v -m 85 {} +
-touch .update-thumbnails;
-echo Image Thumbnails in "'$(pwd)'" updated.;
