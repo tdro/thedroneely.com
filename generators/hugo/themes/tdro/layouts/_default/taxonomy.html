@@ -1,18 +1,56 @@
 {{ define "main" }}
-{{- if $.Site.Params.debug }}<p class="has-text-danger">DEBUG: layouts/_default/taxonomy.html</p>{{ end -}}
 <section class="section is-fullheight" itemscope itemtype="http://schema.org/AboutPage">
-	<div class="container">
-		<div class="columns is-centered">
-			<div class="column is-7">
-				<article class="content">
-					<h1 class="title">{{ .Data.Singular | title }}: {{ .Title }}</h1>
-				{{ range .Paginator.Pages }}
-				{{ .Render "summary" }}
-				{{ end }}
-				</article>
-				{{ partial "pagination.html" . }}
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-7">
+        {{ $title := .Title }}
+        {{ if eq $title "Tags" }}
+          <article class="content">
+          {{ range .Paginator.Pages }}
+            {{ $title := .Title }}
+            <h1 class="article__list smallcaps title">{{ .Title | title }}</h1>
+            {{ range $taxonomy := .Site.Taxonomies }}
+              {{ range $tag, $article := $taxonomy }}
+                {{ if eq $tag $title }}
+                <ul class="article__list">
+                  {{ range $article.Pages }}
+                  <li>
+                    <a class="is-block" href="{{ .RelPermalink }}">
+                      <span class="article__list__date monospace has-text-grey-dark">{{ .Date.Format "02 Jan 2006" }}</span>{{ .Title }}
+                    </a>
+                  </li>
+                  {{ end }}
+                </ul>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          </article>
+          {{ partial "pagination.html" . }}
+        {{ else  }}
+          <article class="content">
+          <h1 class="smallcaps title">
+            {{ if ne $title "Tags" }} <a href="/{{ .Data.Plural }}/">Tags</a> <span>&mdash;</span> <span>{{ end }}{{ .Title | title }}</span>
+          </h1>
+            {{ range $taxonomy := .Site.Taxonomies }}
+              {{ range $tag, $article := $taxonomy }}
+                {{ if eq $tag $title }}
+                <ul class="article__list">
+                  {{ range $article.Pages }}
+                  <li>
+                    <a class="is-block" href="{{ .RelPermalink }}">
+                      <span class="article__list__date monospace has-text-grey-dark">{{ .Date.Format "02 Jan 2006" }}</span>{{ .Title }}
+                    </a>
+                  </li>
+                  {{ end }}
+                </ul>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  </div>
 </section>
 {{ end }}
