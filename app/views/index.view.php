@@ -74,7 +74,7 @@
                     <a href="/posts/page/2/"
                     class="front__more is-block has-text-centered">
                         See More Posts
-                        <?php featherIcon('chevron-right'); ?>
+                        <?php icon('chevron-right'); ?>
                     </a>
 
                     <br>
@@ -100,7 +100,7 @@
                     <a href="/projects/page/2/"
                     class="front__more is-block has-text-centered">
                         See More Projects
-                        <?php featherIcon('chevron-right'); ?>
+                        <?php icon('chevron-right'); ?>
                     </a>
 
                     <br>

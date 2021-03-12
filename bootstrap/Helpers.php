@@ -4,7 +4,7 @@
  * Helper Functions
  */
 
-function featherIcon(string $name, string $class = null)
+function icon(string $name, string $class = null)
 {
     return str_replace(
         '<svg', '<svg class="' . $class . '" ',

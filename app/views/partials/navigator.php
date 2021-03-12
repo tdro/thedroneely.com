@@ -8,7 +8,7 @@
                 <a href="/" class="navbar-item navbar__icon
                 <?php echo $check = $navigation->isActiveHome() ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
-                    <?php echo featherIcon('user'); ?>
+                    <?php echo icon('user'); ?>
                     <p class="is-size-7 navbar__icon__align">Home</p>
                     </div>
                 </a>
@@ -16,7 +16,7 @@
                 <a href="/posts/" class="navbar-item navbar__icon
                 <?php echo $check = $navigation->isActive('posts') ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
-                    <?php echo featherIcon('book-open'); ?>
+                    <?php echo icon('book-open'); ?>
                     <p class="is-size-7 navbar__icon__align">Posts</p>
                     </div>
                 </a>
@@ -24,7 +24,7 @@
                 <a href="/projects/" class="navbar-item navbar__icon
                 <?php echo $check = $navigation->isActive('projects') ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
-                    <?php echo featherIcon('briefcase'); ?>
+                    <?php echo icon('briefcase'); ?>
                     <p class="is-size-7 navbar__icon__align">Projects</p>
                     </div>
                 </a>
@@ -32,7 +32,7 @@
                 <a href="/contact/" class="navbar-item navbar__icon
                 <?php echo $check = $navigation->isActive('contact') ? 'navbar__active' : ''; ?>">
                     <div class="has-text-centered">
-                    <?php echo featherIcon('mail'); ?>
+                    <?php echo icon('mail'); ?>
                     <p class="is-size-7 navbar__icon__align">Contact</p>
                     </div>
                 </a>
@@ -41,7 +41,7 @@
                     <?php
                       $id = 'mobile-compact';
                       $type = 'is-menu is-right';
-                      $icon = feathericon('menu');
+                      $icon = icon('menu');
                       $label = <<<insert
                       <span class="is-block has-text-centered">
                         $icon
@@ -64,7 +64,7 @@
                         <a title="Go to Website Repository"
                         href="/git/"
                         class="navbar-item item__box button is-inline-flex">
-                        <?php echo featherIcon('git-commit'); ?>
+                        <?php echo icon('git-commit'); ?>
                         <span>Repo</span>
                         </a>
 
@@ -84,7 +84,7 @@
                         <a title="Coffee"
                         href ="https://ko-fi.com/thedroneely"
                         class="navbar-item item__box button is-inline-flex has-margin-right-none">
-                        <?php echo featherIcon('coffee'); ?>
+                        <?php echo icon('coffee'); ?>
                         <span>Coffee</span>
                         </a>
                     </div>

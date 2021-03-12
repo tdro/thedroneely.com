@@ -70,7 +70,7 @@
                                 <div class="field">
                                   <div class="control">
                                     <button class="button item__box has-text-weight-normal">
-                                      <?php echo featherIcon('send'); ?>
+                                      <?php echo icon('send'); ?>
                                       <span>Send Message</span>
                                     </button>
                                   </div>
