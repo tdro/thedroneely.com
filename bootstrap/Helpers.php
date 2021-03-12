@@ -10,7 +10,7 @@ function icon(string $name, string $class = null)
         '<svg', '<svg class="' . $class . '" ',
         file_get_contents(
             $_SERVER['DOCUMENT_ROOT']
-            . '/..' . '/public/css/fonts/feather-icons/' . $name . '.svg'
+            . '/..' . '/public/css/icons/feather/' . $name . '.svg'
         )
     );
 }
