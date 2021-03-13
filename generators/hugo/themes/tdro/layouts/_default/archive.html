@@ -3,38 +3,30 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-7">
-
-      {{ $type := .Type }}
-      {{ $.Scratch.Set "count" 1 }}
+        {{ $type := .Type }}
 
         {{ range (.Site.RegularPages.GroupByDate "2006") }}
-          {{ if (gt .Key 2000) }}
+          {{ $articles := (where .Pages "Type" $type) }}
+          {{ if and (gt .Key 1) (gt (where .Pages "Type" $type) 0) }}
 
-            {{ range (where .Pages "Type" $type) }}
-              {{ if (eq ($.Scratch.Get "count") 1) }}
-                {{ $.Scratch.Set "count" 0 }}
-                <h1 class="article__list title is-4 has-text-weight-normal has-margin-bottom-lg">{{ .Date.Format "2006" }}</h1>
-              {{ end }}
+            {{ range (first 1 $articles) }}
+            <h1 class="article__list title is-4 has-text-weight-normal has-margin-bottom-lg">{{ .Date.Format "2006" }}</h1>
             {{ end }}
 
-            {{ $.Scratch.Set "count" 1 }}
-
-              <ul class="article__list">
-              {{ range (where .Pages "Type" $type) }}
+            <ul class="article__list">
+              {{ range $articles }}
                 {{ if (ne .Params.hidden true) }}
-                  <li>
-                    <a class="is-block" href="{{ .RelPermalink }}">
-                      <span class="article__list__date monospace has-text-grey-dark">{{ .Date.Format "02 Jan" }}</span>{{ .Title }}
-                    </a>
-                  </li>
+                <li>
+                  <a class="is-block" href="{{ .RelPermalink }}">
+                    <span class="article__list__date monospace has-text-grey-dark">{{ .Date.Format "02 Jan" }}</span>{{ .Title }}
+                  </a>
+                </li>
                 {{ end }}
               {{ end }}
-
             </ul>
-            <br>
 
+          {{ end }}
         {{ end }}
-      {{ end }}
 
       </div>
     </div>

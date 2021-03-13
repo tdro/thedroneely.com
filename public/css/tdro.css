@@ -3985,6 +3985,7 @@ ul.article__list { line-height: 2.5; }
 .article__list a { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .article__list__date { padding-right: 1rem; text-transform: uppercase; }
 .article__list a, h1.article__list { padding: 0 0.5rem; }
+h1.article__list:not(:first-child) { margin-top: 1.5rem; }
 .article__heading__anchor { border-bottom: none; }
 
 .webring li { padding-top: 1em; }
