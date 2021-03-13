@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $sidenote := "<span class=\"marginnote rightnote\">See an archive of all taxonomies <a href=\"/archives/tags/\">here.</a></span>" }}
 <section class="section is-fullheight" itemscope itemtype="http://schema.org/AboutPage">
   <div class="container">
     <div class="columns is-centered">
@@ -6,6 +7,8 @@
         {{ $title := .Title }}
         {{ if eq $title "Tags" }}
           <article class="content">
+          <h1 class="article__list title is-3">Taxonomies</h1>
+          {{ safeHTML $sidenote }}
           {{ range .Paginator.Pages }}
             {{ $title := .Title }}
             <h1 class="article__list smallcaps title">{{ .Title | title }}</h1>
@@ -32,6 +35,7 @@
           <h1 class="smallcaps title">
             {{ if ne $title "Tags" }} <a href="/{{ .Data.Plural }}/">Tags</a> <span>&mdash;</span> <span>{{ end }}{{ .Title | title }}</span>
           </h1>
+          {{ safeHTML $sidenote }}
             {{ range $taxonomy := .Site.Taxonomies }}
               {{ range $tag, $article := $taxonomy }}
                 {{ if eq $tag $title }}
