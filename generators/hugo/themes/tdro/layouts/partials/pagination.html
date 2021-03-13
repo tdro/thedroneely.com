@@ -1,5 +1,5 @@
 {{ $HugoPaginator := $.Paginator }}
-{{ $Pages := sub $HugoPaginator.TotalNumberOfElements 1 }}
+{{ $Pages := $HugoPaginator.TotalNumberOfElements }}
 {{ $MyPaginator := math.Ceil (div (float $Pages) 3) }}
 
 {{ if gt $HugoPaginator.TotalPages 1 }}
