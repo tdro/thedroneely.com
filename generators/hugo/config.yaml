@@ -1,44 +1,37 @@
+---
 # config.yaml
-
-theme: "tdro"
-baseURL: ""
-languageCode: "en-us"
-title: "Thedro Neely"
+theme: tdro
+baseURL:
+languageCode: en-us
+title: Thedro Neely
 
 # Disable generation of index and 404 files
-
-disableKinds: ["404"]
+disableKinds: ['404']
 
 # Taxonomies
-
 taxonomies:
   tag: tags
 
 # Author name and email appears in RSS feed
-
 author:
-    name: "Thedro Neely"
-    email: "thedroneely@gmail.com"
+  name: Thedro Neely
+  email: thedroneely@gmail.com
 
 # Copyright appears in the RSS feed
-
-copyright: "Thedro Neely"
+copyright: Thedro Neely
 
 # Metadata
-
 metaDataFormat: yaml
 summaryLength: 20
 paginate: 3
 
 # Code highlighting
-
 pygmentsUseClassic: false
 pygmentsCodeFences: true
 pygmentsUseClasses: true
 pygmentsCodeFencesGuessSyntax: true
 
 # RSS
-
 mediaTypes:
   application/atom:
     suffixes: xml
@@ -50,4 +43,4 @@ outputFormats:
 
 outputs:
   home:
-    - RSS
+  - RSS
