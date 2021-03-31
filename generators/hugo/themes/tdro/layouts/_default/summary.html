@@ -1,8 +1,10 @@
 <div class="columns is-mobile">
 
   <div class="column is-5 has-text-centered">
+    {{ $imageFile := print "public/images/thumbnails/" (partial "article-image.html" .) ".png" }}
+    {{ if fileExists $imageFile }}
+    {{ $image := imageConfig $imageFile }}
     <a href="{{ .Permalink }}">
-      {{ $image := imageConfig (print "public/images/thumbnails/" (partial "article-image.html" .) ".png") }}
       <picture>
         <source srcset="/images/thumbnails/{{ partial "article-image.html" . }}.png" type="image/png">
         <source srcset="/images/thumbnails/{{ partial "article-image.html" . }}.jpg" type="image/jpeg">
@@ -11,6 +13,7 @@
          height="{{ $image.Height }}" width="{{ $image.Width }}"/>
       </picture>
     </a>
+    {{ end }}
   </div>
 
   <div class="column is-7">
