@@ -15,7 +15,7 @@ gif2webp='gif2webp -min_size -loop_compatibility -metadata none -m 6 -q 80'
 gifsicle='gifsicle --optimize=3 --crop 270x160 --colors=64 --lossy=100'
 mogrify_thumbnails='mogrify -path thumbnails -auto-orient -quiet -thumbnail x222'
 
-cd "$directory" || exit 1;
+cd "$directory";
 mkdir -p thumbnails;
 
 for image in *; do
@@ -26,13 +26,15 @@ for image in *; do
 
   if test "$image" -nt "$timestamp"; then
 
-    while [ "$mime" = "image/png" ] || [ "$mime" = "image/jpeg" ]; do
-      { [ -f "$name.png" ] && [ -f "$name.jpg" ]; } && break;
-      mogrify -format jpg -quiet "$name.png" || true;
-      mogrify -format png -quiet "$name.jpg" || true;
-    done
+    if [ "$mime" = "image/png" ] || [ "$mime" = "image/jpeg" ]; then
+      while true; do
+        { [ -f "$name.png" ] && [ -f "$name.jpg" ]; } && break;
+        mogrify -format jpg -quiet "$name.png" || true;
+        mogrify -format png -quiet "$name.jpg" || true;
+      done
 
-    if [ "$mime" = "image/png" ] || [ "$mime" = "image/png" ]; then
+      size_png=$(wc -c < "$name.png")
+      size_jpg=$(wc -c < "$name.jpg")
 
       $pngquant_images "$name.png" || true;
       $mogrify_thumbnails "$name.png";
@@ -42,7 +44,7 @@ for image in *; do
       $mogrify_thumbnails "$name.jpg";
       $jpegoptim_thumbnails "thumbnails/$name.jpg";
 
-      if [ "$(wc -c < "$name.png")" -lt "$(wc -c < "$name.jpg")" ]; then
+      if [ "$size_png" -lt "$size_jpg" ]; then
         $cwebp_images "$name.png" -o "$name.webp";
         $cwebp_thumbnails "thumbnails/$name.png" -o "thumbnails/$name.webp";
       else
