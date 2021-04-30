@@ -12,7 +12,7 @@
     type="submit"
     value="light"
   >
-    <?php echo icon('sun', 'is-hidden-mobile'); ?>
+    <?php echo icon('sun', $iconClass ?? null); ?>
     <span>Light</span>
   </button>
 
@@ -25,9 +25,11 @@
     type="submit"
     value="dark"
   >
-    <?php echo icon('moon', 'is-hidden-mobile'); ?>
+    <?php echo icon('moon', $iconClass ?? null); ?>
     <span>Dark</span>
   </button>
 
   <?php } ?>
 </form>
+
+<?php $formClass = $buttonClass = $iconClass = null; ?>

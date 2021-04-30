@@ -1994,15 +1994,6 @@ body.has-navbar-fixed-bottom {
   display: none;
 }
 
-.navbar-item,
-.navbar-link {
-  color: #4a4a4a;
-  display: block;
-  line-height: 1.5;
-  padding: 0.5rem 0.75rem;
-  position: relative;
-}
-
 .navbar-item .icon:only-child,
 .navbar-link .icon:only-child {
   margin-left: -0.25rem;
@@ -2012,14 +2003,6 @@ body.has-navbar-fixed-bottom {
 a.navbar-item,
 .navbar-link {
   cursor: pointer;
-}
-
-a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active,
-.navbar-link:focus,
-.navbar-link:focus-within,
-.navbar-link:hover,
-.navbar-link.is-active {
-  color: #000000;
 }
 
 .navbar-item {
@@ -3872,17 +3855,26 @@ blockquote > p.serif { font-size: 1.2rem !important; }
  * Navigation Bar Reset
  */
 
+a.navbar-item:focus, a.navbar-item:hover, .navbar-item:hover label { color: #000000; }
+.navbar__icon:hover svg, .navbar__icon:hover svg, .navbar__icon:hover label svg { fill: #ffdc9b; }
+
+.navbar-item {
+  display: block;
+  line-height: 1.25;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+}
+
 .navbar { -webkit-transition: top 0.15s; -o-transition: top 0.15s; transition: top 0.15s; }
 .headroom { top: -5em !important; }
-.navbar-item { color: #555; margin: 0.86rem 0.8rem; }
+.navbar-item { color: #555; }
 .navbar { box-shadow: 0 4px 12px 0 rgba(0,0,0,.05); background-color: #fcfcfc;  background-color: rgba(252, 252, 252, .97); min-height: 4rem; }
-.navbar-item, .navbar-link { padding: 0.25rem 0.2rem; display: inline-flex; }
 .navbar, .navbar-menu { background-color: #fcfcfc; background-color: rgba(252, 252, 252, .97); }
 .navbar-menu { display: flex; overflow: visible !important; box-shadow: none; }
 .navbar-menu .columns { margin: 0 auto; display: flex; }
 .navbar-menu .column { padding: 0; }
 html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bottom, body.has-navbar-fixed-bottom { padding-top: 4rem; }
-.navbar .container, .navbar__left, .navbar__middle, .navbar__right { min-height: 4rem; }
+.navbar .container, .navbar__left, .navbar__middle, .navbar__right { min-height: 4rem; align-items: center; }
 .navbar__tablet__compact .navbar__active { border-bottom: 2px solid #75b2f0; }
 
 @media screen and (max-width: 1087px) {
@@ -3891,31 +3883,35 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 }
 
 @media screen and (min-width: 1088px) { .navbar-menu, .navbar-item { display: inline-block; } }
-
-@media screen and (min-width: 525px) {
-  .navbar__active { border-bottom: 2px solid dodgerblue !important; }
-  a.navbar-item { border-bottom: 2px solid transparent; }
-  a.navbar-item:hover { border-bottom: 2px solid dodgerblue; }
-}
-
 @media screen and (max-width: 400px) { .is-mobile { display: block !important; } .is-mobile .column { width: 100% !important; } }
 
-.navbar-mobile, .navbar-burger { display: none; }
-
-.navbar__left { display: inline-flex; justify-content: flex-start; }
-.navbar__right { display: inline-flex; justify-content: flex-end; }
+.navbar__left { display: inline-flex; justify-content: flex-end; }
+.navbar__right { display: inline-flex; justify-content: flex-start; }
 .navbar__middle { display: inline-flex; justify-content: center; }
 
-@media screen and (max-width: 524px) { .navbar-mobile { display: flex; } }
-@media screen and (max-width: 524px) { .navbar__middle { display: none; } }
 @media screen and (max-width: 900px) { .navbar__left, .navbar__right { display: none; } }
 
-.navbar__icon { justify-content: center; width: 20%; margin: 0; height: 4rem; }
-.navbar__icon__align { margin-top: -4px; margin-bottom: 3px; }
+.navbar__icon { display: flex; align-items: center; justify-content: center; padding: 0 1.5rem; height: 4rem; }
+.navbar__icon__label { font-size: 0.75rem; }
+.navbar__icon__label:after {
+  display: block;
+  content: attr(title);
+  font-weight: 700;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 624px) {
+  .navbar-menu .columns { margin: 0; }
+  .navbar__icon { padding: 0; width: 20%; }
+  .navbar__icon__hidden { display: none; }
+}
+
 .navbar__active { color: #014cc6 !important; }
+.navbar__active .navbar__icon__label { font-weight: 700; }
 
 .navbar__icon__menu { margin: 0; justify-content: center; height: 100%; }
-.navbar__icon.navbar__active { font-weight: bold; }
 .navbar-burger .dropdown { width: 100%; }
 .navbar-burger .dropdown-label {
   height: 64px;
@@ -3926,8 +3922,8 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 }
 
 .dropdown label { cursor: pointer; }
-.dropdown-content .navbar-item { margin: 0; padding: 0.65rem 1rem; }
-.dropdown-content .navbar__active { font-weight: bold; color: #014cc6; }
+.dropdown-content .navbar-item { margin: 0; padding: 0.65rem 1rem; width: 100%; }
+.dropdown-content .navbar__active { font-weight: 700; color: #014cc6; }
 .dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover { background-color: #bbdbee; color: black; }
 .dropdown-input[type="checkbox"]:checked ~ .dropdown-menu { display: block; }
 
@@ -3939,9 +3935,11 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 .item__no__hover:hover svg, .item__no__hover:focus svg { fill: transparent !important; }
 .item__box {
   height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 400;
-  margin-left: 0;
-  margin-right: 0.7rem;
+  margin: 0 0 0 0.7rem;
   padding: 0.25rem 1rem;
   background-color: #f2f2f2;
   border: 0 solid transparent !important;
@@ -4057,11 +4055,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
  * Theme toggle
  */
 
-.theme-toggle-button { border-radius: 0; height: 100%; padding: 0 0.35em; width: 100%; font-weight: 400; }
-
-@media screen and (max-width: 1087px) {
-  .theme-toggle-button {  padding: 0.587em 1em; }
-}
+.theme-toggle-button { border-radius: 0; height: auto; border: none; justify-content: start; font-weight: 400; }
 
 
 /*
@@ -4071,6 +4065,7 @@ figcaption { font-size: 0.9em; margin-top: 1.5em; }
 .has-padding-none { padding: 0 !important; }
 .has-padding-left-md { padding-left: 0.5em !important; }
 .has-margin-none { margin: 0 !important; }
+.has-margin-left-none { margin-left: 0 !important}
 .has-margin-right-none { margin-right: 0 !important}
 .has-margin-bottom-none { margin-bottom: 0 !important; }
 .has-margin-bottom-sm { margin-bottom: 0.25em !important; }

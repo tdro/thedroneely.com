@@ -10,7 +10,7 @@ body, .sans-serif a, .serif a, .document h2 a, .document h3 a, nav#TableOfConten
 .article__list li:hover, nav#TableOfContents li:hover { background-color: #002e42; }
 .leftnote, .rightnote, mark { color: #a9bdd0; }
 .medium-zoom-overlay { background-color: #001f2c; background-color: rgba(0, 31, 44, .9); }
-.navbar-item, .subtitle, .has-text-grey-dark { color: #ddd !important; }
+.navbar-item, .subtitle, .has-text-grey-dark { color: #ccc !important; }
 .navbar-mobile .navbar__active, .navbar-end .navbar__active { color: #75b2f0 !important; }
 .dropdown-content { background-color: #002e42; border: 1px solid #00405c; }
 .dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover { background-color: #4698EA; color: #fff !important; }
@@ -20,6 +20,8 @@ body, .sans-serif a, .serif a, .document h2 a, .document h3 a, nav#TableOfConten
 .footer { padding: 1.5rem; }
 .navbar { box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5); }
 .navbar, .navbar-menu { background-color: #002e42; background-color: rgba(0, 46, 66, 0.95); }
+a.navbar-item:focus, a.navbar-item:hover, .navbar-item:hover label { color: #fff; }
+.navbar__icon:hover svg, .navbar__icon:hover svg, .navbar__icon:hover label svg { fill: #0073ca; }
 .title, .content h1, .content h2, .content h3 { color: #ddd; }
 .button.is-link.is-outlined, .button.is-success.is-outlined { border-color: #cad6e2; color: #cad6e2; border-width: 1px; }
 .input, .textarea { background-color: #002e42; border-color: transparent; color: white; }
@@ -31,8 +33,7 @@ body, .sans-serif a, .serif a, .document h2 a, .document h3 a, nav#TableOfConten
 .pagination-previous:hover,
 .pagination-next:hover, .pagination-link:hover, .pagination-previous.disabled, .pagination-next.disabled { color: #cad6e2; }
 .pagination-previous.disabled, .pagination-next.disabled { background-color: #002e42; border-color: #002e42; color: #fff; }
-@media screen and (min-width: 1088px) { .navbar__active { border-bottom: 2px solid #75b2f0 !important; color: white !important; } }
-@media screen and (min-width: 1088px) { a.navbar-item:hover { border-bottom: 2px solid #75b2f0; } }
+@media screen and (min-width: 1088px) { .navbar__active { color: #fff !important; } }
 @media screen and (max-width: 1087px) { .theme-toggle-button { color: #cad6e2; } }
 #isso-thread > h4 { color: #b7c7d7; }
 #isso-thread .textarea.placeholder { color: #cad6e2; }
