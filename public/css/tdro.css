@@ -3924,7 +3924,7 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 .dropdown label { cursor: pointer; }
 .dropdown-content .navbar-item { margin: 0; padding: 0.65rem 1rem; width: 100%; }
 .dropdown-content .navbar__active { font-weight: 700; color: #014cc6; }
-.dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover { background-color: #bbdbee; color: black; }
+.dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover { background-color: #ffeac2; color: black; }
 .dropdown-input[type="checkbox"]:checked ~ .dropdown-menu { display: block; }
 
 .error__headerSize { font-size: 8rem; }
