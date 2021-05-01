@@ -19,8 +19,8 @@
 /* NameException */ .chroma .ne { color: #a6e22e }
 /* NameFunction */ .chroma .nf { color: #a6e22e }
 /* NameOther */ .chroma .nx { color: #a6e22e }
-/* NameTag */ .chroma .nt { color: #ff8383 }
-/* Literal */ .chroma .l { color: #ae81ff }
+/* NameTag */ .chroma .nt { color: #ff9e9e }
+/* Literal */ .chroma .l { color: #c7a8ff }
 /* LiteralDate */ .chroma .ld { color: #e6db74 }
 /* LiteralString */ .chroma .s { color: #e6db74 }
 /* LiteralStringAffix */ .chroma .sa { color: #e6db74 }
