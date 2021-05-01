@@ -4048,7 +4048,7 @@ a:hover img { box-shadow: 0 8px 32px #999; }
  */
 
 figure div { height: 0; }
-figcaption { font-size: 0.9em; margin-top: 1.5em; }
+figcaption, .video footer { font-size: 0.9em; margin-top: 1.5em; }
 
 
 /*
