@@ -27,21 +27,19 @@
                     $route = '/contact/';  $label = 'Contact';  $icon = 'mail';      require views('components', 'navigator.link');
                   ?>
 
-                  <div class="navbar-item navbar__icon has-text-dark has-tap-transparent">
-                    <?php
-                      $links = true;
-                      $id = 'mobile-compact';
-                      $type = 'is-menu is-right';
-                      $icon = icon('arrow-down-circle');
-                      $label = <<<insert
-                        <span class="is-block has-text-centered">
-                          $icon
-                          <span class="is-block navbar__icon__label">More</span>
-                        </span>
-                      insert;
-                      require views('components', 'context.menu');
-                    ?>
-                  </div>
+                  <?php
+                    $links = true;
+                    $id = 'mobile-compact';
+                    $type = 'navbar-item is-menu is-right navbar__icon has-text-dark has-tap-transparent';
+                    $icon = icon('arrow-down-circle');
+                    $label = <<<insert
+                      <span class="is-block has-text-centered">
+                        $icon
+                        <span class="is-block navbar__icon__label">More</span>
+                      </span>
+                    insert;
+                    require views('components', 'context.menu');
+                  ?>
                 </div>
 
                  <div class="navbar__right column">
