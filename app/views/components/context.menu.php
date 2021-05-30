@@ -21,6 +21,7 @@
           $route = '/posts/';                       $label = 'Posts';      include views('components', 'navigator.link.dropdown');
           $route = '/projects/';                    $label = 'Projects';   include views('components', 'navigator.link.dropdown');
           $route = '/about/';                       $label = 'Profile';    include views('components', 'navigator.link.dropdown');
+          $route = '/abstracts/';                   $label = 'Abstracts';  include views('components', 'navigator.link.dropdown');
           $route = '/contact/';                     $label = 'Contact';    include views('components', 'navigator.link.dropdown');
           $route = '/git/';                         $label = 'Repository'; include views('components', 'navigator.link.dropdown');
           $route = 'https://ko-fi.com/thedroneely'; $label = 'Coffee';     include views('components', 'navigator.link.dropdown');

@@ -190,7 +190,7 @@ hr {
   border: none;
   display: block;
   height: 1px;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 img {
@@ -3798,7 +3798,7 @@ ol li:before {
 
 figure a, .navbar-item, .webring a, .article__more__content a, .front__more,
 .is-mobile .has-text-centered > a, .article__list li a, ol li > a, .tableofcontents li a,
-.resume__label, .resume__container a, .isso-comment-footer a { border-bottom: none !important; }
+.resume__label, .resume__container a, .isso-comment-footer a, .abstract.tile > a { border-bottom: none !important; }
 
 .image__thumbnail { max-height: 222px; }
 .medium-zoom-overlay { background-color: #fff; background-color: rgba(255, 255, 255, .9); }
@@ -4034,7 +4034,6 @@ li a:focus span,
 .post-header a:focus,
 .sans-serif > a:focus,
 .serif > a:focus,
-.underline:focus,
 .isso-comment > div.text-wrapper > .text a:focus,
 .front__more:focus { background-color: #fefe98 !important; color: black !important; outline: none; }
 

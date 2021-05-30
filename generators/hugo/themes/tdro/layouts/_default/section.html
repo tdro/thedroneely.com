@@ -6,7 +6,7 @@
 				<article class="content">
 				<br>
         <span class="marginnote rightnote">
-          See an archive of all {{ .Type }} <a class="underline" href="/{{ .Type }}/archive/">here.</a>
+          See an archive of all {{ .Type }} <a href="{{ partial "archive-link.html" . }}">here.</a>
         </span>
         <recent-article>
 				{{ range where .Paginator.Pages ".Params.hidden" "ne" "true" }}
@@ -16,7 +16,7 @@
         </article>
 				{{ partial "pagination.html" . }}
         <br>
-        <a href="/{{ .Type }}/archive/" class="front__more is-block has-text-centered">
+        <a href="{{ partial "archive-link.html" . }}" class="front__more is-block has-text-centered">
           <span>Archive of all {{ .Type }}</span> {{ safeHTML (readFile "public/css/icons/feather/corner-down-right.svg") }}
         </a>
 			</div>

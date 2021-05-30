@@ -1,0 +1,11 @@
+<div class="tile is-parent">
+  <article class="abstract tile is-child">
+    {{ partial "thumbnail-image.html" . }}
+    <h2 class="article__title title is-5 has-text-weight-bold">
+      <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+    </h2>
+    <p class="article__date subtitle is-6">
+    {{ partial "page-date.html" . }} <br> {{ partial "read-time.html" .}}
+    </p>
+  </article>
+</div>

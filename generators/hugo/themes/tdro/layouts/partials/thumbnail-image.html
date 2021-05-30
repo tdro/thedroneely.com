@@ -1,0 +1,17 @@
+{{ $imageFile := print "public/images/thumbnails/" (partial "article-image.html" .) ".png" }}
+{{ if fileExists $imageFile }}
+{{ $image := imageConfig $imageFile }}
+<a href="{{ .Permalink }}">
+  <picture>
+    <source srcset="/images/thumbnails/{{ partial "article-image.html" . }}.png" type="image/png">
+    <source srcset="/images/thumbnails/{{ partial "article-image.html" . }}.jpg" type="image/jpeg">
+    <source srcset="/images/thumbnails/{{ partial "article-image.html" . }}.webp" type="image/webp">
+    <img class="image__thumbnail" alt="{{ .Title }}" src="/images/thumbnails/{{ partial "article-image.html" . }}.png" height="{{ $image.Height }}" width="{{ $image.Width }}"/>
+  </picture>
+</a>
+{{ else }}
+{{ $image := imageConfig "public/images/thumbnails/personal-portfolio.png" }}
+<a href="{{ .Permalink }}">
+  <img class="image__thumbnail" alt="{{ .Title }}" src="/images/thumbnails/personal-portfolio.png" height="{{ $image.Height }}" width="{{ $image.Width }}"/>
+</a>
+{{ end }}

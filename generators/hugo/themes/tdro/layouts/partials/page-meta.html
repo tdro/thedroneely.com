@@ -1,11 +1,3 @@
-{{- if eq .Type "posts" -}} 
-	{{ partial "page-date.html" . -}}
-	{{- with .Params.categories }} in {{ partial "page-categories.html" . }}{{ end }}
-	{{- with .Params.tags }} {{ partial "page-tags.html" . }}{{ end }}
-{{- end -}}
-
-{{- if eq .Type "projects" -}} 
-	{{ partial "page-date.html" . -}}
-	{{- with .Params.categories }} in {{ partial "page-categories.html" . }}{{ end }}
-	{{- with .Params.tags }} {{ partial "page-tags.html" . }}{{ end }}
-{{- end -}}
+{{ partial "page-date.html" . -}}
+{{- with .Params.categories }} in {{ partial "page-categories.html" . }}{{ end }}
+{{- with .Params.tags }} {{ partial "page-tags.html" . }}{{ end }}
