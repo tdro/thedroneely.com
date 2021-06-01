@@ -3773,7 +3773,7 @@ a:hover { border-bottom: 2px solid #999; }
 
 ol {
   counter-reset: ol;
-  margin-left: 2.75rem;
+  margin-left: 4rem;
   margin-top: 1.5rem;
 }
 
