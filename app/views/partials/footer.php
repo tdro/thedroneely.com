@@ -7,17 +7,17 @@
 
             <p class="has-text-grey-dark is-size-7">
 
-            <a class="underline" href="/posts/rss.xml">RSS Feed</a> |
+            <a href="/posts/rss.xml">RSS Feed</a> |
 
-            <a class="underline" href="/resume">Resume</a> |
+            <a href="/resume">Resume</a> |
 
-            <a class="underline" rel="me" href="https://gitlab.com/tdro">Gitlab</a> |
+            <a rel="me" href="https://gitlab.com/tdro">Gitlab</a> |
 
-            <a class="underline" rel="me" href="https://github.com/tdro">Github</a> |
+            <a rel="me" href="https://github.com/tdro">Github</a> |
 
-            <a class="underline" href="/analytics">Analytics</a> |
+            <a href="/analytics">Analytics</a> |
 
-            <a class="underline" href="#">Back To Top</a>
+            <a href="#">Back To Top</a>
 
             </p>
 

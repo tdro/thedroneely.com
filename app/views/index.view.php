@@ -62,7 +62,7 @@
                     <input type="checkbox" id="posts" class="marginnote-toggle">
 
                     <span class="marginnote rightnote">
-                        See an archive of all posts <a class="underline" href="/posts/archive/">here.</a>
+                        See an archive of all posts <a href="/posts/archive/">here.</a>
                     </span>
 
                     <?php
@@ -87,7 +87,7 @@
                     <input type="checkbox" id="projects" class="marginnote-toggle">
 
                     <span class="marginnote rightnote">
-                        See an archive of all projects <a class="underline" href="/projects/archive/">here.</a>
+                        See an archive of all projects <a href="/projects/archive/">here.</a>
                     </span>
 
                     <?php
