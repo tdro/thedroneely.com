@@ -4168,9 +4168,10 @@ input.sidenote-toggle, input.marginnote-toggle  { display: none; }
 mark { background-color: transparent; color: unset; }
 
 .sidenote-container:hover .sidenote-mark span,
-.sidenote-container:hover .sidenote mark { background-color: #fefe98; color: #000; }
-.sidenote-container:hover .sidenote a { background-color: #fefe98; color: #000; border-color: dodgerblue; }
-
+.sidenote-container:hover .sidenote mark,
+.marginnote-container:hover .marginnote-mark span,
+.marginnote-container:hover .marginnote mark { background-color: #fefe98; color: #000; }
+.sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { background-color: #fefe98; color: #000; border-color: dodgerblue; }
 .sideimage > a, .sideimage a:focus { border-bottom: 1px solid transparent !important; background-color: transparent !important; }
 
 @media (max-width: 768px) {

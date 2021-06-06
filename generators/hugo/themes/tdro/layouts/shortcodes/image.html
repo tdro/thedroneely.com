@@ -1,15 +1,15 @@
-{{ safeHTML "<?php" }}
-$width = getimagesize($_SERVER['DOCUMENT_ROOT'] . '{{.Get `source`}}')[0];
-$height = getimagesize($_SERVER['DOCUMENT_ROOT'] . '{{.Get `source`}}')[1];
-$ratio = ((($height / $width) * 100) > 100) ? $height . 'px' : $height / $width * 100 . '%';
-{{ safeHTML "?>" }}
+{{ $imageFile := print "public" (.Get `source`) }}
+{{ $image := imageConfig $imageFile }}
+
+{{ $ratio := 0 }}
+{{ if lt (mul (div (float $image.Height) $image.Width) 100) 100 }}
+{{ $ratio = mul (div (float $image.Height) $image.Width) 100 }}
+{{ end }}
 
 <figure>
-  <a href="{{.Get `source`}}" onclick="return false;">
-    <div {{ safeHTMLAttr `<?php echo 'style=' . '"' . 'padding-bottom:' . $ratio . ';' . '"'; ?>` }}>
-    <img data-image-zoom src="{{.Get `source`}}" alt="{{.Get `title`}}" title="{{.Get `title`}}"
-    {{ safeHTMLAttr `<?php echo 'width=' . '"' . $width . '"'; ?>` }}
-    {{ safeHTMLAttr `<?php echo 'height=' . '"' . $height . '"'; ?>` }} />
+  <a href="{{ .Get `source` }}" onclick="return false;">
+    <div style="padding-bottom: {{ $ratio }}%;">
+      <img data-image-zoom src="{{ .Get `source` }}" alt="{{ .Get `title` }}" title="{{ .Get `title` }}" width="{{ $image.Width }}" height="{{ $image.Height }}"/>
     </div>
   </a>
   <figcaption class="has-text-centered has-text-grey-dark">{{ .Inner }}</figcaption>

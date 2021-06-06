@@ -2,10 +2,10 @@
 {{ $imageFile := print "public" (.Get `source`) }}
 {{ $image := imageConfig $imageFile }}
 
-<span class="sidenote-container">
-  <label for="{{ $id }}" class="sidenote-toggle sidenote-mark" title="{{ .Inner }}"><span>{{ .Get `mark` }}</span></label>
-  <input type="checkbox" id="{{ $id }}" class="sidenote-toggle">
-  <span class="sans-serif sidenote sideimage {{ .Get `set` }}note">
+<span class="marginnote-container">
+  <label for="{{ $id }}" class="marginnote-toggle marginnote-mark" title="{{ .Inner }}"><span>{{ .Get `mark` }}</span></label>
+  <input type="checkbox" id="{{ $id }}" class="marginnote-toggle">
+  <span class="sans-serif marginnote sideimage {{ .Get `set` }}note">
     <a href="{{.Get `source`}}" onclick="return false;">
       <img data-image-zoom src="{{ .Get `source`}}" alt="{{ .Inner }}" title="{{ .Get `title`}}" width="{{ $image.Width }}" height="{{ $image.Height }}"/>
     </a>

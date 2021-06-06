@@ -1,7 +1,9 @@
+{{ $id := md5 (printf (.Get `mark`) .Inner) }}
+
 <span class="sidenote-container">
-<label for="{{ .Get `mark` }}" class="sidenote-toggle sidenote-mark" title="{{ .Inner }}"><span>{{ .Get `mark` }}</span></label>
-<input type="checkbox" id="{{ .Get `mark` }}" class="sidenote-toggle">
-<span class="sans-serif sidenote {{ .Get `set` }}note">
-<mark>{{ .Inner }}</mark>
-</span>
+  <label for="{{ $id }}" class="sidenote-toggle sidenote-mark" title="{{ .Inner }}"><span>{{ .Get `mark` }}</span></label>
+  <input type="checkbox" id="{{ $id }}" class="sidenote-toggle">
+  <span class="sans-serif sidenote {{ .Get `set` }}note">
+    <mark>{{ .Inner }}</mark>
+  </span>
 </span>
