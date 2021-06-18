@@ -2,6 +2,7 @@
 
 html { background-color: #001f2c; }
 a { color: #75b2f0; }
+a:focus, a:focus span { color: #fff; background-color: #3f5c00; }
 a:hover img { outline: 6px dashed #75b2f0; box-shadow: none; }
 a:focus img { outline: 9px dashed #75b2f0; }
 a.navbar-item:hover { color: #fff !important; }
@@ -13,7 +14,7 @@ body, .sans-serif a, .serif a, .document h2 a, .document h3 a, nav#TableOfConten
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ccc !important; }
 .navbar-mobile .navbar__active, .navbar-end .navbar__active { color: #75b2f0 !important; }
 .dropdown-content { background-color: #002e42; border: 1px solid #00405c; }
-.dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover { background-color: #4698EA; color: #fff !important; }
+.dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover, .dropdown-content .navbar__active { background-color: #004766; }
 .has-text-danger { color: #ff8f93 !important; }
 .has-text-primary { color: #a6c9e8 !important; }
 .footer a { color: #bbb; }
@@ -28,7 +29,7 @@ a.navbar-item:focus, a.navbar-item:hover, .navbar-item:hover label { color: #fff
 .item__box { color: #ddd; background-color: #004766; }
 .item__box:hover, .item__box:hover svg, .item__box:focus svg { color: #fff; }
 .message__success { background-color: #55a1ec; border: 1px solid #1259a1;  color: black; }
-.pagination-link.is-current { background-color: #75b2f0; border-color: #75b2f0; color: #212121 !important; }
+.pagination-link.is-current { background-color: #004766; border-color: #00608a; color: #fff !important; }
 .pagination-previous, .pagination-next, .pagination-link { border-color: #002e42; color: #cad6e2; min-width: 2.25em; }
 .pagination-previous:hover,
 .pagination-next:hover, .pagination-link:hover, .pagination-previous.disabled, .pagination-next.disabled { color: #cad6e2; }
@@ -52,3 +53,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cad6e2; }
 .isso-comment > div.text-wrapper > .text a { color: #cad6e2; }
 .is-success:focus, .is-link:focus { background-color: #75b2f0 !important; color: #121212 !important; border-color: #75b2f0 !important; }
 .timeline .timeline-item .timeline-marker { border: 3px solid #001f2c !important; }
+.sidenote-container:hover .sidenote-mark span, .sidenote-container:hover .sidenote mark,
+.marginnote-container:hover .marginnote-mark span, .marginnote-container:hover .marginnote mark,
+.sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { color: #fff; background-color: #3f5c00; }

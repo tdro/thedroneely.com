@@ -3924,7 +3924,7 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 .navbar__middle .dropdown { padding: 0; }
 .dropdown label { cursor: pointer; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 1.5rem; }
 .dropdown-content .navbar-item { margin: 0; padding: 0.65rem 1rem; width: 100%; }
-.dropdown-content .navbar__active { font-weight: 700; color: #014cc6; }
+.dropdown-content .navbar__active { font-weight: 700; background-color: #ebf2ff; }
 .dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover { background-color: #ffeac2; color: black; }
 .dropdown-input[type="checkbox"]:checked ~ .dropdown-menu { display: block; }
 
@@ -4028,18 +4028,10 @@ h1.article__list:not(:first-child) { margin-top: 1.5rem; }
  * Focus Links
  */
 
-.focus-link:focus,
-li a:focus,
-li a:focus span,
-.post-header a:focus,
-.sans-serif > a:focus,
-.serif > a:focus,
-.isso-comment > div.text-wrapper > .text a:focus,
-.front__more:focus { background-color: #fefe98 !important; color: black !important; outline: none; }
-
+a:focus, a:focus span { background-color: #fefe98; color: #014cc6; outline: none; }
 a:focus img { outline: 2px solid; }
 a:hover img { box-shadow: 0 8px 32px #999; }
-
+figure > a:focus { background-color: transparent; }
 .is-success:focus, .is-link:focus { background-color: #ebebeb !important }
 
 
@@ -4167,11 +4159,10 @@ input.sidenote-toggle, input.marginnote-toggle  { display: none; }
 
 mark { background-color: transparent; color: unset; }
 
-.sidenote-container:hover .sidenote-mark span,
-.sidenote-container:hover .sidenote mark,
-.marginnote-container:hover .marginnote-mark span,
-.marginnote-container:hover .marginnote mark { background-color: #fefe98; color: #000; }
-.sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { background-color: #fefe98; color: #000; border-color: dodgerblue; }
+.sidenote-container:hover .sidenote-mark span, .sidenote-container:hover .sidenote mark,
+.marginnote-container:hover .marginnote-mark span, .marginnote-container:hover .marginnote mark,
+.sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { background-color: #fefe98; color: #000; }
+.sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { border-color: dodgerblue; }
 .sideimage > a, .sideimage a:focus { border-bottom: 1px solid transparent !important; background-color: transparent !important; }
 
 @media (max-width: 768px) {
