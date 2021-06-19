@@ -7,6 +7,8 @@
 
             <p class="has-text-grey-dark is-size-7">
 
+            <a href="/sitemap.xml">Site Map</a> |
+
             <a href="/posts/rss.xml">RSS Feed</a> |
 
             <a href="/resume">Resume</a> |
