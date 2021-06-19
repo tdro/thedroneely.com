@@ -2,7 +2,7 @@
 
 html { background-color: #001f2c; }
 a { color: #75b2f0; }
-a:focus, a:focus span { color: #fff; background-color: #3f5c00; }
+a:focus, a:focus span { color: #fff; background-color: #005d85; }
 a:hover img { outline: 6px dashed #75b2f0; box-shadow: none; }
 a:focus img { outline: 9px dashed #75b2f0; }
 a.navbar-item:hover { color: #fff !important; }
@@ -14,7 +14,8 @@ body, .sans-serif a, .serif a, .document h2 a, .document h3 a, nav#TableOfConten
 .navbar-item, .subtitle, .has-text-grey-dark { color: #ccc !important; }
 .navbar-mobile .navbar__active, .navbar-end .navbar__active { color: #75b2f0 !important; }
 .dropdown-content { background-color: #002e42; border: 1px solid #00405c; }
-.dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover, .dropdown-content .navbar__active { background-color: #004766; }
+.dropdown-content a.navbar-item:hover, .dropdown-content .theme-toggle-button:hover { color: #fff; background-color: #005d85; }
+.dropdown-content .navbar__active { background-color: #004766; }
 .has-text-danger { color: #ff8f93 !important; }
 .has-text-primary { color: #a6c9e8 !important; }
 .footer a { color: #bbb; }
@@ -55,4 +56,4 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cad6e2; }
 .timeline .timeline-item .timeline-marker { border: 3px solid #001f2c !important; }
 .sidenote-container:hover .sidenote-mark span, .sidenote-container:hover .sidenote mark,
 .marginnote-container:hover .marginnote-mark span, .marginnote-container:hover .marginnote mark,
-.sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { color: #fff; background-color: #3f5c00; }
+.sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { color: #fcfcfc; background-color: #005d85; }

@@ -3856,7 +3856,7 @@ blockquote > p.serif { font-size: 1.2rem !important; }
  */
 
 a.navbar-item:focus, a.navbar-item:hover, .navbar-item:hover label { color: #000000; }
-.navbar__icon:hover svg, .navbar__icon:hover svg, .navbar__icon:hover label svg { fill: #ffdc9b; }
+.navbar__icon:hover svg, .navbar__icon:hover svg, .navbar__icon:hover label svg { fill: #ffc966; }
 
 .navbar-item {
   display: block;
@@ -4028,7 +4028,7 @@ h1.article__list:not(:first-child) { margin-top: 1.5rem; }
  * Focus Links
  */
 
-a:focus, a:focus span { background-color: #fefe98; color: #014cc6; outline: none; }
+a:focus, a:focus span { background-color: #ffeac2; color: #0145b2; outline: none; }
 a:focus img { outline: 2px solid; }
 a:hover img { box-shadow: 0 8px 32px #999; }
 figure > a:focus { background-color: transparent; }
@@ -4161,7 +4161,7 @@ mark { background-color: transparent; color: unset; }
 
 .sidenote-container:hover .sidenote-mark span, .sidenote-container:hover .sidenote mark,
 .marginnote-container:hover .marginnote-mark span, .marginnote-container:hover .marginnote mark,
-.sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { background-color: #fefe98; color: #000; }
+.sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { background-color: #ffeac2; color: #000; }
 .sidenote-container:hover .sidenote a, .marginnote-container:hover .marginnote a { border-color: dodgerblue; }
 .sideimage > a, .sideimage a:focus { border-bottom: 1px solid transparent !important; background-color: transparent !important; }
 
