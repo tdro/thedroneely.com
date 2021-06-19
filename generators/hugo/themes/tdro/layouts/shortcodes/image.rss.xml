@@ -1,0 +1,14 @@
+{{ $imageFile := print "public" (.Get `source`) }}
+{{ $image := imageConfig $imageFile }}
+
+{{ $ratio := 0 }}
+{{ if lt (mul (div (float $image.Height) $image.Width) 100) 100 }}
+{{ $ratio = mul (div (float $image.Height) $image.Width) 100 }}
+{{ end }}
+
+<figure>
+  <a href="{{ .Get `source` }}">
+    <img data-image-zoom src="{{ .Get `source` }}" alt="{{ .Get `title` }}" title="{{ .Get `title` }}" width="{{ $image.Width }}" height="{{ $image.Height }}"/>
+  </a>
+  <figcaption class="has-text-centered has-text-grey-dark">{{ .Inner }}</figcaption>
+</figure>

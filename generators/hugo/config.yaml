@@ -31,16 +31,12 @@ pygmentsCodeFences: true
 pygmentsUseClasses: true
 pygmentsCodeFencesGuessSyntax: true
 
-# RSS
-mediaTypes:
-  application/atom:
-    suffixes: xml
-
+# Output formats
 outputFormats:
-  RSS:
-    mediaType: application/rss
+  rss:
     baseName: rss
+    mediaType: application/xml
 
 outputs:
   home:
-  - RSS
+  - rss
