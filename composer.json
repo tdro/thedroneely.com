@@ -7,6 +7,6 @@
         "exclude-from-classmap": [ "/cockpit/" ]
     },
     "require": {
-        "phpmailer/phpmailer": "6.1.6"
+        "phpmailer/phpmailer": "6.5.0"
     }
 }
