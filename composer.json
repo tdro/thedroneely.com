@@ -1,12 +1,16 @@
 {
-    "config": {
-      "autoloader-suffix": "tdro"
-     },
-    "autoload" : {
-        "classmap": [ "./" ],
-        "exclude-from-classmap": [ "/cockpit/" ]
-    },
-    "require": {
-        "phpmailer/phpmailer": "6.1.6"
-    }
+  "config": {
+    "autoloader-suffix": "tdro"
+  },
+  "autoload": {
+    "classmap": [
+      "./"
+    ],
+    "exclude-from-classmap": [
+      "/cockpit/"
+    ]
+  },
+  "require": {
+    "phpmailer/phpmailer": "6.5.0"
+  }
 }
