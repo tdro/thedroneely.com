@@ -25,14 +25,16 @@
           {{- .Content | replaceRE "<p>" "<p class=\"serif is-size-serif\">" | replaceRE "<h2" "<h2 class=\"serif\"" | replaceRE "<h3" "<h3 class=\"serif\"" | safeHTML }}
 
 
-          <div class="has-text-right">
-            <p class="article__updated has-text-grey-dark is-inline-block">
-            Updated
-            {{ if .Params.updated }}
-            {{ dateFormat "2 January 2006" .Params.updated }}
-            {{ else }}
-            {{ dateFormat "2 January 2006" .Params.date }}
-            {{ end }}
+          <div class="has-text-grey-dark has-text-right">
+            <p>
+              Updated
+              {{ if .Params.updated }}
+              {{ dateFormat "2 January 2006" .Params.updated }}
+              {{ else }}
+              {{ dateFormat "2 January 2006" .Params.date }}
+              {{ end }}
+              <br>
+              <a class="has-text-grey-dark" href="{{ strings.TrimRight "/" .Permalink }}.md">View Source</a>
             </p>
           </div>
 
