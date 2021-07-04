@@ -4028,7 +4028,7 @@ h1.article__list:not(:first-child) { margin-top: 1.5rem; }
  * Focus Links
  */
 
-a:focus, a:focus span { background-color: #ffeac2; color: #0145b2; outline: none; }
+a:focus, a:focus span { background-color: #ffeac2; color: #000; outline: none; }
 a:focus img { outline: 2px solid; }
 a:hover img { box-shadow: 0 8px 32px #999; }
 figure > a:focus { background-color: transparent; }
