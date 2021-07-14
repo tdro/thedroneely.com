@@ -3930,6 +3930,7 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
 
 .error__headerSize { font-size: 8rem; }
 
+nav .item__box { margin: 0 0 0 0.7rem; }
 .item__box span { padding-left: 10px; }
 .item__box svg { stroke-width: 1.5px; width: 20px; height: 20px; }
 .item__box:hover, .item__box:hover svg, .item__box:focus svg { fill: currentColor; color: #000; }
@@ -3940,7 +3941,6 @@ html.has-navbar-fixed-top, body.has-navbar-fixed-top, html.has-navbar-fixed-bott
   align-items: center;
   justify-content: center;
   font-weight: 400;
-  margin: 0 0 0 0.7rem;
   padding: 0.25rem 1rem;
   background-color: #f2f2f2;
   border: 0 solid transparent !important;
