@@ -23,6 +23,7 @@ class Form
         if ((bool) empty($this->email) == true
             || (bool) empty($this->message) == true
         ) {
+            error_log('Contact Form Incomplete: Error 403');
             return true;
         }
     }
@@ -34,14 +35,11 @@ class Form
 
     public function submit()
     {
-        // Include mail config
         $config = include '../config.php';
 
         $mail = new PHPMailer(true);
 
         try {
-            //Server settings
-            //$mail->SMTPDebug = 2;
             $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->SMTPSecure = 'ssl';
@@ -50,21 +48,18 @@ class Form
             $mail->Username = $config['mail']['username'];
             $mail->Password = $config['mail']['password'];
 
-            //Recipients
             $mail->setFrom($config['mail']['username'], $config['mail']['name']);
             $mail->addAddress($config['mail']['username'], $config['mail']['name']);
 
-            //Content
             $mail->isHTML(true);
             $mail->Subject = 'New message from ' . $this->email;
             $mail->Body    = $this->message . "\n\n" . $this->name . "\n" . $this->email;
             $mail->AltBody = $this->message . "\n\n" . $this->name . "\n" . $this->email;
 
-            //Send Mail
             $mail->send();
 
         } catch (Exception $exception) {
-            log_exception($exception);
+            error_log($exception);
         }
     }
 }

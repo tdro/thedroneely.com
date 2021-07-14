@@ -10,19 +10,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $form->spam = $spam = $_POST['agree'] ?? false;
 
     if ($form->empty()) {
-        include '../app/views/contact.view.php';
-        return;
+        return http_response_code(403);
     }
 
     if ($form->spam()) {
-        error_log('Contact Form Spam: Error 403');
         return http_response_code(403);
     }
 
     if ($form->emailValid() === false) {
         $emailError = 'Invalid email: ' . "\r" . '<b>'. $email . '</b>';
-        include '../app/views/contact.view.php';
-        return;
+        return include '../app/views/contact.view.php';
     }
 
     $formSuccess = true;
