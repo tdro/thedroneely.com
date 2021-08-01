@@ -4040,7 +4040,7 @@ figure > a:focus { background-color: transparent; }
  */
 
 figure div { height: 0; }
-figcaption, .video footer { font-size: 0.9em; margin-top: 1.5em; }
+figcaption, .video footer { font-size: 0.9em; margin-top: 1.5em; margin-bottom: 1em; }
 
 
 /*
