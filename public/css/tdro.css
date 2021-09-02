@@ -4076,7 +4076,7 @@ details summary { cursor: pointer;}
 
 nav#TableOfContents li:hover { background-color: #f1f1f1; }
 nav#TableOfContents ul { margin-left: -0.5em; }
-nav#TableOfContents a { display: block; color: #555; padding-left: 0.5rem; }
+nav#TableOfContents a { display: block; color: #555; padding: 0.125rem 0 0.125rem 0.5rem; }
 nav#TableOfContents a { white-space: nowrap; overflow: hidden; display: block; text-overflow: ellipsis; }
 
 
