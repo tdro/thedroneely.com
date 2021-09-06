@@ -18,7 +18,7 @@
                 <ul class="article__list">
                   {{ range $article.Pages }}
                   <li>
-                    <a class="is-block" href="{{ .RelPermalink }}">
+                    <a title="{{ .Title }}" class="is-block" href="{{ .RelPermalink }}">
                       <span class="article__list__date monospace has-text-grey-dark">{{ .Date.Format "02 Jan 2006" }}</span>{{ .Title }}
                     </a>
                   </li>
@@ -42,7 +42,7 @@
                 <ul class="article__list">
                   {{ range $article.Pages }}
                   <li>
-                    <a class="is-block" href="{{ .RelPermalink }}">
+                    <a title="{{ .Title }}" class="is-block" href="{{ .RelPermalink }}">
                       <span class="article__list__date monospace has-text-grey-dark">{{ .Date.Format "02 Jan 2006" }}</span>{{ .Title }}
                     </a>
                   </li>
