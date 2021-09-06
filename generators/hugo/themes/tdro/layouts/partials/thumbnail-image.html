@@ -1,7 +1,7 @@
 {{ $imageFile := print "public/images/thumbnails/" (partial "article-image.html" .) ".png" }}
 {{ if fileExists $imageFile }}
 {{ $image := imageConfig $imageFile }}
-<a href="{{ .Permalink }}">
+<a title="{{ .Title }}" href="{{ .Permalink }}">
   <picture>
     <source srcset="/images/thumbnails/{{ partial "article-image.html" . }}.png" type="image/png">
     <source srcset="/images/thumbnails/{{ partial "article-image.html" . }}.jpg" type="image/jpeg">
