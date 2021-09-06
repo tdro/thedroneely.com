@@ -50,7 +50,7 @@
       <div class="column is-7">
 
         <section class="section-vertical">
-          <h2 class="is-size-4 has-margin-bottom-lg">More Content</h2>
+          <h2 class="is-uppercase is-size-5 has-spacing-widest has-margin-bottom-lg">More Content</h2>
           {{ $related :=  shuffle .Site.RegularPages | first 3 }}
           {{ with $related }}
           {{ range . }}
@@ -100,11 +100,11 @@
 <link rel="stylesheet" href="/css/syntax-highlight.css">
 {{ end }}
 
-<aside class="section content container comments__section">
+<aside class="section content container">
   <div class="columns is-centered">
     <div class="column is-7">
 
-      <h1 id="comments" class="is-size-4">Comments</h1>
+      <h1 id="comments" class="is-uppercase is-size-5 has-spacing-widest">Comments</h1>
 
       <script
         data-isso="/isso/"
