@@ -19,7 +19,7 @@ window.history.replaceState(null, null, url);
 /**
  * Remove url hash to store in pager
  */
-var url = window.location.href.split('#')[0];
+url = window.location.href.split('#')[0];
 
 /**
  * Settings array
@@ -82,9 +82,7 @@ document.addEventListener('mousemove', function(event) {
       }
     }
   }
-
   hide(dropdownContentList, 300, event);
-
 });
 
 /*
