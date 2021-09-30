@@ -6,11 +6,8 @@ function apos (x, a) { return (typeof x == 'function') ? posf(x,a) : Array.proto
 function arem (a, x) { var i = apos(x, a); if (i >= 0) { a.splice(i, 1); } return a; }
 function afind (x, a) { var i = apos(x, a); return (i >= 0) ? a[i] : null; }
 function byClass (el, cl) { return el ? el.getElementsByClassName(cl) : []; }
-function byTag (el, tg) { return el ? el.getElementsByTagName(tg) : []; }
-function hasClass (el, cl) { var a = el.className.split(' '); return afind(cl, a); }
 function addClass (el, cl) { if (el) { var a = el.className.split(' '); if (!afind(cl, a)) { a.unshift(cl); el.className = a.join(' '); } } }
 function remClass (el, cl) { if (el) { var a = el.className.split(' '); arem(a, cl); el.className = a.join(' '); } }
-function togClass (el, cl) { if (hasClass(el, cl)) { remClass(el, cl); return; } addClass(el, cl); }
 function runOnce(action) { runOnce = function(){}; action(); }
 
 /**
