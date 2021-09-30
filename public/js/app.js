@@ -160,7 +160,7 @@ window.addEventListener('scroll', function(event) {
     return node.tagName === "IMG";
   };
   var isNodeList = function isNodeList(selector) {
-    return NodeList.prototype.isPrototypeOf(selector);
+    return Object.prototype.hasOwnProperty.call(NodeList, selector);
   };
   var isNode = function isNode(selector) {
     return selector && selector.nodeType === 1;
