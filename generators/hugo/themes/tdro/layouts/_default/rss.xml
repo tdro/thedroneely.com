@@ -11,7 +11,6 @@
     <title>{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} from {{ end }}{{ .Site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
     <description>Recent {{ if ne .Title .Site.Title }}{{ with .Title }}{{ . }} {{ end }}{{ end }}from {{ .Site.Title }}</description>
-    <generator>Hugo</generator>
     <language>{{ .Site.LanguageCode }}</language>
     <managingEditor>{{ $.Site.Author.name }}</managingEditor>
     <webMaster>{{ $.Site.Author.name }}</webMaster>
