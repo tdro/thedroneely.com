@@ -34,7 +34,7 @@
       <div class="column is-7 has-text-grey-dark has-text-right">
         <p>
           {{ dateFormat "2 January 2006" .Params.date }}
-          <code> &mdash; Created</code>
+          <code> &mdash; Written</code>
           <br>
           {{ if .Params.updated }}
             {{ dateFormat "2 January 2006" .Params.updated }}
@@ -45,7 +45,7 @@
           <br>
           {{ .Site.Author.name }}<code> &mdash; Creator</code>
           <br>
-          <a class="has-text-grey-dark" href="{{ strings.TrimRight "/" .Permalink }}.md">{{ .Slug }}.md</a><code> &mdash; Origins</code>
+          <a class="has-text-grey-dark" href="{{ strings.TrimRight "/" .Permalink }}.md">{{ .Slug }}.md</a><code> &mdash; Article</code>
         </p>
       </div>
     </div>
