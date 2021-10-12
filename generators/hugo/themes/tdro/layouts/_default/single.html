@@ -5,7 +5,6 @@
       <div class="column is-7">
         <article class="content document">
           <h1 class="title is-2 serif">{{ .Title }}</h1>
-
           {{ if .Params.toc }}
           <div class="tableofcontents marginnote rightnote is-inline">
             <div class="is-size-6 is-uppercase has-text-weight-bold has-spacing-widest has-margin-bottom-sm">Table of Contents</div>
@@ -14,35 +13,44 @@
           {{ end }}
 
           <aside class="subtitle is-6 has-text-grey-dark">
-          {{- partial "page-meta.html" . -}}
-          <br>
-          <span class="isso-comments-counter"><a class="has-text-grey-dark focus-link" title="Jump to Comments" href="#isso-thread">0 Comments</a> ·</span>
-          {{- partial "read-time.html" . -}} · {{ .FuzzyWordCount }} words
+            {{- partial "page-meta.html" . -}}
+            <br>
+            <span class="isso-comments-counter"><a class="has-text-grey-dark focus-link" title="Jump to Comments" href="#isso-thread">0 Comments</a> ·</span>
+            {{- partial "read-time.html" . -}} · {{ .FuzzyWordCount }} words
           </aside>
 
           {{- partial "page-status.html" . -}}
 
           {{- .Content | replaceRE "<p>" "<p class=\"serif is-size-serif\">" | replaceRE "<h2" "<h2 class=\"serif\"" | replaceRE "<h3" "<h3 class=\"serif\"" | safeHTML }}
-
-
-          <div class="has-text-grey-dark has-text-right">
-            <p>
-              Updated
-              {{ if .Params.updated }}
-              {{ dateFormat "2 January 2006" .Params.updated }}
-              {{ else }}
-              {{ dateFormat "2 January 2006" .Params.date }}
-              {{ end }}
-              <br>
-              <a class="has-text-grey-dark" href="{{ strings.TrimRight "/" .Permalink }}.md">View Source</a>
-            </p>
-          </div>
-
         </article>
       </div>
     </div>
   </div>
 </main>
+
+<aside class="section">
+  <div class="container">
+    <div class="columns is-tablet is-centered">
+      <div class="column is-7 has-text-grey-dark has-text-right">
+        <p>
+          {{ dateFormat "2 January 2006" .Params.date }}
+          <code> &mdash; Created</code>
+          <br>
+          {{ if .Params.updated }}
+            {{ dateFormat "2 January 2006" .Params.updated }}
+          {{ else }}
+            {{ dateFormat "2 January 2006" .Params.date }}
+          {{ end }}
+          <code> &mdash; Updated</code>
+          <br>
+          {{ .Site.Author.name }}<code> &mdash; Creator</code>
+          <br>
+          <a class="has-text-grey-dark" href="{{ strings.TrimRight "/" .Permalink }}.md">{{ .Slug }}.md</a><code> &mdash; Origins</code>
+        </p>
+      </div>
+    </div>
+  </div>
+</aside>
 
 <aside class="section content article__more__content has-margin-bottom-none">
   <div class="container">
