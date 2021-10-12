@@ -2,7 +2,7 @@
 <title>{{ partial "title.html" . -}}</title>
 <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}">
 <meta name="keywords" content="{{ partial "title.html" . -}}">
-<meta name="author" content="Thedro Neely">
+<meta name="author" content="{{ .Site.Author.name }}">
 
 <meta charset="utf-8">
 <meta name="robots" content="index,follow">
