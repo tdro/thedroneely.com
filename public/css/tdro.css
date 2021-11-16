@@ -3186,7 +3186,7 @@ label.marginnote-toggle:not(.sidenote-number) { display: inline; }
 }
 
 .isso-comment .isso-follow-up {
-    padding-left: calc(7% + 20px);
+    padding-left: 2rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header,
