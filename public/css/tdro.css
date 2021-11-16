@@ -3159,6 +3159,7 @@ label.marginnote-toggle:not(.sidenote-number) { display: inline; }
     width: 16px;
     height: 16px;
     margin: 2px 12px 0 0;
+    display: none;
 }
 
 .isso-comment blockquote {
