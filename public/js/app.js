@@ -837,3 +837,46 @@ function preload(url) {
 
   prefetches.add(url);
 }
+
+/**
+ * Dictionary Access Copyright (C) 2006, Paul Lutus https://arachnoid.com/javascript/dictionary_access.js GPLv2+
+ */
+
+addEvent(document,"dblclick", dictionary);
+
+function addEvent(o,e,f) {
+  if (o.addEventListener) {
+    o.addEventListener(e,f,false);
+    return true;
+  }
+  else if (o.attachEvent) {
+    return o.attachEvent("on"+e,f);
+  }
+  else {
+    return false;
+  }
+}
+
+function dictionary(e) {
+  if(e.ctrlKey == true || e.shiftKey == true || e.altKey == true) {return;}
+  if (navigator.appName != 'Microsoft Internet Explorer') {
+    var str = "" + window.getSelection();
+    if(str > '' && str.length > 1) {
+      dictionary_access(str);
+    }
+  }
+  else {
+    var t = document.selection;
+    var ts = t.createRange();
+    if(t.type == 'Text' && ts.text > '' && t.text.length > 1) {
+      document.selection.empty();
+      dictionary_access(ts.text);
+    }
+  }
+}
+
+function dictionary_access(str) {
+  str = str.replace(/[!.:?,;\"]/g, '');
+  str = str.replace(/^\s*(\S*?)\s*$/g,"$1");
+  if (str) {window.open('http://www.merriam-webster.com/dictionary/'+encodeURIComponent(str), 'Definitions', 'width=700,height=500,resizable=1,menubar=1,scrollbars=1,status=1,titlebar=1,toolbar=1,location=1,personalbar=1');}
+}
