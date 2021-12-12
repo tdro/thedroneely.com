@@ -52,10 +52,6 @@ mark {
 .has-text-grey-dark {
   color: #ccc !important;
 }
-.navbar-mobile .navbar__active,
-.navbar-end .navbar__active {
-  color: #75b2f0 !important;
-}
 .dropdown-content {
   background-color: #002e42;
   border: 1px solid #00405c;
@@ -96,7 +92,7 @@ a.navbar-item:hover,
 .navbar__icon:hover svg,
 .navbar__icon:hover svg,
 .navbar__icon:hover label svg {
-  fill: #0073ca;
+  fill: #555;
 }
 .title,
 .content h1,
@@ -155,10 +151,11 @@ a.navbar-item:hover,
   border-color: #002e42;
   color: #fff;
 }
-@media screen and (min-width: 1088px) {
-  .navbar__active {
-    color: #fff !important;
-  }
+.navbar__active {
+  color: #fff !important;
+}
+.navbar__active svg {
+  fill: #0073ca;
 }
 @media screen and (max-width: 1087px) {
   .theme-toggle-button {
