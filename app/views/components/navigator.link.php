@@ -1,12 +1,8 @@
 <a href="<?php echo $route ?? null; ?>" class="navbar-item navbar__icon has-text-centered
   <?php
-
     $hiddenLabels = [ 'Profile' ];
     if (in_array($label, $hiddenLabels)) { echo ' navbar__icon__hidden'; }
-
-    echo $check = ($label === 'Home')
-      ? ($navigation->isActiveHome() ? ' navbar__active' : '')
-      : ($navigation->isActive($route ?? null) ? ' navbar__active' : '');
+    if ($navigation->isActive($route ?? null)) { echo ' navbar__active'; }
   ?>
 ">
   <div class="has-text-centered">
