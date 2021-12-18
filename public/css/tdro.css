@@ -1557,6 +1557,10 @@ a:hover {
   border-bottom: 2px solid #999;
 }
 
+a:focus {
+  border-bottom: 3px solid #999;
+}
+
 :target::before {
   content: "";
   display: block;
