@@ -23,22 +23,10 @@
                         In it for the long haul
                     </h2>
 
-                    <?php
-                    $width = getimagesize($_SERVER['DOCUMENT_ROOT'] . '/images/mountains.jpg')[0];
-                    $height = getimagesize($_SERVER['DOCUMENT_ROOT'] . '/images/mountains.jpg')[1];
-                    $ratio = ((($height / $width) * 100) > 100) ? $height . 'px' : $height / $width * 100 . '%';
-                    ?>
-
-                    <figure>
-                      <a href="/images/mountains.jpg" onclick="return false;">
-                        <div style="<?php echo 'padding-bottom:' . $ratio . ';'; ?>">
-                          <img data-image-zoom alt="Mountains" src="/images/mountains.jpg"
-                            width="<?php echo $width; ?>"
-                            height="<?php echo $height; ?>"
-                          >
-                        </div>
-                      </a>
-                    </figure>
+                    <video preload="none" poster="/images/pipes.png" width="732" height="" autoplay="true" loop="true" muted="true">
+                      <source src="/videos/pipes.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
 
                     <div class="content">
 
