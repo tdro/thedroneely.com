@@ -4,7 +4,7 @@ class Navigation
 {
     public function requestContains($route)
     {
-        return (bool) (strpos($_SERVER['REQUEST_URI'], $route) !== false);
+        return (bool) (strpos($_SERVER['REQUEST_URI'], $route) === 1);
     }
 
     public function isActive($route)
