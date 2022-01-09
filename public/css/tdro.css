@@ -1865,7 +1865,7 @@ body.has-navbar-fixed-bottom {
   color: #014cc6 !important;
 }
 .navbar__active svg {
-  fill: #eee;
+  fill: #d1ebff;
 }
 .navbar__active .navbar__icon__label {
   font-weight: 700;
