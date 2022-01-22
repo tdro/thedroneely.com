@@ -204,9 +204,8 @@ body {
 }
 
 code {
-  font-size: 0.735em;
+  font-size: 1rem;
   font-weight: normal;
-  border-radius: 3px;
   -ms-hyphens: auto;
   -ms-word-break: normal;
   overflow-wrap: break-word;
@@ -238,7 +237,7 @@ span {
   font-weight: inherit;
 }
 
-strong {
+strong * {
   font-weight: 700;
 }
 
@@ -246,21 +245,35 @@ pre {
   -webkit-overflow-scrolling: touch;
   background-color: #002e42;
   border-radius: 3px;
-  color: #fff;
   font-size: 0.875em;
-  overflow-x: auto;
-  padding: 1.25rem 1.5rem;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 1.25em 1.5em;
   white-space: pre;
   word-wrap: normal;
 }
 
 pre code {
-  display: inline-block;
   background-color: transparent;
   color: currentColor;
+  display: inline-block;
   font-size: 1em;
-  padding: 0;
   min-width: 100%;
+  padding: 0.75em 0 0 0;
+  position: relative;
+}
+
+pre code:before {
+  border-radius: 0 0 0.25em 0.25em;
+  content: attr(data-lang);
+  font-size: 0.9em;
+  letter-spacing: 0.01rem;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  top: -1.4em;
 }
 
 .is-pulled-right {
@@ -497,14 +510,6 @@ ul {
   width: 100%;
 }
 
-.content pre {
-  -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
-  padding: 1.25em 1.5em;
-  white-space: pre;
-  word-wrap: normal;
-}
-
 .content sup,
 .content sub {
   font-size: 75%;
@@ -618,12 +623,6 @@ ul {
   max-width: 100%;
   overflow: hidden;
   padding: 0;
-}
-
-.highlight pre {
-  background-color: #002e42;
-  overflow: auto;
-  max-width: 100%;
 }
 
 .input,
@@ -1513,14 +1512,6 @@ article.content {
 video {
   display: inline-block;
   box-shadow: 0 0.25rem 1rem rgba(48, 55, 66, 0.3);
-}
-
-p code {
-  font-size: 1rem;
-}
-
-strong code {
-  font-weight: 700;
 }
 
 a {
