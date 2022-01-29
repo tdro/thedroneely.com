@@ -842,41 +842,45 @@ function preload(url) {
  * Dictionary Access Copyright (C) 2006, Paul Lutus https://arachnoid.com/javascript/dictionary_access.js GPLv2+
  */
 
-addEvent(document,"dblclick", dictionary);
+(function () {
+  addEvent(document, "dblclick", dictionary);
 
-function addEvent(o,e,f) {
-  if (o.addEventListener) {
-    o.addEventListener(e,f,false);
-    return true;
-  }
-  else if (o.attachEvent) {
-    return o.attachEvent("on"+e,f);
-  }
-  else {
-    return false;
-  }
-}
-
-function dictionary(e) {
-  if(e.ctrlKey == true || e.shiftKey == true || e.altKey == true) {return;}
-  if (navigator.appName != 'Microsoft Internet Explorer') {
-    var str = "" + window.getSelection();
-    if(str > '' && str.length > 1) {
-      dictionary_access(str);
+  function addEvent(element, type, listener) {
+    if (element.addEventListener) {
+      element.addEventListener(type, listener, false);
+      return true;
+    } else if (element.attachEvent) {
+      return element.attachEvent("on" + type, listener);
+    } else {
+      return false;
     }
   }
-  else {
-    var t = document.selection;
-    var ts = t.createRange();
-    if(t.type == 'Text' && ts.text > '' && t.text.length > 1) {
-      document.selection.empty();
-      dictionary_access(ts.text);
+
+  function dictionary(event) {
+    if (
+      event.ctrlKey == true ||
+      event.shiftKey == true ||
+      event.altKey == true
+    ) {
+      return;
+    }
+    var word = "" + window.getSelection();
+    var container = window.getSelection().anchorNode.parentElement.tagName;
+    if (word > "" && word.length > 1 && container !== "CODE") {
+      dictionary_access(word);
     }
   }
-}
 
-function dictionary_access(str) {
-  str = str.replace(/[!.:?,;\"]/g, '');
-  str = str.replace(/^\s*(\S*?)\s*$/g,"$1");
-  if (str) {window.open('http://www.merriam-webster.com/dictionary/'+encodeURIComponent(str), 'Definitions', 'width=700,height=500,resizable=1,menubar=1,scrollbars=1,status=1,titlebar=1,toolbar=1,location=1,personalbar=1');}
-}
+  function dictionary_access(word) {
+    word = word.replace(/[!.:?,;"]/g, "");
+    word = word.replace(/^\s*(\S*?)\s*$/g, "$1");
+    if (word) {
+      window.open(
+        "https://www.merriam-webster.com/dictionary/" +
+          encodeURIComponent(word),
+        "Definitions",
+        "targetWindow,width=700,height=500,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes"
+      );
+    }
+  }
+})();
