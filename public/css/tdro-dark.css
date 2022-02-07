@@ -241,4 +241,5 @@ textarea:-ms-input-placeholder {
 .marginnote-container:hover .marginnote a {
   color: #fcfcfc;
   background-color: #005d85;
+  border-color: #af0c00;
 }
