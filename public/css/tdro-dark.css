@@ -30,8 +30,7 @@ body,
 nav#TableOfContents a {
   color: #cad6e2;
 }
-.sans-serif a,
-.serif a {
+.document a {
   color: #eee;
 }
 .article__list li:hover,

@@ -1390,11 +1390,16 @@ a:focus {
 
 ol {
   counter-reset: ol;
+}
+
+ol,
+.document > ul {
   margin-left: 4rem;
   margin-top: 1.5rem;
 }
 
-ol li {
+ol li,
+.document > ul li {
   -ms-hyphens: auto;
   -ms-word-break: normal;
   overflow-wrap: break-word;
@@ -1427,7 +1432,6 @@ figure a,
 .front__more,
 .is-mobile .has-text-centered > a,
 .article__list li a,
-ol li > a,
 .tableofcontents li a,
 .resume__label,
 .resume__container a,
@@ -1464,7 +1468,8 @@ textarea,
 }
 
 .serif,
-ol li {
+.document ol li,
+.document > ul li {
   font-family: Charter, Georgia, "Book Antiqua", serif;
 }
 
@@ -1477,13 +1482,14 @@ blockquote > p.serif,
   font-family: "Fira Code", Consolas, monaco, monospace;
 }
 
-.sans-serif a,
-.serif a {
+.document a {
   color: #000;
 }
+
 .is-size-serif {
   font-size: 1.25rem !important;
 }
+
 .content h1,
 .content h2,
 .content h3,
@@ -1492,7 +1498,7 @@ blockquote > p.serif,
 .document h3 a {
   color: #111;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 blockquote .blockquote-footer {
@@ -2137,11 +2143,6 @@ table code {
   -ms-user-select: none;
   user-select: none;
   letter-spacing: 0.01rem;
-}
-
-.marginnote code,
-.sidenote code {
-  font-size: 0.8em;
 }
 
 .sidenote:hover,
