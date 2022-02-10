@@ -27,14 +27,15 @@ url = window.location.href.split('#')[0];
 var settings = { pager: {} };
 
 window.addEventListener('load', function(event) {
+  if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
   if (localStorage['settings']) { settings = JSON.parse(localStorage['settings']); }
   if (window.location.href.indexOf("#") >= 0) {
-    settings['pager'][url] = window.pageYOffset + 1;
+    settings['pager'][url] = window.pageYOffset;
     localStorage['settings'] = JSON.stringify(settings);
     return;
   }
-  if (settings['pager'][url]) { window.scrollTo(0, settings['pager'][url]); return; }
-  settings['pager'][url] = window.pageYOffset + 1;
+  if (settings['pager'][url] > 0) { window.scrollTo(0, settings['pager'][url]); return; }
+  settings['pager'][url] = window.pageYOffset;
   localStorage['settings'] = JSON.stringify(settings);
 });
 
@@ -119,6 +120,7 @@ window.addEventListener('scroll', function(event) {
     var velocity = previousPosition - currentPosition;
 
     settings['pager'][url] = currentPosition;
+    localStorage['settings'] = JSON.stringify(settings);
 
     if (scrolls > 3) {
       if (velocity > 75 || currentPosition < navbarHeight) {
@@ -128,8 +130,6 @@ window.addEventListener('scroll', function(event) {
       } else if (currentPosition > navbarHeight) {
         runOnce(function () { addClass(navbar, 'headroom'); });
       }
-
-      localStorage['settings'] = JSON.stringify(settings);
     }
 
     previousPosition = currentPosition;
