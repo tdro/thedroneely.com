@@ -2311,10 +2311,6 @@ mark {
   word-wrap: break-word;
 }
 
-#isso-thread .avatar > svg[data-hash="4415d0b80795"] {
-  border: 3px solid #f19670;
-}
-
 #isso-thread .isso-comment-header a {
   text-decoration: none;
 }
@@ -2363,12 +2359,11 @@ mark {
 }
 
 .isso-comment > div.avatar {
-  display: block;
   float: left;
   width: 16px;
   height: 16px;
   margin: 2px 12px 0 0;
-  display: none;
+  display: none !important;
 }
 
 .isso-comment blockquote {
