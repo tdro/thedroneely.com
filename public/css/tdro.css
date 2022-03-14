@@ -1969,6 +1969,10 @@ figure div {
   height: 0;
 }
 
+figcaption code {
+  font-size: 1em;
+}
+
 figcaption,
 .video footer,
 .video footer code {
