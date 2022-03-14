@@ -49,7 +49,7 @@ mark {
 .navbar-item,
 .subtitle,
 .has-text-grey-dark {
-  color: #ccc !important;
+  color: #fff !important;
 }
 .dropdown-content {
   background-color: #002e42;
@@ -112,7 +112,7 @@ a.navbar-item:hover,
   color: white;
 }
 .item__box {
-  color: #ddd;
+  color: #fff;
   background-color: #004766;
 }
 .item__box:hover,
