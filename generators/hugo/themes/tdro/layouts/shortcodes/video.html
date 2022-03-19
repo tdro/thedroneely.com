@@ -3,5 +3,5 @@
     <source src="{{ .Get `source` }}" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-  <footer class="has-text-centered has-text-grey-dark">{{ .Inner }}</footer>
+  <footer class="has-text-centered has-text-grey-dark">{{ .Inner | markdownify }}</footer>
 </div>

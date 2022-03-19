@@ -1,1 +1,1 @@
-<!-- Hide shortcode {{ .Inner }} for RSS feeds. -->
+<!-- Hide shortcode {{ .Inner | markdownify }} for RSS feeds. -->

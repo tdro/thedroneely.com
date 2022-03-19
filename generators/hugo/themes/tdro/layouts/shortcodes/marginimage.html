@@ -3,12 +3,12 @@
 {{ $image := imageConfig $imageFile }}
 
 <span class="marginnote-container">
-  <label for="{{ $id }}" class="marginnote-toggle marginnote-mark" title="{{ .Inner }}"><span>{{ .Get `mark` }}</span></label>
+  <label for="{{ $id }}" class="marginnote-toggle marginnote-mark" title="{{ .Inner | markdownify }}"><span>{{ .Get `mark` | markdownify }}</span></label>
   <input type="checkbox" id="{{ $id }}" class="marginnote-toggle">
   <span class="sans-serif marginnote sideimage {{ .Get `set` }}note">
     <a href="{{.Get `source`}}" onclick="return false;">
-      <img data-image-zoom src="{{ .Get `source`}}" alt="{{ .Inner }}" title="{{ .Get `title`}}" width="{{ $image.Width }}" height="{{ $image.Height }}"/>
+      <img data-image-zoom src="{{ .Get `source`}}" alt="{{ .Inner | markdownify }}" title="{{ .Get `title`}}" width="{{ $image.Width }}" height="{{ $image.Height }}"/>
     </a>
-    <span class="sideimage-footer is-block has-text-centered has-text-grey-dark"><mark>{{ .Inner }}</mark></span>
+    <span class="sideimage-footer is-block has-text-centered has-text-grey-dark"><mark>{{ .Inner | markdownify }}</mark></span>
   </span>
 </span>

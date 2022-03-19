@@ -4,7 +4,7 @@
     <div class="columns is-centered">
       <div class="column is-7">
         <article class="content document">
-          <h1 class="title is-2 serif">{{ .Title }}</h1>
+          <h1 class="title is-2 serif">{{ .Title | markdownify }}</h1>
           {{ if .Params.toc }}
           <div class="tableofcontents marginnote rightnote is-inline">
             <div class="is-size-6 is-uppercase has-text-weight-bold has-spacing-widest has-margin-bottom-sm">Table of Contents</div>

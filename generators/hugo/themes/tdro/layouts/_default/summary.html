@@ -9,7 +9,7 @@
       <header class="post-header">
 
       <h2 class="article__title title is-5 has-text-weight-bold">
-        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | markdownify }}</a>
       </h2>
 
       <p class="article__date subtitle is-6">

@@ -5,7 +5,7 @@
       <div class="column is-7">
         {{ $title := .Title }}
         <article class="content">
-          <h1 class="article__list smallcaps title">{{ .Title | title }}</h1>
+          <h1 class="article__list smallcaps title">{{ .Title | markdownify }}</h1>
           {{ range $taxonomy := .Site.Taxonomies }}
             {{ $title := .Title }}
             {{ range $tag, $article := $taxonomy }}
@@ -15,7 +15,10 @@
                   {{ range $article.Pages }}
                     <li>
                       <a title="{{ .Title }}" class="is-block" href="{{ .RelPermalink }}">
-                        <span class="article__list__date monospace has-text-grey-dark">{{ .Date.Format "02 Jan 2006" }}</span>{{ .Title }}
+                        <span class="article__list__date monospace has-text-grey-dark">
+                          {{- .Date.Format "02 Jan 2006" -}}
+                        </span>
+                        {{- .Title | markdownify -}}
                       </a>
                     </li>
                   {{ end }}
