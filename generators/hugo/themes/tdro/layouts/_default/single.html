@@ -21,7 +21,14 @@
 
           {{- partial "page-status.html" . -}}
 
-          {{- .Content | replaceRE "<p>" "<p class=\"serif is-size-serif\">" | replaceRE "<h2" "<h2 class=\"serif\"" | replaceRE "<h3" "<h3 class=\"serif\"" | safeHTML }}
+          {{- .Content |
+            replaceRE "<p>\n<figure>" "<figure>" |
+            replaceRE "</figure></p>" "</figure>" |
+            replaceRE "<p>" "<p class=\"serif is-size-serif\">" |
+            replaceRE "<h2" "<h2 class=\"serif\"" |
+            replaceRE "<h3" "<h3 class=\"serif\"" |
+            safeHTML
+          -}}
         </article>
       </div>
     </div>

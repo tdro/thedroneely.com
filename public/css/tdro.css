@@ -505,11 +505,6 @@ ul {
   text-align: center;
 }
 
-.content figure a {
-  display: inline-block;
-  width: 100%;
-}
-
 .content sup,
 .content sub {
   font-size: 75%;
@@ -1425,7 +1420,7 @@ ol li:before {
   position: absolute;
 }
 
-figure a,
+figure > a,
 .navbar-item,
 .webring a,
 .article__more__content a,

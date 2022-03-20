@@ -1,0 +1,18 @@
+{{ $imageFile := print "public" (.Destination | safeURL) }}
+{{ $image := imageConfig $imageFile }}
+{{- /* This comment removes trailing newlines. */ -}}
+<figure>
+  <a href="{{ .Destination | safeURL }}" onclick="return false;">
+    <img data-image-zoom
+      src="{{ .Destination | safeURL }}"
+      alt="{{ $.Text }}"
+      title="{{ $.Text }}"
+      width="{{ $image.Width }}"
+      height="{{ $image.Height }}"
+    />
+  </a>
+  <figcaption class="has-text-centered has-text-grey-dark">
+    {{ $.Title | markdownify }}
+  </figcaption>
+</figure>
+{{- /* This comment removes trailing newlines. */ -}}
