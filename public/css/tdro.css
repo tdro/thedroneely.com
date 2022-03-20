@@ -2055,10 +2055,8 @@ nav#TableOfContents a {
   padding: 0.125rem 0 0.125rem 0.5rem;
 }
 nav#TableOfContents a {
-  white-space: nowrap;
-  overflow: hidden;
   display: block;
-  text-overflow: ellipsis;
+  font-size: 0.8125rem;
 }
 
 /*
