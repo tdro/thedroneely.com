@@ -856,6 +856,16 @@ function preload(url) {
     }
   }
 
+  function notInside(element, name) {
+    if (typeof element.parentElement === "undefined" ||
+      element.parentElement === null
+    ) { return true; }
+    var parentTag = element.parentElement;
+    var tagName = element.tagName;
+    if (tagName === name) { return false; }
+    return notInside(parentTag, name);
+  }
+
   function dictionary(event) {
     if (
       event.ctrlKey == true ||
@@ -865,8 +875,9 @@ function preload(url) {
       return;
     }
     var word = "" + window.getSelection();
-    var container = window.getSelection().anchorNode.parentElement.tagName;
-    if (word > "" && word.length > 1 && container !== "CODE") {
+    var container = window.getSelection().anchorNode.parentElement;
+
+    if (word > "" && word.length > 1 && notInside(container, 'PRE')) {
       dictionary_access(word);
     }
   }
