@@ -1479,7 +1479,7 @@ blockquote > p.serif,
 .monospace {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: "Fira Code", Consolas, monaco, monospace;
+  font-family: "Fira Code", Lucida Console, Courier, Andale Mono, monospace;
 }
 
 .document a {
