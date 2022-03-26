@@ -365,12 +365,6 @@ a.has-text-danger:focus {
   display: inline !important;
 }
 
-@media screen and (min-width: 769px), print {
-  .is-inline-tablet {
-    display: inline !important;
-  }
-}
-
 .is-inline-block {
   display: inline-block !important;
 }
@@ -746,10 +740,6 @@ fieldset[disabled] .select select:-ms-input-placeholder,
   height: initial;
 }
 
-.textarea.has-fixed-size {
-  resize: none;
-}
-
 .checkbox,
 .radio {
   cursor: pointer;
@@ -894,63 +884,6 @@ fieldset[disabled] .radio {
   font-size: 1rem;
   position: relative;
   text-align: left;
-}
-
-.control.has-icons-left .input:focus ~ .icon,
-.control.has-icons-left .select:focus ~ .icon,
-.control.has-icons-right .input:focus ~ .icon,
-.control.has-icons-right .select:focus ~ .icon {
-  color: #7a7a7a;
-}
-
-.control.has-icons-left .input.is-small ~ .icon,
-.control.has-icons-left .select.is-small ~ .icon,
-.control.has-icons-right .input.is-small ~ .icon,
-.control.has-icons-right .select.is-small ~ .icon {
-  font-size: 0.75rem;
-}
-
-.control.has-icons-left .input.is-medium ~ .icon,
-.control.has-icons-left .select.is-medium ~ .icon,
-.control.has-icons-right .input.is-medium ~ .icon,
-.control.has-icons-right .select.is-medium ~ .icon {
-  font-size: 1.25rem;
-}
-
-.control.has-icons-left .input.is-large ~ .icon,
-.control.has-icons-left .select.is-large ~ .icon,
-.control.has-icons-right .input.is-large ~ .icon,
-.control.has-icons-right .select.is-large ~ .icon {
-  font-size: 1.5rem;
-}
-
-.control.has-icons-left .icon,
-.control.has-icons-right .icon {
-  color: #dbdbdb;
-  height: 2.25em;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 2.25em;
-  z-index: 4;
-}
-
-.control.has-icons-left .input,
-.control.has-icons-left .select select {
-  padding-left: 2.25em;
-}
-
-.control.has-icons-left .icon.is-left {
-  left: 0;
-}
-
-.control.has-icons-right .input,
-.control.has-icons-right .select select {
-  padding-right: 2.25em;
-}
-
-.control.has-icons-right .icon.is-right {
-  right: 0;
 }
 
 .dropdown {
@@ -1443,6 +1376,35 @@ figure > a,
   margin-top: 2rem;
 }
 
+.article__more__content time {
+  margin-right: 1rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.05rem;
+  font-variant: all-small-caps;
+}
+
+.article__more__content li {
+  display: flex;
+  align-items: center;
+}
+
+.article__more__content li p {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 1rem;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 968px) {
+  .article__more__content li {
+    display: block;
+  }
+  .article__more__content li p {
+    white-space: normal;
+  }
+}
+
 .image__thumbnail {
   max-height: 222px;
 }
@@ -1873,7 +1835,7 @@ h1.article__list:not(:first-child) {
   padding-top: 1em;
 }
 .webring ul {
-  margin-top: 0.5em;
+  margin-top: 0;
 }
 .webring .articles h2 {
   margin-bottom: 0.1em;
@@ -2051,7 +2013,7 @@ nav#TableOfContents ul {
 }
 nav#TableOfContents a {
   display: block;
-  color: #555;
+  color: #444;
   padding: 0.125rem 0 0.125rem 0.5rem;
 }
 nav#TableOfContents a {
@@ -2106,7 +2068,7 @@ table code {
 }
 
 /*
- * Tufte CSS
+ * Tufte CSS: https://edwardtufte.github.io/tufte-css/
  */
 
 .leftnote {

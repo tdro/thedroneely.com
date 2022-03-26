@@ -72,11 +72,14 @@
 
           <ul>
             <li>
-              <span class="has-text-grey-dark">{{ dateFormat "02 Jan 2006" .Date }}</span>
-              &nbsp;
-              <h2 class="has-margin-none is-inline-tablet">
-                <a href="{{ .RelPermalink }}" title="{{ truncate 100 "..." .Summary }}" class="serif is-size-4">{{ .Title }}</a>
-              </h2>
+              <p class="has-margin-none">
+                <a href="{{ .RelPermalink }}" title="{{ truncate 100 "..." .Summary }}" class="serif is-size-4">
+                  {{ .Title | markdownify }}
+                </a>
+              </p>
+              <time datetime="{{ dateFormat "2006-01-02" .Date }}">
+                {{ dateFormat "02 Jan 2006" .Date }}
+              </time>
             </li>
           </ul>
 
