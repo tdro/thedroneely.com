@@ -1308,11 +1308,6 @@ a:focus {
   border-bottom: 3px solid #999;
 }
 
-a:active {
-  top: 0.1rem;
-  position: relative;
-}
-
 :target::before {
   content: "";
   display: block;
