@@ -3,7 +3,7 @@
 {{ $image := imageConfig $imageFile }}
 
 <span class="marginnote-container">
-  <label for="{{ $id }}" class="marginnote-toggle marginnote-mark" title="{{ .Inner | markdownify }}"><span>{{ .Get `mark` | markdownify }}</span></label>
+  <label for="{{ $id }}" class="marginnote-toggle marginnote-mark" title="{{ .Inner | replaceRE "\n" " " | markdownify }}"><span>{{ .Get `mark` | markdownify }}</span></label>
   <input type="checkbox" id="{{ $id }}" class="marginnote-toggle">
   <span class="sans-serif marginnote sideimage {{ .Get `set` }}note">
     <a href="{{.Get `source`}}" onclick="return false;">

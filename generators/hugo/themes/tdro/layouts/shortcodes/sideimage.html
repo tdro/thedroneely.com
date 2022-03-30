@@ -3,7 +3,7 @@
 {{ $image := imageConfig $imageFile }}
 
 <span class="sidenote-container">
-  <label for="{{ $id }}" class="sidenote-toggle sidenote-mark" title="{{ .Inner | markdownify }}"><span>{{ .Get `mark` | markdownify }}</span></label>
+  <label for="{{ $id }}" class="sidenote-toggle sidenote-mark" title="{{ .Inner | replaceRE "\n" " " | markdownify }}"><span>{{ .Get `mark` | markdownify }}</span></label>
   <input type="checkbox" id="{{ $id }}" class="sidenote-toggle">
   <span class="sans-serif sidenote sideimage {{ .Get `set` }}note">
     <a href="{{.Get `source`}}" onclick="return false;">

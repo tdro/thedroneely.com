@@ -1,7 +1,7 @@
 {{ $id := md5 (printf (.Get `mark`) .Inner) }}
 
 <span class="marginnote-container">
-  <label for="{{ $id }}" class="marginnote-toggle marginnote-mark" title="{{ .Inner | markdownify }}"><span>{{ .Get `mark` | markdownify }}</span></label>
+  <label for="{{ $id }}" class="marginnote-toggle marginnote-mark" title="{{ .Inner | replaceRE "\n" " " | markdownify }}"><span>{{ .Get `mark` | markdownify }}</span></label>
   <input type="checkbox" id="{{ $id }}" class="marginnote-toggle">
   <span class="sans-serif marginnote {{ .Get `set` }}note">
     <mark>{{ .Inner | markdownify }}</mark>
