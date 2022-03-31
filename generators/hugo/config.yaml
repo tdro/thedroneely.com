@@ -12,9 +12,8 @@ taxonomies:
 author:
   name: Thedro Neely
 
-metaDataFormat: yaml
-summaryLength: 20
 paginate: 3
+summaryLength: 20
 
 pygmentsUseClassic: false
 pygmentsCodeFences: true
