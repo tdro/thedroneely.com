@@ -1,7 +1,12 @@
-<div class="video has-text-centered">
-  <video preload="none" poster="{{ .Get `poster` }}" width="{{ .Get `width` }}" height="{{ .Get `height`}}" controls {{ .Get `options` | safeHTMLAttr }}>
+<video-container>
+  <video
+    preload="none"
+    poster="{{ .Get `poster` }}"
+    width="{{ .Get `width` }}"
+    height="{{ .Get `height`}}"
+    controls {{ .Get `options` | safeHTMLAttr }}>
     <source src="{{ .Get `source` }}" type="video/mp4">
-    Your browser does not support the video tag.
+    Sorry, your browser doesn't support embedded videos.
   </video>
-  <footer class="has-text-centered has-text-grey-dark">{{ .Inner | markdownify }}</footer>
-</div>
+  <footer class="has-text-grey-dark">{{ .Inner | markdownify }}</footer>
+</video-container>

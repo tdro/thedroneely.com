@@ -23,15 +23,13 @@
                         In it for the long haul
                     </h2>
 
-                    <div class="video has-text-centered">
-                      <video preload="none" poster="/images/pipes.png" width="732" height="" autoplay="true" loop="true" muted="true">
+                    <video-container>
+                      <video preload="none" poster="/images/pipes.png" width="732" autoplay="true" loop="true" muted="true">
                         <source src="/videos/pipes.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
+                        Sorry, your browser doesn't support embedded videos.
                       </video>
-                      <footer class="has-text-centered has-text-grey-dark">
-                      pipes.sh terminal screensaver
-                      </footer>
-                    </div>
+                      <footer class="has-text-grey-dark">pipes.sh terminal screensaver</footer>
+                    </video-container>
 
                     <div class="content">
 

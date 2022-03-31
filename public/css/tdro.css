@@ -1931,15 +1931,21 @@ figcaption code {
 }
 
 figcaption,
-.video footer,
-.video footer code {
+video ~ footer,
+video ~ footer code {
   font-size: 0.9rem;
 }
 
 figcaption,
-.video footer {
+video ~ footer {
   margin-top: 1.5em;
   margin-bottom: 1em;
+  text-align: center;
+}
+
+video-container {
+  display: block;
+  text-align: center;
 }
 
 /*

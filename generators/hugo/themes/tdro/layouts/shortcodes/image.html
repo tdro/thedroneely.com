@@ -5,5 +5,5 @@
   <a href="{{ .Get `source` }}" onclick="return false;">
     <img data-image-zoom src="{{ .Get `source` }}" alt="{{ .Get `title` }}" title="{{ .Get `title` }}" width="{{ $image.Width }}" height="{{ $image.Height }}"/>
   </a>
-  <figcaption class="has-text-centered has-text-grey-dark">{{ .Inner | markdownify }}</figcaption>
+  <figcaption class="has-text-grey-dark">{{ .Inner | markdownify }}</figcaption>
 </figure>
