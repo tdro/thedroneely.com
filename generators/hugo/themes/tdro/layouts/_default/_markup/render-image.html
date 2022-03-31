@@ -6,7 +6,7 @@
     <img data-image-zoom
       src="{{ .Destination | safeURL }}"
       alt="{{ $.Text }}"
-      title="{{ $.Text }}"
+      title="{{ $.Text | htmlUnescape | safeHTML }}"
       width="{{ $image.Width }}"
       height="{{ $image.Height }}"
     />
