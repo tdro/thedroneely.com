@@ -1,12 +1,26 @@
+{{-
+  $source  := default
+  "https://raw.githubusercontent.com/benhosmer/HTML5-Test-Videos/9a6c2db46472454c634963cbeb0900fd37901fac/big_buck_bunny"
+  (.Get "source"  | default (.Get 0))
+-}}
+{{- $poster  := default ""     (.Get "poster"  | default (.Get 1)) -}}
+{{- $width   := default ""     (.Get "width"   | default (.Get 2)) -}}
+{{- $height  := default ""     (.Get "height"  | default (.Get 3)) -}}
+{{- $preload := default "none" (.Get "preload" | default (.Get 4)) -}}
+{{- $options := default ""     (.Get "options" | default (.Get 5)) -}}
+
 <video-container>
   <video
-    preload="none"
-    poster="{{ .Get `poster` }}"
-    width="{{ .Get `width` }}"
-    height="{{ .Get `height`}}"
-    controls {{ .Get `options` | safeHTMLAttr }}>
-    <source src="{{ .Get `source` }}" type="video/mp4">
-    Sorry, your browser doesn't support embedded videos.
+    preload="{{ $preload }}"
+    poster="{{ $poster }}"
+    width="{{ $width }}"
+    height="{{ $height }}"
+    controls {{ $options | safeHTMLAttr }}>
+    <source src="{{ $source }}" type="video/mp4">
+    <p>
+      Sorry, your browser doesn't support embedded videos. Here is a
+      <a href="{{ $source }}">link to the video</a> instead.
+    </p>
   </video>
-  <footer class="has-text-grey-dark">{{ .Inner | markdownify }}</footer>
+  <figcaption class="has-text-grey-dark">{{ .Inner | markdownify }}</figcaption>
 </video-container>

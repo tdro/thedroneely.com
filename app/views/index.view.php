@@ -26,9 +26,12 @@
                     <video-container>
                       <video preload="none" poster="/images/pipes.png" width="732" autoplay="true" loop="true" muted="true">
                         <source src="/videos/pipes.mp4" type="video/mp4" />
-                        Sorry, your browser doesn't support embedded videos.
+                        <p>
+                          Sorry, your browser doesn't support embedded videos. Here is a
+                          <a href="/videos/pipes.mp4">link to the video</a> instead.
+                        </p>
                       </video>
-                      <footer class="has-text-grey-dark">pipes.sh terminal screensaver</footer>
+                      <figcaption class="has-text-grey-dark">pipes.sh terminal screensaver</figcaption>
                     </video-container>
 
                     <div class="content">
