@@ -10,8 +10,8 @@
   </picture>
 </a>
 {{ else }}
-{{ $image := imageConfig "public/images/thumbnails/personal-portfolio.png" }}
+{{ $image := imageConfig "public/images/thumbnails/placeholder.png" }}
 <a href="{{ .Permalink }}">
-  <img class="image__thumbnail" alt="{{ .Title }}" src="/images/thumbnails/personal-portfolio.png" height="{{ $image.Height }}" width="{{ $image.Width }}"/>
+  <img class="image__thumbnail" alt="{{ .Title }}" src="/images/thumbnails/placeholder.png" height="{{ $image.Height }}" width="{{ $image.Width }}"/>
 </a>
 {{ end }}
