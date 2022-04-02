@@ -8,13 +8,13 @@
           <span class="marginnote rightnote">
             See an archive of all {{ .Type }} <a href="{{ partial "archive-link.html" . }}">here.</a>
           </span>
-          <recent-article>
+          <recent-articles>
             <div class="abstract tile is-ancestor has-text-centered">
               {{ range where .Paginator.Pages ".Params.hidden" "ne" "true" }}
               {{ .Render "summary" }}
               {{ end }}
             </div>
-          </recent-article>
+          </recent-articles>
         </article>
         {{ partial "pagination.html" . }}
         <br>

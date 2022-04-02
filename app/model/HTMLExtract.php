@@ -2,7 +2,6 @@
 
 class DOMExtract extends DOMDocument
 {
-    private $source;
     private $document;
 
     public function __construct()
@@ -10,55 +9,25 @@ class DOMExtract extends DOMDocument
         libxml_use_internal_errors(true);
         $this->preserveWhiteSpace = false;
         $this->strictErrorChecking = false;
-        $this->formatOutput = true;
+        $this->formatOutput = false;
     }
 
-    public function setSource($source)
+    public function innerHTML($tag, $file)
     {
-        $this->source = file_get_contents($source);
-        return $this;
-    }
+        $html = '';
+        $this->loadHTML(file_get_contents($file));
+        $this->document = $this->getElementsByTagName($tag);
 
-    public function getInnerHTML($tag, $id=null, $nodeValue = false)
-    {
-        if (empty($this->source)) {
-            throw new Exception('Error: Missing $this->source, use setSource() first');
+        foreach ($this->document as $node)
+        {
+            /*
+            |  TODO: DOMDocument::saveHTML's empty elements list is not updated.
+            |  https://bugs.php.net/bug.php?id=73175
+            */
+
+            $html .= $this->saveHTML($node);
         }
 
-        $html = null;
-        $this->loadHTML($this->source);
-        $element = $this->getElementsByTagName($tag);
-
-        foreach ($element as $tags) {
-            if ($id !== null) {
-                $attr = explode('=', $id);
-                if ($tags->getAttribute($attr[0]) == $attr[1]) {
-                    if ($nodeValue == true) {
-                        $html .= trim($tags->nodeValue);
-                    } else {
-                        $html .= $this->innerHTML($tags);
-                    }
-                }
-            } else {
-                if ($nodeValue == true) {
-                    $html .= trim($tags->nodeValue);
-                } else {
-                    $html .= $this->innerHTML($tags);
-                }
-            }
-        }
-        return $html;
+        return str_replace("</source>", '', $html);
     }
-
-    protected function innerHTML($document)
-    {
-        $html = "";
-        foreach ($document->childNodes as $v) {
-            $tmp = new DOMDocument();
-            $tmp->appendChild($tmp->importNode($v, true));
-            $html .= trim($tmp->saveHTML());
-        }
-        return $html;
-    }
-
 }

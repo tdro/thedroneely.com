@@ -61,8 +61,7 @@
 
                     <?php
                     $recentPosts = new DOMExtract();
-                    $recentPosts->setSource($_SERVER['DOCUMENT_ROOT'] . '/posts/index.html');
-                    echo $recentPosts->getInnerHTML('recent-article');
+                    echo $recentPosts->innerHTML('recent-articles', $_SERVER['DOCUMENT_ROOT'] . '/posts/index.html');
                     ?>
 
                     <a href="/posts/page/2/"
@@ -86,8 +85,7 @@
 
                     <?php
                     $recentProjects = new DOMExtract();
-                    $recentProjects->setSource($_SERVER['DOCUMENT_ROOT'] . '/projects/index.html');
-                    echo $recentProjects->getInnerHTML('recent-article');
+                    echo $recentPosts->innerHTML('recent-articles', $_SERVER['DOCUMENT_ROOT'] . '/projects/index.html');
                     ?>
                     </div>
 
