@@ -1,0 +1,10 @@
+{{- $user := default "gdb"                              (.Get "user" | default (.Get 0)) -}}
+{{- $gist := default "b6365e79be6052e7531e7ba6ea8caf23" (.Get "gist" | default (.Get 1)) -}}
+{{- $file := default ""                                 (.Get "file" | default (.Get 2)) -}}
+
+<github-gist>
+  <script
+    type="application/javascript"
+    src="https://gist.github.com/{{ $user }}/{{ $gist }}.js?file={{ $file }}">
+  </script>
+</github-gist>
