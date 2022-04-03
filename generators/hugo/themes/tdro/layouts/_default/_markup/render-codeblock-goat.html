@@ -1,0 +1,18 @@
+{{ $width   := .Attributes.width   }}
+{{ $height  := .Attributes.height  }}
+{{ $caption := .Attributes.caption }}
+<diagram-container>
+  {{ with diagrams.Goat .Inner }}
+    <svg font-family="'Fira Code', 'Lucida Console', 'Andale Mono', monospace"
+      xmlns="http://www.w3.org/2000/svg"
+      {{ if or $width $height }}
+        {{ with $width }}width="{{ . }}"{{ end }}
+        {{ with $height }}height="{{ . }}"{{ end }}
+      {{ else }}
+        viewBox="0 0 {{ .Width }} {{ .Height }}"
+      {{ end }}>
+      {{ .Inner }}
+    </svg>
+  {{ end }}
+  <figcaption class="has-text-grey-dark">{{ $caption }}</figcaption>
+</diagram-container>
