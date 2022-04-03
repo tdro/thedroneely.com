@@ -614,6 +614,10 @@ ul {
   padding: 0;
 }
 
+.highlight:focus-within {
+  outline: 0.25rem solid #ff8383;
+}
+
 .input,
 .textarea,
 .select select {
