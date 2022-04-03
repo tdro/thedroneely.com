@@ -11,6 +11,8 @@
 
             <a href="/posts/rss.xml">RSS Feed</a> |
 
+            <a href="/index.json">JSON Feed</a> |
+
             <a href="/resume">Resume</a> |
 
             <a rel="me" href="https://gitlab.com/tdro">Gitlab</a> |

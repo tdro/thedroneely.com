@@ -24,7 +24,11 @@ outputFormats:
   rss:
     baseName: rss
     mediaType: application/xml
+  json:
+    baseName: index
+    mediaType: application/json
 
 outputs:
   home:
   - rss
+  - json

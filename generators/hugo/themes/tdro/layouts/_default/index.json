@@ -1,0 +1,40 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "{{ .Site.Title }}",
+  "home_page_url": "{{ .Site.BaseURL }}",
+  "feed_url": "{{ .Site.BaseURL }}/index.json",
+  "items": [
+    {{- range $index, $data := .Site.Pages -}}
+    {{- if ne $data.Type "json" -}}
+    {{- if and $index (gt $index 0) -}},{{- end }}
+    {
+      "id": "{{ md5 $data.Permalink }}",
+      "url": "{{ $data.Permalink }}",
+      "title": "{{ htmlEscape $data.Title}}",
+      "content_text": {{ $data.Plain | jsonify }},
+      "content_html": {{ $data.Content | jsonify }},
+      "summary": "{{ $data.Summary }}",
+      "date_modified": "{{ $data.Date | time.Format "2006-01-02T15:04:05Z" }}",
+      "date_published": "{{ $data.PublishDate | time.Format "2006-01-02T15:04:05Z" }}",
+      "_metadata": {
+        "slug": "{{ $data.Slug }}",
+        "type": "{{ $data.Type }}"
+      },
+      "author": {
+        "name": "{{ .Site.Author.name }}"
+      },
+      "tags": [
+        {{- range $tags, $tag := $data.Params.tags -}}
+          {{- if $tags -}}
+          ,
+          {{- end -}}
+          "
+          {{- $tag | htmlEscape -}}
+          "
+        {{- end -}}
+      ]
+    }
+    {{- end -}}
+    {{ end }}
+  ]
+}
