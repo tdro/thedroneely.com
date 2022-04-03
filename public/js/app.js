@@ -14,7 +14,7 @@ function runOnce(action) { runOnce = function(){}; action(); }
  * Remove url query string
  */
 var url = window.location.href.split('?')[0];
-window.history.replaceState(null, null, url);
+window.history.replaceState(null, '', url);
 
 /**
  * Remove url hash to store in pager
@@ -32,6 +32,7 @@ window.addEventListener('load', function(event) {
   if (window.location.href.indexOf("#") >= 0) {
     settings['pager'][url] = window.pageYOffset;
     localStorage['settings'] = JSON.stringify(settings);
+    document.getElementById(location.hash.slice(1)).scrollIntoView()
     return;
   }
   if (settings['pager'][url] > 0) { window.scrollTo(0, settings['pager'][url]); return; }
