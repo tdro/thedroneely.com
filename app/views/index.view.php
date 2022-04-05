@@ -24,7 +24,7 @@
                     </h2>
 
                     <video-container>
-                      <video preload="none" poster="/images/pipes.png" width="732" autoplay="true" loop="true" muted="true">
+                      <video preload="none" poster="/images/pipes.png" width="732" autoplay loop muted playsinline>
                         <source src="/videos/pipes.mp4" type="video/mp4" />
                         <p>
                           Sorry, your browser doesn't support embedded videos. Here is a
