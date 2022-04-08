@@ -242,8 +242,6 @@ strong * {
 }
 
 pre {
-  -webkit-overflow-scrolling: touch;
-  background-color: #002e42;
   border-radius: 3px;
   font-size: 0.875em;
   max-width: 100%;
