@@ -10,9 +10,7 @@
     {
       "id": "{{ md5 $data.Permalink }}",
       "url": "{{ $data.Permalink }}",
-      "title": "{{ htmlEscape $data.Title}}",
-      "content_text": {{ $data.Plain | jsonify }},
-      "content_html": {{ $data.Content | jsonify }},
+      "title": "{{ htmlEscape $data.Title }}",
       "summary": "{{ $data.Summary }}",
       "date_modified": "{{ $data.Date | time.Format "2006-01-02T15:04:05Z" }}",
       "date_published": "{{ $data.PublishDate | time.Format "2006-01-02T15:04:05Z" }}",
@@ -32,7 +30,9 @@
           {{- $tag | htmlEscape -}}
           "
         {{- end -}}
-      ]
+      ],
+      "content_text": {{ $data.Plain | jsonify }},
+      "content_html": {{ $data.Content | jsonify }}
     }
     {{- end -}}
     {{ end }}
