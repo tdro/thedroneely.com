@@ -15,10 +15,15 @@ author:
 paginate: 3
 summaryLength: 20
 
-pygmentsUseClassic: false
-pygmentsCodeFences: true
-pygmentsUseClasses: true
-pygmentsCodeFencesGuessSyntax: true
+markup:
+  highlight:
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    lineNumbersInTable: false
+    noClasses: false
+    noHl: false
 
 outputFormats:
   rss:
