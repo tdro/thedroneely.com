@@ -1,14 +1,37 @@
-{{ $imageFile := print "public" (.Destination | safeURL) }}
-{{ $image := imageConfig $imageFile }}
+{{ $localPath := print "public/" ($.Destination | safeURL) }}
+{{ $remoteImage := resources.GetRemote ($.Destination | safeURL) }}
+
 {{- /* This comment removes trailing newlines. */ -}}
 <figure>
-  <a href="{{ .Destination | safeURL }}" onclick="return false;">
+  <a href="{{ $.Destination | safeURL }}" onclick="return false;">
     <img data-image-zoom
-      src="{{ .Destination | safeURL }}"
+      src="{{ $.Destination | safeURL }}"
       alt="{{ $.Text }}"
       title="{{ $.Text | htmlUnescape | safeHTML }}"
-      width="{{ $image.Width }}"
-      height="{{ $image.Height }}"
+      width="
+        {{- with $remoteImage -}}
+          {{- with .Err -}}
+            {{ $localImage := imageConfig $localPath }}
+            {{- with $localImage -}}
+              {{ .Width }}
+            {{- end -}}
+          {{- else -}}
+            {{- .Width -}}
+          {{- end -}}
+        {{- end -}}
+        "
+      height="
+        {{- with $remoteImage -}}
+          {{- with .Err -}}
+            {{ $localImage := imageConfig $localPath }}
+            {{- with $localImage -}}
+              {{ .Height }}
+            {{- end -}}
+          {{- else -}}
+            {{ .Height }}
+          {{- end -}}
+        {{- end -}}
+        "
     />
   </a>
   <figcaption class="has-text-grey-dark">
