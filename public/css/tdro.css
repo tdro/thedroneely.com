@@ -1434,12 +1434,11 @@ textarea,
   font-family: Charter, Georgia, "Book Antiqua", serif;
 }
 
-code,
 pre,
-blockquote > p.serif,
-.monospace {
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
+code,
+svg text,
+.monospace,
+blockquote > p.serif {
   font-family: "Fira Code", "Lucida Console", "Andale Mono", monospace;
 }
 

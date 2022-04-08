@@ -1,9 +1,9 @@
 {{ $width   := .Attributes.width   }}
 {{ $height  := .Attributes.height  }}
-{{ $caption := .Attributes.caption }}
+{{ $caption := default "GoAT Diagram" .Attributes.caption }}
 <diagram-container>
   {{ with diagrams.Goat .Inner }}
-    <svg font-family="'Fira Code', 'Lucida Console', 'Andale Mono', monospace"
+    <svg
       xmlns="http://www.w3.org/2000/svg"
       {{ if or $width $height }}
         {{ with $width }}width="{{ . }}"{{ end }}
