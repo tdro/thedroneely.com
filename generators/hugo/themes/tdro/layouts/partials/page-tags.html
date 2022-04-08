@@ -1,2 +1,8 @@
-{{- range $i, $value := sort . }}{{ if $i }} {{ end }}
-&middot; <a class="has-text-grey-dark" href="{{ "tags/" | relURL }}{{ $value | urlize }}/">{{ $value }}</a>{{ end }}
+{{- range $tags, $tag := sort . }}
+  &middot;
+  <a
+    class="has-text-grey-dark"
+    href="{{ "tags/" | relURL }}{{ $tag | urlize }}/">
+    {{ $tag }}
+  </a>
+{{ end }}
