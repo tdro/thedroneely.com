@@ -1,41 +1,45 @@
-{{ $localPath := print "public/" ($.Destination | safeURL) }}
-{{ $remoteImage := resources.GetRemote ($.Destination | safeURL) }}
+{{- $source      := $.Destination | safeURL -}}
+{{- $localPath   := print "public/" $source -}}
+{{- $remoteImage := resources.GetRemote $source -}}
+{{- $width       := "" -}}
+{{- $height      := "" -}}
+
+{{- with $remoteImage -}}
+  {{- with .Err -}}
+    {{- if fileExists $localPath -}}
+      {{- $localImage := imageConfig $localPath -}}
+      {{- with $localImage -}}
+        {{- $width  = .Width -}}
+        {{- $height = .Height -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $source = print "/images/thumbnails/placeholder.png" -}}
+      {{- $localPath = print "static/" $source -}}
+      {{- $localImage := imageConfig $localPath -}}
+      {{- with $localImage -}}
+        {{- $width  = .Width -}}
+        {{- $height = .Height -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $width  = .Width -}}
+    {{- $height = .Height -}}
+  {{ end }}
+{{ end }}
 
 {{- /* This comment removes trailing newlines. */ -}}
 <figure>
-  <a href="{{ $.Destination | safeURL }}" onclick="return false;">
+  <a href="{{ $source }}" onclick="return false;">
     <img data-image-zoom
-      src="{{ $.Destination | safeURL }}"
-      alt="{{ $.Text }}"
-      title="{{ $.Text | htmlUnescape | safeHTML }}"
-      width="
-        {{- with $remoteImage -}}
-          {{- with .Err -}}
-            {{ $localImage := imageConfig $localPath }}
-            {{- with $localImage -}}
-              {{ .Width }}
-            {{- end -}}
-          {{- else -}}
-            {{- .Width -}}
-          {{- end -}}
-        {{- end -}}
-        "
-      height="
-        {{- with $remoteImage -}}
-          {{- with .Err -}}
-            {{ $localImage := imageConfig $localPath }}
-            {{- with $localImage -}}
-              {{ .Height }}
-            {{- end -}}
-          {{- else -}}
-            {{ .Height }}
-          {{- end -}}
-        {{- end -}}
-        "
+      src="{{ $source }}"
+      alt="{{ $.Text | htmlUnescape }}"
+      title="{{ $.Text | htmlUnescape }}"
+      width="{{ $width }}"
+      height="{{ $height }}"
     />
   </a>
-  <figcaption class="has-text-grey-dark">
-    {{ $.Title | markdownify }}
-  </figcaption>
+{{ if $.Title }}
+<figcaption class="has-text-grey-dark">{{ $.Title | markdownify }}</figcaption>
+{{ end -}}
 </figure>
 {{- /* This comment removes trailing newlines. */ -}}
