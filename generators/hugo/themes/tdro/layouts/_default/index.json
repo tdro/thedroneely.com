@@ -4,7 +4,7 @@
   "home_page_url": "{{ .Site.BaseURL }}",
   "feed_url": "{{ .Site.BaseURL }}/index.json",
   "items": [
-    {{- range $index, $data := .Site.Pages -}}
+    {{- range $index, $data := where .Site.RegularPages ".Params.hidden" "!=" "true" -}}
     {{- if ne $data.Type "json" -}}
     {{- if and $index (gt $index 0) -}},{{- end }}
     {
