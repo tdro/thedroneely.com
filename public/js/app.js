@@ -26,13 +26,13 @@ url = window.location.href.split('#')[0];
  */
 var settings = { pager: {} };
 
-window.addEventListener('load', function(event) {
+window.addEventListener('DOMContentLoaded', function(event) {
   if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
   if (localStorage['settings']) { settings = JSON.parse(localStorage['settings']); }
   if (window.location.href.indexOf("#") >= 0) {
     settings['pager'][url] = window.pageYOffset;
     localStorage['settings'] = JSON.stringify(settings);
-    document.getElementById(location.hash.slice(1)).scrollIntoView()
+    document.getElementById(location.hash.slice(1)).scrollIntoView();
     return;
   }
   if (settings['pager'][url] > 0) { window.scrollTo(0, settings['pager'][url]); return; }
