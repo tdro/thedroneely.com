@@ -6,10 +6,6 @@
 .pagination-next,
 .pagination-link,
 .pagination-ellipsis {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -30,13 +26,11 @@
 .button,
 .input,
 .textarea,
-.select select,
 .pagination-previous,
 .pagination-next,
 .pagination-link,
 .pagination-ellipsis {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  appearance: none;
   align-items: center;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -57,7 +51,6 @@
 .button:focus,
 .input:focus,
 .textarea:focus,
-.select select:focus,
 .pagination-previous:focus,
 .pagination-next:focus,
 .pagination-link:focus,
@@ -65,7 +58,6 @@
 .is-focused.button,
 .is-focused.input,
 .is-focused.textarea,
-.select select.is-focused,
 .is-focused.pagination-previous,
 .is-focused.pagination-next,
 .is-focused.pagination-link,
@@ -73,7 +65,6 @@
 .button:active,
 .input:active,
 .textarea:active,
-.select select:active,
 .pagination-previous:active,
 .pagination-next:active,
 .pagination-link:active,
@@ -81,7 +72,6 @@
 .is-active.button,
 .is-active.input,
 .is-active.textarea,
-.select select.is-active,
 .is-active.pagination-previous,
 .is-active.pagination-next,
 .is-active.pagination-link,
@@ -92,22 +82,12 @@
 .button[disabled],
 .input[disabled],
 .textarea[disabled],
-.select select[disabled],
 .pagination-previous[disabled],
 .pagination-next[disabled],
 .pagination-link[disabled],
 .pagination-previous.disabled,
 .pagination-next.disabled,
-.pagination-ellipsis[disabled],
-fieldset[disabled] .button,
-fieldset[disabled] .input,
-fieldset[disabled] .textarea,
-fieldset[disabled] .select select,
-.select fieldset[disabled] select,
-fieldset[disabled] .pagination-previous,
-fieldset[disabled] .pagination-next,
-fieldset[disabled] .pagination-link,
-fieldset[disabled] .pagination-ellipsis {
+.pagination-ellipsis[disabled] {
   cursor: not-allowed;
 }
 
@@ -174,15 +154,10 @@ video {
 html {
   background-color: #fcfcfc;
   font-size: 16px;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   min-width: 300px;
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
@@ -399,8 +374,7 @@ a.has-text-danger:focus {
   border-color: transparent;
 }
 
-.button[disabled],
-fieldset[disabled] .button {
+.button[disabled] {
   background-color: white;
   border-color: #dbdbdb;
   box-shadow: none;
@@ -628,97 +602,24 @@ ul {
   border-radius: 3px;
 }
 
-.input::-moz-placeholder,
-.textarea::-moz-placeholder,
-.select select::-moz-placeholder {
-  color: #545454;
-}
-
-.input::-webkit-input-placeholder,
-.textarea::-webkit-input-placeholder,
-.select select::-webkit-input-placeholder {
-  color: #545454;
-}
-
-.input:-moz-placeholder,
-.textarea:-moz-placeholder,
-.select select:-moz-placeholder {
-  color: #545454;
-}
-
-.input:-ms-input-placeholder,
-.textarea:-ms-input-placeholder,
-.select select:-ms-input-placeholder {
-  color: #545454;
-}
-
 .input:focus,
 .textarea:focus,
-.select select:focus,
 .is-focused.input,
 .is-focused.textarea,
-.select select.is-focused,
 .input:active,
 .textarea:active,
-.select select:active,
 .is-active.input,
-.is-active.textarea,
-.select select.is-active {
+.is-active.textarea {
   border-color: #4992d0;
   box-shadow: 0 0 0 0.125em rgba(73, 146, 208, 0.5);
 }
 
 .input[disabled],
-.textarea[disabled],
-.select select[disabled],
-fieldset[disabled] .input,
-fieldset[disabled] .textarea,
-fieldset[disabled] .select select,
-.select fieldset[disabled] select {
+.textarea[disabled] {
   background-color: whitesmoke;
   border-color: whitesmoke;
   box-shadow: none;
   color: #7a7a7a;
-}
-
-.input[disabled]::-moz-placeholder,
-.textarea[disabled]::-moz-placeholder,
-.select select[disabled]::-moz-placeholder,
-fieldset[disabled] .input::-moz-placeholder,
-fieldset[disabled] .textarea::-moz-placeholder,
-fieldset[disabled] .select select::-moz-placeholder,
-.select fieldset[disabled] select::-moz-placeholder {
-  color: rgba(122, 122, 122, 0.3);
-}
-
-.input[disabled]::-webkit-input-placeholder,
-.textarea[disabled]::-webkit-input-placeholder,
-.select select[disabled]::-webkit-input-placeholder,
-fieldset[disabled] .input::-webkit-input-placeholder,
-fieldset[disabled] .textarea::-webkit-input-placeholder,
-fieldset[disabled] .select select::-webkit-input-placeholder,
-.select fieldset[disabled] select::-webkit-input-placeholder {
-  color: rgba(122, 122, 122, 0.3);
-}
-
-.input[disabled]:-moz-placeholder,
-.textarea[disabled]:-moz-placeholder,
-.select select[disabled]:-moz-placeholder,
-fieldset[disabled] .input:-moz-placeholder,
-fieldset[disabled] .textarea:-moz-placeholder,
-fieldset[disabled] .select select:-moz-placeholder,
-.select fieldset[disabled] select:-moz-placeholder {
-  color: rgba(122, 122, 122, 0.3);
-}
-
-.input[disabled]:-ms-input-placeholder,
-.textarea[disabled]:-ms-input-placeholder,
-.select select[disabled]:-ms-input-placeholder,
-fieldset[disabled] .input:-ms-input-placeholder,
-fieldset[disabled] .textarea:-ms-input-placeholder,
-fieldset[disabled] .select select:-ms-input-placeholder,
-.select fieldset[disabled] select:-ms-input-placeholder {
-  color: rgba(122, 122, 122, 0.3);
 }
 
 .is-danger.input,
@@ -761,9 +662,7 @@ fieldset[disabled] .select select:-ms-input-placeholder,
 }
 
 .checkbox[disabled],
-.radio[disabled],
-fieldset[disabled] .checkbox,
-fieldset[disabled] .radio {
+.radio[disabled] {
   color: #7a7a7a;
   cursor: not-allowed;
 }
@@ -1230,8 +1129,6 @@ a.navbar-item,
   -ms-flex-preferred-size: auto;
   flex-grow: 1;
   flex-shrink: 1;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
   min-height: min-content;
 }
 
@@ -2258,8 +2155,6 @@ mark {
  */
 
 #isso-thread * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
 }
@@ -2517,8 +2412,6 @@ mark {
   background-color: #fafafa;
   line-height: 1.4em;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
 .isso-postbox > .form-wrapper > .auth-section .post-action {
@@ -2536,8 +2429,6 @@ mark {
   line-height: 1.7em;
   width: 6em;
   background-color: white;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   color: #1e55ae;
 }
 
