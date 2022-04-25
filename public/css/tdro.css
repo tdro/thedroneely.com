@@ -1379,18 +1379,18 @@ blockquote > p.serif {
  */
 
 ::selection {
-  color: #000;
-  background-color: #c4e3f3;
+  color: #fff;
+  background-color: #000;
   text-shadow: 0 0 currentColor;
 }
 ::-webkit-selection {
-  color: #000;
-  background-color: #c4e3f3;
+  color: #fff;
+  background-color: #000;
   text-shadow: 0 0 currentColor;
 }
 ::-moz-selection {
-  color: #000;
-  background-color: #c4e3f3;
+  color: #fff;
+  background-color: #000;
   text-shadow: 0 0 currentColor;
 }
 
