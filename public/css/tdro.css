@@ -2135,11 +2135,25 @@ mark {
     clear: both;
   }
 }
+
+/* IE quote height fix */
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .quote {
     height: 0;
   }
-} /* ie quote height fix */
+}
+
+/* Embed friendly */
+
+@media (max-height: 16rem) {
+  html.has-navbar-fixed-top {
+    padding: 0;
+  }
+  nav {
+    display: none;
+  }
+}
 
 /*
  * Isso comments
