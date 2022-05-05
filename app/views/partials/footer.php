@@ -13,11 +13,15 @@
 
             <a href="/index.json">JSON Feed</a> |
 
-            <a href="/resume">Resume</a> |
+            <a href="/resume">Resume</a>
+
+            <br>
 
             <a rel="me" href="https://gitlab.com/tdro">Gitlab</a> |
 
             <a rel="me" href="https://github.com/tdro">Github</a> |
+
+            <a rel="me" href="https://codeberg.org/tdro">Codeberg</a> |
 
             <a href="/analytics">Analytics</a> |
 
