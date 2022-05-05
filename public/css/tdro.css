@@ -55,27 +55,13 @@
 .pagination-next:focus,
 .pagination-link:focus,
 .pagination-ellipsis:focus,
-.is-focused.button,
-.is-focused.input,
-.is-focused.textarea,
-.is-focused.pagination-previous,
-.is-focused.pagination-next,
-.is-focused.pagination-link,
-.is-focused.pagination-ellipsis,
 .button:active,
 .input:active,
 .textarea:active,
 .pagination-previous:active,
 .pagination-next:active,
 .pagination-link:active,
-.pagination-ellipsis:active,
-.is-active.button,
-.is-active.input,
-.is-active.textarea,
-.is-active.pagination-previous,
-.is-active.pagination-next,
-.is-active.pagination-link,
-.is-active.pagination-ellipsis {
+.pagination-ellipsis:active {
   outline: none;
 }
 
@@ -1205,6 +1191,11 @@ a:hover {
 
 a:focus {
   border-bottom: 3px solid #999;
+}
+
+:target {
+  text-decoration: underline;
+  text-decoration-style: double;
 }
 
 :target::before {
