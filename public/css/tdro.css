@@ -1,7 +1,6 @@
 /*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
 
 .button,
-.file,
 .pagination-previous,
 .pagination-next,
 .pagination-link,
@@ -12,7 +11,6 @@
 .box:not(:last-child),
 .content:not(:last-child),
 .table:not(:last-child),
-.table-container:not(:last-child),
 .title:not(:last-child),
 .subtitle:not(:last-child),
 .block:not(:last-child),
@@ -1193,7 +1191,9 @@ a:focus {
   border-bottom: 3px solid #999;
 }
 
-:target {
+h1:target,
+h2:target,
+h3:target {
   text-decoration: underline;
   text-decoration-style: double;
 }
