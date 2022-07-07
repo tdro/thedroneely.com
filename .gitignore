@@ -1,6 +1,7 @@
 /app/storage
 /cockpit
 /vendor
+config.php
 generators/hugo/content
 generators/hugo/public
 google[a-z0-9]*.html
