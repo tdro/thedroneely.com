@@ -4,7 +4,7 @@
 
 <?php require __DIR__ . '/partials/navigator.php';?>
 
-    <section class="section" itemscope itemtype="http://schema.org/HomePage">
+    <section class="section">
 
         <div class="container">
             <div class="columns is-centered">

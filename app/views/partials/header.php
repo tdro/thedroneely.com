@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top" lang="en-us">
+<html class="has-navbar-fixed-top" lang="en-us" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
 
@@ -12,7 +12,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow">
-
 
     <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/rss.php'; ?>
 

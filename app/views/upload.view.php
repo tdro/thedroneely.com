@@ -6,7 +6,7 @@
 
 <?php require __DIR__ . '/partials/navigator.php';?>
 
-    <section class="section" itemscope itemtype="http://schema.org/HomePage">
+    <section class="section">
         <div class="container">
 
             <h1 class="title has-text-centered">Upload Files</h1>
