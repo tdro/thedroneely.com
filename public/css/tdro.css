@@ -17,6 +17,7 @@
 .highlight:not(:last-child),
 .level:not(:last-child),
 .list:not(:last-child),
+article > mark:not(:last-child),
 .message:not(:last-child) {
   margin-bottom: 1.5rem;
 }
@@ -1315,6 +1316,7 @@ textarea,
 }
 
 .serif,
+article > mark,
 .document ol li,
 .document > ul li {
   font-family: Charter, Georgia, "Book Antiqua", serif;
@@ -1332,6 +1334,7 @@ blockquote > p.serif {
   color: #000;
 }
 
+article > mark,
 .is-size-serif {
   font-size: 1.25rem !important;
 }
@@ -2051,11 +2054,12 @@ input.marginnote-toggle {
   top: -0.5rem;
 }
 
-mark {
+.sidenote-container mark {
   background-color: transparent;
   color: unset;
 }
 
+article > mark,
 .sidenote-container:hover .sidenote-mark span,
 .sidenote-container:hover .sidenote mark,
 .marginnote-container:hover .marginnote-mark span,

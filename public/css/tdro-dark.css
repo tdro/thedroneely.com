@@ -232,6 +232,7 @@ textarea:-ms-input-placeholder {
 .timeline .timeline-item .timeline-marker {
   border: 3px solid #001f2c !important;
 }
+article > mark,
 .sidenote-container:hover .sidenote-mark span,
 .sidenote-container:hover .sidenote mark,
 .marginnote-container:hover .marginnote-mark span,

@@ -1,0 +1,9 @@
+{{- $text  := default "mark"             (.Get "text"  | default (.Get 0)) -}}
+{{- $title := default "highlighted text" (.Get "title" | default (.Get 1)) -}}
+
+{{- if gt (len .Inner) 1 -}}
+  {{- $text = .Inner -}}
+{{- end -}}
+
+<mark title="{{- $title -}}">{{- $text | markdownify -}}</mark>
+{{- /* This comment removes trailing newlines and white spaces. */ -}}
