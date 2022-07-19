@@ -5,10 +5,11 @@
 <?php } ?>
 
 <noscript>
-    <style>
-        .has-navbar-fixed-top { padding-top: 0 !important; }
-        .is-fixed-top { position: unset !important; }
-        .posts__more__content { margin-bottom: 0 !important; }
-        .isso-comments-counter, .comments__section { display: none; }
-    </style>
+  <style>
+    article-comments,
+    [href="#isso-thread"],
+    article-meta-top aside:nth-child(2) svg:first-child {
+      display: none;
+    }
+  </style>
 </noscript>

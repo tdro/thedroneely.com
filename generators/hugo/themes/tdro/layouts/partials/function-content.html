@@ -1,0 +1,10 @@
+{{- $content := . -}}
+
+{{-
+  $content = $content |
+    replaceRE "<p><figure>"   "<figure>"  |
+    replaceRE "<p>\n<figure>" "<figure>"  |
+    replaceRE "</figure></p>" "</figure>" |
+-}}
+
+{{- return $content -}}

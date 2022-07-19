@@ -1,109 +1,90 @@
 <?php require __DIR__ . '/partials/header.php';?>
 
-    <body>
+<body>
 
 <?php require __DIR__ . '/partials/navigator.php';?>
 
-    <section class="section">
+<main>
+  <home-page>
+    <article>
 
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-7">
+      <h1>Web <em>Developer </em></h1>
 
-                    <h1 class="title has-text-weight-normal">
-                        <span>
-                            Web
-                            <span class="has-text-danger">
-                                Developer
-                            </span>
-                        </span>
-                    </h1>
+      <h2>In it for the long haul</h2>
 
-                    <h2 class="subtitle has-text-grey-dark has-text-weight-normal">
-                        In it for the long haul
-                    </h2>
+      <video-container>
+        <video preload="none" poster="/images/pipes.png" width="732" autoplay loop muted playsinline>
+          <source src="/videos/pipes.mp4" type="video/mp4" />
+          <p>
+            Sorry, your browser doesn't support embedded videos. Here is a
+            <a href="/videos/pipes.mp4">link to the video</a> instead.
+          </p>
+        </video>
+        <footer><a href="https://github.com/pipeseroni/pipes.sh#readme">pipes.sh</a> terminal screensaver</footer>
+      </video-container>
 
-                    <video-container>
-                      <video preload="none" poster="/images/pipes.png" width="732" autoplay loop muted playsinline>
-                        <source src="/videos/pipes.mp4" type="video/mp4" />
-                        <p>
-                          Sorry, your browser doesn't support embedded videos. Here is a
-                          <a href="/videos/pipes.mp4">link to the video</a> instead.
-                        </p>
-                      </video>
-                      <figcaption class="has-text-grey-dark">pipes.sh terminal screensaver</figcaption>
-                    </video-container>
+      <home-page-intro>
+        <?php fetch('/cockpit/api/singletons/get/introduction', 'text'); ?>
+      </home-page-intro>
 
-                    <div class="content">
+      <fortune-quote>
+        <margin-note left>
+          <b>Random Quote</b>
+          <?php echo shell_exec('fortune ' . dirname($_SERVER['DOCUMENT_ROOT']) . '/generators/fortune/quotes.fortune'); ?>
+        </margin-note>
+      </fortune-quote>
 
-                    <p class="introduction has-text-left">
-                        <?php fetch('/cockpit/api/singletons/get/introduction', 'text'); ?>
-                    </p>
+      <home-page-posts>
 
-                    <span class="quote marginnote leftnote">
-                    <span class="has-text-weight-bold has-margin-bottom-sm is-block">Random Quote</span>
-                    <?php echo shell_exec('fortune ' . dirname($_SERVER['DOCUMENT_ROOT']) . '/generators/fortune/quotes.fortune'); ?>
-                    </span>
+        <margin-note-aside>
+          <label for="posts">Recent Posts</label>
+          <input type="checkbox" id="posts" name="toggle">
+          <margin-note right>
+            See an archive of all posts <a href="/archives/posts/">here.</a>
+          </margin-note>
+        </margin-note-aside>
 
-                    </div>
+        <?php
+          $recentPosts = new DOMExtract();
+          echo $recentPosts->innerHTML('recent-articles', $_SERVER['DOCUMENT_ROOT'] . '/posts/index.html');
+        ?>
 
-                    <div class="recent__article">
+        <a href="/posts/page/2/">
+          See More Posts
+          <?php echo icon('corner-down-right'); ?>
+        </a>
+      </home-page-posts>
 
-                    <label for="posts" class="title is-inline-block is-4 has-text-weight-normal marginnote-toggle marginnote-mark">
-                       Recent Posts
-                    </label>
+      <br>
 
-                    <input type="checkbox" id="posts" class="marginnote-toggle">
+      <home-page-projects>
 
-                    <span class="marginnote rightnote">
-                        See an archive of all posts <a href="/posts/archive/">here.</a>
-                    </span>
+        <margin-note-aside>
+          <label for="projects">Recent Projects</label>
+          <input type="checkbox" id="projects" name="toggle">
+          <margin-note right>
+            See an archive of all projects <a href="/archives/projects/">here.</a>
+          </margin-note>
+        </margin-note-aside>
 
-                    <?php
-                    $recentPosts = new DOMExtract();
-                    echo $recentPosts->innerHTML('recent-articles', $_SERVER['DOCUMENT_ROOT'] . '/posts/index.html');
-                    ?>
+        <?php
+          $recentProjects = new DOMExtract();
+          echo $recentPosts->innerHTML('recent-articles', $_SERVER['DOCUMENT_ROOT'] . '/projects/index.html');
+        ?>
 
-                    <a href="/posts/page/2/"
-                    class="front__more is-block has-text-centered">
-                        See More Posts
-                        <?php icon('chevron-right'); ?>
-                    </a>
+        <a href="/projects/page/2/">
+          See More Projects
+          <?php echo icon('corner-down-right'); ?>
+        </a>
+      </home-page-projects>
 
-                    <br>
+      <br>
 
-
-                    <label for="projects" class="title is-inline-block is-4 has-text-weight-normal marginnote-toggle marginnote-mark">
-                       Recent Projects
-                    </label>
-
-                    <input type="checkbox" id="projects" class="marginnote-toggle">
-
-                    <span class="marginnote rightnote">
-                        See an archive of all projects <a href="/projects/archive/">here.</a>
-                    </span>
-
-                    <?php
-                    $recentProjects = new DOMExtract();
-                    echo $recentPosts->innerHTML('recent-articles', $_SERVER['DOCUMENT_ROOT'] . '/projects/index.html');
-                    ?>
-                    </div>
-
-                    <a href="/projects/page/2/"
-                    class="front__more is-block has-text-centered">
-                        See More Projects
-                        <?php icon('chevron-right'); ?>
-                    </a>
-
-                    <br>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
+    </article>
+  </home-page>
+</main>
 
 <?php require __DIR__ . '/partials/footer.php';?>
 
-  </body>
+</body>
 </html>

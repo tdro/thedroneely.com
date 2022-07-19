@@ -1,0 +1,6 @@
+<article-archive-link>
+  <a href="/archives/{{ .Type }}/">
+    <span>Archive of all {{ .Type }}</span>
+    {{ safeHTML (readFile "public/css/icons/feather/corner-down-right.svg") }}
+  </a>
+</article-archive-link>

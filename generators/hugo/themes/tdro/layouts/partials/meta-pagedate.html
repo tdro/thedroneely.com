@@ -1,0 +1,10 @@
+{{ if .Params.date }}
+  {{ safeHTML (readFile "public/css/icons/feather/calendar.svg") }}
+  <time datetime="{{ dateFormat "2006-01-02" .Params.date }}">
+    {{ dateFormat "January 2, 2006" .Params.date }}
+  </time>
+  {{else}}
+  <time datetime="{{ .Date.Format "2006-01-02"}}">
+    {{ .Date.Format "January 2, 2006" }}
+  </time>
+{{- end -}}

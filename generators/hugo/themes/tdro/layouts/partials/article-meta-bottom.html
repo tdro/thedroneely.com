@@ -1,0 +1,15 @@
+<article-meta-bottom>
+  {{ dateFormat "2 January 2006" .Params.date }}
+  <code> &mdash; Written</code>                         
+  <br>
+  {{ if .Params.updated }}
+    {{ dateFormat "2 January 2006" .Params.updated }}
+  {{ else }}
+    {{ dateFormat "2 January 2006" .Params.date }}
+  {{ end }}
+  <code> &mdash; Updated</code>                         
+  <br>
+  {{ .Site.Author.name }}<code> &mdash; Creator</code>  
+  <br>
+  <a href="{{ strings.TrimRight "/" .Permalink }}.md">{{ .Slug }}.md</a><code> &mdash; Article</code>
+</article-meta-bottom>

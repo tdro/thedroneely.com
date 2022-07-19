@@ -2,93 +2,74 @@
 
 <?php require __DIR__ . '/partials/header.php'; ?>
 
-    <body>
+<body>
 
-    <?php require __DIR__ . '/partials/navigator.php'; ?>
+<?php require __DIR__ . '/partials/navigator.php'; ?>
 
-    <section class="section">
+<main>
+  <contact-page>
+    <article>
 
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-7">
+      <h1>Contact</h1>
 
-                    <article class="content">
+      <?php if (isset($formSuccess)) : ?>
+        <aside>
+          <p>Your message has been successful. I'll get in touch with you soon!</p>
+        </aside>
+      <?php endif; ?>
 
-                        <h1 class="title is-3">Contact</h1>
+      <p>
+        Interested in collaborating? Complete and submit the form below to send me a
+        direct message.
+      </p>
 
-                        <?php if (isset($formSuccess)) : ?>
-                        <div class="message__success" role="alert">
-                        <p>Your message has been successful. I'll get in touch with you soon!</p>
-                        </div>
-                        <?php endif; ?>
+      <form method="post" action="/contact/">
 
-                        <p>
-                        Interested in collaborating?
-                        Complete and submit the form below to send me a direct message.
-                        </p>
+        <field-set>
 
-                        <form method="post" action="/contact/">
+          <section>
+            <label for="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              name="26471"
+              value="<?php echo $name ?? '' ?>"
+            >
+          </section>
 
-                            <div class="field is-horizontal">
-                                <div class="field-body">
-                                    <div class="field is-expanded">
-                                    <label for="name" class="heading is-size-6">Name</label>
-                                        <div class="field has-addons">
-                                            <p class="control is-expanded">
-                                              <input id="name" class="input" type="text" name="26471" value="<?php echo $name ?? '' ?>">
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="field is-expanded">
-                                        <label for="email" class="heading is-size-6">Email <span class="alert">*</span></label>
-                                        <div class="field has-addons">
-                                            <p class="control is-expanded">
-                                              <input id="email" class="input <?php echo $border = isset($emailError) ? 'is-danger' : '';?>"
-                                              type="email" name="26472" value="<?php echo $email ?? '' ?>" required>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+          <section>
+            <label for="email">Email <span data-danger>*</span></label>
+            <input
+              required
+              id="email"
+              type="email"
+              name="26472"
+              value="<?php echo $email ?? '' ?>"
+              <?php echo $border = isset($emailError) ? 'data-contact-required' : '';?>
+            >
+          </section>
 
-                            <label for="message" class="heading is-size-6">Message <span class="alert">*</span></label>
+        </field-set>
 
-                            <div class="field is-horizontal">
-                              <div class="field-body">
-                                <div class="field">
-                                  <div class="control">
-                                    <textarea id="message" class="textarea" name="26478" placeholder="" required><?php echo $message ?? '' ?></textarea>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+        <label for="message">Message <span data-danger>*</span></label>
+        <textarea
+          id="message"
+          name="26478"
+          placeholder="" required
+        ><?php echo $message ?? '' ?> </textarea>
 
-                            <br>
+        <button>
+          <?php echo icon('send'); ?>
+          <span>Send Message</span>
+        </button>
 
-                            <div class="field is-horizontal">
-                              <div class="field-body">
-                                <div class="field">
-                                  <div class="control">
-                                    <button class="button item__box has-text-weight-normal">
-                                      <?php echo icon('send'); ?>
-                                      <span>Send Message</span>
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+        <input type="checkbox" name="agree" tabindex="-1">
 
-                           <input type="checkbox" name="agree" class="agree" tabindex="-1">
+      </form>
 
-                        </form>
-
-                    </article>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
+      </article>
+    </contact-page>
+  </main>
 
 <?php require __DIR__ . '/partials/footer.php'; ?>
 

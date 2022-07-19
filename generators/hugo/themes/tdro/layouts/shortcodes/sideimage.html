@@ -1,14 +1,24 @@
-{{ $id := md5 (printf (.Get `mark`) .Inner) }}
-{{ $imageFile := print "public" (.Get `source`) }}
-{{ $image := imageConfig $imageFile }}
+{{- $mark   := (.Get `mark`)   -}}
+{{- $set    := (.Get `set`)    -}}
+{{- $source := (.Get `source`) -}}
+{{- $title  := (.Get `title`)  -}}
+{{- $id := md5 (printf $mark .Inner) -}}
+{{- $imageFile := print "public" $source -}}
+{{- $image := imageConfig $imageFile -}}
 
-<span class="sidenote-container">
-  <label for="{{ $id }}" class="sidenote-toggle sidenote-mark" title="{{ .Inner | replaceRE "\n" " " | markdownify }}"><span>{{ .Get `mark` | markdownify }}</span></label>
-  <input type="checkbox" id="{{ $id }}" class="sidenote-toggle">
-  <span class="sans-serif sidenote sideimage {{ .Get `set` }}note">
-    <a href="{{.Get `source`}}" onclick="return false;">
-      <img data-image-zoom src="{{ .Get `source`}}" alt="{{ .Inner | markdownify }}" title="{{ .Get `title`}}" width="{{ $image.Width }}" height="{{ $image.Height }}"/>
+<side-note-aside>
+  <label for="{{ $id }}" title="{{ .Inner | replaceRE "\n" " " | markdownify }}"><span>{{ $mark | markdownify }}</span></label>
+  <input type="checkbox" id="{{ $id }}" name="toggle">
+  <side-note title="{{ $mark }}" image {{ $set }}>
+    <a href="{{ $source }}" onclick="return false;">
+      <img data-image-zoom
+        src="{{ $source }}"
+        title="{{ $title }}"
+        width="{{ $image.Width }}"
+        height="{{ $image.Height }}"
+        alt="{{ .Inner | markdownify }}"
+      />
     </a>
-    <span class="sideimage-footer is-block has-text-centered has-text-grey-dark"><mark>{{ .Inner | markdownify }}</mark></span>
-  </span>
-</span>
+    <mark>{{ .Inner | markdownify }}</mark>
+  </side-node>
+</side-note-aside>

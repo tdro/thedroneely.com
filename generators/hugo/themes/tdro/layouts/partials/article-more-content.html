@@ -1,0 +1,25 @@
+<article-more-content>
+  <section>
+    <h2>More Content</h2>
+    {{ $more := shuffle .Site.RegularPages | first 3 }}
+    {{ with $more }}
+      {{ range . }}
+        <ul>
+          <li>
+            <h3>
+              <a 
+                href="{{ .RelPermalink }}" 
+                title="{{ truncate 100 "..." .Summary }}"
+              >
+                {{ .Title | markdownify }}
+              </a>
+            </h3>
+            <time datetime="{{ dateFormat "2006-01-02" .Date }}">
+              {{ dateFormat "January 2, 2006" .Date }}
+            </time>
+          </li>
+        </ul>
+      {{ end }}
+    {{ end }}
+  </section>
+</article-more-content>

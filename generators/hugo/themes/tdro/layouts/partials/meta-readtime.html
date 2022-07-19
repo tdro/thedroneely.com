@@ -1,0 +1,10 @@
+{{- safeHTML (readFile "public/css/icons/feather/clock.svg") -}}
+
+<span>
+  {{ $minutes := div .WordCount 150 }}
+  {{ if lt $minutes 1 }}
+    1 minute read
+  {{- else -}}
+    {{ $minutes }} minute read
+  {{ end }}
+</span>

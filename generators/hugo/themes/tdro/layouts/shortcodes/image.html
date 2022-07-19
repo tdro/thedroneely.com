@@ -1,9 +1,15 @@
-{{ $imageFile := print "public" (.Get `source`) }}
-{{ $image := imageConfig $imageFile }}
+{{- $imageFile := print "public" (.Get `source`) -}}
+{{- $image := imageConfig $imageFile -}}
 
 <figure>
   <a href="{{ .Get `source` }}" onclick="return false;">
-    <img data-image-zoom src="{{ .Get `source` }}" alt="{{ .Get `title` }}" title="{{ .Get `title` }}" width="{{ $image.Width }}" height="{{ $image.Height }}"/>
+    <img data-image-zoom
+      src="{{ .Get `source` }}"
+      alt="{{ .Get `title` }}"
+      title="{{ .Get `title` }}"
+      width="{{ $image.Width }}"
+      height="{{ $image.Height }}"
+    />
   </a>
-  <figcaption class="has-text-grey-dark">{{ .Inner | markdownify }}</figcaption>
+  <figcaption>{{ .Inner | markdownify }}</figcaption>
 </figure>

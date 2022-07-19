@@ -1,13 +1,11 @@
-{{ $id := md5 (printf (.Get `mark`) .Inner) }}
+{{- $mark := (.Get `mark`) -}}
+{{- $set  := (.Get `set`)  -}}
+{{- $id   := md5 (printf $mark .Inner) -}}
 
-<span class="sidenote-container">
-  <label
-    for="{{ $id }}"
-    class="sidenote-toggle sidenote-mark"
-    title="{{ .Inner | replaceRE "\n" " " | markdownify }}">
-    <span>{{ .Get `mark` | markdownify }}</span></label>
-  <input type="checkbox" id="{{ $id }}" class="sidenote-toggle">
-  <span class="sans-serif sidenote {{ .Get `set` }}note">
-    <mark>{{ .Inner | markdownify }}</mark>
-  </span>
-</span>
+<side-note-aside>
+  <label for="{{ $id }}" title="{{ .Inner | replaceRE "\n" " " | markdownify }}"><span>{{ $mark | markdownify }}</span></label>
+  <input type="checkbox" id="{{ $id }}" name="toggle">
+  <side-note title="{{ $mark }}" {{ $set }}>
+    <mark >{{ .Inner | markdownify }}</mark>
+  </side-note>
+</side-note-aside>

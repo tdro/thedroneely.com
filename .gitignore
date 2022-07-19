@@ -1,11 +1,12 @@
+.hugo_build.lock
 /app/storage
 /cockpit
 /vendor
 config.php
 generators/hugo/content
 generators/hugo/public
+generators/openring/openring
 google[a-z0-9]*.html
-openring
 openring.html
 public/about
 public/abstracts

@@ -1,0 +1,17 @@
+{{- $caption := .Attributes.caption -}}
+{{- $type    := .Type | default "text" -}}
+{{- $options := .Attributes.options | default "default=1" -}}
+{{- $id      := print "code-block-" (truncate 7 "" (md5 .Inner)) -}}
+
+<code-block id="{{ $id }}" {{ if in (lower $options) "linenos" }}data-lines{{ end }}>
+  <header>
+  <language-label>
+    <a href="#{{ $id }}"><code>{{ $type }}</code></a>
+  </language-label>
+  </header>
+  {{ highlight .Inner $type (print $options ",lineAnchors=" "code-line-" (truncate 7 "" (md5 .Inner))) }}
+</code-block>
+
+{{- with $caption -}}
+  <footer>{{- . | markdownify -}}</footer>
+{{- end -}}

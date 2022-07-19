@@ -1,63 +1,68 @@
 {{ define "main" }}
-{{ $sidenote := "<span class=\"marginnote rightnote\">See an archive of all taxonomies <a href=\"/archives/tags/\">here.</a></span>" }}
-<section class="section is-fullheight">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-7">
-        {{ $title := .Title }}
-        {{ if eq $title "Tags" }}
-          <article class="content">
-          <h1 class="article__list title is-3">Taxonomies</h1>
-          {{ safeHTML $sidenote }}
-          {{ range .Paginator.Pages }}
-            {{ $title := .Title }}
-            <h1 class="article__list smallcaps title">{{ .Title | title }}</h1>
-            {{ range $taxonomy := .Site.Taxonomies }}
-              {{ range $tag, $article := $taxonomy }}
-                {{ if eq $tag $title }}
-                <ul class="article__list">
-                  {{ range $article.Pages }}
-                  <li>
-                    <a title="{{ .Title }}" class="is-block" href="{{ .RelPermalink }}">
-                      <span class="article__list__date monospace has-text-grey-dark">{{ .Date.Format "02 Jan 2006" }}</span>{{ .Title }}
-                    </a>
-                  </li>
-                  {{ end }}
-                </ul>
+  {{ $sidenote := "<margin-note right>See an archive of all taxonomies <a href=\"/archives/tags/\">here.</a></margin-note>" }}
+  {{ $title := .Title }}
+  {{ if eq $title "Tags" }}
+    <main>
+      <taxonomy-list>
+      {{ safeHTML $sidenote }}
+      <h1>Taxonomies</h1>
+      <hr>
+      <section>
+        {{ range .Paginator.Pages }}
+          {{ $title := .Title }}
+          <h2>{{ .Title | title }}</h2>
+          {{- range $taxonomy := .Site.Taxonomies -}}
+            {{- range $tag, $article := $taxonomy -}}
+              {{ if eq $tag $title }}
+              <ul>
+                {{ range $article.Pages }}
+                <li>
+                  <a title="{{ .Title }}" href="{{ .RelPermalink }}">
+                    <code><time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ .Date.Format "02 Jan 2006" }}</time></code>
+                    <span>{{ .Title }}</span>
+                  </a>
+                </li>
                 {{ end }}
+              </ul>
               {{ end }}
-            {{ end }}
-          {{ end }}
-          </article>
-          {{ partial "pagination.html" . }}
-        {{ else  }}
-          <article class="content">
-          <h1 class="smallcaps title">
-            {{ if ne $title "Tags" }} <a href="/{{ .Data.Plural }}/">Tags</a> <span>&mdash;</span> <span>{{ end }}{{ .Title | title }}</span>
-          </h1>
-          {{ safeHTML $sidenote }}
-            {{ range $taxonomy := .Site.Taxonomies }}
-              {{ range $tag, $article := $taxonomy }}
-                {{ if eq $tag $title }}
-                <ul class="article__list">
-                  {{ range $article.Pages }}
-                  <li>
-                    <a title="{{ .Title }}" class="is-block" href="{{ .RelPermalink }}">
-                      <span class="article__list__date monospace has-text-grey-dark">
-                        {{- .Date.Format "02 Jan 2006" -}}
-                      </span>
-                      {{- .Title | markdownify -}}
-                    </a>
-                  </li>
-                  {{ end }}
-                </ul>
-                {{ end }}
-              {{ end }}
-            {{ end }}
-          </article>
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      </section>
+      {{ partial "article-pagination.html" . }}
+      </taxonomy-list>
+    </main>
+  {{ else  }}
+    <main>
+      <taxonomy-list>
+      {{ safeHTML $sidenote }}
+      <h1>
+        {{ if ne $title "Tags" }}
+          <a href="/{{ .Data.Plural }}/">Tags</a>
+          <span>&mdash;</span>
+          <span>{{ .Title | title }}</span>
         {{ end }}
-      </div>
-    </div>
-  </div>
-</section>
+      </h1>
+      <hr>
+      <section>
+        {{- range $taxonomy := .Site.Taxonomies -}}
+          {{- range $tag, $article := $taxonomy -}}
+            {{- if eq $tag $title -}}
+            <ul>
+              {{ range $article.Pages }}
+              <li>
+                <a title="{{ .Title }}" href="{{ .RelPermalink }}">
+                  <code><time datetime="{{ dateFormat "2006-01-02" .Date }}">{{- .Date.Format "02 Jan 2006" -}}</time></code>
+                  <span>{{- .Title | markdownify -}}</span>
+                </a>
+              </li>
+              {{ end }}
+            </ul>
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      </section>
+      </taxonomy-list>
+    </main>
+  {{ end }}
 {{ end }}

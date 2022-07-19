@@ -32,7 +32,7 @@
         {{- end -}}
       ],
       "content_text": {{ $data.Plain | jsonify }},
-      "content_html": {{ $data.Content | jsonify }}
+      "content_html": {{ partial "function-content.html" $data.Content | jsonify }}
     }
     {{- end -}}
     {{ end }}

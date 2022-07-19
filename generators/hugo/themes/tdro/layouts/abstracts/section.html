@@ -1,28 +1,25 @@
 {{ define "main" }}
-<section class="section is-fullheight">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-7">
-        <article class="content">
-          <h1 class="title is-3">{{ .Type | title }}</h1>
-          <span class="marginnote rightnote">
-            See an archive of all {{ .Type }} <a href="{{ partial "archive-link.html" . }}">here.</a>
-          </span>
-          <recent-articles>
-            <div class="abstract tile is-ancestor has-text-centered">
-              {{ range where .Paginator.Pages ".Params.hidden" "ne" "true" }}
-              {{ .Render "summary" }}
-              {{ end }}
-            </div>
-          </recent-articles>
-        </article>
-        {{ partial "pagination.html" . }}
-        <br>
-        <a href="{{ partial "archive-link.html" . }}" class="front__more is-block has-text-centered">
-          <span>Archive of all {{ .Type }}</span> {{ safeHTML (readFile "public/css/icons/feather/corner-down-right.svg") }}
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+<main>
+  <abstracts-page>
+    <article-list>
+        <h1>{{ .Type | title }}</h1>
+
+        <margin-note right>
+          See an archive of all {{ .Type }} <a href="/archives/{{ .Type }}/">here.</a>
+        </margin-note>
+
+        <recent-articles>
+          <recent-abstracts>
+            {{ range where .Paginator.Pages ".Params.hidden" "ne" "true" }}
+            {{ .Render "summary" }}
+            {{ end }}
+          </recent-abstracts>
+        </recent-articles>
+
+      {{ partial "article-pagination.html" . }}
+
+      {{ partial "article-archive-link.html" . }}
+    </article-list>
+  </abstracts-page>
+</main>
 {{ end }}

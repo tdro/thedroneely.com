@@ -1,27 +1,24 @@
-<div class="columns is-mobile">
+<article-card>
+  <article-thumbnail>
+    {{ partial "article-thumbnail-image.html" . }}
+  </article-thumbnail>
 
-  <div class="column is-5 has-text-centered">
-    {{ partial "thumbnail-image.html" . }}
-  </div>
+  <article-summary>
+      <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | markdownify }}</a></h2>
 
-  <div class="column is-7">
-    <article>
-      <header class="post-header">
+      <article-summary-meta>
+        {{- partial "meta-pagedate.html" . -}}
+        {{- partial "meta-pagestatus.html" . -}}
+        {{- partial "meta-readtime.html" . -}}
+      </article-summary-meta>
 
-      <h2 class="article__title title is-5 has-text-weight-bold">
-        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | markdownify }}</a>
-      </h2>
-
-      <p class="article__date subtitle is-6">
-        {{ partial "page-date.html" . }}{{ partial "page-status.html" . }} &middot; {{ partial "read-time.html" . }}
+      <p>
+        {{ if .Params.summary }}
+          {{ truncate 75 "..." .Params.summary }}
+        {{ else }}
+          {{ truncate 75 "..." .Summary}}
+        {{ end }}
       </p>
-
-      </header>
-      <p class="article__summary">{{ if .Params.summary }}{{ truncate 75 "..." .Params.summary }}{{ else }}{{ truncate 75 "..." .Summary}}{{ end }}</p>
-      <p><a href='{{ .Permalink }}'>Continue reading ({{ .FuzzyWordCount }} words)</a></p>
-    </article>
-  </div>
-
-</div>
-
-<hr class="article__divider">
+      <a href='{{ .Permalink }}'>Continue reading ({{ .FuzzyWordCount }} words)</a>
+  </article-summary>
+</article-card>

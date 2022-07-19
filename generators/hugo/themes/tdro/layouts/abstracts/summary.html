@@ -1,11 +1,22 @@
-<div class="tile is-parent">
-  <article class="abstract tile is-child">
-    {{ partial "thumbnail-image.html" . }}
-    <h2 class="article__title title is-5 has-text-weight-bold">
-      <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | markdownify }}</a>
-    </h2>
-    <p class="article__date subtitle is-6">
-    {{ partial "page-date.html" . }} <br> {{ partial "read-time.html" .}}
-    </p>
-  </article>
-</div>
+<abstract-card>
+  <abstract-thumbnail>
+    {{ partial "article-thumbnail-image.html" . }}
+  </abstract-thumbnail>
+  <abstract-summary>
+    <section>
+      <h2>
+        <a
+          href="{{ .Permalink }}"
+          title="{{ .Title }}">
+          {{ .Title | markdownify }}
+        </a>
+      </h2>
+      <abstract-summary-meta>
+        <footer>
+          <p>{{ partial "meta-pagedate.html" . }}</p>
+          <p>{{ partial "meta-readtime.html" . }}</p>
+        </footer>
+      </abstract-summary-meta>
+    </section>
+  </abstract-summary>
+</abstract-card>

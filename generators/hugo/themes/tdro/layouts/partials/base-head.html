@@ -1,7 +1,7 @@
 <!-- HTML Meta Tags -->
-<title>{{ partial "title.html" . -}}</title>
+<title>{{ partial "base-title.html" . -}}</title>
 <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}">
-<meta name="keywords" content="{{ partial "title.html" . -}}">
+<meta name="keywords" content="{{ partial "base-title.html" . -}}">
 <meta name="author" content="{{ .Site.Author.name }}">
 
 <meta charset="utf-8">
@@ -9,12 +9,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Search Engine Tags -->
-<meta itemprop="name" content="{{ partial "title.html" . -}}">
+<meta itemprop="name" content="{{ partial "base-title.html" . -}}">
 <meta itemprop="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}">
 <meta itemprop="image" content="{{ .Site.BaseURL }}/images/thumbnails/{{ partial "article-image.html" . }}.png">
 
 <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="{{ partial "title.html" . -}}">
+<meta property="og:title" content="{{ partial "base-title.html" . -}}">
 <meta property="og:description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:image" content="{{ .Site.BaseURL }}/images/thumbnails/{{ partial "article-image.html" . }}.png">
@@ -24,7 +24,7 @@
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ partial "title.html" . -}}">
+<meta name="twitter:title" content="{{ partial "base-title.html" . -}}">
 <meta name="twitter:description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}">
 <meta name="twitter:image" content="{{ .Site.BaseURL }}/images/thumbnails/{{ partial "article-image.html" . }}.png">
 

@@ -3,265 +3,248 @@
 
 <head>
 
-    <title>Resume - Thedro Neely</title>
+  <title>Resume - Thedro Neely</title>
 
-    <meta name="description" content="Thedro's Web Development Resume">
-    <meta name="keywords" content="Thedro,Neely,Portfolio,Website,Resume">
-    <meta name="author" content="Thedro Neely">
+  <meta charset="utf-8">
+  <meta name="description" content="Thedro's Web Development Resume">
+  <meta name="keywords" content="Thedro,Neely,Portfolio,Website,Resume">
+  <meta name="author" content="Thedro Neely">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index,follow">
+  <style>html::-webkit-scrollbar { height: 0; width: 0; }</style>
 
-    <style>html::-webkit-scrollbar { height: 0; width: 0; }</style>
+  <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/rss.php'; ?>
 
-    <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/rss.php'; ?>
+  <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/favicons.php'; ?>
 
-    <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/favicons.php'; ?>
-
-    <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/stylesheets.php'; ?>
-
-    <link rel="stylesheet" href="/css/bulma-timeline.css">
+  <?php require $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/views/snippets/stylesheets.php'; ?>
 
 </head>
 
-    <body>
+    <body data-resume>
 
-        <div class="columns max__height is-gapless">
+        <resume-page>
 
-            <div class="column column__background is-4">
-
-            <section class="section has-text-centered">
-
-                <a href="/resume" class="title has-text-weight-normal is-size-4 has-text-white inline__padding">Resume</a>
-
-                <br>
-
-                <a href="/contact/" class="resume__label title has-text-weight-normal is-size-7 text__frame">Contact for Full Resume</a>
-
-                <br>
-
-                <h1 class="title has-text-weight-normal is-size-3 has-text-white inline__padding">Web <br> Developer</h1>
+            <column-left>
+              <section>
+                <h1>
+                  <a href="/resume/">Resume</a>
+                </h1>
 
                 <br>
 
                 <p>
-                    <a href="/" class="title has-text-weight-normal is-size-7 resume__label">https://www.thedroneely.com</a>
+                  <a href="/contact/">Contact for Full Resume</a>
                 </p>
 
                 <br>
 
+                <h1><a href="/">Web <br> Developer</a></h1>
+
+                <br>
+
+                <p><a href="/">https://www.thedroneely.com</a></p>
+
+                <br>
+
                 <p>
-                    <a href="#tools" class="title has-text-weight-normal is-size-7 resume__label">#Tools</a>
-
-                    <a href="#projects" class="title has-text-weight-normal is-size-7 resume__label">#Projects</a>
-
-                    <a href="#questions" class="title has-text-weight-normal is-size-7 resume__label">#Questions</a>
+                  <a href="#stack">#Stack</a>
+                  <a href="#questions">#Questions</a>
+                  <a href="#projects">#Projects</a>
                 </p>
+              </section>
+            </column-left>
 
-            </section>
+            <column-right>
 
-            </div>
+                <main>
 
-            <div class="column column__right is-size-6">
-
-                <div id="tools" class="resume__container">
-
-                <div class="resume__break"></div>
-                <div class="resume__break"></div>
-
-                <div class="column resume__column">
+                <article>
 
                     <section>
-
-                        <h1 class="title has-text-weight-normal has-text-primary is-4">
-                            Thedro Neely
-                        </h1>
-
-                        <p class="is-size-7">
-                            Hi, My name is Thedro, and I'm a web developer based in The Bahamas.
-                        </p>
-
+                      <h1>Thedro Neely</h1>
+                      <p>Hi, My name is Thedro, and I'm a web developer based in The Bahamas.</p>
                     </section>
 
                     <br>
 
-                    <div class="columns">
+                    <column-section>
 
-                        <div class="column">
+                        <column-stack>
+                          <section>
+                            <h1>Stack</h1>
+                          </section>
 
-                            <section>
-                                <h1 class="heading title has-text-weight-semibold">Stack</h1>
-                            </section>
+                          <br>
 
-                            <br>
+                          <section>
 
-                            <section>
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>Front End</h1>
+                                <p>HTML &nbsp; CSS &nbsp; JavaScript &nbsp; Bulma</p>
+                                <p>Bootstrap &nbsp; Sass &nbsp; Tailwind</p>
+                              </timeline-content>
+                            </timeline-item>
 
-                                <div class="timeline">
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>Back End</h1>
+                                <p>PHP &nbsp; Python &nbsp; MariaDB &nbsp; MySQL</p>
+                                <p>PostgreSQL &nbsp; Nginx &nbsp; Apache </p>
+                              </timeline-content>
+                            </timeline-item>
 
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                  <p class="heading">Front End</p>
-                                  <p class="is-size-7">HTML &nbsp; CSS &nbsp; JavaScript &nbsp; Bulma</p>
-                                  <p class="is-size-7">Bootstrap &nbsp; Sass &nbsp; Tailwind</p>
-                                </div>
-                                </div>
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>Tooling and Frameworks</h1>
+                                <p>LaTeX &nbsp; Laravel &nbsp; Sublime Text</p>
+                                <p>Npm &nbsp; Webpack &nbsp; Gimp &nbsp; Hugo</p>
+                              </timeline-content>
+                            </timeline-item>
 
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                  <p class="heading">Back End</p>
-                                  <p class="is-size-7">PHP &nbsp; Python &nbsp; MariaDB &nbsp; MySQL</p>
-                                  <p class="is-size-7">PostgreSQL &nbsp; Nginx &nbsp; Apache </p>
-                                </div>
-                                </div>
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>Version Systems &amp; GUIs</h1>
+                                <p>Git &nbsp; Gitlab &nbsp; Github &nbsp; Gitea</p>
+                              </timeline-content>
+                            </timeline-item>
 
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                  <p class="heading">Tooling and Frameworks</p>
-                                  <p class="is-size-7">LaTeX &nbsp; Laravel &nbsp; Sublime Text</p>
-                                  <p class="is-size-7">Npm &nbsp; Webpack &nbsp; Gimp &nbsp; Hugo</p>
-                                </div>
-                                </div>
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>Sys Admin</h1>
+                                <p>CentOS &nbsp; Debian &nbsp; Windows</p>
+                                <p>Android &nbsp; Alpine &nbsp; pfSense/Opnsense</p>
+                                <p>Systemd &nbsp; DNS &nbsp; SMTP &nbsp; DHCP</p>
+                              </timeline-content>
+                            </timeline-item>
 
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                  <p class="heading">Version Systems & GUIs</p>
-                                  <p class="is-size-7">Git &nbsp; Gitlab &nbsp; Github &nbsp; Gitea</p>
-                                </div>
-                                </div>
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>Dev Ops</h1>
+                                <p>Docker &nbsp; Jenkins &nbsp; Drone CI</p>
+                                <p>LXC</p>
+                              </timeline-content>
+                            </timeline-item>
 
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                  <p class="heading">Sys Admin</p>
-                                  <p class="is-size-7">CentOS &nbsp; Debian &nbsp; Windows</p>
-                                  <p class="is-size-7">Android &nbsp; Alpine &nbsp; pfSense/Opnsense</p>
-                                  <p class="is-size-7">Systemd &nbsp; DNS &nbsp; SMTP &nbsp; DHCP</p>
-                                </div>
-                                </div>
+                          </section>
+                        </column-stack>
 
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                  <p class="heading">Dev Ops</p>
-                                  <p class="is-size-7">Docker &nbsp; Jenkins &nbsp; Drone CI</p>
-                                  <p class="is-size-7">LXC</p>
-                                </div>
-                                </div>
+                        <column-questions>
+                          <section id="questions">
+                              <h1>Questions</h1>
+                          </section>
 
-                                </div>
+                          <br>
 
-                            </section>
+                          <section>
 
-                        </div>
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>Are you currently available for work?</h1>
+                                <p>
+                                  Yes, I'm currently available for contract work and full-time job
+                                  opportunities.
+                                </p>
+                              </timeline-content>
+                            </timeline-item>
 
-                        <div class="column">
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>How long have you been programming?</h1>
+                                <p>I've been programming for a long time, too long to accurately say.</p>
+                              </timeline-content>
+                            </timeline-item>
 
-                            <section id="questions">
-                                <h1 class="heading title has-text-weight-semibold">Questions</h1>
-                            </section>
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>What is your preferred stack?</h1>
+                                <p>
+                                  PHP 7 + PostgreSQL. Pretty decent stuff. I'm still learning Vue and React. I'd
+                                  like to learn Go next.
+                                </p>
+                              </timeline-content>
+                            </timeline-item>
 
-                            <br>
+                            <timeline-item>
+                              <aside></aside>
+                              <timeline-content>
+                                <h1>What's your OS setup?</h1>
+                                  <p>
+                                    Linux distribution with everything else floating on top. NixOS hosting Arch,
+                                    CentOS, Debian, Void, Windows, macOS and more.
+                                  </p>
+                              </timeline-content>
+                            </timeline-item>
 
-                            <section>
+                          </section>
+                        </column-questions>
 
-                                <div class="timeline">
-
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <p class="heading">Are you currently available for work?</p>
-                                    <p class="is-size-7">
-                                        Yes, I'm currently available for
-                                        contract work and full-time job
-                                        opportunities.
-                                    </p>
-                                </div>
-                                </div>
-
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <p class="heading">How long have you been programming?</p>
-                                    <p class="is-size-7">
-                                        I've been programming for a long time, too long to accurately say.
-                                    </p>
-                                </div>
-                                </div>
-
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <p class="heading">What is your preferred stack?</p>
-                                    <p class="is-size-7">
-                                        PHP 7 + PostgreSQL. Pretty decent stuff. I'm still learning
-                                        Vue and React. I'd like to learn Go next.
-                                    </p>
-                                </div>
-                                </div>
-
-                                <div class="timeline-item">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <p class="heading">What's your OS setup?</p>
-                                    <p class="is-size-7">
-                                        Linux distribution on bare metal, and everything else floating on top.
-                                        Arch bare metaling and hosting CentOS, Debian, Void, Windows and macOS.
-                                    </p>
-                                </div>
-                                </div>
-
-                                </div>
-
-                            </section>
-
-                        </div>
-
-                    </div>
-                </div>
+                    </column-section>
+                </article>
 
                 <br>
 
                 <section id="projects">
-                    <h1 class="heading title has-text-weight-semibold">Projects</h1>
+                  <h1>Projects</h1>
                 </section>
 
-                <div class="resume__break"></div>
+                <br>
 
                 <section>
-                    <div class="tile is-ancestor">
 
-                        <div class="tile is-parent">
-                            <a href="/projects/personal-portfolio">
-                              <img width="203" height="360" src="/images/personal-portfolio.png" alt="thedro">
-                            </a>
-                        </div>
+                  <tile-set>
+                      <tile-item>
+                        <a href="/projects/personal-portfolio/">
+                          <img
+                            width="203"
+                            height="360"
+                            src="/images/personal-portfolio.png"
+                            alt="thedro"
+                          >
+                        </a>
+                      </tile-item>
 
-                        <div class="tile is-parent">
-                            <a href="/projects/bulma-resume">
-                              <img width="203" height="360" src="/images/bulma-resume.png" alt="resume">
-                            </a>
-                        </div>
+                      <tile-item>
+                        <a href="/projects/bulma-resume/">
+                          <img
+                            width="203"
+                            height="360"
+                            src="/images/bulma-resume.png"
+                            alt="resume"
+                          >
+                        </a>
+                      </tile-item>
 
-                        <div class="tile is-parent">
-                            <a href="/projects/voiceover-website/">
-                              <img width="203" height="360" src="/images/voiceover-website.png" alt="edwin">
-                            </a>
-                        </div>
+                      <tile-item>
+                        <a href="/projects/voiceover-website/">
+                          <img
+                            width="203"
+                            height="360"
+                            src="/images/voiceover-website.png"
+                            alt="edwin"
+                          >
+                        </a>
+                      </tile-item>
+                  </tile-set>
 
-                    </div>
                 </section>
 
-            </div>
+            </main>
 
-          </div>
+          </column-right>
 
-        </div>
+        </resume-page>
 
     </body>
 </html>

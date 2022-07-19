@@ -1,0 +1,6 @@
+{{- with .Params.tags -}} 
+  {{- range $tags, $tag := sort . -}}
+    {{ safeHTML (readFile "public/css/icons/feather/tag.svg") }}
+    <a href="{{ "tags/" | relURL }}{{ $tag | urlize }}/">{{ $tag }}</a>
+  {{ end }}
+{{- end -}}

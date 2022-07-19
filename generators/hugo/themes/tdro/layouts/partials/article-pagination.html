@@ -1,0 +1,77 @@
+{{- $HugoPaginator := $.Paginator -}}
+{{- $Pages := $HugoPaginator.TotalNumberOfElements -}}
+{{- $MyPaginator := math.Ceil (div (float $Pages) 3) -}}
+
+{{ if gt $HugoPaginator.TotalPages 1 }}
+
+<pagination-controller>
+  <nav>
+
+    <pagination-previous>
+      <a {{ if $HugoPaginator.HasPrev }}
+        href="{{ $HugoPaginator.Prev.URL }}"
+        {{ end }}
+        title="Previous page"
+        {{ if not $HugoPaginator.HasPrev }}
+        data-disabled
+        {{ end }}
+      >
+        Previous
+      </a>
+    </pagination-previous>
+
+    <ul>
+
+    {{- $.Scratch.Set "__paginator.ellipsed" false -}}
+    {{- range (first $MyPaginator $HugoPaginator.Pagers) -}}
+    {{- $right := sub .TotalPages .PageNumber -}}
+    {{- $showNumber := or (le .PageNumber 1) (eq $right 0) -}}
+    {{- $showNumber := or $showNumber (and (gt .PageNumber (sub $HugoPaginator.PageNumber 2)) (lt .PageNumber (add $HugoPaginator.PageNumber 2))) -}}
+
+      {{ if $showNumber }}
+        {{ $.Scratch.Set "__paginator.ellipsed" false }}
+        {{ $.Scratch.Set "__paginator.shouldEllipse" false }}
+      {{ else }}
+        {{ $.Scratch.Set "__paginator.shouldEllipse" (not ($.Scratch.Get "__paginator.ellipsed") ) }}
+        {{ $.Scratch.Set "__paginator.ellipsed" true }}
+      {{ end }}
+
+      {{ if $showNumber }}
+
+        <li>
+          <a
+            href="{{ .URL }}"
+            title="Go to page {{ .PageNumber }}"
+            {{ if eq . $HugoPaginator }}data-pagination-current{{ end }}
+          >
+            {{ .PageNumber }}
+          </a>
+        </li>
+
+      {{ else if ($.Scratch.Get "__paginator.shouldEllipse") }}
+
+        <li><pagination-ellipsis>&hellip;</pagination-ellipsis></li>
+
+      {{ end }}
+
+    {{ end }}
+    </ul>
+    <pagination-next>
+      <a
+        {{ if not (le (int $MyPaginator) $HugoPaginator.PageNumber) }}
+        {{ if $HugoPaginator.HasNext }}
+        href="{{ $HugoPaginator.Next.URL }}"
+        {{ end }}
+        {{ end }}
+        title="Next page"
+        {{ if le (int $MyPaginator) $HugoPaginator.PageNumber }}
+        data-disabled
+        {{ end }}
+      >
+        Next
+      </a>
+    </pagination-next>
+
+  </nav>
+</pagination-controller>
+{{ end }}

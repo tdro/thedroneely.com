@@ -1,14 +1,15 @@
-<a href="<?php echo $route ?? null; ?>" class="navbar-item navbar__icon has-text-centered
+<a
+  href="<?php echo $route ?? null; ?>"
   <?php
     $hiddenLabels = [ 'Profile' ];
-    if (in_array($label, $hiddenLabels)) { echo ' navbar__icon__hidden'; }
-    if ($navigation->isActive($route ?? null)) { echo ' navbar__active'; }
+    if (in_array($label, $hiddenLabels)) { echo ' data-hidden'; }
+    if ($navigation->isActive($route ?? null)) { echo ' data-active'; }
   ?>
-">
-  <div class="has-text-centered">
-    <?php echo icon($icon ?? null); ?>
-    <p title="<?php echo $label ?? null; ?>" class="navbar__icon__label"><?php echo $label ?? null; ?></p>
-  </div>
+>
+  <?php echo icon($icon ?? null); ?>
+  <span title="<?php echo $label ?? null; ?>">
+    <?php echo $label ?? null; ?>
+  </span>
 </a>
 
 <?php $route = $label = $icon = null; ?>

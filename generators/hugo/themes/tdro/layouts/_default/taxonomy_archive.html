@@ -1,34 +1,31 @@
 {{ define "main" }}
-<section class="section is-fullheight">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-7">
-        {{ $title := .Title }}
-        <article class="content">
-          <h1 class="article__list smallcaps title">{{ .Title | markdownify }}</h1>
-          {{ range $taxonomy := .Site.Taxonomies }}
-            {{ $title := .Title }}
-            {{ range $tag, $article := $taxonomy }}
-              {{ if ne $tag $title }}
-                <h1 class="article__list smallcaps title is-4">{{ $tag }}</h1>
-                <ul class="article__list">
-                  {{ range $article.Pages }}
-                    <li>
-                      <a title="{{ .Title }}" class="is-block" href="{{ .RelPermalink }}">
-                        <span class="article__list__date monospace has-text-grey-dark">
-                          {{- .Date.Format "02 Jan 2006" -}}
-                        </span>
-                        {{- .Title | markdownify -}}
-                      </a>
-                    </li>
-                  {{ end }}
-                </ul>
-              {{ end }}
+  <main>
+    <taxonomy-archive-list>
+    {{ $title := .Title }}
+    <h1>{{ .Title | markdownify }}</h1>
+    <hr>
+      <section>
+        {{ range $taxonomy := .Site.Taxonomies }}
+          {{ $title := .Title }}
+          {{ range $tag, $article := $taxonomy }}
+            {{ if ne $tag $title }}
+              <h2>{{ $tag }}</h2>
+              <ul>
+                {{ range $article.Pages }}
+                  <li>
+                    <a
+                      title="{{ .Title }}"
+                      href="{{ .RelPermalink }}">
+                      <code><time>{{- .Date.Format "02 Jan 2006" -}}</time></code>
+                      <span>{{- .Title | markdownify -}}</span>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
             {{ end }}
           {{ end }}
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+        {{ end }}
+      </section>
+    </taxonomy-archive-list>
+  </main>
 {{ end }}

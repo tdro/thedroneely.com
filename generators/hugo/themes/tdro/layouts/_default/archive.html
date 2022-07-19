@@ -1,36 +1,29 @@
 {{ define "main" }}
-<section class="section is-fullheight">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-7">
-        {{ $type := .Type }}
+<main>
+  <article-archive-list>
+  {{ $type := .Type }}
 
-        {{ range (.Site.RegularPages.GroupByDate "2006") }}
-          {{ $articles := (where .Pages "Type" $type) }}
-          {{ if and (gt .Key 1) (gt (where .Pages "Type" $type) 0) }}
+  {{ range (.Site.RegularPages.GroupByDate "2006") }}
+    {{ $articles := (where .Pages "Type" $type) }}
+    {{ if and (gt .Key 1) (gt (where .Pages "Type" $type) 0) }}
+      {{ range (first 1 $articles) }}
+      <h1>{{ .Date.Format "2006" }}</h1>
+      {{ end }}
 
-            {{ range (first 1 $articles) }}
-            <h1 class="article__list title is-4 has-text-weight-normal has-margin-bottom-lg">{{ .Date.Format "2006" }}</h1>
-            {{ end }}
-
-            <ul class="article__list">
-              {{ range $articles }}
-                {{ if (ne .Params.hidden true) }}
-                <li>
-                  <a title="{{ .Title }}" class="is-block" href="{{ .RelPermalink }}">
-                    <span class="article__list__date monospace has-text-grey-dark">{{ .Date.Format "02 Jan" }}</span>
-                    {{- .Title | markdownify -}}
-                  </a>
-                </li>
-                {{ end }}
-              {{ end }}
-            </ul>
-
+      <ul>
+        {{ range $articles }}
+          {{ if (ne .Params.hidden true) }}
+          <li>
+            <a title="{{ .Title }}" href="{{ .RelPermalink }}">
+              <code><time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ .Date.Format "02 Jan" }}</time></code>
+              <span>{{- .Title | markdownify -}}</span>
+            </a>
+          </li>
           {{ end }}
         {{ end }}
-
-      </div>
-    </div>
-  </div>
-</section>
+      </ul>
+    {{ end }}
+  {{ end }}
+  </article-archive-list>
+</main>
 {{ end }}

@@ -1,5 +1,4 @@
 <form
-  class="<?php echo $formClass ?? null; ?>"
   method="get"
   action="<?php echo $_SERVER['REQUEST_URI']; ?>"
 >
@@ -7,29 +6,25 @@
 
   <button
     title="Switch to Light Theme"
-    class="<?php echo $buttonClass ?? null; ?>"
     name="theme"
     type="submit"
     value="light"
   >
-    <?php echo icon('sun', $iconClass ?? null); ?>
-    <span>Light</span>
+    <?php echo icon('moon'); ?>
+    <span>Dark</span>
   </button>
 
   <?php } else { ?>
 
   <button
     title="Switch to Dark Theme"
-    class="<?php echo $buttonClass ?? null; ?>"
     name="theme"
     type="submit"
     value="dark"
   >
-    <?php echo icon('moon', $iconClass ?? null); ?>
-    <span>Dark</span>
+    <?php echo icon('sun'); ?>
+    <span>Light</span>
   </button>
 
   <?php } ?>
 </form>
-
-<?php $formClass = $buttonClass = $iconClass = null; ?>

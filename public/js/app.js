@@ -10,6 +10,24 @@ function addClass (el, cl) { if (el) { var a = el.className.split(' '); if (!afi
 function remClass (el, cl) { if (el) { var a = el.className.split(' '); arem(a, cl); el.className = a.join(' '); } }
 function runOnce(action) { runOnce = function(){}; action(); }
 
+/*
+ * Context Menu functions
+ */
+function contextMenuHide(element, event) {
+  /* Hide contextMenu elements */
+  for (var i = 0; i < element.length; i++) {
+    element[i].checked = false;
+  }
+}
+
+function contextMenuClickHide(element, event) {
+  /* Hide contextMenu when clicked outside of region */
+  for (var i = 0; i < element.length; i++) {
+    let notClicked = !element[i].contains(event.target);
+    if (notClicked && contextMenuInputs[i].checked === true) { contextMenuHide(contextMenuInputs); }
+  }
+}
+
 /**
  * Remove url query string
  */
@@ -22,7 +40,7 @@ window.history.replaceState(null, '', url);
 url = window.location.href.split('#')[0];
 
 /**
- * Settings array
+ * Load events
  */
 var settings = { pager: {} };
 
@@ -41,64 +59,17 @@ window.addEventListener('DOMContentLoaded', function(event) {
 });
 
 /*
- * Dropdown functions
- */
-function dropdownHide(element, event) {
-  /* Hide dropdown elements */
-  for (var i = 0; i < element.length; i++) {
-    element[i].checked = false;
-  }
-}
-
-function dropdownClickHide(element, event) {
-  /* Hide dropdown when clicked outside of region */
-  for (var i = 0; i < element.length; i++) {
-    let click = element[i].contains(event.target);
-    if (!click && dropdownInputList[i].checked === true) { dropdownHide(dropdownInputList); }
-  }
-}
-
-/*
- * Hide dropdown when the mouse is far away
- */
-document.addEventListener('mousemove', function(event) {
-  let mouseX = event.pageX;
-  let mouseY = event.pageY;
-
-  function magnitude(x, y) {
-    return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
-  }
-
-  function distance(mouseX, mouseY, element) {
-    let position = element.getBoundingClientRect();
-    let elementX = position.right - (element.offsetWidth / 2 ) + window.pageXOffset;
-    let elementY = position.bottom - (element.offsetHeight / 2 ) + window.pageYOffset;
-    return Math.abs(magnitude(mouseX, mouseY) - magnitude(elementX, elementY));
-  }
-
-  function hide(element, threshold, event) {
-    for (var i = 0; i < element.length; i++) {
-      let proximity = distance(mouseX, mouseY, element[i]);
-      if (proximity > threshold && dropdownInputList[i].checked === true) {
-        dropdownHide(dropdownInputList, event);
-      }
-    }
-  }
-  hide(dropdownContentList, 300, event);
-});
-
-/*
  * Click events
  */
 document.addEventListener('click', function(event) {
-  dropdownClickHide(dropdownMenuList, event);
+  contextMenuClickHide(contextMenus, event);
 });
 
 /*
  * Touch start events
  */
 document.addEventListener('touchstart', function(event) {
-  dropdownClickHide(dropdownMenuList, event);
+  contextMenuClickHide(contextMenus, event);
 });
 
 /**
@@ -109,13 +80,12 @@ var navbar = document.getElementById("navbar");
 var navbarHeight = navbar.offsetHeight;
 var scrolls = 0;
 
-var dropdownInputList = byClass(document, 'dropdown-input');
-var dropdownContentList = byClass(document, 'dropdown-content');
-var dropdownMenuList = byClass(document, 'dropdown');
+var contextMenus = document.getElementsByTagName('context-menu-container');
+var contextMenuInputs = document.querySelectorAll('context-menu-container input');
 
 window.addEventListener('scroll', function(event) {
 
-    dropdownHide(dropdownInputList);
+    contextMenuHide(contextMenuInputs);
 
     var currentPosition = window.pageYOffset;
     var velocity = previousPosition - currentPosition;
@@ -125,11 +95,11 @@ window.addEventListener('scroll', function(event) {
 
     if (scrolls > 3) {
       if (velocity > 75 || currentPosition < navbarHeight) {
-        remClass(navbar, 'headroom');
+        remClass(navbar, 'hide');
       } else if (velocity < -25) {
-        addClass(navbar, 'headroom');
+        addClass(navbar, 'hide');
       } else if (currentPosition > navbarHeight) {
-        runOnce(function () { addClass(navbar, 'headroom'); });
+        runOnce(function () { addClass(navbar, 'hide'); });
       }
     }
 
@@ -631,8 +601,8 @@ window.addEventListener('scroll', function(event) {
  * Activate Medium Zoom
  */
 var imageZoom = mediumZoom('[data-image-zoom]');
-imageZoom.on('open', function(event) { addClass(navbar, 'headroom'); });
-imageZoom.on('close', function(event) { remClass(navbar, 'headroom'); });
+imageZoom.on('open', function(event) { addClass(navbar, 'hide'); });
+imageZoom.on('close', function(event) { remClass(navbar, 'hide'); });
 
 
 /**
