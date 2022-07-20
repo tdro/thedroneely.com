@@ -1974,8 +1974,8 @@ taxonomy-archive-list > section ul li:hover {
 }
 
 pagination-controller [data-pagination-current] {
-  background-color: #3273dc;
-  border-color: #3273dc;
+  background-color: #0961aa;
+  border-color: #0961aa;
   color: #fff;
 }
 
