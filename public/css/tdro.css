@@ -360,8 +360,16 @@ body > footer {
 }
 
 article p {
-  font-size: 1.25rem;
   margin-bottom: 1.5rem;
+}
+
+article ul {
+  margin-left: 2rem;
+}
+
+article p,
+article ul li {
+  font-size: 1.25rem;
 }
 
 /* ----- Tables ----- */
@@ -412,6 +420,7 @@ article p,
 article h1,
 article h2,
 article h3,
+article ul li,
 article-on-web h3,
 side-note-aside label,
 margin-note-aside label,
@@ -429,6 +438,7 @@ margin-note-aside,
 blockquote-footer,
 table-contents h2,
 home-page article p,
+table-contents ul li,
 home-page article h1,
 home-page article h2,
 resume-page article p,
