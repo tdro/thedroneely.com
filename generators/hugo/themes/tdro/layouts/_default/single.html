@@ -7,12 +7,11 @@
     {{- partial "function-content.html" .Content | safeHTML -}}
   </article>
 
+  {{- partial "article-syntax.html"       . -}}
   {{- partial "article-meta-bottom.html"  . -}}
   {{- partial "article-more-content.html" . -}}
-  {{- if fileExists "themes/tdro/layouts/partials/openring.html" -}}
   {{- partial "article-on-web.html"       . -}}
-  {{- end -}}
-  {{- partial "article-syntax.html"       . -}}
   {{- partial "article-comments.html"     . -}}
+  {{- partial "article-references.html"   . -}}
 </main>
 {{ end }}

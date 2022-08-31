@@ -1,0 +1,11 @@
+{{- $exoference := print "themes/tdro/layouts/partials/generators/exoference/" .Slug ".html" -}}
+{{- $include    := print "generators/exoference/" .Slug ".html" -}}
+
+{{- if fileExists $exoference -}}
+<article-references id="article-references">
+  <section>
+    <h2>References</h2>
+  </section>
+  {{- partial $include . -}}
+</article-references>
+{{- end -}}

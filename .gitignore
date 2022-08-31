@@ -1,3 +1,4 @@
+**/generators/exoference/*.html
 .hugo_build.lock
 /app/storage
 /cockpit

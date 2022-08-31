@@ -635,6 +635,7 @@ article-list,
 taxonomy-list,
 article-on-web,
 article-comments,
+article-references,
 article-subsection,
 article-meta-bottom,
 article-archive-list,
@@ -654,6 +655,7 @@ article-more-content {
   taxonomy-list,
   article-on-web,
   article-comments,
+  article-references,
   article-subsection,
   article-meta-bottom,
   article-archive-list,
@@ -666,6 +668,7 @@ article-more-content {
 taxonomy-list h2,
 article-on-web h2,
 article-comments h2,
+article-references h2,
 article-more-content h2,
 taxonomy-archive-list h2 {
   font-size: 1.25rem;
@@ -811,9 +814,11 @@ article-archive-link a svg {
   vertical-align: bottom;
 }
 
+article-on-web,
+article-comments,
+article-references,
 article-meta-bottom,
-article-more-content,
-article-on-web {
+article-more-content {
   padding: 2.5rem 1.5rem;
 }
 
