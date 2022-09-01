@@ -21,4 +21,4 @@ cockpit:
 	sed --in-place "s|^hugo_base_dir.*|hugo_base_dir: $PWD/generators/hugo|" cockpit/addons/Hugo/config.yaml
 	sed --in-place "s|^hugo_theme.*|hugo_theme: tdro|" cockpit/addons/Hugo/config.yaml
 
-.PHONY: generators
+.PHONY: generators cockpit
