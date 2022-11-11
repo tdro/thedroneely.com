@@ -1,4 +1,4 @@
 #!/bin/sh -eu
-cachedir=$(dirname "$(pwd)")/app/storage/cache;
-rm -r "${cachedir:?}/"* > /dev/null 2>&1 || { echo "Nothing to invalidate in ${cachedir:?}" && exit; };
-echo "Cache invalidated in ${cachedir:?}";
+cachedir=$(dirname "$(pwd)")/storage/cache
+rm --recursive "${cachedir:?}/"* >/dev/null 2>&1 || { printf "Nothing to invalidate in %s\n" "${cachedir:?}" && exit; }
+printf "Cache invalidated in %s\n" "${cachedir:?}"

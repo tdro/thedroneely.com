@@ -31,7 +31,7 @@ function views(string $folder, string $name)
 function cache(string $filename, string $data)
 {
     file_put_contents(
-        $_SERVER['DOCUMENT_ROOT'] . '/..' . '/app/storage/cache/'
+        $_SERVER['DOCUMENT_ROOT'] . '/..' . '/storage/cache/'
         . base64_encode($filename), $data
     );
 }
@@ -40,12 +40,12 @@ function fetch(string $uri, string $field)
 {
     if (file_exists(
         $_SERVER['DOCUMENT_ROOT'] . '/..'
-        . '/app/storage/cache/' . base64_encode($uri . $field)
+        . '/storage/cache/' . base64_encode($uri . $field)
     )
     ) {
         echo file_get_contents(
             $_SERVER['DOCUMENT_ROOT'] . '/..'
-            . '/app/storage/cache/' . base64_encode($uri . $field)
+            . '/storage/cache/' . base64_encode($uri . $field)
         );
           return;
     }

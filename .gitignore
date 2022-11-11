@@ -1,7 +1,7 @@
 **/generators/exoference/*.html
 .hugo_build.lock
-/app/storage
 /cockpit
+/storage
 /vendor
 config.php
 generators/hugo/content
