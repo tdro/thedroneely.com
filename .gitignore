@@ -1,6 +1,7 @@
 **/generators/exoference/*.html
 .hugo_build.lock
 /cockpit
+/database
 /storage
 /vendor
 config.php

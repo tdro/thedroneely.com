@@ -2,10 +2,9 @@
 
 return [
     'database' => [
-        'name' => 'pgsql_database',
-        'username' => 'pgsql_username',
-        'password' => 'pgsql_password',
-        'connection' => 'pgsql:',
+        'dsn' => 'sql:;dbname=sql_database',
+        'username' => 'sql_username',
+        'password' => 'sql_password',
         'options' => [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]

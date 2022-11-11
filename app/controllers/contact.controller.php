@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $spam = false;
 
     include '../app/views/contact.view.php';
+
     fastcgi_finish_request();
 
     $contact['database']->insert(

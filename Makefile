@@ -21,4 +21,8 @@ cockpit:
 	sed --in-place "s|^hugo_base_dir.*|hugo_base_dir: $$PWD/generators/hugo|" cockpit/addons/Hugo/config.yaml
 	sed --in-place "s|^hugo_theme.*|hugo_theme: tdro|" cockpit/addons/Hugo/config.yaml
 
+migration:
+	sqlite3 database/sqlite.db < database/contactform.sql
+	sed --in-place "s|'sql:;dbname=sql_database'|'sqlite:' . __DIR__ . '/database/sqlite.db'|" config.php
+
 .PHONY: generators cockpit
