@@ -4,7 +4,7 @@
 {{- if fileExists $references -}}
 <article-references id="article-references">
   <section>
-    <h2>References</h2>
+    {{ "## References" | markdownify }}
   </section>
   {{- partial $include . -}}
 </article-references>

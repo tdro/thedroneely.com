@@ -450,7 +450,7 @@ article h1,
 article h2,
 article h3,
 article ul li,
-article-on-web h3,
+article-webring h3,
 side-note-aside label,
 margin-note-aside label,
 article-more-content h3 {
@@ -640,7 +640,7 @@ article,
 body > footer,
 article-list,
 taxonomy-list,
-article-on-web,
+article-webring,
 article-comments,
 article-references,
 article-subsection,
@@ -660,7 +660,7 @@ article-more-content {
   body > footer,
   article-list,
   taxonomy-list,
-  article-on-web,
+  article-webring,
   article-comments,
   article-references,
   article-subsection,
@@ -673,7 +673,7 @@ article-more-content {
 }
 
 taxonomy-list h2,
-article-on-web h2,
+article-webring h2,
 article-comments h2,
 article-references h2,
 article-more-content h2,
@@ -821,7 +821,7 @@ article-archive-link a svg {
   vertical-align: bottom;
 }
 
-article-on-web,
+article-webring,
 article-comments,
 article-references,
 article-meta-bottom,
@@ -829,11 +829,11 @@ article-more-content {
   padding: 2.5rem 1.5rem;
 }
 
-article-on-web button-anchor {
+article-webring button-anchor {
   float: right;
 }
 
-article-on-web li + li {
+article-webring li + li {
   margin-top: 1.5rem;
 }
 
@@ -1998,7 +1998,11 @@ recent-articles h2 a {
 }
 
 article a,
-article-subsection a {
+article-subsection a,
+article-webring h2 a,
+article-comments h2 a,
+article-references h2 a,
+article-more-content h2 a {
   color: #000;
 }
 
@@ -2118,7 +2122,7 @@ article-meta-bottom,
 article-meta-top a,
 article-meta-top,
 article-more-content time,
-article-on-web time,
+article-webring time,
 article-summary-meta,
 blockquote-footer,
 home-page article > h2,
@@ -2180,7 +2184,7 @@ article-card article-thumbnail a,
 article-card article-thumbnail a:hover,
 article-meta-top a,
 article-meta-top a:hover,
-article-on-web a,
+article-webring a,
 button-anchor a:focus,
 button-anchor a:hover,
 code-block language-label a,

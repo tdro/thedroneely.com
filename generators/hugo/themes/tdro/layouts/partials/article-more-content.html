@@ -1,6 +1,6 @@
 <article-more-content id="article-more-content">
   <section>
-    <h2>More Content</h2>
+    {{ "## More Content" | markdownify }}
     {{ $more := shuffle .Site.RegularPages | first 3 }}
     {{ with $more }}
       {{ range . }}

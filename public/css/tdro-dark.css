@@ -67,7 +67,11 @@ textarea {
 
 article a,
 body > footer a,
-article-subsection a {
+article-webring h2 a,
+article-subsection a,
+article-comments h2 a,
+article-references h2 a,
+article-more-content h2 a {
   color: #eee;
 }
 
@@ -148,7 +152,7 @@ article-meta-bottom,
 article-meta-top a,
 article-meta-top,
 article-more-content time,
-article-on-web time,
+article-webring time,
 article-summary-meta,
 blockquote-footer,
 home-page article > h2,
