@@ -23,8 +23,9 @@ webrings:
 quotes:
 	strfile generators/fortune/quotes.fortune
 
+export DENO_DIR := generators/exoference/vendor
+
 references:
-	export DENO_DIR=generators/exoference/vendor
 	deno compile \
     --allow-net \
     --no-check \
