@@ -28,7 +28,7 @@ function contextMenuHideOutside(element, event) {
 /**
  * Remove url query string and hash
  */
-var url = window.location.href.split('#')[0].split('?')[0];
+var url = window.location.href.split('?')[0];
 window.history.replaceState(null, '', url);
 
 /**
