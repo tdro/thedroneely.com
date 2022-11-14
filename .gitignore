@@ -6,7 +6,7 @@
 /storage
 /vendor
 config.php
-generators/exoference/exoference
+generators/exoference
 generators/hugo/content
 generators/hugo/public
 generators/openring/openring

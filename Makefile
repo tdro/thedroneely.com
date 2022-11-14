@@ -24,6 +24,12 @@ quotes:
 	strfile generators/fortune/quotes.fortune
 
 references:
+	DENO_DIR=generators/exoference/vendor && \
+	deno compile \
+    --allow-net \
+    --no-check \
+    --output generators/exoference/ \
+    generators/exoference/main.ts
 	find generators/hugo/content/posts -type f -name "*.md" -exec basename --suffix '.md' {} \; \
 		| while read -r file; do path="generators/hugo/themes/tdro/layouts/partials/references/$$file.html" \
 		&& printf 'Gathering references for %s\n' "$$file" && [ ! -e "$$path" ] \
