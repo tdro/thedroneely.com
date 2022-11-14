@@ -188,9 +188,11 @@ recent-articles h2 a {
 }
 
 video {
-  display: inline-block;
+  border-radius: 0.5rem;
   box-shadow: 0 0.25rem 1rem;
+  display: inline-block;
   max-width: 100%;
+  color: #999;
 }
 
 video-container {
@@ -1958,10 +1960,6 @@ img {
 
 hr {
   background-color: #ddd;
-}
-
-video {
-  color: #999;
 }
 
 input,
