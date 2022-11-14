@@ -5,7 +5,6 @@ function posf (f, a) { for (var i=0; i < a.length; i++) { if (f(a[i])) {return i
 function apos (x, a) { return (typeof x == 'function') ? posf(x,a) : Array.prototype.indexOf.call(a,x); }
 function arem (a, x) { var i = apos(x, a); if (i >= 0) { a.splice(i, 1); } return a; }
 function afind (x, a) { var i = apos(x, a); return (i >= 0) ? a[i] : null; }
-function byClass (el, cl) { return el ? el.getElementsByClassName(cl) : []; }
 function addClass (el, cl) { if (el) { var a = el.className.split(' '); if (!afind(cl, a)) { a.unshift(cl); el.className = a.join(' '); } } }
 function remClass (el, cl) { if (el) { var a = el.className.split(' '); arem(a, cl); el.className = a.join(' '); } }
 function runOnce(action) { runOnce = function(){}; action(); }
@@ -13,15 +12,13 @@ function runOnce(action) { runOnce = function(){}; action(); }
 /*
  * Context Menu functions
  */
-function contextMenuHide(element, event) {
-  /* Hide contextMenu elements */
+function contextMenuHide(element) {
   for (var i = 0; i < element.length; i++) {
     element[i].checked = false;
   }
 }
 
-function contextMenuClickHide(element, event) {
-  /* Hide contextMenu when clicked outside of region */
+function contextMenuHideOutside(element, event) {
   for (var i = 0; i < element.length; i++) {
     let notClicked = !element[i].contains(event.target);
     if (notClicked && contextMenuInputs[i].checked === true) { contextMenuHide(contextMenuInputs); }
@@ -29,28 +26,25 @@ function contextMenuClickHide(element, event) {
 }
 
 /**
- * Remove url query string
+ * Remove url query string and hash
  */
-var url = window.location.href.split('?')[0];
+var url = window.location.href.split('#')[0].split('?')[0];
 window.history.replaceState(null, '', url);
-
-/**
- * Remove url hash to store in pager
- */
-url = window.location.href.split('#')[0];
 
 /**
  * Load events
  */
 var settings = { pager: {} };
 
-window.addEventListener('DOMContentLoaded', function(event) {
+window.addEventListener('DOMContentLoaded', function() {
   if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
   if (localStorage['settings']) { settings = JSON.parse(localStorage['settings']); }
-  if (window.location.href.indexOf("#") >= 0) {
+  var hash = document.getElementById(location.hash.slice(1));
+  var hashInURL = window.location.href.indexOf("#") >= 0;
+  if (hashInURL && document.body.contains(hash)) {
     settings['pager'][url] = window.pageYOffset;
     localStorage['settings'] = JSON.stringify(settings);
-    document.getElementById(location.hash.slice(1)).scrollIntoView();
+    hash.scrollIntoView();
     return;
   }
   if (settings['pager'][url] > 0) { window.scrollTo(0, settings['pager'][url]); return; }
@@ -62,14 +56,14 @@ window.addEventListener('DOMContentLoaded', function(event) {
  * Click events
  */
 document.addEventListener('click', function(event) {
-  contextMenuClickHide(contextMenus, event);
+  contextMenuHideOutside(contextMenus, event);
 });
 
 /*
  * Touch start events
  */
 document.addEventListener('touchstart', function(event) {
-  contextMenuClickHide(contextMenus, event);
+  contextMenuHideOutside(contextMenus, event);
 });
 
 /**
@@ -83,7 +77,7 @@ var scrolls = 0;
 var contextMenus = document.getElementsByTagName('context-menu-container');
 var contextMenuInputs = document.querySelectorAll('context-menu-container input');
 
-window.addEventListener('scroll', function(event) {
+window.addEventListener('scroll', function() {
 
     contextMenuHide(contextMenuInputs);
 
@@ -106,6 +100,7 @@ window.addEventListener('scroll', function(event) {
     previousPosition = currentPosition;
     scrolls++;
 });
+
 
 /**
  * Medium Zoom 1.0.4
@@ -601,8 +596,8 @@ window.addEventListener('scroll', function(event) {
  * Activate Medium Zoom
  */
 var imageZoom = mediumZoom('[data-image-zoom]');
-imageZoom.on('open', function(event) { addClass(navbar, 'hide'); });
-imageZoom.on('close', function(event) { remClass(navbar, 'hide'); });
+imageZoom.on('open', function() { addClass(navbar, 'hide'); });
+imageZoom.on('close', function() { remClass(navbar, 'hide'); });
 
 
 /**
