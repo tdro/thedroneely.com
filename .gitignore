@@ -1,10 +1,12 @@
-**/generators/exoference/*.html
+**/references/*.html
+**/webrings/*.html
 .hugo_build.lock
 /cockpit
 /database
 /storage
 /vendor
 config.php
+generators/exoference/exoference
 generators/hugo/content
 generators/hugo/public
 generators/openring/openring
