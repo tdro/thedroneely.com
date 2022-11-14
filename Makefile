@@ -24,11 +24,11 @@ quotes:
 	strfile generators/fortune/quotes.fortune
 
 references:
-	DENO_DIR=generators/exoference/vendor && \
+	export DENO_DIR=generators/exoference/vendor
 	deno compile \
     --allow-net \
     --no-check \
-    --output generators/exoference/ \
+    --output generators/exoference/exoference \
     generators/exoference/main.ts
 	find generators/hugo/content/posts -type f -name "*.md" -exec basename --suffix '.md' {} \; \
 		| while read -r file; do path="generators/hugo/themes/tdro/layouts/partials/references/$$file.html" \
