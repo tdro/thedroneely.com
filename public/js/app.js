@@ -87,20 +87,21 @@ window.addEventListener('scroll', function() {
     settings['pager'][url] = currentPosition;
     localStorage['settings'] = JSON.stringify(settings);
 
-    if (scrolls > 3) {
-      if (velocity > 75 || currentPosition < navbarHeight) {
+    if ((scrolls > 3 && velocity > 75) || currentPosition < navbarHeight) {
         remClass(navbar, 'hide');
       } else if (velocity < -25) {
         addClass(navbar, 'hide');
       } else if (currentPosition > navbarHeight) {
         runOnce(function () { addClass(navbar, 'hide'); });
       }
-    }
 
     previousPosition = currentPosition;
     scrolls++;
 });
 
+window.addEventListener("hashchange", function () {
+  document.getElementById(location.hash.slice(1)).scrollIntoView();
+});
 
 /**
  * Medium Zoom 1.0.4
