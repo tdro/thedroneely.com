@@ -13,7 +13,6 @@
   title="{{ . }}"
   {{ end }}
   {{- if $isRemote -}}
-  target="_blank"
   rel="noopener no-referrer"
   {{ end }}>
     {{- .Text | safeHTML -}}
