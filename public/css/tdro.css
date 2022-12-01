@@ -215,7 +215,6 @@ ul:not(:last-child) {
 dl {
   max-width: 36rem;
   margin: 0 auto;
-  font-size: 110%;
 }
 
 dl:not(:last-child) {
