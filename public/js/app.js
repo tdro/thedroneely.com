@@ -812,55 +812,30 @@ function preload(url) {
  */
 
 (function () {
-  addEvent(document, "dblclick", dictionary);
+  const options =
+    "targetWindow,width=700,height=500,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes";
 
-  function addEvent(element, type, listener) {
-    if (element.addEventListener) {
-      element.addEventListener(type, listener, false);
-      return true;
-    } else if (element.attachEvent) {
-      return element.attachEvent("on" + type, listener);
-    } else {
-      return false;
+  self.addEventListener("keydown", function (event) {
+    if (event.repeat && event.key === "d") {
+      selection(dictionary);
+    }
+  });
+
+  function selection(execute) {
+    let phrase = "" + window.getSelection();
+    phrase = phrase.replace(/[!.:?,;"]/g, "");
+    phrase = phrase.replace(/^\s*(\S*?)\s*$/g, "$1");
+    if (phrase && phrase > "" && phrase.length > 1) {
+      execute(phrase);
     }
   }
 
-  function notInside(element, name) {
-    if (typeof element.parentElement === "undefined" ||
-      element.parentElement === null
-    ) { return true; }
-    var parentTag = element.parentElement;
-    var tagName = element.tagName;
-    if (tagName === name) { return false; }
-    return notInside(parentTag, name);
-  }
-
-  function dictionary(event) {
-    if (
-      event.ctrlKey == true ||
-      event.shiftKey == true ||
-      event.altKey == true
-    ) {
-      return;
-    }
-    var word = "" + window.getSelection();
-    var container = window.getSelection().anchorNode.parentElement;
-
-    if (word > "" && word.length > 1 && notInside(container, 'PRE')) {
-      dictionary_access(word);
-    }
-  }
-
-  function dictionary_access(word) {
-    word = word.replace(/[!.:?,;"]/g, "");
-    word = word.replace(/^\s*(\S*?)\s*$/g, "$1");
-    if (word) {
-      window.open(
-        "https://www.merriam-webster.com/dictionary/" +
-          encodeURIComponent(word),
-        "Definitions",
-        "targetWindow,width=700,height=500,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes"
-      );
-    }
+  function dictionary(word) {
+    window.open(
+      "https://www.merriam-webster.com/dictionary/" +
+        encodeURIComponent(word),
+      "Definitions",
+      options,
+    );
   }
 })();
