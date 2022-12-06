@@ -18,14 +18,21 @@
 a {
   color: #75b2f0;
 }
-a:focus {
+
+a:focus,
+h1:target a,
+h2:target a,
+h3:target a,
+code-block[id^="code-block"]:target language-label a {
   color: #fff;
   background-color: #005d85;
 }
+
 a:hover img {
   outline: 6px dashed #75b2f0;
   box-shadow: none;
 }
+
 a:focus img {
   outline: 9px dashed #75b2f0;
 }

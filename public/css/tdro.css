@@ -58,7 +58,11 @@ a:hover img {
   box-shadow: 0 8px 32px;
 }
 
+h1:target a,
+h2:target a,
+h3:target a,
 a:focus img,
+code-block[id^="code-block"]:target language-label a,
 :focus:not(article-thumbnail a):not(abstract-thumbnail a):not(figure
     > a):not(nav column-middle a):not(tile-item a),
 :focus-visible:not(article-thumbnail a):not(abstract-thumbnail a):not(figure
@@ -74,6 +78,9 @@ a:focus {
 }
 
 a:focus,
+h1:target a,
+h2:target a,
+h3:target a,
 code-block[id^="code-block"]:target language-label a {
   background-color: #ffeac2;
   color: #000;
