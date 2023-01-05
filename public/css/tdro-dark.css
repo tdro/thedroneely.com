@@ -261,22 +261,24 @@ textarea:-ms-input-placeholder {
   color: #cad6e2;
 }
 
-.isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
-  background-color: #002e42;
-  color: white;
+.isso-comment .isso-comment-footer a {
+  color: #fff;
+  background-color: #004766;
+  box-shadow: none;
 }
 
-.isso-comment .textarea,
-.isso-postbox > .form-wrapper .textarea,
-.isso-postbox > .form-wrapper .preview {
+.isso-preview,
+.isso-comment textarea,
+.isso-postbox textarea {
   background-color: #002e42;
 }
 
-.isso-comment > div.text-wrapper > .isso-comment-header .author {
+.isso-author,
+.isso-permalink {
   color: #ccc;
 }
 
-.isso-postbox > .form-wrapper .preview {
+.isso-preview {
   background-color: #001f2c;
   background: repeating-linear-gradient(
     -45deg,
@@ -287,10 +289,6 @@ textarea:-ms-input-placeholder {
   );
 }
 
-.isso-comment > div.text-wrapper > .isso-comment-header .permalink {
-  color: #ccc;
-}
-
-.isso-comment > div.text-wrapper > .text a {
+#isso-thread .isso-text a {
   color: #cad6e2;
 }

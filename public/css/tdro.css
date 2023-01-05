@@ -1630,21 +1630,18 @@ margin-note[image] a:focus {
 }
 
 /* ----- Isso Comments ----- */
+/* https://raw.githubusercontent.com/posativ/isso/master/isso/css/isso.css */
 
-#isso-thread {
-  padding: 0;
-  margin: 0;
-}
-
-#isso-thread .isso-comment-header a {
-  text-decoration: none;
+#isso-thread label {
+  margin: 0 0 0.5rem 0;
+  display: block;
 }
 
 #isso-thread div.text p:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-.isso-comment > div.text-wrapper > .text a {
+#isso-thread .isso-text a {
   color: #000;
 }
 
@@ -1655,18 +1652,10 @@ margin-note[image] a:focus {
 
 #isso-thread .isso-feedlink {
   float: right;
-  padding-left: 1rem;
 }
 
 #isso-thread .isso-feedlink a {
-  font-size: 0.8rem;
-  vertical-align: bottom;
-}
-
-#isso-root .isso-comment {
-  max-width: 68rem;
-  padding-top: 0.95rem;
-  margin: 0.95rem auto;
+  font-size: 85%;
 }
 
 #isso-root .preview .isso-comment {
@@ -1674,11 +1663,7 @@ margin-note[image] a:focus {
   margin: 0;
 }
 
-.isso-comment div.avatar {
-  float: left;
-  width: 16px;
-  height: 16px;
-  margin: 2px 12px 0 0;
+.isso-avatar {
   display: none !important;
 }
 
@@ -1693,18 +1678,6 @@ margin-note[image] a:focus {
   padding-left: 0.5rem;
 }
 
-.isso-comment div.avatar svg {
-  max-width: 48px;
-  max-height: 48px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.isso-comment div.text-wrapper {
-  display: block;
-}
-
 .isso-comment .isso-follow-up {
   padding-left: 2rem;
 }
@@ -1714,20 +1687,20 @@ margin-note[image] a:focus {
   font-size: 0.95rem;
 }
 
-.isso-comment .isso-comment-header .permalink {
+.isso-permalink {
   color: #555;
 }
 
-.isso-comment .isso-comment-header .spacer {
+.isso-spacer {
   padding: 0 6px;
   color: #999;
 }
 
-.isso-comment .isso-comment-header .note {
+.isso-note {
   float: right;
 }
 
-.isso-comment .isso-comment-header .author {
+.isso-author {
   font-weight: 700;
   color: #555;
 }
@@ -1753,9 +1726,9 @@ margin-note[image] a:focus {
 }
 
 .isso-comment .isso-comment-footer {
-  font-size: 85%;
-  color: #555;
   clear: left;
+  color: #555;
+  margin: 0.5rem 0 0.75rem 0;
 }
 
 .isso-feedlink {
@@ -1763,117 +1736,100 @@ margin-note[image] a:focus {
   text-decoration: none;
 }
 
+.isso-comment > .isso-text-wrapper {
+  margin-bottom: 1.5rem;
+}
+
 .isso-comment .isso-comment-footer a {
   border: none;
   font-weight: 700;
   padding: 0.25rem 0.5rem;
-}
-
-.isso-feedlink:hover,
-.isso-comment .isso-comment-footer a:hover svg,
-.isso-comment .isso-comment-footer .edit:hover,
-.isso-comment .isso-comment-footer .cancel:hover,
-.isso-comment .isso-comment-footer .reply:hover,
-.isso-comment .isso-comment-footer .delete:hover {
-  color: #111111;
-  text-shadow: #aaaaaa 0 0 1px !important;
-  background-color: #ccc;
-  fill: #111111;
+  background-color: #f2f2f2;
+  box-shadow: 0 1px 1px #aaa;
   border-radius: 0.25rem;
 }
 
-.isso-comment .isso-comment-footer .votes,
-.isso-comment .isso-comment-footer .spacer,
-.isso-comment .isso-comment-footer .upvote,
-.isso-comment .isso-comment-footer .downvote {
-  display: none;
-}
-
-.isso-comment .isso-postbox {
-  margin-top: 0.8rem;
-}
-
-.isso-comment-footer .delete {
-  margin: 0.2rem 0 0 0.4rem;
-}
-
-.isso-comment-footer .cancel {
-  margin-left: 0.3rem;
-}
-
-.isso-comment.isso-no-votes span.votes {
+.isso-votes,
+.isso-upvote,
+.isso-downvote,
+.isso-comment-footer .isso-spacer {
   display: none;
 }
 
 .isso-postbox {
   max-width: 68rem;
-  margin: 0 auto 2rem;
+  margin: 0 auto 3rem;
   clear: right;
 }
 
-.isso-postbox .form-wrapper {
+.isso-form-wrapper {
   display: block;
   padding: 0;
 }
 
-.isso-postbox .auth-section,
-.isso-postbox .auth-section .post-action {
-  display: block;
+.isso-textarea-wrapper {
+  display: flex;
 }
 
-.isso-comment .textarea,
-.isso-postbox .form-wrapper .textarea,
-.isso-postbox .form-wrapper .preview {
-  margin: 0 0 0.6rem;
-  padding: 0.4em 0.8rem;
-  border-radius: 2px;
+.isso-comment textarea,
+.isso-postbox textarea,
+.isso-postbox .isso-preview {
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #fafafa;
   min-height: 150px;
+  line-height: inherit;
 }
 
-.isso-postbox .auth-section .input-wrapper {
+.isso-input-wrapper {
   display: inline-block;
   position: relative;
   padding-bottom: 0.6rem;
   width: 33.33%;
 }
 
-.isso-postbox .auth-section .input-wrapper:nth-child(-n + 2) {
+.isso-edit,
+.isso-cancel,
+.isso-delete {
+  margin-right: 0.5rem;
+}
+
+.isso-input-wrapper:nth-child(-n + 2) {
   padding-right: 0.6rem;
 }
 
-.isso-postbox .auth-section .post-action {
-  padding-left: 0.6rem;
-  margin-bottom: 0 !important;
-}
-
-.isso-postbox .auth-section .post-action {
+.isso-post-action {
   display: inline-block;
   float: right;
+  padding-left: 0.5rem;
 }
 
-.isso-postbox input[name="preview"],
-.isso-postbox input[name="edit"] {
+.isso-post-action input[name="edit"],
+.isso-post-action input[name="preview"],
+.isso-post-action input[type="submit"] {
   width: 6rem;
+  margin-top: 0.5rem;
 }
 
-.isso-postbox .form-wrapper .preview,
-.isso-postbox .form-wrapper input[name="edit"],
-.isso-postbox.preview-mode .form-wrapper input[name="preview"],
-.isso-postbox.preview-mode .form-wrapper .textarea {
+.isso-preview,
+.isso-post-action input[name="edit"],
+.isso-postbox.isso-preview-mode > .isso-form-wrapper input[name="preview"],
+.isso-postbox.isso-preview-mode > .isso-form-wrapper .isso-textarea {
   display: none;
 }
 
-.isso-postbox.preview-mode .form-wrapper .preview {
-  display: block;
+.isso-postbox.isso-preview-mode > .isso-form-wrapper .isso-preview {
+  display: inline-block;
+  width: 100%;
 }
 
-.isso-postbox.preview-mode .form-wrapper input[name="edit"] {
+.isso-postbox.isso-preview-mode > .isso-form-wrapper input[name="edit"] {
   display: inline;
 }
 
-.isso-postbox .preview {
+.isso-preview {
   background-color: #f8f8f8;
   background: repeating-linear-gradient(
     -45deg,
@@ -1894,13 +1850,13 @@ margin-note[image] a:focus {
 }
 
 @media screen and (max-width: 600px) {
-  .isso-postbox .input-wrapper {
+  .isso-input-wrapper {
     display: inline-block;
-    max-width: 100%;
+    width: 100%;
     margin: 0 0 0.3rem;
   }
-  .isso-postbox .input-wrapper input {
-    width: 100%;
+  .isso-input-wrapper:nth-child(-n + 2) {
+    padding-right: 0;
   }
 }
 
