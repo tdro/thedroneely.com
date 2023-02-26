@@ -2,7 +2,6 @@ all:
 	make webrings
 	make quotes
 	make references
-	make migration
 	make site
 	make admin
 	make migration
@@ -27,10 +26,10 @@ export DENO_DIR := generators/exoference/vendor
 
 references:
 	deno compile \
-    --allow-net \
-    --no-check \
-    --output generators/exoference/exoference \
-    generators/exoference/main.ts
+		--allow-net \
+		--no-check \
+		--output generators/exoference/exoference \
+		generators/exoference/main.ts
 	find generators/hugo/content/posts -type f -name "*.md" -exec basename --suffix '.md' {} \; \
 		| while read -r file; do path="generators/hugo/themes/tdro/layouts/partials/references/$$file.html" \
 		&& printf 'Gathering references for %s\n' "$$file" && [ ! -e "$$path" ] \
