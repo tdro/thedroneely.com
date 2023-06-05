@@ -1,6 +1,5 @@
 all:
 	make webrings
-	make quotes
 	make references
 	make site
 	make admin
@@ -8,7 +7,6 @@ all:
 
 generators:
 	make webrings
-	make quotes
 	make references
 
 webrings:
@@ -18,9 +16,6 @@ webrings:
 	-s "https://www.taniarascia.com/rss.xml" \
 	< generators/openring/template.html \
 	> generators/hugo/themes/tdro/layouts/partials/webrings/openring.html
-
-quotes:
-	strfile generators/fortune/quotes.fortune
 
 export DENO_DIR := generators/exoference/vendor
 

@@ -30,7 +30,7 @@
       <fortune-quote>
         <margin-note left>
           <b>Random Quote</b>
-          <?php echo shell_exec('fortune ' . dirname($_SERVER['DOCUMENT_ROOT']) . '/generators/fortune/quotes.fortune'); ?>
+          <?php echo (new Fortune)->random(); ?>
         </margin-note>
       </fortune-quote>
 
