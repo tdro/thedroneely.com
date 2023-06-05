@@ -724,7 +724,7 @@ article-more-content ul + ul {
   margin-top: 1.5rem;
 }
 
-article-meta-top {
+article header {
   margin-bottom: 1.5rem;
 }
 
@@ -732,18 +732,18 @@ article-summary-meta {
   margin-bottom: 0.75rem;
 }
 
-article-meta-top,
+article header,
 article-summary-meta {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-article-meta-top a {
+article header a {
   text-decoration: underline;
 }
 
-article-meta-top aside {
+article header aside {
   display: flex;
   align-items: center;
   width: 100%;
@@ -752,7 +752,7 @@ article-meta-top aside {
 
 abstract-summary-meta svg,
 article-summary-meta svg,
-article-meta-top svg {
+article header svg {
   height: 1rem;
   margin-right: 0.35rem;
   width: 1rem;
@@ -761,7 +761,7 @@ article-meta-top svg {
 }
 
 article-summary-meta *:not(svg),
-article-meta-top aside *:not(svg) {
+article header aside *:not(svg) {
   margin-right: 0.5rem;
 }
 
@@ -2082,8 +2082,8 @@ figcaption code,
 article-archive-list time,
 article-meta-bottom a,
 article-meta-bottom,
-article-meta-top a,
-article-meta-top,
+article header a,
+article header,
 article-more-content time,
 article-webring time,
 article-summary-meta,
@@ -2145,8 +2145,8 @@ article-archive-list ul a,
 article-archive-list ul a:hover,
 article-card article-thumbnail a,
 article-card article-thumbnail a:hover,
-article-meta-top a,
-article-meta-top a:hover,
+article header a,
+article header a:hover,
 article-webring a,
 button-anchor a:focus,
 button-anchor a:hover,

@@ -8,7 +8,7 @@
   <style>
     article-comments,
     [href="#isso-thread"],
-    article-meta-top aside:nth-child(2) svg:first-child {
+    article header aside:nth-child(2) svg:first-child {
       display: none;
     }
   </style>
