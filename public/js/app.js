@@ -43,6 +43,17 @@ self.addEventListener('DOMContentLoaded', function() {
     localStorage['pager'] = JSON.stringify(pager);
   })();
 
+  (function() {
+      var imageAnchors = document.querySelectorAll("a");
+      for(var i = 0; i < imageAnchors.length; i++){
+          if (imageAnchors[i].firstElementChild) {
+              if (imageAnchors[i].firstElementChild.tagName === "IMG") {
+                  imageAnchors[i].removeAttribute("href");
+              }
+          }
+      }
+  })();
+
   /**
    * Scroll events
    */

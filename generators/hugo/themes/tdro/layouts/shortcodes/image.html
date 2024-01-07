@@ -2,8 +2,10 @@
 {{- $image := imageConfig $imageFile -}}
 
 <figure>
-  <a href="{{ .Get `source` }}" onclick="return false;">
-    <img data-image-zoom
+  <a href="{{ .Get `source` }}">
+    <img
+      loading="lazy"
+      data-image-zoom=""
       src="{{ .Get `source` }}"
       alt="{{ .Get `title` }}"
       title="{{ .Get `title` }}"

@@ -10,8 +10,10 @@
   <label for="{{ $id }}" title="{{ .Inner | replaceRE "\n" " " | markdownify }}"><span>{{ $mark | markdownify }}</span></label>
   <input type="checkbox" id="{{ $id }}" name="toggle">
   <side-note title="{{ $mark }}" image {{ $set }}>
-    <a href="{{ $source }}" onclick="return false;">
-      <img data-image-zoom
+    <a href="{{ $source }}">
+      <img
+        loading="lazy"
+        data-image-zoom=""
         src="{{ $source }}"
         title="{{ $title }}"
         width="{{ $image.Width }}"

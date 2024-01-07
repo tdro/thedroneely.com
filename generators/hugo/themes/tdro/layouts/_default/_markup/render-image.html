@@ -29,8 +29,10 @@
 
 {{- /* This comment removes trailing newlines. */ -}}
 <figure>
-  <a href="{{ $source }}" onclick="return false;">
-    <img data-image-zoom
+  <a href="{{ $source }}">
+    <img
+      loading="lazy"
+      data-image-zoom=""
       src="{{ $source }}"
       alt="{{ $.Text | htmlUnescape }}"
       title="{{ $.Text | htmlUnescape }}"
