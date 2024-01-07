@@ -10,8 +10,8 @@
     {
       "id": "{{ md5 $data.Permalink }}",
       "url": "{{ $data.Permalink }}",
-      "title": "{{ $data.Title | htmlUnescape }}",
-      "summary": "{{ $data.Summary | htmlUnescape }}",
+      "title": {{ $data.Summary | htmlUnescape | jsonify }},
+      "summary": {{ $data.Summary | htmlUnescape | jsonify }},
       "date_modified": "{{ $data.Date | time.Format "2006-01-02T15:04:05Z" }}",
       "date_published": "{{ $data.PublishDate | time.Format "2006-01-02T15:04:05Z" }}",
       "_metadata": {
