@@ -5167,4 +5167,38 @@ return [
           I have gained this by philosophy: that I do without being commanded what others
           do only from fear of the law. — Aristotle
           ',
+  1304 => '
+          Were you born in a cave?
+          ',
+  1305 => '
+          There is a secret person undamaged within every individual. — Paul
+          Shepard
+          ',
+  1306 => '
+          It is easier for a camel to pass through the eye of a needle if it is
+          lightly greased. — Kehlog Albran, “The Profit”
+          ',
+  1307 => '
+          It appears that you are currently using Enhanced Tracking Protection.
+          What are the consequences?
+          ',
+  1308 => '
+          April showers bring May flowers.
+          ',
+  1309 => '
+          Talk of the devil, and he is sure to appear.
+          ',
+  1310 => '
+          No news is good news.
+          ',
+  1311 => '
+          The best way to find out if you can trust somebody is to trust them. — Ernest Hemingway
+          ',
+  1312 => '
+          Truth is incontrovertible. Panic may resent it. Ignorance may deride it.
+          Malice may distort it. But there it is. — Winston Churchill
+          ',
+  1313 => '
+          “To be ignorant of what occurred before you were born is to remain always a child.” — Marcus Tullius Cicero
+          ',
 ];
