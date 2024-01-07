@@ -7,9 +7,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($uploadedFile) {
         move_uploaded_file(
             $uploadedFile['tmp_name'], 'uploads/'
-            . uniqid()
+            . bin2hex(random_bytes(14))
             . '-'
-            . $uploadedFile['name']
+            . urlencode($uploadedFile['name'])
         );
     }
 
