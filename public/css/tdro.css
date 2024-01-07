@@ -63,10 +63,8 @@ h2:target a,
 h3:target a,
 a:focus img,
 code-block[id^="code-block"]:target language-label a,
-:focus:not(article-thumbnail a):not(abstract-thumbnail a):not(figure
-    > a):not(nav column-middle a):not(tile-item a),
-:focus-visible:not(article-thumbnail a):not(abstract-thumbnail a):not(figure
-    > a):not(nav column-middle a):not(tile-item a) {
+:focus:not(article-thumbnail a):not(abstract-thumbnail a):not(figure > a):not(nav column-middle a):not(tile-item a),
+:focus-visible:not(article-thumbnail a):not(abstract-thumbnail a):not(figure > a):not(nav column-middle a):not(tile-item a) {
   border-radius: 0.25rem;
   box-shadow: 0 0 0 0.125rem #4992d0;
   outline: none;
@@ -306,9 +304,9 @@ pagination-controller a {
 }
 
 button,
+button-anchor a,
 input[type="submit"],
 input[type="button"],
-button-anchor a,
 pagination-controller a {
   align-items: center;
   border: 0 solid transparent;
@@ -317,6 +315,23 @@ pagination-controller a {
   height: 2rem;
   justify-content: center;
   padding: 0.25rem 1rem;
+}
+
+::file-selector-button,
+::-webkit-file-upload-button {
+  background-color: #f2f2f2;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 0;
+  box-shadow: 0 1px 1px #aaa;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 2rem;
+  padding: 0.25rem 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  display: block;
 }
 
 button svg,
@@ -586,10 +601,6 @@ home-page recent-projects article-thumbnail {
 
 recent-projects article-thumbnail {
   flex: none;
-}
-
-upload-page h1 {
-  text-align: center;
 }
 
 article-subsection h1,
@@ -1032,6 +1043,17 @@ small-caps[intro] {
   text-transform: none;
 }
 
+html[data-page="resume"]::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+  scrollbar-width: none;
+}
+
+body[data-page="resume"] {
+  margin: 0;
+  max-width: 100%;
+}
+
 resume-page {
   display: flex;
   min-height: 100vh;
@@ -1164,6 +1186,50 @@ resume-page timeline-content {
   padding: 1rem 0 0 2rem;
 }
 
+upload-box h1,
+upload-box h2 {
+  text-align: center;
+}
+
+upload-box header {
+  display: flex;
+  align-items: center;
+}
+
+upload-box header p {
+  margin: 0 1rem;
+}
+
+upload-box footer {
+  display: flex;
+}
+
+upload-box footer,
+upload-box header {
+  padding: 1rem;
+  margin: 0;
+}
+
+upload-box form,
+upload-box footer,
+upload-box header {
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 1px;
+}
+
+upload-box form {
+  border-radius: 0.5rem;
+}
+
+upload-box input[type="file"] {
+  border: 1px dashed #999;
+  display: block;
+  padding: 10rem 2rem;
+  text-align-last: center;
+  width: 100%;
+}
+
 /* ----- Attributes ----- */
 
 [hidden] {
@@ -1173,11 +1239,6 @@ resume-page timeline-content {
 [data-disabled] {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-[data-resume] {
-  margin: 0;
-  max-width: 100%;
 }
 
 /* ----- Context Menu ----- */
@@ -1860,22 +1921,6 @@ margin-note[image] a:focus {
   }
 }
 
-/* ----- Uppy CSS ----- */
-
-.uppy-Dashboard-inner {
-  background-color: #fff !important;
-  border: 1px solid #aaa !important;
-  margin: 0 auto;
-}
-
-.uppy-DashboardAddFiles {
-  border: 2px dashed #aaa !important;
-}
-
-.uppy-DashboardTab {
-  padding: 0.5rem !important;
-}
-
 /* ----- Colors ----- */
 
 ::selection {
@@ -1934,9 +1979,9 @@ textarea {
 
 button,
 button-anchor a,
-pagination-controller a,
 input[type="submit"],
-input[type="button"] {
+input[type="button"],
+pagination-controller a {
   background-color: #f2f2f2;
   box-shadow: 0 1px 1px #aaa;
 }

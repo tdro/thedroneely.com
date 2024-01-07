@@ -92,6 +92,13 @@ input[type="button"] {
   box-shadow: none;
 }
 
+::file-selector-button,
+::-webkit-file-upload-button {
+  color: #fff;
+  background-color: #004766;
+  box-shadow: none;
+}
+
 button:hover,
 button-anchor a:hover,
 pagination-controller a,
@@ -224,6 +231,12 @@ home-page article > h1 em {
 contact-page aside {
   background-color: #002e42;
   border-color: #008fcc;
+}
+
+upload-box form,
+upload-box footer,
+upload-box header {
+  border-color: #004766;
 }
 
 /* ---------------------------------------------------------- */

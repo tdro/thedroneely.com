@@ -1,108 +1,108 @@
 /**
  * General Functions
  */
-function posf (f, a) { for (var i=0; i < a.length; i++) { if (f(a[i])) {return i;} } return -1; }
-function apos (x, a) { return (typeof x == 'function') ? posf(x,a) : Array.prototype.indexOf.call(a,x); }
-function arem (a, x) { var i = apos(x, a); if (i >= 0) { a.splice(i, 1); } return a; }
-function afind (x, a) { var i = apos(x, a); return (i >= 0) ? a[i] : null; }
-function addClass (el, cl) { if (el) { var a = el.className.split(' '); if (!afind(cl, a)) { a.unshift(cl); el.className = a.join(' '); } } }
-function remClass (el, cl) { if (el) { var a = el.className.split(' '); arem(a, cl); el.className = a.join(' '); } }
-function runOnce(action) { runOnce = function(){}; action(); }
+function once(action) { once = function(){}; action(); }
 
-/*
- * Context Menu functions
- */
-function contextMenuHide(element) {
-  for (var i = 0; i < element.length; i++) {
-    element[i].checked = false;
+function contextMenuHide(elements) {
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].checked = false;
   }
 }
 
-function contextMenuHideOutside(element, event) {
-  for (var i = 0; i < element.length; i++) {
-    let notClicked = !element[i].contains(event.target);
-    if (notClicked && contextMenuInputs[i].checked === true) { contextMenuHide(contextMenuInputs); }
+function contextMenuHideOutside(elements, targets, event) {
+  for (var i = 0; i < elements.length; i++) {
+    let notClicked = !elements[i].contains(event.target);
+    if (notClicked && targets[i].checked === true) { contextMenuHide(targets); }
   }
 }
 
 /**
  * Remove url query string and hash
  */
-var url = window.location.href.split('?')[0];
-window.history.replaceState(null, '', url);
+var url = self.location.href.split('?')[0];
+self.history.replaceState(null, '', url);
 
 /**
  * Load events
  */
-var settings = { pager: {} };
+var pager = {};
 
-window.addEventListener('DOMContentLoaded', function() {
-  if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
-  if (localStorage['settings']) { settings = JSON.parse(localStorage['settings']); }
-  var hash = document.getElementById(location.hash.slice(1));
-  var hashInURL = window.location.href.indexOf("#") >= 0;
-  if (hashInURL && document.body.contains(hash)) {
-    settings['pager'][url] = window.pageYOffset;
-    localStorage['settings'] = JSON.stringify(settings);
-    hash.scrollIntoView();
-    return;
-  }
-  if (settings['pager'][url] > 0) { window.scrollTo(0, settings['pager'][url]); return; }
-  settings['pager'][url] = window.pageYOffset;
-  localStorage['settings'] = JSON.stringify(settings);
-});
-
-/*
- * Click events
- */
-document.addEventListener('click', function(event) {
-  contextMenuHideOutside(contextMenus, event);
-});
-
-/*
- * Touch start events
- */
-document.addEventListener('touchstart', function(event) {
-  contextMenuHideOutside(contextMenus, event);
-});
-
-/**
- * Scroll events
- */
-var previousPosition = window.pageYOffset;
-var navbar = document.getElementById("navbar");
-var navbarHeight = navbar.offsetHeight;
-var scrolls = 0;
-
-var contextMenus = document.getElementsByTagName('context-menu-container');
-var contextMenuInputs = document.querySelectorAll('context-menu-container input');
-
-window.addEventListener('scroll', function() {
-
-    contextMenuHide(contextMenuInputs);
-
-    var currentPosition = window.pageYOffset;
-    var velocity = previousPosition - currentPosition;
-
-    settings['pager'][url] = currentPosition;
-    localStorage['settings'] = JSON.stringify(settings);
-
-    if (scrolls > 3) {
-      if (velocity > 75 || currentPosition < navbarHeight) {
-        remClass(navbar, 'hide');
-      } else if (velocity < -25) {
-        addClass(navbar, 'hide');
-      } else if (currentPosition > navbarHeight) {
-        runOnce(function () { addClass(navbar, 'hide'); });
-      }
+self.addEventListener('DOMContentLoaded', function() {
+  (function () {
+    if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
+    if (localStorage['pager']) { pager = JSON.parse(localStorage['pager']); }
+    var hash = self.location.hash.slice(1) && document.getElementById(self.location.hash.slice(1));
+    var hashInURL = self.location.href.indexOf("#") >= 0;
+    if (hashInURL && document.body.contains(hash)) {
+      pager[url] = self.pageYOffset;
+      localStorage['pager'] = JSON.stringify(pager);
+      return hash.scrollIntoView();
     }
+    if (pager[url] > 0) { return self.scrollTo(0, pager[url]); }
+    pager[url] = self.pageYOffset;
+    localStorage['pager'] = JSON.stringify(pager);
+  })();
 
-    previousPosition = currentPosition;
-    scrolls++;
-});
+  /**
+   * Scroll events
+   */
+  var scrolls = 0;
+  var previousPosition = self.pageYOffset;
+  var navbar = document.getElementById("navbar");
+  var navbarHeight = navbar.offsetHeight;
 
-window.addEventListener("hashchange", function () {
-  document.getElementById(location.hash.slice(1)).scrollIntoView();
+  var contextMenus = document.getElementsByTagName('context-menu-container');
+  var contextMenuInputs = document.querySelectorAll('context-menu-container input');
+
+  self.addEventListener('scroll', function() {
+      contextMenuHide(contextMenuInputs);
+
+      var currentPosition = self.pageYOffset;
+      var velocity = previousPosition - currentPosition;
+
+      pager[url] = currentPosition;
+      localStorage['pager'] = JSON.stringify(pager);
+
+      if (scrolls > 3) {
+        if (velocity > 75 || currentPosition < navbarHeight) {
+          navbar.classList.remove('hide');
+        } else if (velocity < -25) {
+          navbar.classList.add('hide');
+        } else if (currentPosition > navbarHeight) {
+          once(function () { navbar.classList.add('hide'); });
+        }
+      }
+      previousPosition = currentPosition;
+      scrolls++;
+  });
+
+  /*
+   * Click events
+   */
+  self.addEventListener('click', function(event) {
+    contextMenuHideOutside(contextMenus, contextMenuInputs, event);
+  });
+
+  /*
+   * Touch start events
+   */
+  self.addEventListener('touchstart', function(event) {
+    contextMenuHideOutside(contextMenus, contextMenuInputs, event);
+  });
+
+  /*
+   * Hash change events
+   */
+  self.addEventListener("hashchange", function () {
+    document.getElementById(self.location.hash.slice(1)).scrollIntoView();
+  });
+
+  /**
+   * Activate Medium Zoom
+   */
+  var imageZoom = mediumZoom('[data-image-zoom]');
+  imageZoom.on('open', function() { navbar.classList.add('hide'); });
+  imageZoom.on('close', function() { navbar.classList.remove('hide'); });
 });
 
 /**
@@ -594,248 +594,328 @@ window.addEventListener("hashchange", function () {
   return mediumZoom;
 });
 
+(function () {
+  self.addEventListener("DOMContentLoaded", function () {
+    /*! instant.page v5.1.0 - (C) 2019-2020 Alexandre Dieulot - https://instant.page/license */
 
-/**
- * Activate Medium Zoom
- */
-var imageZoom = mediumZoom('[data-image-zoom]');
-imageZoom.on('open', function() { addClass(navbar, 'hide'); });
-imageZoom.on('close', function() { remClass(navbar, 'hide'); });
+    let mouseoverTimer;
+    let lastTouchTimestamp;
+    const prefetches = new Set();
+    const prefetchElement = document.createElement("link");
+    const isSupported = prefetchElement.relList &&
+      prefetchElement.relList.supports &&
+      prefetchElement.relList.supports("prefetch") &&
+      window.IntersectionObserver &&
+      "isIntersecting" in IntersectionObserverEntry.prototype;
+    const allowQueryString = "instantAllowQueryString" in document.body.dataset;
+    const allowExternalLinks = "instantAllowExternalLinks" in
+      document.body.dataset;
+    const useWhitelist = "instantWhitelist" in document.body.dataset;
+    const mousedownShortcut = "instantMousedownShortcut" in
+      document.body.dataset;
+    const DELAY_TO_NOT_BE_CONSIDERED_A_TOUCH_INITIATED_ACTION = 1111;
 
+    let delayOnHover = 65;
+    let useMousedown = false;
+    let useMousedownOnly = false;
+    let useViewport = false;
 
-/**
- * Instant Page v3.0.0 - (C) 2019 Alexandre Dieulot - https://instant.page/license
- */
-let mouseoverTimer;
-let lastTouchTimestamp;
-const prefetches = new Set();
-const prefetchElement = document.createElement('link');
-const isSupported = prefetchElement.relList && prefetchElement.relList.supports && prefetchElement.relList.supports('prefetch')
-                    && window.IntersectionObserver && 'isIntersecting' in IntersectionObserverEntry.prototype;
-const allowQueryString = 'instantAllowQueryString' in document.body.dataset;
-const allowExternalLinks = 'instantAllowExternalLinks' in document.body.dataset;
-const useWhitelist = 'instantWhitelist' in document.body.dataset;
+    if ("instantIntensity" in document.body.dataset) {
+      const intensity = document.body.dataset.instantIntensity;
 
-let delayOnHover = 65;
-let useMousedown = false;
-let useMousedownOnly = false;
-let useViewport = false;
-if ('instantIntensity' in document.body.dataset) {
-  const intensity = document.body.dataset.instantIntensity;
-
-  if (intensity.substr(0, 'mousedown'.length) == 'mousedown') {
-    useMousedown = true;
-    if (intensity == 'mousedown-only') {
-      useMousedownOnly = true;
-    }
-  }
-  else if (intensity.substr(0, 'viewport'.length) == 'viewport') {
-    if (!(navigator.connection && (navigator.connection.saveData || navigator.connection.effectiveType.includes('2g')))) {
-      if (intensity == "viewport") {
-        /* Biggest iPhone resolution (which we want): 414 × 896 = 370944
+      if (intensity.substr(0, "mousedown".length) == "mousedown") {
+        useMousedown = true;
+        if (intensity == "mousedown-only") {
+          useMousedownOnly = true;
+        }
+      } else if (intensity.substr(0, "viewport".length) == "viewport") {
+        if (
+          !(navigator.connection &&
+            (navigator.connection.saveData ||
+              (navigator.connection.effectiveType &&
+                navigator.connection.effectiveType.includes("2g"))))
+        ) {
+          if (intensity == "viewport") {
+            /* Biggest iPhone resolution (which we want): 414 × 896 = 370944
          * Small 7" tablet resolution (which we don’t want): 600 × 1024 = 614400
          * Note that the viewport (which we check here) is smaller than the resolution due to the UI’s chrome */
-        if (document.documentElement.clientWidth * document.documentElement.clientHeight < 450000) {
-          useViewport = true;
-        }
-      }
-      else if (intensity == "viewport-all") {
-        useViewport = true;
-      }
-    }
-  }
-  else {
-    const milliseconds = parseInt(intensity);
-    if (!isNaN(milliseconds)) {
-      delayOnHover = milliseconds;
-    }
-  }
-}
-
-if (isSupported) {
-  const eventListenersOptions = {
-    capture: true,
-    passive: true,
-  };
-
-  if (!useMousedownOnly) {
-    document.addEventListener('touchstart', touchstartListener, eventListenersOptions);
-  }
-
-  if (!useMousedown) {
-    document.addEventListener('mouseover', mouseoverListener, eventListenersOptions);
-  }
-  else {
-    document.addEventListener('mousedown', mousedownListener, eventListenersOptions);
-  }
-
-  if (useViewport) {
-    let triggeringFunction;
-    if (window.requestIdleCallback) {
-      triggeringFunction = function(callback) {
-        requestIdleCallback(callback, {
-          timeout: 1500,
-        });
-      };
-    }
-    else {
-      triggeringFunction = function(callback) {
-        callback();
-      };
-    }
-
-    triggeringFunction(function() {
-      const intersectionObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            const linkElement = entry.target;
-            intersectionObserver.unobserve(linkElement);
-            preload(linkElement.href);
+            if (
+              document.documentElement.clientWidth *
+                  document.documentElement.clientHeight < 450000
+            ) {
+              useViewport = true;
+            }
+          } else if (intensity == "viewport-all") {
+            useViewport = true;
           }
-        });
-      });
-
-      document.querySelectorAll('a').forEach(function(linkElement) {
-        if (isPreloadable(linkElement)) {
-          intersectionObserver.observe(linkElement);
         }
-      });
-    });
-  }
-}
+      } else {
+        const milliseconds = parseInt(intensity);
+        if (!isNaN(milliseconds)) {
+          delayOnHover = milliseconds;
+        }
+      }
+    }
 
-function touchstartListener(event) {
-  /* Chrome on Android calls mouseover before touchcancel so `lastTouchTimestamp`
+    if (isSupported) {
+      const eventListenersOptions = {
+        capture: true,
+        passive: true,
+      };
+
+      if (!useMousedownOnly) {
+        document.addEventListener(
+          "touchstart",
+          touchstartListener,
+          eventListenersOptions,
+        );
+      }
+
+      if (!useMousedown) {
+        document.addEventListener(
+          "mouseover",
+          mouseoverListener,
+          eventListenersOptions,
+        );
+      } else if (!mousedownShortcut) {
+        document.addEventListener(
+          "mousedown",
+          mousedownListener,
+          eventListenersOptions,
+        );
+      }
+
+      if (mousedownShortcut) {
+        document.addEventListener(
+          "mousedown",
+          mousedownShortcutListener,
+          eventListenersOptions,
+        );
+      }
+
+      if (useViewport) {
+        let triggeringFunction;
+        if (window.requestIdleCallback) {
+          triggeringFunction = function (callback) {
+            requestIdleCallback(callback, {
+              timeout: 1500,
+            });
+          };
+        } else {
+          triggeringFunction = function (callback) {
+            callback();
+          };
+        }
+
+        triggeringFunction(function () {
+          const intersectionObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  const linkElement = entry.target;
+                  intersectionObserver.unobserve(linkElement);
+                  preload(linkElement.href);
+                }
+              });
+            },
+          );
+
+          document.querySelectorAll("a").forEach(function (linkElement) {
+            if (isPreloadable(linkElement)) {
+              intersectionObserver.observe(linkElement);
+            }
+          });
+        });
+      }
+    }
+
+    function touchstartListener(event) {
+      /* Chrome on Android calls mouseover before touchcancel so `lastTouchTimestamp`
    * must be assigned on touchstart to be measured on mouseover. */
-  lastTouchTimestamp = performance.now();
+      lastTouchTimestamp = performance.now();
 
-  const linkElement = event.target.closest('a');
+      const linkElement = event.target.closest("a");
 
-  if (!isPreloadable(linkElement)) {
-    return;
-  }
+      if (!isPreloadable(linkElement)) {
+        return;
+      }
 
-  preload(linkElement.href);
-}
+      preload(linkElement.href);
+    }
 
-function mouseoverListener(event) {
-  if (performance.now() - lastTouchTimestamp < 1100) {
-    return;
-  }
+    function mouseoverListener(event) {
+      if (
+        performance.now() - lastTouchTimestamp <
+          DELAY_TO_NOT_BE_CONSIDERED_A_TOUCH_INITIATED_ACTION
+      ) {
+        return;
+      }
 
-  const linkElement = event.target.closest('a');
+      const linkElement = event.target.closest("a");
 
-  if (!isPreloadable(linkElement)) {
-    return;
-  }
+      if (!isPreloadable(linkElement)) {
+        return;
+      }
 
-  linkElement.addEventListener('mouseout', mouseoutListener, {passive: true});
+      linkElement.addEventListener("mouseout", mouseoutListener, {
+        passive: true,
+      });
 
-  mouseoverTimer = setTimeout(function() {
-    preload(linkElement.href);
-    mouseoverTimer = undefined;
-  }, delayOnHover);
-}
+      mouseoverTimer = setTimeout(function () {
+        preload(linkElement.href);
+        mouseoverTimer = undefined;
+      }, delayOnHover);
+    }
 
-function mousedownListener(event) {
-  const linkElement = event.target.closest('a');
+    function mousedownListener(event) {
+      const linkElement = event.target.closest("a");
 
-  if (!isPreloadable(linkElement)) {
-    return;
-  }
+      if (!isPreloadable(linkElement)) {
+        return;
+      }
 
-  preload(linkElement.href);
-}
+      preload(linkElement.href);
+    }
 
-function mouseoutListener(event) {
-  if (event.relatedTarget && event.target.closest('a') == event.relatedTarget.closest('a')) {
-    return;
-  }
+    function mouseoutListener(event) {
+      if (
+        event.relatedTarget &&
+        event.target.closest("a") == event.relatedTarget.closest("a")
+      ) {
+        return;
+      }
 
-  if (mouseoverTimer) {
-    clearTimeout(mouseoverTimer);
-    mouseoverTimer = undefined;
-  }
-}
+      if (mouseoverTimer) {
+        clearTimeout(mouseoverTimer);
+        mouseoverTimer = undefined;
+      }
+    }
 
-function isPreloadable(linkElement) {
-  if (!linkElement || !linkElement.href) {
-    return;
-  }
+    function mousedownShortcutListener(event) {
+      if (
+        performance.now() - lastTouchTimestamp <
+          DELAY_TO_NOT_BE_CONSIDERED_A_TOUCH_INITIATED_ACTION
+      ) {
+        return;
+      }
 
-  if (useWhitelist && !('instant' in linkElement.dataset)) {
-    return;
-  }
+      const linkElement = event.target.closest("a");
 
-  if (!allowExternalLinks && linkElement.origin != location.origin && !('instant' in linkElement.dataset)) {
-    return;
-  }
+      if (event.which > 1 || event.metaKey || event.ctrlKey) {
+        return;
+      }
 
-  if (!['http:', 'https:'].includes(linkElement.protocol)) {
-    return;
-  }
+      if (!linkElement) {
+        return;
+      }
 
-  if (linkElement.protocol == 'http:' && location.protocol == 'https:') {
-    return;
-  }
+      linkElement.addEventListener("click", function (event) {
+        if (event.detail == 1337) {
+          return;
+        }
 
-  if (!allowQueryString && linkElement.search && !('instant' in linkElement.dataset)) {
-    return;
-  }
+        event.preventDefault();
+      }, { capture: true, passive: false, once: true });
 
-  if (linkElement.hash && linkElement.pathname + linkElement.search == location.pathname + location.search) {
-    return;
-  }
+      const customEvent = new MouseEvent("click", {
+        view: window,
+        bubbles: true,
+        cancelable: false,
+        detail: 1337,
+      });
+      linkElement.dispatchEvent(customEvent);
+    }
 
-  if ('noInstant' in linkElement.dataset) {
-    return;
-  }
+    function isPreloadable(linkElement) {
+      if (!linkElement || !linkElement.href) {
+        return;
+      }
 
-  return true;
-}
+      if (useWhitelist && !("instant" in linkElement.dataset)) {
+        return;
+      }
 
-function preload(url) {
-  if (prefetches.has(url)) {
-    return;
-  }
+      if (
+        !allowExternalLinks && linkElement.origin != location.origin &&
+        !("instant" in linkElement.dataset)
+      ) {
+        return;
+      }
 
-  const prefetcher = document.createElement('link');
-  prefetcher.rel = 'prefetch';
-  prefetcher.href = url;
-  document.head.appendChild(prefetcher);
+      if (!["http:", "https:"].includes(linkElement.protocol)) {
+        return;
+      }
 
-  prefetches.add(url);
-}
+      if (linkElement.protocol == "http:" && location.protocol == "https:") {
+        return;
+      }
+
+      if (
+        !allowQueryString && linkElement.search &&
+        !("instant" in linkElement.dataset)
+      ) {
+        return;
+      }
+
+      if (
+        linkElement.hash &&
+        linkElement.pathname + linkElement.search ==
+          location.pathname + location.search
+      ) {
+        return;
+      }
+
+      if ("noInstant" in linkElement.dataset) {
+        return;
+      }
+
+      return true;
+    }
+
+    function preload(url) {
+      if (prefetches.has(url)) {
+        return;
+      }
+
+      const prefetcher = document.createElement("link");
+      prefetcher.rel = "prefetch";
+      prefetcher.href = url;
+      document.head.appendChild(prefetcher);
+
+      prefetches.add(url);
+    }
+  });
+})();
 
 /**
  * Dictionary Access Copyright (C) 2006, Paul Lutus https://arachnoid.com/javascript/dictionary_access.js GPLv2+
  */
 
 (function () {
-  const options =
-    "targetWindow,width=700,height=500,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes";
+  self.addEventListener("DOMContentLoaded", function () {
+    const options = "targetWindow,width=700,height=500,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes";
 
-  self.addEventListener("keydown", function (event) {
-    if (event.repeat && event.key === "d") {
-      selection(dictionary);
+    self.addEventListener("keydown", function (event) {
+      if (event.repeat && event.key === "d") {
+        selection(dictionary);
+      }
+    });
+
+    function selection(execute) {
+      let phrase = "" + window.getSelection();
+      phrase = phrase.replace(/[!.:?,;"]/g, "");
+      phrase = phrase.replace(/^\s*(\S*?)\s*$/g, "$1");
+      if (phrase && phrase > "" && phrase.length > 1) {
+        execute(phrase);
+      }
+    }
+
+    function dictionary(word) {
+      window.open(
+        "https://www.merriam-webster.com/dictionary/" + encodeURIComponent(word),
+        "Definitions",
+        options,
+      );
     }
   });
-
-  function selection(execute) {
-    let phrase = "" + window.getSelection();
-    phrase = phrase.replace(/[!.:?,;"]/g, "");
-    phrase = phrase.replace(/^\s*(\S*?)\s*$/g, "$1");
-    if (phrase && phrase > "" && phrase.length > 1) {
-      execute(phrase);
-    }
-  }
-
-  function dictionary(word) {
-    window.open(
-      "https://www.merriam-webster.com/dictionary/" +
-        encodeURIComponent(word),
-      "Definitions",
-      options,
-    );
-  }
 })();

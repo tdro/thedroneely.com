@@ -8,7 +8,7 @@
   <home-page>
     <article>
 
-      <h1>Web <em>Developer </em></h1>
+      <h1>Web <em>Developer</em></h1>
 
       <h2>In it for the long haul</h2>
 
